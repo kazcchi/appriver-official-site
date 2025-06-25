@@ -95,8 +95,8 @@ nav {
 
 .logo h1 {
     font-size: 2rem;
-    font-weight: 900;
-    font-family: 'Helvetica Neue', 'Arial Black', sans-serif;
+    font-weight: normal;
+    font-family: 'Chalkboard', 'Bradley Hand', cursive;
     background: linear-gradient(45deg, #e8a48b 0%, #d49175 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -224,12 +224,12 @@ nav {
 
 .artist-name {
     font-size: 6rem;
-    font-weight: 900;
-    font-family: 'Helvetica Neue', 'Arial Black', sans-serif;
+    font-weight: normal;
+    font-family: 'Chalkboard', 'Bradley Hand', cursive;
     margin-bottom: 1rem;
     color: white;
     animation: fadeInUp 1.5s ease-out 0.5s both;
-    letter-spacing: -3px;
+    letter-spacing: -1px;
     text-transform: lowercase;
 }
 
@@ -488,16 +488,40 @@ section h2::after {
     background: white;
 }
 
-.song-info {
-    text-align: center;
+.singles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.song-info h3 {
-    font-size: 2.5rem;
+.single-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.single-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.single-item h3 {
+    font-size: 2.2rem;
     font-weight: 700;
     font-family: 'M PLUS 2', sans-serif;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    color: white;
     letter-spacing: -0.5px;
+}
+
+.single-item .stream-link {
+    margin-top: 1rem;
 }
 
 /* Lyrics Section */
