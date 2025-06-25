@@ -9,8 +9,9 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #ffeee6 0%, #f9f0e8 100%);
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
@@ -40,10 +41,15 @@ nav {
 .logo h1 {
     font-size: 2rem;
     font-weight: 700;
-    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(45deg, #e8a48b 0%, #d49175 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    transition: transform 0.3s ease;
+}
+
+.logo h1:hover {
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -60,7 +66,8 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #667eea;
+    color: #e8a48b;
+    transform: translateY(-2px);
 }
 
 /* Hero Section */
@@ -70,10 +77,23 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f7d2b8 0%, #e8a48b 50%, #d49175 100%);
     color: white;
     position: relative;
     overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><rect width="300" height="300" fill="%23f7d2b8" opacity="0.1"/><text x="150" y="150" text-anchor="middle" dominant-baseline="middle" font-size="120" font-weight="bold" fill="white" opacity="0.05">♪</text></svg>') center/cover no-repeat;
+    filter: blur(20px);
+    opacity: 0.1;
+    z-index: 1;
 }
 
 .hero::before {
@@ -96,6 +116,19 @@ nav {
 .hero-content {
     position: relative;
     z-index: 2;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .artist-name {
@@ -139,7 +172,7 @@ section h2::after {
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(45deg, #e8a48b 0%, #d49175 100%);
     border-radius: 2px;
 }
 
@@ -164,16 +197,39 @@ section h2::after {
 .placeholder-artwork {
     width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f7d2b8 0%, #e8a48b 50%, #d49175 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
     font-weight: 700;
     color: white;
-    border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(212, 145, 117, 0.3);
     margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.placeholder-artwork::before {
+    content: '♪';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    animation: musicNote 3s ease-in-out infinite;
+}
+
+@keyframes musicNote {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+.placeholder-artwork:hover {
+    transform: scale(1.1);
+    box-shadow: 0 35px 70px rgba(212, 145, 117, 0.4);
 }
 
 .album-details h3 {
@@ -191,7 +247,7 @@ section h2::after {
 .release-date {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #667eea;
+    color: #e8a48b;
     margin-bottom: 1rem;
 }
 
@@ -202,24 +258,65 @@ section h2::after {
 
 .stream-link {
     display: inline-block;
-    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(45deg, #e8a48b 0%, #d49175 100%);
     color: white;
     padding: 12px 30px;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 600;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stream-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.stream-link:hover::before {
+    left: 100%;
 }
 
 .stream-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(232, 164, 139, 0.4);
 }
 
 /* Main Song Section */
 .main-song-section {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #f7d2b8 0%, #e8a48b 100%);
     color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-song-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.05) 10px,
+        rgba(255,255,255,0.05) 20px
+    );
+    animation: movePattern 20s linear infinite;
+}
+
+@keyframes movePattern {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .main-song-section h2 {
@@ -258,12 +355,47 @@ section h2::after {
 }
 
 .verse {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #faf5f2 0%, #f0e6dc 100%);
+    border-left: 4px solid #e8a48b;
+    opacity: 0;
+    animation: fadeInSlide 0.8s ease-out forwards;
+}
+
+.verse:nth-child(1) { animation-delay: 0.1s; }
+.verse:nth-child(2) { animation-delay: 0.2s; }
+.verse:nth-child(3) { animation-delay: 0.3s; }
+.verse:nth-child(4) { animation-delay: 0.4s; }
+.verse:nth-child(5) { animation-delay: 0.5s; }
+.verse:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .chorus {
-    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    background: linear-gradient(135deg, #f7e6d9 0%, #ead4c4 100%);
     font-weight: 500;
+    border-left: 4px solid #d49175;
+    position: relative;
+    opacity: 0;
+    animation: fadeInSlide 0.8s ease-out forwards;
+}
+
+.chorus::before {
+    content: '♫';
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.2rem;
+    color: #d49175;
+    opacity: 0.6;
 }
 
 .verse:hover, .chorus:hover {
@@ -277,8 +409,20 @@ section h2::after {
 
 /* Links Section */
 .links-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
     color: white;
+    position: relative;
+}
+
+.links-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><circle cx="30" cy="30" r="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><circle cx="30" cy="30" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    opacity: 0.3;
 }
 
 .links-section h2 {
@@ -298,12 +442,21 @@ section h2::after {
 }
 
 .link-item {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     padding: 2rem;
-    border-radius: 15px;
+    border-radius: 20px;
     text-align: center;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.link-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .link-item h3 {
@@ -322,7 +475,8 @@ section h2::after {
 }
 
 .link-item a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
 }
 
 /* Footer */
