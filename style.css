@@ -576,7 +576,7 @@ section h2::after {
 
 .lyrics-content p {
     margin-bottom: 0.3rem;
-    color: #444;
+    color: #000;
     transition: color 0.3s ease;
 }
 
@@ -586,7 +586,7 @@ section h2::after {
 
 .chorus-line {
     font-weight: 600;
-    color: #e8a48b !important;
+    color: #000 !important;
     position: relative;
 }
 
@@ -594,17 +594,17 @@ section h2::after {
     content: '♫';
     position: absolute;
     left: -25px;
-    color: #d49175;
+    color: #000;
     font-size: 0.9rem;
     opacity: 0.7;
 }
 
 .lyrics-content:hover p {
-    color: #333;
+    color: #000;
 }
 
 .lyrics-content p:hover {
-    color: #e8a48b;
+    color: #000;
     transform: translateX(5px);
     transition: all 0.3s ease;
 }
