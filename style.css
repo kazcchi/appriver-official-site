@@ -355,7 +355,7 @@ section h2::after {
     align-items: center;
     justify-content: center;
     font-size: 2.5rem;
-    font-weight: 800;
+    font-weight: normal;
     font-family: 'M PLUS 2', sans-serif;
     color: white;
     border-radius: 20px;
@@ -369,20 +369,6 @@ section h2::after {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.placeholder-artwork::before {
-    content: '♪';
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.5rem;
-    opacity: 0.7;
-    animation: musicNote 3s ease-in-out infinite;
-}
-
-@keyframes musicNote {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(5deg); }
-}
 
 .placeholder-artwork:hover {
     transform: scale(1.1);
@@ -391,7 +377,7 @@ section h2::after {
 
 .album-details h3 {
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: normal;
     font-family: 'M PLUS 2', sans-serif;
     margin-bottom: 1rem;
     color: #333;
@@ -590,14 +576,6 @@ section h2::after {
     position: relative;
 }
 
-.chorus-line::before {
-    content: '♫';
-    position: absolute;
-    left: -25px;
-    color: #000;
-    font-size: 0.9rem;
-    opacity: 0.7;
-}
 
 .lyrics-content:hover p {
     color: #000;
