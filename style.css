@@ -194,11 +194,31 @@ section h2::after {
     text-align: center;
 }
 
+.album-artwork-container {
+    position: relative;
+    display: inline-block;
+}
+
+.album-artwork-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(212, 145, 117, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.album-artwork-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 35px 70px rgba(212, 145, 117, 0.4);
+}
+
 .placeholder-artwork {
     width: 300px;
     height: 300px;
     background: linear-gradient(135deg, #f7d2b8 0%, #e8a48b 50%, #d49175 100%);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
@@ -341,9 +361,37 @@ section h2::after {
     background: white;
 }
 
-.lyrics-content {
+.lyrics-scroll-container {
     max-width: 600px;
     margin: 0 auto;
+    max-height: 500px;
+    overflow-y: auto;
+    border: 2px solid #e8a48b;
+    border-radius: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, #faf5f2 0%, #f0e6dc 100%);
+    box-shadow: inset 0 4px 8px rgba(232, 164, 139, 0.1);
+}
+
+.lyrics-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.lyrics-scroll-container::-webkit-scrollbar-track {
+    background: #f0e6dc;
+    border-radius: 4px;
+}
+
+.lyrics-scroll-container::-webkit-scrollbar-thumb {
+    background: #e8a48b;
+    border-radius: 4px;
+}
+
+.lyrics-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #d49175;
+}
+
+.lyrics-content {
     line-height: 2;
 }
 

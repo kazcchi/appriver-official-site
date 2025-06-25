@@ -37,7 +37,10 @@
                 <h2>最新アルバム</h2>
                 <div class="album-info">
                     <div class="album-artwork">
-                        <div class="placeholder-artwork">NUKUMORI</div>
+                        <div class="album-artwork-container">
+                            <img src="nukumori-album.jpg" alt="NUKUMORI アルバムアート" class="album-artwork-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="placeholder-artwork">NUKUMORI</div>
+                        </div>
                     </div>
                     <div class="album-details">
                         <h3>NUKUMORI</h3>
@@ -65,7 +68,8 @@
         <section id="lyrics" class="lyrics-section">
             <div class="container">
                 <h2>歌詞 - いのちの理由</h2>
-                <div class="lyrics-content">
+                <div class="lyrics-scroll-container">
+                    <div class="lyrics-content">
                     <div class="verse">
                         <p>空に問いかけた声が</p>
                         <p>消えてゆく　この静寂の中で</p>
@@ -106,6 +110,7 @@
                         <p>涙が流れる　その理由を</p>
                         <p>心の奥で感じた想い</p>
                         <p>それが私を生かしてる</p>
+                    </div>
                     </div>
                 </div>
             </div>
