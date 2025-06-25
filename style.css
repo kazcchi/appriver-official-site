@@ -392,68 +392,46 @@ section h2::after {
 }
 
 .lyrics-content {
-    line-height: 2;
+    line-height: 2.2;
+    font-size: 1.1rem;
+    text-align: center;
 }
 
-.verse, .chorus {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+.lyrics-content p {
+    margin-bottom: 0.3rem;
+    color: #444;
+    transition: color 0.3s ease;
 }
 
-.verse {
-    background: linear-gradient(135deg, #faf5f2 0%, #f0e6dc 100%);
-    border-left: 4px solid #e8a48b;
-    opacity: 0;
-    animation: fadeInSlide 0.8s ease-out forwards;
+.lyrics-content br {
+    margin-bottom: 1.5rem;
 }
 
-.verse:nth-child(1) { animation-delay: 0.1s; }
-.verse:nth-child(2) { animation-delay: 0.2s; }
-.verse:nth-child(3) { animation-delay: 0.3s; }
-.verse:nth-child(4) { animation-delay: 0.4s; }
-.verse:nth-child(5) { animation-delay: 0.5s; }
-.verse:nth-child(6) { animation-delay: 0.6s; }
-
-@keyframes fadeInSlide {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.chorus {
-    background: linear-gradient(135deg, #f7e6d9 0%, #ead4c4 100%);
-    font-weight: 500;
-    border-left: 4px solid #d49175;
+.chorus-line {
+    font-weight: 600;
+    color: #e8a48b !important;
     position: relative;
-    opacity: 0;
-    animation: fadeInSlide 0.8s ease-out forwards;
 }
 
-.chorus::before {
+.chorus-line::before {
     content: '♫';
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.2rem;
+    left: -25px;
     color: #d49175;
-    opacity: 0.6;
+    font-size: 0.9rem;
+    opacity: 0.7;
 }
 
-.verse:hover, .chorus:hover {
-    transform: translateY(-2px);
+.lyrics-content:hover p {
+    color: #333;
 }
 
-.verse p, .chorus p {
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+.lyrics-content p:hover {
+    color: #e8a48b;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
 }
+
 
 /* Links Section */
 .links-section {
