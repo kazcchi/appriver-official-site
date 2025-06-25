@@ -585,7 +585,7 @@ section h2::after {
 }
 
 .chorus-line {
-    font-weight: 600;
+    font-weight: normal;
     color: #000 !important;
     position: relative;
 }
