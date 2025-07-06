@@ -850,6 +850,13 @@ footer {
 /* Lyrics Modal */
 
 /* --- Compact Songs & Lyrics Overrides --- */
+.songs-container {
+    align-items: flex-start !important;
+}
+.song-section {
+    min-height: 75vh !important;
+    justify-content: flex-start !important;
+}
 .songs-section {
     padding: 0.5rem 1rem !important;
 }
