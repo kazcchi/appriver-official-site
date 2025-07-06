@@ -787,7 +787,27 @@ section h2::after {
     flex-direction: row;
 }
 
-.songs-section {position: relative;}
+.songs-section {
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.songs-section h2 {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .songs-section {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .songs-section h2 {
+        margin-bottom: 0.8rem;
+    }
+}
+
+
 .songs-section .nav-dots {
     position: absolute;
     bottom: 1.5rem;
