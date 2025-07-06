@@ -856,6 +856,7 @@ footer {
 .song-section {
     min-height: 75vh !important;
     justify-content: flex-start !important;
+
 }
 .songs-section {
     padding: 0.5rem 1rem !important;
@@ -895,8 +896,8 @@ footer {
     height:2.5rem;
     border-radius:50%;
 }
-.nav-arrow.prev{ left:0.5rem; }
-.nav-arrow.next{ right:0.5rem; }
+.nav-arrow.prev{ left:-1.5rem; }
+.nav-arrow.next{ right:-1.5rem; }
 
 .nav-dots,
 .page-indicators {
