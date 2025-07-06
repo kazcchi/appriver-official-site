@@ -34,8 +34,8 @@
             <ul class="nav-links">
                 <li><a href="#home" class="nav-item">home</a></li>
                 <li><a href="#album" class="nav-item">album</a></li>
-                <li><a href="#single" class="nav-item">single</a></li>
-                <li><a href="#lyrics" class="nav-item">lyrics</a></li>
+                <li><a href="#single" class="nav-item">songs &amp; lyrics</a></li>
+                
                 <li><a href="#links" class="nav-item">links</a></li>
             </ul>
         </nav>
@@ -69,59 +69,10 @@
             </div>
         </section>
 
-        <section id="single" class="songs-container">
-            <section id="song-1" class="song-section" data-title="いのちの理由">
-                <h2>いのちの理由</h2>
-                <a href="https://linkco.re/Hb9nfMcM" class="stream-link" target="_blank">Listen on TuneCore</a>
-            </section>
-            <section id="song-2" class="song-section" data-title="君の影">
-                <h2>君の影</h2>
-                <a href="https://linkco.re/DDaFCGVU" class="stream-link" target="_blank">Listen on TuneCore</a>
-            </section>
-        </section>
-
-        <section id="lyrics" class="lyrics-section">
+        <section id="songs" class="songs-section">
             <div class="container">
-                <h2>LYRICS</h2>
-                <h3 class="lyrics-song-title">いのちの理由</h3>
-                <div class="lyrics-scroll-container">
-                    <div class="lyrics-content">
-                        <p>空に問いかけた声が</p>
-                        <p>消えてゆく　この静寂の中で</p>
-                        <p>あの日見た夢の続きを</p>
-                        <p>今も探している</p>
-                        <br>
-                        
-                        <p>風に乗せた祈りの言葉</p>
-                        <p>どこか遠く届くように</p>
-                        <p>手を伸ばして掴むはずの</p>
-                        <p>光は儚く揺れる</p>
-                        <br>
-                        
-                        <p class="chorus-line">命の意味を問い続けて</p>
-                        <p class="chorus-line">涙が流れる　その理由を</p>
-                        <p class="chorus-line">心の奥で感じた想い</p>
-                        <p class="chorus-line">それが私を生かしてる</p>
-                        <br>
-                        
-                        <p>夜が明ける　その瞬間に</p>
-                        <p>新しい世界が待っている</p>
-                        <p>痛みさえも抱きしめながら</p>
-                        <p>歩いていく　この道</p>
-                        <br>
-                        
-                        <p>花が咲き散るその儚さに</p>
-                        <p>美しさを見つけられたなら</p>
-                        <p>全てが繋がる　その時を</p>
-                        <p>信じて進もう</p>
-                        <br>
-                        
-                        <p class="chorus-line">命の意味を問い続けて</p>
-                        <p class="chorus-line">涙が流れる　その理由を</p>
-                        <p class="chorus-line">心の奥で感じた想い</p>
-                        <p class="chorus-line">それが私を生かしてる</p>
-                    </div>
-                </div>
+                <h2>Songs &amp; Lyrics</h2>
+                <section id="single" class="songs-container"><!-- songs will be injected by songs.js --></section>
             </div>
         </section>
 
@@ -159,6 +110,6 @@
             <p>&copy; 2025 appriver. All rights reserved.</p>
         </div>
     </footer>
-    <script src="songs.js"></script>
+    <script type="module" src="songsUI.js"></script>
 </body>
 </html>

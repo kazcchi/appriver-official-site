@@ -787,6 +787,15 @@ section h2::after {
     flex-direction: row;
 }
 
+.songs-section {position: relative;}
+.songs-section .nav-dots {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+}
+
 /* old vertical songs-container disabled */
 /* .songs-container {
     scroll-snap-type: y mandatory;
@@ -812,7 +821,97 @@ footer {
     padding: 2rem 0;
 }
 
+/* Lyrics Modal */
+.lyrics-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 1rem;
+}
+.lyrics-modal.show { display: flex; }
+.modal-content {
+    background: #fff;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.8rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+.modal-lyrics {
+    white-space: pre-line;
+    font-family: inherit;
+    line-height: 2;
+    font-size: 1.1rem;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.lyrics-btn {
+    margin-top: 1rem;
+    background: transparent;
+    border: 2px solid #e8a48b;
+    color: #e8a48b;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.lyrics-btn:hover {
+    background: #e8a48b;
+    color: #fff;
+}
+
+/* custom scrollbar for modal lyrics */
+.modal-lyrics::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-lyrics::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+.modal-lyrics::-webkit-scrollbar-thumb {
+    background: #e8a48b;
+    border-radius: 4px;
+}
+
+.track-list{margin-top:1rem;list-style:none;padding:0;font-size:0.95rem;}
+.track-list li{display:flex;align-items:center;margin-bottom:0.4rem;}
+.track-list li span{flex:1;}
+.track-list .lyrics-btn.mini{margin-top:0;}
+
+.song-list .lyrics-item{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid rgba(0,0,0,0.05);}
+
 /* Responsive Design */
+@media (max-width: 600px) {
+    .modal-content {
+        max-width: 90%;
+        padding: 1.2rem;
+    }
+    .modal-lyrics {
+        font-size: 1rem;
+        max-height: 55vh;
+    }
+}
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;

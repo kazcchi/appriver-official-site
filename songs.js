@@ -1,6 +1,38 @@
-// songs.js - smooth scroll, indicator, keyboard nav
+// songs.js - dynamic single generation, scroll nav, lyrics modal
 
 document.addEventListener('DOMContentLoaded', () => {
+  /* -------------------- Config -------------------- */
+  const songs = [
+    {
+      title: 'いのちの理由',
+      stream: 'https://linkco.re/Hb9nfMcM',
+      lyrics: `空に問いかけた声が\n消えてゆく　この静寂の中で\nあの日見た夢の続きを\n今も探している\n\n風に乗せた祈りの言葉\nどこか遠く届くように\n手を伸ばして掴むはずの\n光は儚く揺れる\n\n命の意味を問い続けて\n涙が流れる　その理由を\n心の奥で感じた想い\nそれが私を生かしてる` 
+    },
+    {
+      title: '君の影',
+      stream: 'https://linkco.re/DDaFCGVU',
+      lyrics: `夜が明ける　その瞬間に\n新しい世界が待っている\n痛みさえも抱きしめながら\n歩いていく　この道` 
+    }
+    // ここに曲を追加していくだけでOK
+  ];
+
+  /* ------------- Build song sections -------------- */
+  const singleContainer = document.getElementById('single');
+  singleContainer.innerHTML = '';
+  songs.forEach((song, idx) => {
+    const sec = document.createElement('section');
+    sec.id = `song-${idx + 1}`;
+    sec.className = 'song-section';
+    sec.dataset.title = song.title;
+    sec.innerHTML = `
+      <h2>${song.title}</h2>
+      <a href="${song.stream}" class="stream-link" target="_blank">Listen on TuneCore</a>
+      <button class="lyrics-btn" data-index="${idx}">Lyrics</button>
+    `;
+    singleContainer.appendChild(sec);
+  });
+
+  /* ---------------- Nav Dots & Scroll -------------- */
   const sections = document.querySelectorAll('.song-section');
   const navDotsContainer = document.createElement('div');
   navDotsContainer.className = 'nav-dots';
