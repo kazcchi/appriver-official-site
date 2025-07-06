@@ -763,14 +763,14 @@ section h2::after {
     overflow-x: auto;
     overflow-y: hidden;
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 6rem); /* accommodate heading + padding + dots */
     width: 100%;
 }
 
 .song-section {
     scroll-snap-align: start;
     min-width: 100vw;
-    min-height: 100vh;
+    min-height: calc(100vh - 5rem);
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -831,7 +831,7 @@ section h2::after {
 
 .song-section {
     scroll-snap-align: start;
-    min-height: 100vh;
+    min-height: calc(100vh - 5rem);
     padding: 1rem;
     display: flex;
     flex-direction: column;
