@@ -31,6 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const songsSection = document.getElementById('songs') || document.querySelector('.songs-section');
   (songsSection || document.body).appendChild(navDotsContainer);
 
+  // Arrow navigation
+  const prevArrow = document.createElement('button');
+  prevArrow.className = 'nav-arrow prev';
+  prevArrow.textContent = '‹';
+  prevArrow.addEventListener('click', ()=> move(-1));
+  const nextArrow = document.createElement('button');
+  nextArrow.className = 'nav-arrow next';
+  nextArrow.textContent = '›';
+  nextArrow.addEventListener('click', ()=> move(1));
+  songsSection.appendChild(prevArrow);
+  songsSection.appendChild(nextArrow);
+
   sections.forEach((sec, idx) => {
     const dot = document.createElement('button');
     dot.className = 'nav-dot';
@@ -54,10 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if(['ArrowLeft','ArrowUp'].includes(e.key)){e.preventDefault(); move(-1);} 
   });
   function move(offset){
-    const dots=Array.from(document.querySelectorAll('.nav-dot'));
-    const current=dots.findIndex(d=>d.classList.contains('active'));
-    const next=Math.min(Math.max(current+offset,0),dots.length-1);
-    if(next!==current) sections[next].scrollIntoView({behavior:'smooth'});
+    const dots = Array.from(document.querySelectorAll('.nav-dot'));
+    const current = dots.findIndex(d=>d.classList.contains('active'));
+    const total = dots.length;
+    const next = (current + offset + total) % total;
+    sections[next].scrollIntoView({behavior:'smooth'});
   }
 
   /* -------- Build album track list ------------ */

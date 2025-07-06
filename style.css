@@ -877,6 +877,27 @@ footer {
     margin: 0.8rem 0 0.5rem 0 !important;
     gap: 0.5rem !important;
 }
+.nav-dots {
+    display:none !important;
+}
+
+/* Arrow navigation buttons */
+.nav-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:1500;
+    background:rgba(0,0,0,0.4);
+    color:#fff;
+    border:none;
+    font-size:2rem;
+    width:2.5rem;
+    height:2.5rem;
+    border-radius:50%;
+}
+.nav-arrow.prev{ left:0.5rem; }
+.nav-arrow.next{ right:0.5rem; }
+
 .nav-dots,
 .page-indicators {
     margin-top: 0.5rem !important;
