@@ -855,7 +855,7 @@ footer {
 }
 .song-section {
     min-height: 75vh !important;
-    justify-content: flex-start !important;
+    justify-content: center !important;
 
 }
 .songs-section {
