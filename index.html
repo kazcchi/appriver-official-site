@@ -34,7 +34,7 @@
             <ul class="nav-links">
                 <li><a href="#home" class="nav-item">home</a></li>
                 <li><a href="#album" class="nav-item">album</a></li>
-                <li><a href="#lyrics" class="nav-item">lyrics</a></li>
+                <li><a href="#songs-lyrics" class="nav-item">songs&lyrics</a></li>
                 <li><a href="#links" class="nav-item">links</a></li>
             </ul>
         </nav>
@@ -68,62 +68,86 @@
             </div>
         </section>
 
-        <section id="main-song" class="main-song-section">
-            <div class="container">
-                <h2>single</h2>
-                <div class="singles-grid">
-                    <div class="single-item">
-                        <h3>いのちの理由</h3>
-                        <a href="https://linkco.re/Hb9nfMcM" class="stream-link" target="_blank">Listen Now</a>
-                    </div>
-                    <div class="single-item">
-                        <h3>君の影</h3>
-                        <a href="https://linkco.re/DDaFCGVU" class="stream-link" target="_blank">Listen Now</a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="lyrics" class="lyrics-section">
+
+
+        <section id="songs-lyrics" class="lyrics-section">
             <div class="container">
-                <h2>LYRICS</h2>
-                <h3 class="lyrics-song-title">いのちの理由</h3>
-                <div class="lyrics-scroll-container">
-                    <div class="lyrics-content">
-                        <p>空に問いかけた声が</p>
-                        <p>消えてゆく　この静寂の中で</p>
-                        <p>あの日見た夢の続きを</p>
-                        <p>今も探している</p>
-                        <br>
+                <h2>SONGS & LYRICS</h2>
+
+                <!-- Song Slider Start -->
+                <div class="song-slider">
+                    <button class="slider-btn prev">&#10094;</button>
+                    <div class="slider-track">
+                        <!-- Existing Songs -->
+                        <div class="slider-card" data-link="https://linkco.re/Hb9nfMcM">
+                            <h3>いのちの理由</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/Hb9nfMcM" target="_blank" class="stream-link small">listen now</a>
+                                <a href="#" class="stream-link small secondary">lyric</a>
+                            </div>
+                        </div>
+                        <div class="slider-card" data-link="https://linkco.re/DDaFCGVU">
+                            <h3>君の影</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/DDaFCGVU" target="_blank" class="stream-link small">listen now</a>
+                                <a href="#" class="stream-link small secondary">lyric</a>
+                            </div>
+                        </div>
+                        <!-- Coming Soon Cards -->
+                        <div class="slider-card coming-soon">
+                            <h3>Coming Soon</h3>
+                        </div>
+                        <div class="slider-card coming-soon">
+                            <h3>Coming Soon</h3>
+                        </div>
+                        <div class="slider-card coming-soon">
+                            <h3>Coming Soon</h3>
+                        </div>
+                        <div class="slider-card coming-soon">
+                            <h3>Coming Soon</h3>
+                        </div>
+                        <div class="slider-card coming-soon">
+                            <h3>Coming Soon</h3>
+                        </div>
+                    </div>
+                    <button class="slider-btn next">&#10095;</button>
+                </div>
+                <!-- Song Slider End -->
+
+
+
+
+
                         
-                        <p>風に乗せた祈りの言葉</p>
-                        <p>どこか遠く届くように</p>
-                        <p>手を伸ばして掴むはずの</p>
-                        <p>光は儚く揺れる</p>
-                        <br>
+
+
+
+
+
                         
-                        <p class="chorus-line">命の意味を問い続けて</p>
-                        <p class="chorus-line">涙が流れる　その理由を</p>
-                        <p class="chorus-line">心の奥で感じた想い</p>
-                        <p class="chorus-line">それが私を生かしてる</p>
-                        <br>
+
+
+
+
+
                         
-                        <p>夜が明ける　その瞬間に</p>
-                        <p>新しい世界が待っている</p>
-                        <p>痛みさえも抱きしめながら</p>
-                        <p>歩いていく　この道</p>
-                        <br>
+
+
+
+
+
                         
-                        <p>花が咲き散るその儚さに</p>
-                        <p>美しさを見つけられたなら</p>
-                        <p>全てが繋がる　その時を</p>
-                        <p>信じて進もう</p>
-                        <br>
+
+
+
+
+
                         
-                        <p class="chorus-line">命の意味を問い続けて</p>
-                        <p class="chorus-line">涙が流れる　その理由を</p>
-                        <p class="chorus-line">心の奥で感じた想い</p>
-                        <p class="chorus-line">それが私を生かしてる</p>
+
+
+
+
                     </div>
                 </div>
             </div>
@@ -163,5 +187,6 @@
             <p>&copy; 2025 appriver. All rights reserved.</p>
         </div>
     </footer>
+    <script src="slider.js"></script>
 </body>
 </html>

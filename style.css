@@ -703,6 +703,100 @@ section h2::after {
     background: rgba(250, 250, 250, 0.2);
 }
 
+/* Song Slider */
+.song-slider {
+    position: relative;
+    margin: 3rem 0;
+}
+
+.song-slider .slider-track {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Center track container */
+.song-slider .slider-track {
+    width: 100%;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
+    z-index: 2;
+}
+
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
+
+.slider-btn:hover { background: #e8a48b; color: #fff; }
+
+.slider-track {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.slider-card {
+    min-width: 250px;
+    max-width: 250px;
+    height: 320px;
+    margin: 0 1rem;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.slider-card.coming-soon {
+    background: #f1f1f1;
+    color: #777;
+}
+
+.slider-card h3 { margin-bottom: 1rem; }
+
+.card-actions { display: flex; gap: 0.5rem; }
+
+.stream-link.small { padding: 6px 14px; font-size: 0.8rem; }
+.stream-link.small.secondary { background: transparent; color: #e8a48b; border: 1px solid #e8a48b; }
+
+.slider-btn {
+    background: rgba(255,255,255,0.8);
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
+}
+
+.slider-btn:hover { background: #e8a48b; color: #fff; }
+
 /* Footer */
 footer {
     background: #333;
