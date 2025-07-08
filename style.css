@@ -776,10 +776,10 @@ section h2::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: linear-gradient(45deg, #e8a48b 0%, #d49175 100%);
+    background: linear-gradient(135deg, #ffeee6 0%, #f9f0e8 100%);
     border: none;
     font-size: 2.2rem;
-    color: white;
+    color: #e8a48b;
     width: 55px;
     height: 55px;
     display: flex;
@@ -787,7 +787,7 @@ section h2::after {
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 8px 20px rgba(232, 164, 139, 0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     z-index: 10;
     backdrop-filter: blur(10px);
@@ -802,10 +802,10 @@ section h2::after {
 }
 
 .slider-btn:hover { 
-    background: linear-gradient(45deg, #d49175 0%, #c17d5f 100%);
-    color: #fff; 
+    background: linear-gradient(135deg, #ffeee6 0%, #f9f0e8 100%);
+    color: #d49175; 
     transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 12px 30px rgba(232, 164, 139, 0.5);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 .slider-card.coming-soon {
