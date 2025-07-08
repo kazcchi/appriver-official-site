@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'つくしAまるゴシック', 'Noto Sans JP', sans-serif;
     line-height: 1.6;
     color: #333;
     background: linear-gradient(135deg, #ffeee6 0%, #f9f0e8 100%);
@@ -269,7 +269,7 @@ section:nth-child(odd) {
 section h2 {
     font-size: 2.8rem;
     font-weight: 800;
-    font-family: 'Helvetica Neue', 'Arial Black', sans-serif;
+    font-family: 'つくしAまるゴシック', 'Helvetica Neue', 'Arial Black', sans-serif;
     text-align: center;
     margin-bottom: 3rem;
     color: #333;
@@ -356,7 +356,7 @@ section h2::after {
     justify-content: center;
     font-size: 2.5rem;
     font-weight: normal;
-    font-family: 'M PLUS 2', sans-serif;
+    font-family: 'つくしAまるゴシック', 'M PLUS 2', sans-serif;
     color: white;
     border-radius: 20px;
     box-shadow: 0 25px 50px rgba(212, 145, 117, 0.3);
@@ -378,7 +378,7 @@ section h2::after {
 .album-details h3 {
     font-size: 3rem;
     font-weight: normal;
-    font-family: 'M PLUS 2', sans-serif;
+    font-family: 'つくしAまるゴシック', 'M PLUS 2', sans-serif;
     margin-bottom: 1rem;
     color: #333;
     letter-spacing: -1px;
@@ -500,7 +500,7 @@ section h2::after {
 .single-item h3 {
     font-size: 2.2rem;
     font-weight: 700;
-    font-family: 'M PLUS 2', sans-serif;
+    font-family: 'つくしAまるゴシック', 'M PLUS 2', sans-serif;
     margin-bottom: 1.5rem;
     color: white;
     letter-spacing: -0.5px;
@@ -547,7 +547,7 @@ section h2::after {
 .lyrics-song-title {
     font-size: 2rem;
     font-weight: 600;
-    font-family: 'M PLUS 2', sans-serif;
+    font-family: 'つくしAまるゴシック', sans-serif;
     text-align: center;
     margin-bottom: 2rem;
     color: #e8a48b;
