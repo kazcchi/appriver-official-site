@@ -62,7 +62,7 @@
                         <h3>NUKUMORI</h3>
                         <p class="track-count">15 Tracks</p>
                         <p class="release-date">June 28, 2025 - Available on All Platforms</p>
-                        <a href="https://linkco.re/E7hxe2Ay" class="stream-link" target="_blank">Listen Now</a>
+                        <a href="https://linkco.re/E7hxe2Ay" class="stream-link" target="_blank">listen now</a>
                     </div>
                 </div>
             </div>
@@ -84,36 +84,31 @@
                             <h3>いのちの理由</h3>
                             <div class="card-actions">
                                 <a href="https://linkco.re/Hb9nfMcM" target="_blank" class="stream-link small">listen now</a>
-                                <a href="#" class="stream-link small secondary">lyric</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="inochi">lyric</button>
                             </div>
                         </div>
                         <div class="slider-card" data-link="https://linkco.re/DDaFCGVU">
                             <h3>君の影</h3>
                             <div class="card-actions">
                                 <a href="https://linkco.re/DDaFCGVU" target="_blank" class="stream-link small">listen now</a>
-                                <a href="#" class="stream-link small secondary">lyric</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="kage">lyric</button>
                             </div>
-                        </div>
-                        <!-- Coming Soon Cards -->
-                        <div class="slider-card coming-soon">
-                            <h3>Coming Soon</h3>
-                        </div>
-                        <div class="slider-card coming-soon">
-                            <h3>Coming Soon</h3>
-                        </div>
-                        <div class="slider-card coming-soon">
-                            <h3>Coming Soon</h3>
-                        </div>
-                        <div class="slider-card coming-soon">
-                            <h3>Coming Soon</h3>
-                        </div>
-                        <div class="slider-card coming-soon">
-                            <h3>Coming Soon</h3>
                         </div>
                     </div>
                     <button class="slider-btn next">&#10095;</button>
                 </div>
                 <!-- Song Slider End -->
+                
+                <!-- Lyrics Display -->
+                <div class="lyrics-display" id="lyrics-display" style="display: none;">
+                    <div class="lyrics-song-title" id="lyrics-title"></div>
+                    <div class="lyrics-scroll-container">
+                        <div class="lyrics-content" id="lyrics-content"></div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button class="close-lyrics-btn" id="close-lyrics">close</button>
+                    </div>
+                </div>
 
 
 

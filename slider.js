@@ -1,6 +1,74 @@
 // Simple infinite carousel for song slider
 // Author: Cascade AI
 
+// Lyrics data
+const lyricsData = {
+  inochi: {
+    title: 'いのちの理由',
+    lyrics: `空に問いかけた声が
+消えてゆくこの静寂の中で
+あの日見た夢の続きを
+今も探している
+
+風に乗せた祈りの言葉
+どこか遠く届くように
+手を伸ばして掴むはずの
+光は儚く揺れる
+
+命の意味を問い続けて
+涙が流れるその理由を
+心の奥で感じた想い
+それが私を生かしてる
+
+夜が明けるその瞬間に
+新しい世界が待っている
+痛みさえも抱きしめながら
+歩いて行くこの道
+
+花が咲き散るその儚さに
+美しさを見つけられたなら
+全てが繋がるその時を
+信じて進もう
+
+命の意味を問い続けて
+涙が流れるその理由を
+心の奥で感じた想い
+それが私を生かしてる`
+  },
+  kage: {
+    title: '君の影',
+    lyrics: `もしあの時別れなければ
+今頃君とどこにいるの
+手をつなぎ笑っていたかな
+それとも涙を隠してたの
+
+君の声まだ聞こえる
+あの夜の風の中で
+忘れたいのに忘れられない
+心に響く君の影
+
+夕焼けが二人染めた日
+未来は明るいと思った
+けれど時の波にさらわれ
+君の笑顔も遠く消えた
+
+君の声まだ聞こえる
+あの夜の風の中で
+忘れたいのに忘れられない
+心に響く君の影
+
+もし戻れるならば
+何を言えばよかったの
+過ぎ去った時間の中で
+答えは見つからないまま
+
+君の声まだ聞こえる
+あの夜の風の中で
+忘れたいのに忘れられない
+心に響く君の影`
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   const slider = document.querySelector('.song-slider');
   if (!slider) return;
@@ -10,99 +78,86 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = slider.querySelector('.slider-btn.next');
 
   let cards = Array.from(track.children);
-
-  // Clone first and last card for seamless loop
-  const firstClone = cards[0].cloneNode(true);
-  firstClone.classList.add('clone');
-  const lastClone = cards[cards.length - 1].cloneNode(true);
-  lastClone.classList.add('clone');
-
-  track.appendChild(firstClone);
-  track.insertBefore(lastClone, cards[0]);
-
-  cards = Array.from(track.children); // Update with clones included
-
-  let index = 1; // start from real first card
-  let cardWidth = cards[index].offsetWidth + 32; // include margin 2*16px
-
-  // Set initial position
-  track.style.transform = `translateX(-${cardWidth * index}px)`;
-
-  // Helper to move slide
-  function moveTo(i) {
-    track.style.transition = 'transform 0.4s cubic-bezier(0.42,0,0.58,1)';
-    track.style.transform = `translateX(-${cardWidth * i}px)`;
-    index = i;
-  }
-
-  // Prevent rapid clicks and unify handlers
-  let isAnimating = false;
-  function safeMove(delta) {
-    if (isAnimating) return;
-    isAnimating = true;
-    moveTo(index + delta);
-    // allow slight extra time than transition in case of lag
-    setTimeout(() => (isAnimating = false), 600);
-  }
-  // Map arrows correctly (right arrow shows next card)
-  nextBtn.addEventListener('click', () => safeMove(-1)); // right arrow
-  prevBtn.addEventListener('click', () => safeMove(1));  // left arrow
-
-  // Loop handling
-  track.addEventListener('transitionend', () => {
-    if (cards[index].classList.contains('clone')) {
-      track.style.transition = 'none';
-      if (index === 0) {
-        index = cards.length - 2;
-      } else if (index === cards.length - 1) {
-        index = 1;
-      }
-      track.style.transform = `translateX(-${cardWidth * index}px)`;
+  let currentIndex = 0;
+  
+  // Function to show card at specific index
+  function showCard(index) {
+    // Hide all cards
+    cards.forEach(card => {
+      card.style.display = 'none';
+    });
+    
+    // Show current card
+    if (cards[index]) {
+      cards[index].style.display = 'flex';
     }
+  }
+
+  // Initialize - show first card
+  showCard(currentIndex);
+
+  // Next button
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % cards.length;
+    showCard(currentIndex);
   });
 
-  // Resize handling
-  window.addEventListener('resize', () => {
-    cardWidth = cards[index].getBoundingClientRect().width;
-    track.style.transition = 'none';
-    track.style.transform = `translateX(-${cardWidth * index}px)`;
+  // Previous button
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+    showCard(currentIndex);
   });
 
-  // Touch swipe support (on slider container)
+  // Touch swipe support
   let touchStartX = 0;
-  // Enable pointer events for wider support
-  slider.style.touchAction = 'pan-y'; // allow vertical scroll, disable horizontal default
-
-  // Touch events
+  
   slider.addEventListener('touchstart', (e) => {
-    // store starting X and cancel passive scrolling to capture swipe
-    e.stopPropagation();
     touchStartX = e.touches[0].clientX;
   });
 
-  // optional prevent vertical scroll interference
-  slider.addEventListener('touchmove', (e) => {
-    const diff = e.touches[0].clientX - touchStartX;
-    if (Math.abs(diff) > 10) e.preventDefault();
-  }, {passive:false});
-
   slider.addEventListener('touchend', (e) => {
-    e.stopPropagation();
-    const diff = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(diff) > 40) {
-      diff < 0 ? safeMove(-1) : safeMove(1);
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > 50) { // minimum swipe distance
+      if (diff > 0) {
+        // Swipe left - next card
+        currentIndex = (currentIndex + 1) % cards.length;
+      } else {
+        // Swipe right - previous card
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      }
+      showCard(currentIndex);
     }
   });
 
-  // Pointer (mouse / touch) fallback
-  let pointerStartX = 0;
-  slider.addEventListener('pointerdown', (e) => {
-    pointerStartX = e.clientX;
-  });
-  slider.addEventListener('pointerup', (e) => {
-    const diff = e.clientX - pointerStartX;
-    if (Math.abs(diff) > 40) {
-      diff < 0 ? safeMove(-1) : safeMove(1);
+  // Lyrics display functionality
+  const lyricsDisplay = document.getElementById('lyrics-display');
+  const lyricsTitle = document.getElementById('lyrics-title');
+  const lyricsContent = document.getElementById('lyrics-content');
+  const closeLyricsBtn = document.getElementById('close-lyrics');
+  
+  // Add event listeners for lyric buttons
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('lyric-btn')) {
+      const songId = e.target.dataset.song;
+      const songData = lyricsData[songId];
+      
+      if (songData) {
+        lyricsTitle.textContent = songData.title;
+        lyricsContent.innerHTML = songData.lyrics.split('\n').map(line => 
+          line.trim() === '' ? '<br>' : `<p>${line}</p>`
+        ).join('');
+        lyricsDisplay.style.display = 'block';
+        
+        // Scroll to lyrics
+        lyricsDisplay.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+  });
+  
+  // Close lyrics
+  closeLyricsBtn.addEventListener('click', () => {
+    lyricsDisplay.style.display = 'none';
   });
 });
