@@ -735,33 +735,48 @@ section h2::after {
 /* Song Slider */
 .song-slider {
     position: relative;
-    margin: 3rem 0;
-    overflow: hidden;
+    margin: 3rem auto;
     width: 100%;
+    max-width: 500px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.song-slider .slider-track {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-/* Center track container */
 .slider-track {
-    width: 100%;
-    overflow: visible;
     position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-card {
+    width: 350px;
+    height: 400px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 2px solid #e8a48b;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
 }
 
 .slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.95);
     border: none;
     font-size: 2.2rem;
     color: #333;
@@ -772,51 +787,36 @@ section h2::after {
     justify-content: center;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
-    z-index: 2;
+    z-index: 10;
     backdrop-filter: blur(10px);
 }
 
-.slider-btn.prev { left: 20px; }
-.slider-btn.next { right: 20px; }
+.slider-btn.prev { 
+    left: -70px;
+}
+
+.slider-btn.next { 
+    right: -70px;
+}
 
 .slider-btn:hover { 
     background: #e8a48b; 
     color: #fff; 
     transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 8px 20px rgba(232, 164, 139, 0.3);
-}
-
-.slider-track {
-    display: flex;
-    overflow: hidden;
-    scroll-behavior: smooth;
-}
-
-.slider-card {
-    min-width: 350px;
-    max-width: 350px;
-    width: 350px;
-    height: 400px;
-    margin: 0 auto;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    border-radius: 20px;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid #e8a48b;
-    position: relative;
+    box-shadow: 0 10px 25px rgba(232, 164, 139, 0.4);
 }
 
 .slider-card.coming-soon {
     background: linear-gradient(135deg, #f7f7f7 0%, #e9ecef 100%);
     color: #6c757d;
     border: 2px solid #dee2e6;
+}
+
+.slider-card:hover {
+    transform: translate(-50%, -50%) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 .slider-card h3 { 
@@ -880,28 +880,6 @@ section h2::after {
     transform: translateY(-2px);
 }
 
-.slider-btn {
-    background: rgba(255,255,255,0.8);
-    border: none;
-    font-size: 2rem;
-    color: #333;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: background 0.3s ease;
-}
-
-.slider-btn:hover { 
-    background: #e8a48b; 
-    color: #fff; 
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 8px 20px rgba(232, 164, 139, 0.3);
-}
 
 /* Footer */
 footer {
@@ -977,6 +955,32 @@ footer {
     section h2 {
         font-size: 2rem;
     }
+    
+    /* Song Slider Mobile */
+    .song-slider {
+        max-width: 100%;
+        height: 350px;
+        margin: 2rem auto;
+    }
+    
+    .slider-card {
+        width: 280px;
+        height: 320px;
+    }
+    
+    .slider-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+    
+    .slider-btn.prev { 
+        left: -50px;
+    }
+    
+    .slider-btn.next { 
+        right: -50px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1036,5 +1040,40 @@ footer {
     
     .social-link {
         font-size: 0.7rem;
+    }
+    
+    /* Song Slider Extra Small Mobile */
+    .song-slider {
+        height: 300px;
+        margin: 1.5rem auto;
+    }
+    
+    .slider-card {
+        width: 250px;
+        height: 280px;
+    }
+    
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .slider-btn.prev { 
+        left: -35px;
+    }
+    
+    .slider-btn.next { 
+        right: -35px;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .stream-link.small {
+        padding: 8px 16px;
+        font-size: 0.8rem;
     }
 }
