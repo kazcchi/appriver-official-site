@@ -150,8 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ).join('');
         lyricsDisplay.style.display = 'block';
         
-        // Scroll to lyrics
-        lyricsDisplay.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to lyrics with proper offset for title visibility
+        lyricsDisplay.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   });
