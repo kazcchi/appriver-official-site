@@ -745,11 +745,12 @@ section h2::after {
     position: relative;
     margin: 3rem auto;
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .slider-track {
@@ -766,7 +767,7 @@ section h2::after {
     height: 400px;
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-radius: 20px;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -775,9 +776,8 @@ section h2::after {
     border: 2px solid #e8a48b;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease;
+    transform: translateY(-50%);
+    transition: all 0.4s ease;
 }
 
 .slider-btn {
@@ -802,11 +802,11 @@ section h2::after {
 }
 
 .slider-btn.prev { 
-    left: -45px;
+    left: 10px;
 }
 
 .slider-btn.next { 
-    right: -45px;
+    right: 10px;
 }
 
 .slider-btn:hover { 
@@ -983,11 +983,11 @@ footer {
     }
     
     .slider-btn.prev { 
-        left: -30px;
+        left: 5px;
     }
     
     .slider-btn.next { 
-        right: -30px;
+        right: 5px;
     }
 }
 
@@ -1068,11 +1068,11 @@ footer {
     }
     
     .slider-btn.prev { 
-        left: -25px;
+        left: 5px;
     }
     
     .slider-btn.next { 
-        right: -25px;
+        right: 5px;
     }
     
     .card-actions {

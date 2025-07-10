@@ -109,43 +109,98 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtn = slider.querySelector('.slider-btn.prev');
   const nextBtn = slider.querySelector('.slider-btn.next');
 
-  let cards = Array.from(track.children);
-  let currentIndex = 0;
+  let allCards = Array.from(track.children);
   
-  // Function to show card at specific index
-  function showCard(index) {
-    // Hide all cards
-    cards.forEach(card => {
+  // Filter to get only real song cards (not "coming soon")
+  let cards = allCards.filter(card => !card.classList.contains('coming-soon'));
+  
+  // Hide coming soon cards
+  allCards.forEach(card => {
+    if (card.classList.contains('coming-soon')) {
       card.style.display = 'none';
-    });
-    
-    // Show current card
-    if (cards[index]) {
-      cards[index].style.display = 'flex';
+    } else {
+      card.style.display = 'flex';
     }
+  });
+  
+  // Start with newest card (last card) in center
+  let currentIndex = cards.length - 1;
+  
+  // Function to update card positions
+  function updateCards() {
+    cards.forEach((card, index) => {
+      const relativeIndex = (index - currentIndex + cards.length) % cards.length;
+      
+      if (relativeIndex === 0) {
+        // Main card - center
+        card.style.left = '50%';
+        card.style.transform = 'translateX(-50%) translateY(-50%) scale(1)';
+        card.style.opacity = '1';
+        card.style.zIndex = '3';
+      } else if (relativeIndex === 1) {
+        // Next card - right side
+        card.style.left = '70%';
+        card.style.transform = 'translateX(-50%) translateY(-50%) scale(0.85)';
+        card.style.opacity = '0.7';
+        card.style.zIndex = '2';
+      } else if (relativeIndex === cards.length - 1) {
+        // Previous card - left side
+        card.style.left = '30%';
+        card.style.transform = 'translateX(-50%) translateY(-50%) scale(0.85)';
+        card.style.opacity = '0.7';
+        card.style.zIndex = '2';
+      } else {
+        // Other cards - hidden but ready for navigation
+        card.style.opacity = '0';
+        card.style.zIndex = '1';
+        card.style.left = '50%';
+        card.style.transform = 'translateX(-50%) translateY(-50%) scale(0.8)';
+      }
+    });
   }
 
-  // Initialize - show first card
-  showCard(currentIndex);
+  // Initialize
+  updateCards();
 
-  // Next button
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % cards.length;
-    showCard(currentIndex);
-  });
+  // Button controls
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log('Next button clicked');
+      currentIndex = (currentIndex + 1) % cards.length;
+      updateCards();
+    });
+  }
 
-  // Previous button
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-    showCard(currentIndex);
-  });
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log('Previous button clicked');
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      updateCards();
+    });
+  }
 
-  // Touch swipe support
+  // Touch/Swipe support
   let touchStartX = 0;
+  let touchStartY = 0;
   
   slider.addEventListener('touchstart', (e) => {
     touchStartX = e.touches[0].clientX;
-  });
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  slider.addEventListener('touchmove', (e) => {
+    // Prevent scrolling during horizontal swipe
+    const touchCurrentX = e.touches[0].clientX;
+    const touchCurrentY = e.touches[0].clientY;
+    const diffX = Math.abs(touchCurrentX - touchStartX);
+    const diffY = Math.abs(touchCurrentY - touchStartY);
+    
+    if (diffX > diffY) {
+      e.preventDefault();
+    }
+  }, { passive: false });
 
   slider.addEventListener('touchend', (e) => {
     const touchEndX = e.changedTouches[0].clientX;
@@ -154,14 +209,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (Math.abs(diff) > 50) { // minimum swipe distance
       if (diff > 0) {
         // Swipe left - next card
+        console.log('Swiped left - next');
         currentIndex = (currentIndex + 1) % cards.length;
       } else {
         // Swipe right - previous card
+        console.log('Swiped right - previous');
         currentIndex = (currentIndex - 1 + cards.length) % cards.length;
       }
-      showCard(currentIndex);
+      updateCards();
     }
-  });
+  }, { passive: true });
 
   // Lyrics display functionality
   const lyricsDisplay = document.getElementById('lyrics-display');
@@ -191,5 +248,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close lyrics
   closeLyricsBtn.addEventListener('click', () => {
     lyricsDisplay.style.display = 'none';
+    
+    // Scroll back to songs&lyrics section top
+    const songsLyricsSection = document.getElementById('songs-lyrics');
+    if (songsLyricsSection) {
+      songsLyricsSection.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
+    }
   });
 });
