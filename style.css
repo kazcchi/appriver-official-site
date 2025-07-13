@@ -992,12 +992,13 @@ footer {
     
     /* Lyrics Display Mobile */
     .lyrics-display {
-        margin: 1rem 0;
+        margin: 0.5rem 0;
         padding: 0.8rem;
-        max-height: 90vh;
+        max-height: 85vh;
         overflow: hidden;
         display: flex;
         flex-direction: column;
+        position: relative;
     }
     
     .lyrics-song-title {
@@ -1007,10 +1008,11 @@ footer {
     }
     
     .lyrics-scroll-container {
-        max-height: calc(90vh - 8rem);
+        max-height: calc(85vh - 9rem);
         padding: 12px;
         flex: 1;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     .close-lyrics-btn {
@@ -1018,6 +1020,17 @@ footer {
         margin-top: 0.8rem;
         font-size: 0.9rem;
         flex-shrink: 0;
+    }
+    
+    /* iOS Safari specific fixes */
+    @supports (-webkit-touch-callout: none) {
+        .lyrics-display {
+            max-height: 80vh;
+        }
+        
+        .lyrics-scroll-container {
+            max-height: calc(80vh - 9rem);
+        }
     }
 }
 
@@ -1117,12 +1130,13 @@ footer {
     
     /* Lyrics Display Extra Small Mobile */
     .lyrics-display {
-        margin: 0.5rem 0;
+        margin: 0.3rem 0;
         padding: 0.6rem;
-        max-height: 95vh;
+        max-height: 90vh;
         overflow: hidden;
         display: flex;
         flex-direction: column;
+        position: relative;
     }
     
     .lyrics-song-title {
@@ -1132,10 +1146,11 @@ footer {
     }
     
     .lyrics-scroll-container {
-        max-height: calc(95vh - 7rem);
+        max-height: calc(90vh - 8rem);
         padding: 10px;
         flex: 1;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     .close-lyrics-btn {
@@ -1143,5 +1158,17 @@ footer {
         margin-top: 0.6rem;
         font-size: 0.8rem;
         flex-shrink: 0;
+    }
+    
+    /* iOS Safari specific fixes for small screens */
+    @supports (-webkit-touch-callout: none) {
+        .lyrics-display {
+            max-height: 75vh;
+            margin: 0.2rem 0;
+        }
+        
+        .lyrics-scroll-container {
+            max-height: calc(75vh - 8rem);
+        }
     }
 }
