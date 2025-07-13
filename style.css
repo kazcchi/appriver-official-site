@@ -828,10 +828,20 @@ section h2::after {
 }
 
 .slider-card h3 { 
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     font-size: 1.8rem;
     font-weight: 600;
     color: #333;
+}
+
+.song-subtitle {
+    font-size: 0.9rem;
+    color: #e8a48b;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    letter-spacing: 0.5px;
 }
 
 .slider-card.coming-soon h3 {
@@ -1102,6 +1112,11 @@ footer {
     .slider-card {
         width: 250px;
         height: 280px;
+    }
+    
+    .song-subtitle {
+        font-size: 0.75rem;
+        margin-bottom: 0.6rem;
     }
     
     .slider-btn {
