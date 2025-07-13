@@ -992,24 +992,32 @@ footer {
     
     /* Lyrics Display Mobile */
     .lyrics-display {
-        margin: 1.5rem 0;
-        padding: 1rem;
+        margin: 1rem 0;
+        padding: 0.8rem;
+        max-height: 90vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
     
     .lyrics-song-title {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+        flex-shrink: 0;
     }
     
     .lyrics-scroll-container {
-        max-height: 40vh;
-        padding: 15px;
+        max-height: calc(90vh - 8rem);
+        padding: 12px;
+        flex: 1;
+        overflow-y: auto;
     }
     
     .close-lyrics-btn {
-        padding: 10px 20px;
-        margin-top: 1rem;
+        padding: 8px 16px;
+        margin-top: 0.8rem;
         font-size: 0.9rem;
+        flex-shrink: 0;
     }
 }
 
@@ -1109,22 +1117,31 @@ footer {
     
     /* Lyrics Display Extra Small Mobile */
     .lyrics-display {
-        margin: 1rem 0;
-        padding: 0.8rem;
+        margin: 0.5rem 0;
+        padding: 0.6rem;
+        max-height: 95vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
     
     .lyrics-song-title {
-        font-size: 1.3rem;
-        margin-bottom: 0.8rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.6rem;
+        flex-shrink: 0;
     }
     
     .lyrics-scroll-container {
-        max-height: 35vh;
-        padding: 12px;
+        max-height: calc(95vh - 7rem);
+        padding: 10px;
+        flex: 1;
+        overflow-y: auto;
     }
     
     .close-lyrics-btn {
-        padding: 8px 16px;
+        padding: 6px 14px;
+        margin-top: 0.6rem;
         font-size: 0.8rem;
+        flex-shrink: 0;
     }
 }
