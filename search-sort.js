@@ -65,12 +65,24 @@ class SearchSortManager {
 
   // 検索クリア
   clearSearch() {
+    // 現在表示中の楽曲（検索結果で中央に表示されている楽曲）を記録
+    const currentIndex = this.getCurrentIndex();
+    const currentDisplayedSong = this.filteredSongs.length > currentIndex ? this.filteredSongs[currentIndex] : null;
+    
     this.currentSearch = "";
     const searchInput = document.getElementById('song-search');
     if (searchInput) {
       searchInput.value = "";
     }
+    
+    // 検索をクリアして全楽曲を表示
     this.applySortAndFilter();
+    
+    // 検索結果で中央表示されていた楽曲があれば、それをトップに移動
+    if (currentDisplayedSong) {
+      this.moveTargetSongToTop(currentDisplayedSong);
+    }
+    
     this.updateSearchUI();
   }
 
@@ -348,6 +360,25 @@ class SearchSortManager {
 
   setCurrentIndex(index) {
     this.currentSliderIndex = index;
+  }
+
+  // ターゲット曲をトップに移動
+  moveTargetSongToTop(targetSong) {
+    if (!targetSong || this.filteredSongs.length === 0) return;
+    
+    // ターゲット曲のインデックスを見つける
+    const targetIndex = this.filteredSongs.findIndex(song => song.id === targetSong.id);
+    
+    if (targetIndex > 0) {
+      // ターゲット曲を配列の先頭に移動
+      const targetSongData = this.filteredSongs.splice(targetIndex, 1)[0];
+      this.filteredSongs.unshift(targetSongData);
+      
+      // スライダー表示を更新
+      this.updateSliderDisplay();
+      
+      console.log(`Moved "${targetSong.title}" to top position`);
+    }
   }
 
   // デバウンス関数
