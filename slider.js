@@ -166,16 +166,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const diff = touchStartX - touchEndX;
     
     if (Math.abs(diff) > 50) { // minimum swipe distance
-      if (diff > 0) {
-        // Swipe left - next card
-        console.log('Swiped left - next');
-        currentIndex = (currentIndex + 1) % cards.length;
+      // 検索・ソート機能がアクティブな場合はその関数を使用
+      if (typeof window.searchSortUpdateCards === 'function' && 
+          typeof window.searchSortGetCurrentIndex === 'function' &&
+          typeof window.searchSortSetCurrentIndex === 'function' &&
+          typeof window.searchSortGetCardsLength === 'function') {
+        
+        let newIndex;
+        const currentIdx = window.searchSortGetCurrentIndex();
+        const cardsLength = window.searchSortGetCardsLength();
+        
+        if (diff > 0) {
+          // Swipe left - next card
+          newIndex = (currentIdx + 1) % cardsLength;
+        } else {
+          // Swipe right - previous card
+          newIndex = (currentIdx - 1 + cardsLength) % cardsLength;
+        }
+        
+        window.searchSortSetCurrentIndex(newIndex);
+        window.searchSortUpdateCards();
+        console.log(`Search-sort swipe: ${diff > 0 ? 'next' : 'prev'} -> index ${newIndex}`);
+        
       } else {
-        // Swipe right - previous card
-        console.log('Swiped right - previous');
-        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+        // 従来のスワイプ処理
+        if (diff > 0) {
+          // Swipe left - next card
+          console.log('Swiped left - next');
+          currentIndex = (currentIndex + 1) % cards.length;
+        } else {
+          // Swipe right - previous card
+          console.log('Swiped right - previous');
+          currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+        }
+        updateCards();
       }
-      updateCards();
     }
   }, { passive: true });
 

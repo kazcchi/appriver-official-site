@@ -266,9 +266,14 @@ class SearchSortManager {
       };
     }
 
-    // スワイプイベント再設定
-    // Note: 基本のスワイプ機能はslider.jsで常に動作する
-    // 検索・ソート後は再初期化時にupdateCards関数が正しく動作する
+    // グローバル変数でスワイプ用関数を公開（slider.jsから使用）
+    window.searchSortUpdateCards = updateCards;
+    window.searchSortGetCurrentIndex = () => currentIndex;
+    window.searchSortSetCurrentIndex = (newIndex) => {
+      currentIndex = newIndex;
+      this.setCurrentIndex(currentIndex);
+    };
+    window.searchSortGetCardsLength = () => cards.length;
   }
 
   // 検索UI更新
