@@ -314,17 +314,17 @@ class SearchSortManager {
 
     if (releaseSortBtn) {
       if (this.currentSort === 'releaseDate') {
-        releaseSortBtn.textContent = this.currentOrder === 'desc' ? '📅 最新順' : '📅 古い順';
+        releaseSortBtn.textContent = this.currentOrder === 'desc' ? '⚡ Latest Release' : '💎 Oldest Release';
       } else {
-        releaseSortBtn.textContent = '📅 最新順';
+        releaseSortBtn.textContent = '⚡ Latest Release';
       }
     }
 
     if (readingSortBtn) {
       if (this.currentSort === 'reading') {
-        readingSortBtn.textContent = this.currentOrder === 'asc' ? '🔤 あいうえお順' : '🔤 んわろ順';
+        readingSortBtn.textContent = this.currentOrder === 'asc' ? '📝 あ→ん' : '📝 ん→あ';
       } else {
-        readingSortBtn.textContent = '🔤 あいうえお順';
+        readingSortBtn.textContent = '📝 あ→ん';
       }
     }
   }
