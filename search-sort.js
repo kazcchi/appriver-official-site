@@ -146,12 +146,7 @@ class SearchSortManager {
     });
 
     // スライダーの再初期化（既存のスライダー機能との統合）
-    if (typeof window.initializeSlider === 'function') {
-      window.initializeSlider();
-    } else {
-      // 既存のスライダー初期化コードを呼び出し
-      this.reinitializeSlider();
-    }
+    this.reinitializeSlider();
 
     console.log(`表示楽曲数: ${this.filteredSongs.length}`);
   }
@@ -271,10 +266,16 @@ class SearchSortManager {
       };
     }
 
-    // スワイプイベント再設定
+    // スワイプイベント再設定（slider.jsのグローバル関数を使用）
     const slider = document.querySelector('.song-slider');
-    if (slider) {
-      this.setupSwipeEvents(slider, currentIndex, updateCards, cards);
+    if (slider && typeof window.initializeSliderEvents === 'function') {
+      window.initializeSliderEvents(
+        slider, 
+        cards, 
+        updateCards,
+        () => this.getCurrentIndex(),
+        (newIndex) => this.setCurrentIndex(newIndex)
+      );
     }
   }
 
@@ -342,65 +343,6 @@ class SearchSortManager {
     }
   }
 
-  // スワイプイベントセットアップ
-  setupSwipeEvents(slider, currentIndexRef, updateCards, cards) {
-    // 既存のスワイプイベントリスナーを削除
-    const oldListeners = slider._swipeListeners;
-    if (oldListeners) {
-      slider.removeEventListener('touchstart', oldListeners.touchstart);
-      slider.removeEventListener('touchmove', oldListeners.touchmove);
-      slider.removeEventListener('touchend', oldListeners.touchend);
-    }
-
-    let touchStartX = 0;
-    let touchStartY = 0;
-
-    const touchStartHandler = (e) => {
-      touchStartX = e.touches[0].clientX;
-      touchStartY = e.touches[0].clientY;
-    };
-
-    const touchMoveHandler = (e) => {
-      const touchCurrentX = e.touches[0].clientX;
-      const touchCurrentY = e.touches[0].clientY;
-      const diffX = Math.abs(touchCurrentX - touchStartX);
-      const diffY = Math.abs(touchCurrentY - touchStartY);
-      
-      if (diffX > diffY) {
-        e.preventDefault();
-      }
-    };
-
-    const touchEndHandler = (e) => {
-      const touchEndX = e.changedTouches[0].clientX;
-      const diff = touchStartX - touchEndX;
-      
-      if (Math.abs(diff) > 50) {
-        let newIndex;
-        if (diff > 0) {
-          // Swipe left - next card
-          newIndex = (this.getCurrentIndex() + 1) % cards.length;
-        } else {
-          // Swipe right - previous card
-          newIndex = (this.getCurrentIndex() - 1 + cards.length) % cards.length;
-        }
-        this.setCurrentIndex(newIndex);
-        updateCards();
-      }
-    };
-
-    // イベントリスナーを追加
-    slider.addEventListener('touchstart', touchStartHandler, { passive: true });
-    slider.addEventListener('touchmove', touchMoveHandler, { passive: false });
-    slider.addEventListener('touchend', touchEndHandler, { passive: true });
-
-    // 後で削除できるように保存
-    slider._swipeListeners = {
-      touchstart: touchStartHandler,
-      touchmove: touchMoveHandler,
-      touchend: touchEndHandler
-    };
-  }
 
   // 現在のインデックス管理用ヘルパー関数
   getCurrentIndex() {

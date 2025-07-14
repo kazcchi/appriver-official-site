@@ -81,44 +81,72 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Touch/Swipe support
-  let touchStartX = 0;
-  let touchStartY = 0;
-  
-  slider.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-  }, { passive: true });
-
-  slider.addEventListener('touchmove', (e) => {
-    // Prevent scrolling during horizontal swipe
-    const touchCurrentX = e.touches[0].clientX;
-    const touchCurrentY = e.touches[0].clientY;
-    const diffX = Math.abs(touchCurrentX - touchStartX);
-    const diffY = Math.abs(touchCurrentY - touchStartY);
-    
-    if (diffX > diffY) {
-      e.preventDefault();
+  // グローバル関数として定義（search-sort.jsから呼び出し可能）
+  window.initializeSliderEvents = function(sliderElement, cardsArray, updateCardsFunction, getCurrentIndexFunction, setCurrentIndexFunction) {
+    // 既存のイベントリスナーを削除
+    if (sliderElement._sliderEventListeners) {
+      sliderElement.removeEventListener('touchstart', sliderElement._sliderEventListeners.touchstart);
+      sliderElement.removeEventListener('touchmove', sliderElement._sliderEventListeners.touchmove);
+      sliderElement.removeEventListener('touchend', sliderElement._sliderEventListeners.touchend);
     }
-  }, { passive: false });
 
-  slider.addEventListener('touchend', (e) => {
-    const touchEndX = e.changedTouches[0].clientX;
-    const diff = touchStartX - touchEndX;
-    
-    if (Math.abs(diff) > 50) { // minimum swipe distance
-      if (diff > 0) {
-        // Swipe left - next card
-        console.log('Swiped left - next');
-        currentIndex = (currentIndex + 1) % cards.length;
-      } else {
-        // Swipe right - previous card
-        console.log('Swiped right - previous');
-        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    const touchStartHandler = (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    };
+
+    const touchMoveHandler = (e) => {
+      const touchCurrentX = e.touches[0].clientX;
+      const touchCurrentY = e.touches[0].clientY;
+      const diffX = Math.abs(touchCurrentX - touchStartX);
+      const diffY = Math.abs(touchCurrentY - touchStartY);
+      
+      if (diffX > diffY) {
+        e.preventDefault();
       }
-      updateCards();
-    }
-  }, { passive: true });
+    };
+
+    const touchEndHandler = (e) => {
+      const touchEndX = e.changedTouches[0].clientX;
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > 50) {
+        let newIndex;
+        if (diff > 0) {
+          // Swipe left - next card
+          newIndex = (getCurrentIndexFunction() + 1) % cardsArray.length;
+        } else {
+          // Swipe right - previous card
+          newIndex = (getCurrentIndexFunction() - 1 + cardsArray.length) % cardsArray.length;
+        }
+        setCurrentIndexFunction(newIndex);
+        updateCardsFunction();
+      }
+    };
+
+    // イベントリスナーを追加
+    sliderElement.addEventListener('touchstart', touchStartHandler, { passive: true });
+    sliderElement.addEventListener('touchmove', touchMoveHandler, { passive: false });
+    sliderElement.addEventListener('touchend', touchEndHandler, { passive: true });
+
+    // 後で削除できるように保存
+    sliderElement._sliderEventListeners = {
+      touchstart: touchStartHandler,
+      touchmove: touchMoveHandler,
+      touchend: touchEndHandler
+    };
+  };
+
+  // 初期設定（search-sortが無い場合の従来動作）
+  if (typeof searchSortManager === 'undefined') {
+    window.initializeSliderEvents(slider, cards, updateCards, 
+      () => currentIndex, 
+      (newIndex) => { currentIndex = newIndex; }
+    );
+  }
 
   // Lyrics display functionality
   const lyricsDisplay = document.getElementById('lyrics-display');
