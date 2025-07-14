@@ -52,6 +52,20 @@
             <div class="container">
                 <h2>SONGS & LYRICS</h2>
 
+                <!-- Search & Sort Controls Start -->
+                <div class="search-sort-controls">
+                    <div class="search-container">
+                        <input type="text" id="song-search" placeholder="楽曲名・アルバム名で検索..." class="search-input">
+                        <button id="search-clear" class="search-clear" style="display: none;">×</button>
+                    </div>
+                    <div class="sort-container">
+                        <button id="sort-release" class="sort-btn sort-active sort-desc">📅 最新順</button>
+                        <button id="sort-reading" class="sort-btn">🔤 あいうえお順</button>
+                    </div>
+                    <div id="search-result-count" class="search-result-count" style="display: none;"></div>
+                </div>
+                <!-- Search & Sort Controls End -->
+
                 <!-- Song Slider Start -->
                 <div class="song-slider">
                     <button class="slider-btn prev">&#10094;</button>
@@ -194,6 +208,8 @@
             <p>&copy; 2025 appriver. All rights reserved.</p>
         </div>
     </footer>
+    <script src="songs-data.js"></script>
+    <script src="search-sort.js"></script>
     <script src="slider.js"></script>
 </body>
 </html>

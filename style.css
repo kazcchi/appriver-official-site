@@ -522,6 +522,125 @@ section h2::after {
     background: white;
 }
 
+/* Search & Sort Controls */
+.search-sort-controls {
+    margin: 2rem auto 3rem auto;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 40px 12px 16px;
+    border: 2px solid #e8a48b;
+    border-radius: 25px;
+    font-size: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #d49175;
+    box-shadow: 0 0 10px rgba(232, 164, 139, 0.3);
+}
+
+.search-input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.search-clear {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e8a48b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.search-clear:hover {
+    background: #d49175;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.sort-container {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sort-btn {
+    padding: 10px 20px;
+    border: 2px solid #e8a48b;
+    background: white;
+    color: #e8a48b;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.sort-btn:hover {
+    background: rgba(232, 164, 139, 0.1);
+    transform: translateY(-2px);
+}
+
+.sort-btn.sort-active {
+    background: #e8a48b;
+    color: white;
+    box-shadow: 0 4px 12px rgba(232, 164, 139, 0.3);
+}
+
+.sort-btn.sort-active:hover {
+    background: #d49175;
+    transform: translateY(-2px);
+}
+
+.search-result-count {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Search Highlight */
+.search-highlight {
+    background: linear-gradient(45deg, #e8a48b, #f7d2b8);
+    color: #333;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
 /* Lyrics Display */
 .lyrics-display {
     margin: 3rem 0;
@@ -1000,6 +1119,37 @@ footer {
         right: 5px;
     }
     
+    /* Search & Sort Controls Mobile */
+    .search-sort-controls {
+        margin: 1.5rem auto 2rem auto;
+        padding: 0 1rem;
+    }
+    
+    .search-input {
+        font-size: 0.9rem;
+        padding: 10px 35px 10px 12px;
+    }
+    
+    .search-clear {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+        right: 10px;
+    }
+    
+    .sort-container {
+        gap: 0.6rem;
+    }
+    
+    .sort-btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+    
+    .search-result-count {
+        font-size: 0.8rem;
+    }
+
     /* Lyrics Display Mobile */
     .lyrics-display {
         margin: 0.5rem 0;
