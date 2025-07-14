@@ -266,17 +266,9 @@ class SearchSortManager {
       };
     }
 
-    // スワイプイベント再設定（slider.jsのグローバル関数を使用）
-    const slider = document.querySelector('.song-slider');
-    if (slider && typeof window.initializeSliderEvents === 'function') {
-      window.initializeSliderEvents(
-        slider, 
-        cards, 
-        updateCards,
-        () => this.getCurrentIndex(),
-        (newIndex) => this.setCurrentIndex(newIndex)
-      );
-    }
+    // スワイプイベント再設定
+    // Note: 基本のスワイプ機能はslider.jsで常に動作する
+    // 検索・ソート後は再初期化時にupdateCards関数が正しく動作する
   }
 
   // 検索UI更新
