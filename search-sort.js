@@ -206,8 +206,12 @@ class SearchSortManager {
     const cards = Array.from(track.children);
     if (cards.length === 0) return;
 
-    // 既存のスライダー機能を呼び出し
+    // 初期表示: デフォルトソート（最新順）の場合は最初のカード（最新曲）を表示
+    // それ以外のソート時は現在の状態を維持
     let currentIndex = 0;
+    if (this.currentSort === 'releaseDate' && this.currentOrder === 'desc') {
+      currentIndex = 0; // 最新曲が最初に来る
+    }
 
     const updateCards = () => {
       cards.forEach((card, index) => {

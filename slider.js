@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   
-  // Start with newest card (last card) in center
-  let currentIndex = cards.length - 1;
+  // Start with first card (sorted by search-sort functionality)
+  let currentIndex = 0;
   
   // Function to update card positions
   function updateCards() {
