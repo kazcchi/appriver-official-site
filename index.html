@@ -2,15 +2,15 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>appriver - 公式サイト</title>
     <meta name="description" content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
     
     <!-- OGP Meta Tags -->
     <meta property="og:title" content="appriver - 公式サイト">
     <meta property="og:description" content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
-    <meta property="og:image" content="https://kazcchi.github.io/appriver-official-site/OGP.png">
-    <meta property="og:url" content="https://kazcchi.github.io/appriver-official-site/">
+    <meta property="og:image" content="https://appriver.jp/OGP.png">
+    <meta property="og:url" content="https://appriver.jp/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="appriver">
     <meta property="og:locale" content="ja_JP">
@@ -19,7 +19,39 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="appriver - 公式サイト">
     <meta name="twitter:description" content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
-    <meta name="twitter:image" content="https://kazcchi.github.io/appriver-official-site/OGP.png">
+    <meta name="twitter:image" content="https://appriver.jp/OGP.png">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#e8a48b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="appriver">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="appriver">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-touch-icon-57x57.png">
+    
+    <!-- Standard Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#e8a48b">
+    <meta name="msapplication-TileImage" content="/icons/apple-touch-icon-144x144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
     
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=M+PLUS+2:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -33,8 +65,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home" class="nav-item">home</a></li>
+                <li><a href="#songs-lyrics" class="nav-item">songs&lyrics</a></li>
                 <li><a href="#album" class="nav-item">album</a></li>
-                <li><a href="#lyrics" class="nav-item">lyrics</a></li>
                 <li><a href="#links" class="nav-item">links</a></li>
             </ul>
         </nav>
@@ -45,6 +77,112 @@
             <div class="hero-content">
                 <h1 class="artist-name">appriver</h1>
                 <p class="description">created with SUNO AI</p>
+            </div>
+        </section>
+
+        <section id="songs-lyrics" class="lyrics-section">
+            <div class="container">
+                <h2>SONGS & LYRICS</h2>
+
+                <!-- Search & Sort Controls Start -->
+                <div class="search-sort-controls">
+                    <div class="search-container">
+                        <input type="text" id="song-search" placeholder="楽曲名・アルバム名で検索..." class="search-input">
+                        <button id="search-clear" class="search-clear" style="display: none;">×</button>
+                    </div>
+                    <div class="sort-container">
+                        <button id="sort-release" class="sort-btn sort-active sort-desc">⚡ Latest Release</button>
+                        <button id="sort-reading" class="sort-btn">📝 あ→ん</button>
+                    </div>
+                    <div id="search-result-count" class="search-result-count" style="display: none;"></div>
+                </div>
+                <!-- Search & Sort Controls End -->
+
+                <!-- Song Slider Start -->
+                <div class="song-slider">
+                    <button class="slider-btn prev">&#10094;</button>
+                    <div class="slider-track">
+                        <!-- Existing Songs -->
+                        <div class="slider-card" data-link="https://linkco.re/Hb9nfMcM">
+                            <h3>いのちの理由</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/Hb9nfMcM" target="_blank" class="stream-link small">listen now</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="inochi">lyric</button>
+                            </div>
+                        </div>
+                        <div class="slider-card" data-link="https://linkco.re/DDaFCGVU">
+                            <h3>君の影</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/DDaFCGVU" target="_blank" class="stream-link small">listen now</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="kage">lyric</button>
+                            </div>
+                        </div>
+                        <div class="slider-card" data-link="https://linkco.re/bQ8vxgZd">
+                            <h3>心の羽</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/bQ8vxgZd" target="_blank" class="stream-link small">listen now</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="kokoro">lyric</button>
+                            </div>
+                        </div>
+                        <div class="slider-card" data-link="https://linkco.re/E7hxe2Ay">
+                            <h3>優しい光</h3>
+                            <p class="song-subtitle">album: NUKUMORI</p>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/E7hxe2Ay" target="_blank" class="stream-link small">listen now</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="yasashii">lyric</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn next">&#10095;</button>
+                </div>
+                <!-- Song Slider End -->
+                
+                <!-- Lyrics Display -->
+                <div class="lyrics-display" id="lyrics-display" style="display: none;">
+                    <div class="lyrics-song-title" id="lyrics-title"></div>
+                    <div class="lyrics-scroll-container">
+                        <div class="lyrics-content" id="lyrics-content"></div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button class="close-lyrics-btn" id="close-lyrics">close</button>
+                    </div>
+                </div>
+
+
+
+
+
+                        
+
+
+
+
+
+                        
+
+
+
+
+
+                        
+
+
+
+
+
+                        
+
+
+
+
+
+                        
+
+
+
+
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -62,68 +200,7 @@
                         <h3>NUKUMORI</h3>
                         <p class="track-count">15 Tracks</p>
                         <p class="release-date">June 28, 2025 - Available on All Platforms</p>
-                        <a href="https://linkco.re/E7hxe2Ay" class="stream-link" target="_blank">Listen Now</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="main-song" class="main-song-section">
-            <div class="container">
-                <h2>single</h2>
-                <div class="singles-grid">
-                    <div class="single-item">
-                        <h3>いのちの理由</h3>
-                        <a href="https://linkco.re/Hb9nfMcM" class="stream-link" target="_blank">Listen Now</a>
-                    </div>
-                    <div class="single-item">
-                        <h3>君の影</h3>
-                        <a href="https://linkco.re/DDaFCGVU" class="stream-link" target="_blank">Listen Now</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="lyrics" class="lyrics-section">
-            <div class="container">
-                <h2>LYRICS</h2>
-                <h3 class="lyrics-song-title">いのちの理由</h3>
-                <div class="lyrics-scroll-container">
-                    <div class="lyrics-content">
-                        <p>空に問いかけた声が</p>
-                        <p>消えてゆく　この静寂の中で</p>
-                        <p>あの日見た夢の続きを</p>
-                        <p>今も探している</p>
-                        <br>
-                        
-                        <p>風に乗せた祈りの言葉</p>
-                        <p>どこか遠く届くように</p>
-                        <p>手を伸ばして掴むはずの</p>
-                        <p>光は儚く揺れる</p>
-                        <br>
-                        
-                        <p class="chorus-line">命の意味を問い続けて</p>
-                        <p class="chorus-line">涙が流れる　その理由を</p>
-                        <p class="chorus-line">心の奥で感じた想い</p>
-                        <p class="chorus-line">それが私を生かしてる</p>
-                        <br>
-                        
-                        <p>夜が明ける　その瞬間に</p>
-                        <p>新しい世界が待っている</p>
-                        <p>痛みさえも抱きしめながら</p>
-                        <p>歩いていく　この道</p>
-                        <br>
-                        
-                        <p>花が咲き散るその儚さに</p>
-                        <p>美しさを見つけられたなら</p>
-                        <p>全てが繋がる　その時を</p>
-                        <p>信じて進もう</p>
-                        <br>
-                        
-                        <p class="chorus-line">命の意味を問い続けて</p>
-                        <p class="chorus-line">涙が流れる　その理由を</p>
-                        <p class="chorus-line">心の奥で感じた想い</p>
-                        <p class="chorus-line">それが私を生かしてる</p>
+                        <a href="https://linkco.re/E7hxe2Ay" class="stream-link" target="_blank">listen now</a>
                     </div>
                 </div>
             </div>
@@ -163,5 +240,8 @@
             <p>&copy; 2025 appriver. All rights reserved.</p>
         </div>
     </footer>
+    <script src="songs-data.js"></script>
+    <script src="search-sort.js"></script>
+    <script src="slider.js"></script>
 </body>
 </html>

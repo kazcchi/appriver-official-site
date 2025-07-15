@@ -6,13 +6,14 @@
 }
 
 body {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Hiragino Maru Gothic ProN', 'M PLUS 2', 'Noto Sans JP', sans-serif;
     line-height: 1.6;
     color: #333;
     background: linear-gradient(135deg, #ffeee6 0%, #f9f0e8 100%);
     min-height: 100vh;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 /* Loading Animation */
@@ -256,6 +257,12 @@ section {
     padding: 5rem 0;
     position: relative;
     overflow: hidden;
+    scroll-margin-top: 100px;
+}
+
+/* Links section keeps default behavior */
+#links {
+    scroll-margin-top: 0;
 }
 
 section:nth-child(even) {
@@ -269,7 +276,7 @@ section:nth-child(odd) {
 section h2 {
     font-size: 2.8rem;
     font-weight: 800;
-    font-family: 'Helvetica Neue', 'Arial Black', sans-serif;
+    font-family: 'Hiragino Maru Gothic ProN', 'M PLUS 2', 'Noto Sans JP', sans-serif;
     text-align: center;
     margin-bottom: 3rem;
     color: #333;
@@ -356,7 +363,7 @@ section h2::after {
     justify-content: center;
     font-size: 2.5rem;
     font-weight: normal;
-    font-family: 'M PLUS 2', sans-serif;
+    font-family: 'Hiragino Maru Gothic ProN', 'M PLUS 2', 'Noto Sans JP', sans-serif;
     color: white;
     border-radius: 20px;
     box-shadow: 0 25px 50px rgba(212, 145, 117, 0.3);
@@ -378,7 +385,7 @@ section h2::after {
 .album-details h3 {
     font-size: 3rem;
     font-weight: normal;
-    font-family: 'M PLUS 2', sans-serif;
+    font-family: 'Hiragino Maru Gothic ProN', 'M PLUS 2', 'Noto Sans JP', sans-serif;
     margin-bottom: 1rem;
     color: #333;
     letter-spacing: -1px;
@@ -500,7 +507,7 @@ section h2::after {
 .single-item h3 {
     font-size: 2.2rem;
     font-weight: 700;
-    font-family: 'M PLUS 2', sans-serif;
+    font-family: 'Hiragino Maru Gothic ProN', 'M PLUS 2', 'Noto Sans JP', sans-serif;
     margin-bottom: 1.5rem;
     color: white;
     letter-spacing: -0.5px;
@@ -515,10 +522,159 @@ section h2::after {
     background: white;
 }
 
+/* Search & Sort Controls */
+.search-sort-controls {
+    margin: 2rem auto 3rem auto;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 40px 12px 16px;
+    border: 2px solid #e8a48b;
+    border-radius: 25px;
+    font-size: 1rem;
+    background: white;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #d49175;
+    box-shadow: 0 0 10px rgba(232, 164, 139, 0.3);
+}
+
+.search-input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.search-clear {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e8a48b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.search-clear:hover {
+    background: #d49175;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.sort-container {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sort-btn {
+    padding: 10px 20px;
+    border: 2px solid #e8a48b;
+    background: white;
+    color: #e8a48b;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.sort-btn:hover {
+    background: rgba(232, 164, 139, 0.1);
+    transform: translateY(-2px);
+}
+
+.sort-btn.sort-active {
+    background: #e8a48b;
+    color: white;
+    box-shadow: 0 4px 12px rgba(232, 164, 139, 0.3);
+}
+
+.sort-btn.sort-active:hover {
+    background: #d49175;
+    transform: translateY(-2px);
+}
+
+.search-result-count {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* Search Highlight */
+.search-highlight {
+    background: linear-gradient(45deg, #e8a48b, #f7d2b8);
+    color: #333;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+/* Lyrics Display */
+.lyrics-display {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #faf5f2 0%, #f0e6dc 100%);
+    border-radius: 20px;
+    border: 2px solid #e8a48b;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    scroll-margin-top: 100px;
+}
+
+.close-lyrics-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #e8a48b 0%, #d49175 100%);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+.close-lyrics-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(232, 164, 139, 0.4);
+}
+
 .lyrics-song-title {
     font-size: 2rem;
     font-weight: 600;
-    font-family: 'M PLUS 2', sans-serif;
+    font-family: 'Hiragino Maru Gothic ProN', 'M PLUS 2', 'Noto Sans JP', sans-serif;
     text-align: center;
     margin-bottom: 2rem;
     color: #e8a48b;
@@ -703,6 +859,165 @@ section h2::after {
     background: rgba(250, 250, 250, 0.2);
 }
 
+/* Song Slider */
+.song-slider {
+    position: relative;
+    margin: 3rem auto;
+    width: 100%;
+    max-width: 700px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slider-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-card {
+    width: 350px;
+    height: 400px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 2px solid #e8a48b;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.4s ease;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #ffeee6 0%, #f9f0e8 100%);
+    border: none;
+    font-size: 2.2rem;
+    color: #e8a48b;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.slider-btn.prev { 
+    left: 10px;
+}
+
+.slider-btn.next { 
+    right: 10px;
+}
+
+.slider-btn:hover { 
+    background: linear-gradient(135deg, #ffeee6 0%, #f9f0e8 100%);
+    color: #d49175; 
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.slider-card.coming-soon {
+    background: linear-gradient(135deg, #f7f7f7 0%, #e9ecef 100%);
+    color: #6c757d;
+    border: 2px solid #dee2e6;
+}
+
+.slider-card:hover {
+    transform: translate(-50%, -50%) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.slider-card h3 { 
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.song-subtitle {
+    font-size: 0.9rem;
+    color: #e8a48b;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    letter-spacing: 0.5px;
+}
+
+.slider-card.coming-soon h3 {
+    color: #6c757d;
+    font-size: 1.6rem;
+}
+
+.card-actions { 
+    display: flex; 
+    gap: 0.8rem; 
+    margin-top: 1rem;
+}
+
+.stream-link.small { 
+    padding: 10px 20px; 
+    font-size: 0.9rem;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stream-link.small.secondary { 
+    background: transparent; 
+    color: #e8a48b; 
+    border: 2px solid #e8a48b;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.stream-link.small.secondary:hover {
+    background: #e8a48b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.lyric-btn {
+    display: inline-block;
+    background: transparent;
+    color: #e8a48b;
+    border: 2px solid #e8a48b;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.lyric-btn:hover {
+    background: #e8a48b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+
 /* Footer */
 footer {
     background: #333;
@@ -777,6 +1092,106 @@ footer {
     section h2 {
         font-size: 2rem;
     }
+    
+    /* Song Slider Mobile */
+    .song-slider {
+        max-width: 100%;
+        height: 350px;
+        margin: 2rem auto;
+    }
+    
+    .slider-card {
+        width: 280px;
+        height: 320px;
+    }
+    
+    .slider-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+    
+    .slider-btn.prev { 
+        left: 5px;
+    }
+    
+    .slider-btn.next { 
+        right: 5px;
+    }
+    
+    /* Search & Sort Controls Mobile */
+    .search-sort-controls {
+        margin: 1.5rem auto 2rem auto;
+        padding: 0 1rem;
+    }
+    
+    .search-input {
+        font-size: 0.9rem;
+        padding: 10px 35px 10px 12px;
+    }
+    
+    .search-clear {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+        right: 10px;
+    }
+    
+    .sort-container {
+        gap: 0.6rem;
+    }
+    
+    .sort-btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+    
+    .search-result-count {
+        font-size: 0.8rem;
+    }
+
+    /* Lyrics Display Mobile */
+    .lyrics-display {
+        margin: 0.5rem 0;
+        padding: 0.8rem;
+        max-height: 85vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .lyrics-song-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+        flex-shrink: 0;
+    }
+    
+    .lyrics-scroll-container {
+        max-height: calc(85vh - 12rem);
+        padding: 12px;
+        flex: 1;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .close-lyrics-btn {
+        padding: 8px 16px;
+        margin-top: 0.8rem;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+    }
+    
+    /* iOS Safari specific fixes */
+    @supports (-webkit-touch-callout: none) {
+        .lyrics-display {
+            max-height: 80vh;
+        }
+        
+        .lyrics-scroll-container {
+            max-height: calc(80vh - 12rem);
+        }
+    }
 }
 
 @media (max-width: 480px) {
@@ -836,5 +1251,89 @@ footer {
     
     .social-link {
         font-size: 0.7rem;
+    }
+    
+    /* Song Slider Extra Small Mobile */
+    .song-slider {
+        height: 300px;
+        margin: 1.5rem auto;
+    }
+    
+    .slider-card {
+        width: 250px;
+        height: 280px;
+    }
+    
+    .song-subtitle {
+        font-size: 0.75rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .slider-btn.prev { 
+        left: 5px;
+    }
+    
+    .slider-btn.next { 
+        right: 5px;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .stream-link.small {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+    
+    /* Lyrics Display Extra Small Mobile */
+    .lyrics-display {
+        margin: 0.3rem 0;
+        padding: 0.6rem;
+        max-height: 90vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .lyrics-song-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.6rem;
+        flex-shrink: 0;
+    }
+    
+    .lyrics-scroll-container {
+        max-height: calc(90vh - 11rem);
+        padding: 10px;
+        flex: 1;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .close-lyrics-btn {
+        padding: 6px 14px;
+        margin-top: 0.6rem;
+        font-size: 0.8rem;
+        flex-shrink: 0;
+    }
+    
+    /* iOS Safari specific fixes for small screens */
+    @supports (-webkit-touch-callout: none) {
+        .lyrics-display {
+            max-height: 75vh;
+            margin: 0.2rem 0;
+        }
+        
+        .lyrics-scroll-container {
+            max-height: calc(75vh - 11rem);
+        }
     }
 }
