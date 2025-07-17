@@ -1049,7 +1049,7 @@ section h2::after {
 .players-description {
     text-align: center;
     font-size: 1.1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.8rem;
     opacity: 0.9;
     font-weight: 300;
 }
@@ -1190,6 +1190,7 @@ section h2::after {
     text-align: center;
     position: relative;
     z-index: 2;
+    margin-bottom: 1.5rem;
 }
 
 .player-note p {
