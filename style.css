@@ -9,7 +9,7 @@ body {
     font-family: 'Hiragino Maru Gothic ProN', 'M PLUS 2', 'Noto Sans JP', sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #ffeee6 0%, #f9f0e8 100%);
+    background: linear-gradient(180deg, #ffeee6 0%, #f9f0e8 25%, #fff5f2 50%, #f5ebe6 75%, #f0e0d6 100%);
     min-height: 100vh;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -299,7 +299,7 @@ section h2::after {
 
 /* Album Section */
 .album-section {
-    background: white;
+    background: linear-gradient(135deg, #f8f3ef 0%, #f2e8e1 100%);
     position: relative;
 }
 
@@ -519,7 +519,7 @@ section h2::after {
 
 /* Lyrics Section */
 .lyrics-section {
-    background: white;
+    background: linear-gradient(135deg, #fff8f5 0%, #faf0eb 100%);
 }
 
 /* Search & Sort Controls */
@@ -1018,6 +1018,190 @@ section h2::after {
 }
 
 
+/* Music Players Section */
+.music-players-section {
+    background: linear-gradient(135deg, #f0e6db 0%, #e8ddd2 100%);
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.music-players-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><circle cx="30" cy="30" r="20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/><circle cx="30" cy="30" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+    opacity: 0.3;
+    animation: movePattern 20s linear infinite;
+}
+
+.music-players-section h2 {
+    color: #333;
+}
+
+.music-players-section h2::after {
+    background: #e8a48b;
+}
+
+.players-description {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.platform-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.platform-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(232, 164, 139, 0.8);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    border: 2px solid rgba(232, 164, 139, 0.6);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(15px);
+    min-width: 120px;
+    font-family: inherit;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+
+.platform-btn i {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.platform-btn:hover {
+    background: rgba(232, 164, 139, 0.9);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.platform-btn.active {
+    background: white;
+    color: #e8a48b;
+    border-color: #e8a48b;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.platform-btn.coming-soon {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.platform-btn.coming-soon:hover {
+    transform: none;
+    background: rgba(232, 164, 139, 0.8);
+    box-shadow: none;
+}
+
+.player-container {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.player-embed {
+    width: 100%;
+}
+
+.player-embed iframe {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.coming-soon-message {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
+    border-radius: 20px;
+    border: 2px solid rgba(232, 164, 139, 0.3);
+    color: #333;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
+}
+
+.coming-soon-message i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+    color: #e8a48b;
+}
+
+.coming-soon-message h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.coming-soon-message p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.coming-soon-message .stream-link {
+    display: inline-block;
+    background: #e8a48b;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #e8a48b;
+}
+
+.coming-soon-message .stream-link:hover {
+    background: white;
+    color: #e8a48b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(232, 164, 139, 0.3);
+}
+
+.player-note {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.player-note p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.player-note i {
+    margin-right: 0.5rem;
+}
+
 /* Footer */
 footer {
     background: #333;
@@ -1211,6 +1395,30 @@ footer {
         font-size: 1.2rem;
     }
     
+    /* Lyrics Display Extra Small Mobile - Add safe area padding */
+    .lyrics-display {
+        margin: 0.3rem 0;
+        padding: 0.6rem;
+        max-height: 90vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding-top: calc(0.6rem + env(safe-area-inset-top) + 40px);
+    }
+    
+    /* iOS Safari specific fixes for small screens */
+    @supports (-webkit-touch-callout: none) {
+        .lyrics-display {
+            max-height: 75vh;
+            margin: 0.2rem 0;
+            padding-top: calc(0.6rem + env(safe-area-inset-top) + 50px);
+        }
+        
+        .lyrics-scroll-container {
+            max-height: calc(75vh - 12rem);
+        }
+    }
+    
     .album-details h3 {
         font-size: 2rem;
     }
@@ -1302,6 +1510,7 @@ footer {
         display: flex;
         flex-direction: column;
         position: relative;
+        padding-top: calc(env(safe-area-inset-top) + 20px) !important;
     }
     
     .lyrics-song-title {
@@ -1330,10 +1539,57 @@ footer {
         .lyrics-display {
             max-height: 75vh;
             margin: 0.2rem 0;
+            padding-top: calc(env(safe-area-inset-top) + 30px) !important;
         }
         
         .lyrics-scroll-container {
             max-height: calc(75vh - 11rem);
         }
+    }
+
+    /* Music Players Mobile */
+    .platform-selector {
+        gap: 0.8rem;
+    }
+    
+    .platform-btn {
+        min-width: 90px;
+        padding: 0.8rem 1rem;
+    }
+    
+    .platform-btn i {
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .player-container {
+        padding: 1rem;
+        margin: 0 auto 1.5rem auto;
+    }
+    
+    .player-embed iframe {
+        height: 380px;
+        min-height: 350px;
+    }
+    
+    .coming-soon-message {
+        padding: 2rem 1rem;
+    }
+    
+    .coming-soon-message i {
+        font-size: 2.5rem;
+    }
+    
+    .coming-soon-message h3 {
+        font-size: 1.3rem;
+    }
+    
+    .players-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .player-note p {
+        font-size: 0.8rem;
     }
 }
