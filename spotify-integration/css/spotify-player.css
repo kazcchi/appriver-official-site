@@ -1,0 +1,276 @@
+/* appriver Spotify Player Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', 'M PLUS 2', sans-serif;
+    background: linear-gradient(135deg, #ffeee6 0%, #f9f0e8 100%);
+    color: #333;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(232, 164, 139, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e8a48b;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 300;
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+}
+
+.player-section {
+    margin-bottom: 40px;
+}
+
+.player-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #e8a48b;
+}
+
+.player-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(232, 164, 139, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.player-info {
+    margin-bottom: 30px;
+}
+
+.player-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.player-info p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.note {
+    background: rgba(232, 164, 139, 0.1);
+    border: 1px solid rgba(232, 164, 139, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.note strong {
+    color: #e8a48b;
+}
+
+/* Spotify Embed Container */
+.spotify-embed-container {
+    margin-bottom: 40px;
+}
+
+.loading-placeholder {
+    background: rgba(232, 164, 139, 0.1);
+    border: 2px dashed rgba(232, 164, 139, 0.3);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-placeholder p {
+    font-size: 1.2rem;
+    color: #e8a48b;
+    margin-bottom: 10px;
+}
+
+.small {
+    font-size: 0.9rem !important;
+    color: #666 !important;
+}
+
+/* Individual Tracks */
+.individual-tracks {
+    margin-top: 40px;
+}
+
+.individual-tracks h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.track-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.track-item {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(232, 164, 139, 0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.track-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #e8a48b;
+}
+
+.track-embed-placeholder {
+    background: rgba(232, 164, 139, 0.05);
+    border: 1px dashed rgba(232, 164, 139, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    height: 152px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.track-embed-placeholder p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Instructions */
+.instructions {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(232, 164, 139, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.instructions h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #e8a48b;
+}
+
+.instructions ol {
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    padding: 20px 0;
+    border-top: 1px solid rgba(232, 164, 139, 0.2);
+    margin-top: 40px;
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .player-container {
+        padding: 20px;
+    }
+    
+    .track-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .loading-placeholder {
+        height: 300px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .player-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .loading-placeholder {
+        height: 250px;
+    }
+    
+    .loading-placeholder p {
+        font-size: 1rem;
+    }
+}
+
+/* Spotify Embed Styles (for actual implementation) */
+.spotify-embed-container iframe {
+    width: 100%;
+    height: 380px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.spotify-embed-container iframe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 48px rgba(232, 164, 139, 0.2);
+}
+
+.track-item iframe {
+    width: 100%;
+    height: 152px;
+    border-radius: 8px;
+    border: none;
+}

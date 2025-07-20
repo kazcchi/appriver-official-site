@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>appriver - 公式サイト（Spotify統合テスト）</title>
+    <meta name="description" content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
+    
+    <!-- OGP Meta Tags -->
+    <meta property="og:title" content="appriver - 公式サイト">
+    <meta property="og:description" content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
+    <meta property="og:image" content="https://appriver.jp/OGP.png">
+    <meta property="og:url" content="https://appriver.jp/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="appriver">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="appriver - 公式サイト">
+    <meta name="twitter:description" content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
+    <meta name="twitter:image" content="https://appriver.jp/OGP.png">
+    
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="css/spotify-player.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=M+PLUS+2:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Spotify Player Integration Styles -->
+    <style>
+        /* Spotify Player Integration */
+        .spotify-player-section {
+            background: linear-gradient(135deg, #faf5f2 0%, #f0e6dc 100%);
+            padding: 60px 0;
+            margin: 40px 0;
+        }
+        
+        .spotify-player-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .spotify-player-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .spotify-player-header h2 {
+            font-size: 2.5rem;
+            color: #e8a48b;
+            margin-bottom: 10px;
+            font-family: 'M PLUS 2', sans-serif;
+            font-weight: 700;
+        }
+        
+        .spotify-player-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .spotify-embed-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(232, 164, 139, 0.2);
+        }
+        
+        .spotify-embed-wrapper iframe {
+            width: 100%;
+            height: 380px;
+            border-radius: 12px;
+            border: none;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .spotify-note {
+            background: rgba(232, 164, 139, 0.1);
+            border: 1px solid rgba(232, 164, 139, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .spotify-note p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .spotify-note strong {
+            color: #e8a48b;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .spotify-player-header h2 {
+                font-size: 2rem;
+            }
+            
+            .spotify-embed-wrapper {
+                padding: 20px;
+            }
+            
+            .spotify-embed-wrapper iframe {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>appriver</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item">home</a></li>
+                <li><a href="#songs-lyrics" class="nav-item">songs&lyrics</a></li>
+                <li><a href="#album" class="nav-item">album</a></li>
+                <li><a href="#spotify-player" class="nav-item">spotify</a></li>
+                <li><a href="#links" class="nav-item">links</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="artist-name">appriver</h1>
+                <p class="description">created with SUNO AI</p>
+            </div>
+        </section>
+
+        <section id="songs-lyrics" class="lyrics-section">
+            <div class="container">
+                <h2>SONGS & LYRICS</h2>
+
+                <!-- Song Slider Start -->
+                <div class="song-slider">
+                    <button class="slider-btn prev">&#10094;</button>
+                    <div class="slider-track">
+                        <!-- Existing Songs -->
+                        <div class="slider-card" data-link="https://linkco.re/Hb9nfMcM">
+                            <h3>いのちの理由</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/Hb9nfMcM" target="_blank" class="stream-link small">listen now</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="inochi">lyric</button>
+                            </div>
+                        </div>
+                        <div class="slider-card" data-link="https://linkco.re/DDaFCGVU">
+                            <h3>君の影</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/DDaFCGVU" target="_blank" class="stream-link small">listen now</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="kage">lyric</button>
+                            </div>
+                        </div>
+                        <div class="slider-card" data-link="https://linkco.re/bQ8vxgZd">
+                            <h3>心の羽</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/bQ8vxgZd" target="_blank" class="stream-link small">listen now</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="kokoro">lyric</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn next">&#10095;</button>
+                </div>
+                <!-- Song Slider End -->
+                
+                <!-- Lyrics Display -->
+                <div class="lyrics-display" id="lyrics-display" style="display: none;">
+                    <div class="lyrics-song-title" id="lyrics-title"></div>
+                    <div class="lyrics-scroll-container">
+                        <div class="lyrics-content" id="lyrics-content"></div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button class="close-lyrics-btn" id="close-lyrics">close</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Spotify Player Section -->
+        <section id="spotify-player" class="spotify-player-section">
+            <div class="container">
+                <div class="spotify-player-header">
+                    <h2>Spotify Player</h2>
+                    <p>appriver楽曲をSpotifyで直接お楽しみください</p>
+                </div>
+                
+                <div class="spotify-embed-wrapper">
+                    <iframe 
+                        data-testid="embed-iframe" 
+                        src="https://open.spotify.com/embed/playlist/1Y4ICAnET0o7CPHRycOriz?utm_source=generator" 
+                        frameborder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                    
+                    <div class="spotify-note">
+                        <p>
+                            <strong>再生について：</strong>
+                            Premium会員はフル楽曲再生、無料会員は30秒プレビューでお楽しみいただけます
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="album" class="album-section">
+            <div class="container">
+                <h2>ALBUM</h2>
+                <div class="album-info">
+                    <div class="album-artwork">
+                        <div class="album-artwork-container">
+                            <img src="../nukumori-album.jpg" alt="NUKUMORI アルバムアート" class="album-artwork-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="placeholder-artwork">NUKUMORI</div>
+                        </div>
+                    </div>
+                    <div class="album-details">
+                        <h3>NUKUMORI</h3>
+                        <p class="track-count">15 Tracks</p>
+                        <p class="release-date">June 28, 2025 - Available on All Platforms</p>
+                        <a href="https://linkco.re/E7hxe2Ay" class="stream-link" target="_blank">listen now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="links" class="links-section">
+            <div class="container">
+                <h2>Links</h2>
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/@appriver?is_from_webapp=1&sender_device=pc" target="_blank" class="social-link tiktok">
+                        <i class="fab fa-tiktok"></i>
+                        TikTok
+                    </a>
+                    <a href="https://www.tiktok.com/@appriver12?is_from_webapp=1&sender_device=pc" target="_blank" class="social-link tiktok">
+                        <i class="fab fa-tiktok"></i>
+                        TikTok 2
+                    </a>
+                    <a href="https://www.youtube.com/@appriver12" target="_blank" class="social-link youtube">
+                        <i class="fab fa-youtube"></i>
+                        YouTube
+                    </a>
+                    <a href="https://open.spotify.com/intl-ja/artist/2PbgbV4vBCzAUV9ZfHPG3Z" target="_blank" class="social-link spotify">
+                        <i class="fab fa-spotify"></i>
+                        Spotify
+                    </a>
+                    <a href="https://music.apple.com/jp/artist/%E3%82%A2%E3%83%83%E3%83%97%E3%83%AA%E3%83%90%E3%83%BC/1816403477" target="_blank" class="social-link apple-music">
+                        <i class="fab fa-apple"></i>
+                        Apple Music
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 appriver. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../slider.js"></script>
+</body>
+</html>

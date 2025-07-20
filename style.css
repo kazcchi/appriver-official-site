@@ -677,7 +677,14 @@ section h2::after {
     font-family: 'Hiragino Maru Gothic ProN', 'M PLUS 2', 'Noto Sans JP', sans-serif;
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: 0;
     color: #e8a48b;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px 30px;
+    background: transparent;
+    border-radius: 25px;
 }
 
 .lyrics-scroll-container {
@@ -1282,7 +1289,7 @@ footer {
     .song-slider {
         max-width: 100%;
         height: 350px;
-        margin: 2rem auto;
+        margin: 2rem auto 3rem auto;
     }
     
     .slider-card {
@@ -1306,7 +1313,7 @@ footer {
     
     /* Search & Sort Controls Mobile */
     .search-sort-controls {
-        margin: 1.5rem auto 2rem auto;
+        margin: 1.5rem auto 2.5rem auto;
         padding: 0 1rem;
     }
     
@@ -1337,34 +1344,47 @@ footer {
 
     /* Lyrics Display Mobile */
     .lyrics-display {
-        margin: 0.5rem 0;
-        padding: 0.8rem;
-        max-height: 85vh;
+        margin: 6.0rem 0 1.5rem 0;
+        padding: 1.0rem 0.8rem 1.8rem 0.8rem;
+        max-height: 75vh;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         position: relative;
+        justify-content: space-between;
+        scroll-margin-top: 120px;
     }
     
     .lyrics-song-title {
         font-size: 1.3rem;
-        margin-bottom: 0.8rem;
+        margin-bottom: 1.2rem;
+        margin-top: 0.4rem;
         flex-shrink: 0;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 20px;
+        background: transparent;
+        border-radius: 25px;
     }
     
     .lyrics-scroll-container {
-        max-height: calc(85vh - 12rem);
-        padding: 12px;
+        max-height: calc(75vh - 16rem);
+        padding: 16px 12px;
         flex: 1;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
     }
     
     .close-lyrics-btn {
-        padding: 8px 16px;
-        margin-top: 0.8rem;
+        padding: 12px 20px;
+        margin: 1.2rem auto 1.2rem auto;
         font-size: 0.9rem;
         flex-shrink: 0;
+        display: block;
+        min-height: 44px;
+        box-sizing: border-box;
     }
     
     /* iOS Safari specific fixes */
@@ -1398,25 +1418,27 @@ footer {
     
     /* Lyrics Display Extra Small Mobile - Add safe area padding */
     .lyrics-display {
-        margin: 0.3rem 0;
-        padding: 0.6rem;
-        max-height: 90vh;
+        margin: 5.5rem 0 1.0rem 0;
+        padding: 0.8rem 0.6rem 1.4rem 0.6rem;
+        padding-top: calc(0.8rem + env(safe-area-inset-top) + 60px);
+        max-height: 70vh;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        padding-top: calc(0.6rem + env(safe-area-inset-top) + 40px);
+        justify-content: space-between;
+        scroll-margin-top: 140px;
     }
     
     /* iOS Safari specific fixes for small screens */
     @supports (-webkit-touch-callout: none) {
         .lyrics-display {
-            max-height: 75vh;
-            margin: 0.2rem 0;
-            padding-top: calc(0.6rem + env(safe-area-inset-top) + 50px);
+            max-height: 65vh;
+            margin: 5.5rem 0 1.0rem 0;
+            padding-top: calc(0.6rem + env(safe-area-inset-top) + 70px);
         }
         
         .lyrics-scroll-container {
-            max-height: calc(75vh - 12rem);
+            max-height: calc(65vh - 16rem);
         }
     }
     
@@ -1465,7 +1487,7 @@ footer {
     /* Song Slider Extra Small Mobile */
     .song-slider {
         height: 300px;
-        margin: 1.5rem auto;
+        margin: 1.5rem auto 2.5rem auto;
     }
     
     .slider-card {
@@ -1504,47 +1526,60 @@ footer {
     
     /* Lyrics Display Extra Small Mobile */
     .lyrics-display {
-        margin: 0.3rem 0;
-        padding: 0.6rem;
-        max-height: 90vh;
+        margin: 5.0rem 0 0.8rem 0;
+        padding: 0.8rem 0.6rem 1.2rem 0.6rem;
+        padding-top: calc(env(safe-area-inset-top) + 55px) !important;
+        max-height: 70vh;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         position: relative;
-        padding-top: calc(env(safe-area-inset-top) + 20px) !important;
+        justify-content: space-between;
+        scroll-margin-top: 140px;
     }
     
     .lyrics-song-title {
         font-size: 1.2rem;
-        margin-bottom: 0.6rem;
+        margin-bottom: 1.0rem;
+        margin-top: 0.3rem;
         flex-shrink: 0;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 8px 16px;
+        background: transparent;
+        border-radius: 25px;
     }
     
     .lyrics-scroll-container {
-        max-height: calc(90vh - 11rem);
-        padding: 10px;
+        max-height: calc(70vh - 15rem);
+        padding: 14px 10px;
         flex: 1;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
     }
     
     .close-lyrics-btn {
-        padding: 6px 14px;
-        margin-top: 0.6rem;
+        padding: 10px 16px;
+        margin: 1.0rem auto 1.2rem auto;
         font-size: 0.8rem;
         flex-shrink: 0;
+        display: block;
+        min-height: 40px;
+        box-sizing: border-box;
     }
     
     /* iOS Safari specific fixes for small screens */
     @supports (-webkit-touch-callout: none) {
         .lyrics-display {
-            max-height: 75vh;
-            margin: 0.2rem 0;
-            padding-top: calc(env(safe-area-inset-top) + 30px) !important;
+            max-height: 65vh;
+            margin: 5.0rem 0 0.8rem 0;
+            padding-top: calc(env(safe-area-inset-top) + 65px) !important;
         }
         
         .lyrics-scroll-container {
-            max-height: calc(75vh - 11rem);
+            max-height: calc(65vh - 15rem);
         }
     }
 

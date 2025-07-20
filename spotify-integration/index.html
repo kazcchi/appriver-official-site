@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>appriver - Spotify Player Test</title>
+    <meta name="description" content="appriver Spotify埋め込みプレイヤーテスト">
+    <link rel="stylesheet" href="css/spotify-player.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=M+PLUS+2:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>appriver - Spotify Player Test</h1>
+            <p class="subtitle">Spotify埋め込みプレイヤーテスト環境</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="player-section">
+                <h2>Spotify埋め込みプレイヤー</h2>
+                <div class="player-container">
+                    <div class="player-info">
+                        <h3>appriver - NUKUMORI Playlist</h3>
+                        <p>プレイリスト作成完了 ✅</p>
+                        <p class="note">
+                            <strong>注意：</strong><br>
+                            • Premium会員：フル楽曲再生可能<br>
+                            • 無料会員：30秒プレビューのみ
+                        </p>
+                    </div>
+                    
+                    <!-- プレイリスト埋め込みエリア -->
+                    <div class="spotify-embed-container">
+                        <iframe 
+                            data-testid="embed-iframe" 
+                            style="border-radius:12px;width:100%;height:380px" 
+                            src="https://open.spotify.com/embed/playlist/1Y4ICAnET0o7CPHRycOriz?utm_source=generator" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    
+                    <!-- 個別楽曲テスト用エリア -->
+                    <div class="individual-tracks">
+                        <h3>個別楽曲テスト</h3>
+                        <div class="track-grid">
+                            <div class="track-item">
+                                <h4>いのちの理由</h4>
+                                <div class="track-embed-placeholder">
+                                    <p>Spotify楽曲埋め込み予定</p>
+                                </div>
+                            </div>
+                            <div class="track-item">
+                                <h4>君の影</h4>
+                                <div class="track-embed-placeholder">
+                                    <p>Spotify楽曲埋め込み予定</p>
+                                </div>
+                            </div>
+                            <div class="track-item">
+                                <h4>心の羽</h4>
+                                <div class="track-embed-placeholder">
+                                    <p>Spotify楽曲埋め込み予定</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="instructions">
+                <h2>実装手順</h2>
+                <ol>
+                    <li>Spotifyでappriverアカウントにログイン</li>
+                    <li>17曲を含むプレイリストを作成</li>
+                    <li>プレイリストを「公開」に設定</li>
+                    <li>埋め込みコードを取得</li>
+                    <li>このページに埋め込みコードを追加</li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 appriver. Spotify Player Test Environment.</p>
+        </div>
+    </footer>
+
+    <script src="js/spotify-handler.js"></script>
+</body>
+</html>
