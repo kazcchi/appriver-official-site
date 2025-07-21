@@ -158,6 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
             platformButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
 
+            // 他のプラットフォームの再生を停止
+            stopAllOtherPlayers(platform);
+
             // Show corresponding player
             playerEmbeds.forEach(embed => {
                 embed.style.display = 'none';
@@ -194,6 +197,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // YouTube tracklist generation
     generateYouTubeTracklist();
+    
+    // セクション移動リスナーを設定
+    setupSectionChangeListener();
     
     // YouTube sort controls
     const latestReleaseBtn = document.getElementById('youtube-sort-release');
@@ -460,5 +466,139 @@ function updateYouTubeSortButtons() {
         latestBtn.classList.add('sort-active', 'sort-desc');
     } else if (youtubeSortOrder === 'asc' && oldestBtn) {
         oldestBtn.classList.add('sort-active', 'sort-asc');
+    }
+}
+
+// 全プラットフォーム停止機能
+function stopAllOtherPlayers(currentPlatform) {
+    // YouTube停止
+    if (currentPlatform !== 'youtube') {
+        stopYouTubePlayer();
+    }
+    
+    // Spotify停止（iframe内なので完全制御は困難だが、非表示化）
+    if (currentPlatform !== 'spotify') {
+        stopSpotifyPlayer();
+    }
+    
+    // Apple Music停止（iframe内なので完全制御は困難だが、非表示化）
+    if (currentPlatform !== 'apple-music') {
+        stopAppleMusicPlayer();
+    }
+    
+    console.log(`Stopped all players except ${currentPlatform}`);
+}
+
+// YouTube Player停止
+function stopYouTubePlayer() {
+    if (ytPlayer && typeof ytPlayer.pauseVideo === 'function') {
+        ytPlayer.pauseVideo();
+        updateTrackInfo('楽曲を選択してください', '待機中');
+        updateAllPlayPauseButtons();
+        console.log('YouTube player stopped');
+    }
+}
+
+// Spotify Player停止（iframe再読み込みで停止）
+function stopSpotifyPlayer() {
+    const spotifyIframe = document.querySelector('#spotify-player iframe');
+    if (spotifyIframe) {
+        const currentSrc = spotifyIframe.src;
+        spotifyIframe.src = '';
+        // 少し待ってから元のURLに戻す（再生は停止される）
+        setTimeout(() => {
+            spotifyIframe.src = currentSrc;
+        }, 100);
+        console.log('Spotify player stopped');
+    }
+}
+
+// Apple Music Player停止（iframe再読み込みで停止）
+function stopAppleMusicPlayer() {
+    const appleMusicIframe = document.querySelector('#apple-music-player iframe');
+    if (appleMusicIframe) {
+        const currentSrc = appleMusicIframe.src;
+        appleMusicIframe.src = '';
+        // 少し待ってから元のURLに戻す（再生は停止される）
+        setTimeout(() => {
+            appleMusicIframe.src = currentSrc;
+        }, 100);
+        console.log('Apple Music player stopped');
+    }
+}
+
+// セクション移動検知とプレイヤー停止
+function setupSectionChangeListener() {
+    // ナビゲーションリンクにイベントリスナーを追加
+    const navLinks = document.querySelectorAll('.nav-item');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            
+            // music-playersセクション以外に移動する場合、全プレイヤーを停止
+            if (href && href !== '#music-players') {
+                setTimeout(() => {
+                    stopAllPlayers();
+                }, 500); // スクロール完了後に停止
+            }
+        });
+    });
+    
+    // スクロール検知でセクション移動を監視
+    let lastSection = '';
+    window.addEventListener('scroll', throttle(() => {
+        const currentSection = getCurrentSection();
+        
+        if (currentSection !== lastSection && currentSection !== 'music-players') {
+            if (lastSection === 'music-players') {
+                // music-playersから離れる時に全プレイヤーを停止
+                stopAllPlayers();
+            }
+            lastSection = currentSection;
+        }
+    }, 1000)); // 1秒間隔でチェック
+}
+
+// 全プレイヤー停止
+function stopAllPlayers() {
+    stopYouTubePlayer();
+    stopSpotifyPlayer();
+    stopAppleMusicPlayer();
+    console.log('All music players stopped');
+}
+
+// 現在のセクションを取得
+function getCurrentSection() {
+    const sections = ['home', 'songs-lyrics', 'album', 'music-players', 'links'];
+    const scrollTop = window.pageYOffset;
+    const windowHeight = window.innerHeight;
+    const middle = scrollTop + windowHeight / 2;
+    
+    for (const sectionId of sections) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const top = section.offsetTop;
+            const bottom = top + section.offsetHeight;
+            
+            if (middle >= top && middle <= bottom) {
+                return sectionId;
+            }
+        }
+    }
+    return 'home';
+}
+
+// スロットル関数
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
     }
 }
