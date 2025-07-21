@@ -265,25 +265,31 @@
                     </div>
                     <div class="player-embed" id="youtube-player" style="display: none;">
                         <div class="youtube-split-container">
-                            <!-- 左側: YouTube埋め込みプレイヤー -->
+                            <!-- 左側: YouTube個別制御プレイヤー -->
                             <div class="youtube-player-left">
                                 <div class="player-section">
-                                    <iframe style="border-radius:12px" src="https://www.youtube.com/embed/videoseries?list=PLh80zphzXLRkSI5dS5dvYBEqMXe6NBlHP" width="100%" height="350" frameBorder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe>
+                                    <!-- 楽曲情報表示エリア -->
+                                    <div class="now-playing-info" id="now-playing-info">
+                                        <div class="track-info">
+                                            <div class="track-title" id="current-track-title">楽曲を選択してください</div>
+                                        </div>
+                                        <div class="track-status" id="track-status">待機中</div>
+                                    </div>
+                                    <!-- YouTube Player API用のコンテナ（プレイリスト削除済み） -->
+                                    <div id="youtube-player-container" style="width: 100%; height: 300px; border-radius: 12px; background: #000;"></div>
                                 </div>
                             </div>
                             
                             <!-- 右側: 楽曲インデックスリスト -->
                             <div class="youtube-tracklist-right">
                                 <div class="tracklist-section">
-                                    <!-- プレイリスト制御ボタン -->
-                                    <div class="playlist-controls">
-                                        <button class="control-btn active" id="repeat-btn" title="リピート再生">
-                                            <i class="fas fa-redo"></i>
-                                            <span>リピート</span>
+                                    <!-- ソート制御ボタン -->
+                                    <div class="sort-controls">
+                                        <button class="sort-btn sort-active sort-desc" id="youtube-sort-release" title="最新リリース順">
+                                            <span>⚡️ Latest</span>
                                         </button>
-                                        <button class="control-btn" id="shuffle-btn" title="シャッフル再生">
-                                            <i class="fas fa-random"></i>
-                                            <span>シャッフル</span>
+                                        <button class="sort-btn" id="youtube-sort-oldest" title="古いリリース順">
+                                            <span>💎 Oldest</span>
                                         </button>
                                     </div>
                                     <div class="tracklist-scroll" id="youtube-tracklist">
