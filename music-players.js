@@ -486,6 +486,11 @@ function stopAllOtherPlayers(currentPlatform) {
         stopAppleMusicPlayer();
     }
     
+    // Amazon Music停止
+    if (currentPlatform !== 'amazon-music') {
+        stopAmazonMusicPlayer();
+    }
+    
     console.log(`Stopped all players except ${currentPlatform}`);
 }
 
@@ -511,6 +516,13 @@ function stopAppleMusicPlayer() {
     // 直接リンク方式では埋め込みプレイヤーがないため、停止処理は不要
     // ただし、一貫性のためにログを出力
     console.log('Apple Music player stopped (direct link mode)');
+}
+
+// Amazon Music Player停止（直接リンク方式のため実質的な停止処理なし）
+function stopAmazonMusicPlayer() {
+    // 直接リンク方式では埋め込みプレイヤーがないため、停止処理は不要
+    // ただし、一貫性のためにログを出力
+    console.log('Amazon Music player stopped (direct link mode)');
 }
 
 // セクション移動検知とプレイヤー停止
@@ -551,6 +563,7 @@ function stopAllPlayers() {
     stopYouTubePlayer();
     stopSpotifyPlayer();
     stopAppleMusicPlayer();
+    stopAmazonMusicPlayer();
     console.log('All music players stopped');
 }
 
