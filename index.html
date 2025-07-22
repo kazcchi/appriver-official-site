@@ -258,7 +258,27 @@
 
                 <div class="player-container">
                     <div class="player-embed" id="spotify-player">
-                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1Y4ICAnET0o7CPHRycOriz?utm_source=generator&theme=0" width="100%" height="450" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        <div class="spotify-direct-container">
+                            <div class="spotify-header">
+                                <div class="spotify-logo">
+                                    <i class="fab fa-spotify"></i>
+                                    <span>Spotify</span>
+                                </div>
+                                <div class="spotify-subtitle">フル楽曲をお楽しみください</div>
+                            </div>
+                            
+                            <div class="spotify-playlist-link">
+                                <a href="https://open.spotify.com/playlist/1Y4ICAnET0o7CPHRycOriz" target="_blank" class="spotify-full-playlist-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Spotifyでプレイリストを開く</span>
+                                    <div class="btn-subtitle">全楽曲フル再生対応</div>
+                                </a>
+                            </div>
+                            
+                            <div class="spotify-tracklist" id="spotify-tracklist">
+                                <!-- Track list will be generated from songs-data.js -->
+                            </div>
+                        </div>
                     </div>
                     <div class="player-embed" id="apple-music-player" style="display: none;">
                         <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/artist/%E3%82%A2%E3%83%83%E3%83%97%E3%83%AA%E3%83%90%E3%83%BC/1816403477"></iframe>

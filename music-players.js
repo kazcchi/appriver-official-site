@@ -198,6 +198,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // YouTube tracklist generation
     generateYouTubeTracklist();
     
+    // Spotify tracklist generation
+    generateSpotifyTracklist();
+    
     // セクション移動リスナーを設定
     setupSectionChangeListener();
     
@@ -499,18 +502,11 @@ function stopYouTubePlayer() {
     }
 }
 
-// Spotify Player停止（iframe再読み込みで停止）
+// Spotify Player停止（直接リンク方式のため実質的な停止処理なし）
 function stopSpotifyPlayer() {
-    const spotifyIframe = document.querySelector('#spotify-player iframe');
-    if (spotifyIframe) {
-        const currentSrc = spotifyIframe.src;
-        spotifyIframe.src = '';
-        // 少し待ってから元のURLに戻す（再生は停止される）
-        setTimeout(() => {
-            spotifyIframe.src = currentSrc;
-        }, 100);
-        console.log('Spotify player stopped');
-    }
+    // 直接リンク方式では埋め込みプレイヤーがないため、停止処理は不要
+    // ただし、一貫性のためにログを出力
+    console.log('Spotify player stopped (direct link mode)');
 }
 
 // Apple Music Player停止（iframe再読み込みで停止）
@@ -601,4 +597,42 @@ function throttle(func, limit) {
             setTimeout(() => inThrottle = false, limit);
         }
     }
+}
+
+// Spotify楽曲リスト動的生成関数
+function generateSpotifyTracklist() {
+    const tracklistContainer = document.getElementById('spotify-tracklist');
+    if (!tracklistContainer || typeof songsData === 'undefined') {
+        return;
+    }
+
+    // songs-data.js からすべての楽曲を取得（最新順でソート）
+    const allSongs = Object.entries(songsData)
+        .sort((a, b) => new Date(b[1].releaseDate) - new Date(a[1].releaseDate));
+    
+    // 番号付けのための全楽曲数
+    const totalSongs = allSongs.length;
+
+    // HTMLを生成（最新順：最新曲が最大番号）
+    const tracklistHTML = allSongs.map(([id, data], index) => {
+        const trackNumber = String(totalSongs - index).padStart(2, '0');
+        const albumInfo = data.album ? ` - ${data.album}` : '';
+        
+        return `
+            <div class="spotify-track-item" data-song-id="${id}">
+                <span class="spotify-track-num">${trackNumber}</span>
+                <div class="spotify-track-info">
+                    <span class="spotify-track-name">${data.title}</span>
+                    <span class="spotify-track-album">${data.album || 'Single'}</span>
+                </div>
+                <a href="${data.linkUrl}" target="_blank" class="spotify-track-link" title="ストリーミングで聴く">
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        `;
+    }).join('');
+
+    tracklistContainer.innerHTML = tracklistHTML;
+    
+    console.log(`Spotify tracklist generated: ${allSongs.length} tracks`);
 }
