@@ -1300,7 +1300,95 @@ section h2::after {
     font-size: 1.2rem;
 }
 
+/* Apple Music Direct Layout Styles */
+.apple-music-direct-container {
+    background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    border: 2px solid rgba(232, 164, 139, 0.3);
+    box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 2rem;
+}
 
+.apple-music-header {
+    flex-shrink: 0;
+}
+
+.apple-music-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.apple-music-logo i {
+    font-size: 4rem;
+    color: #000;
+    animation: pulse 2s ease-in-out infinite alternate;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.apple-music-logo span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: -0.5px;
+}
+
+.apple-music-playlist-link {
+    flex-shrink: 0;
+}
+
+.apple-music-full-playlist-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
+    color: white;
+    padding: 1.8rem 3.5rem;
+    border-radius: 60px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    border: 3px solid #e8a48b;
+    box-shadow: 0 10px 30px rgba(232, 164, 139, 0.4);
+    position: relative;
+    overflow: hidden;
+    min-width: 300px;
+}
+
+.apple-music-full-playlist-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.apple-music-full-playlist-btn:hover::before {
+    left: 100%;
+}
+
+.apple-music-full-playlist-btn:hover {
+    background: linear-gradient(135deg, #d49175 0%, #c17d61 100%);
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 15px 40px rgba(232, 164, 139, 0.6);
+}
+
+.apple-music-full-playlist-btn i {
+    font-size: 1.2rem;
+}
 
 /* YouTube Split Layout Styles */
 .youtube-split-container {
@@ -2025,6 +2113,39 @@ footer {
     }
     
     .spotify-full-playlist-btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(232, 164, 139, 0.5);
+    }
+    
+    /* Apple Music Mobile Optimizations */
+    .apple-music-direct-container {
+        padding: 2rem 1rem;
+        min-height: 350px;
+        gap: 1.5rem;
+    }
+    
+    .apple-music-logo i {
+        font-size: 3rem;
+    }
+    
+    .apple-music-logo span {
+        font-size: 2rem;
+    }
+    
+    .apple-music-full-playlist-btn {
+        padding: 1.2rem 2rem;
+        font-size: 1rem;
+        width: auto;
+        min-width: auto;
+        border-radius: 50px;
+        gap: 1rem;
+    }
+    
+    .apple-music-full-playlist-btn i {
+        font-size: 1rem;
+    }
+    
+    .apple-music-full-playlist-btn:hover {
         transform: translateY(-3px) scale(1.05);
         box-shadow: 0 10px 25px rgba(232, 164, 139, 0.5);
     }

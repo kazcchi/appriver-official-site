@@ -192,8 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Initialize with Spotify as default
-    console.log('Music Players initialized - Spotify active by default');
+    // Initialize with Apple Music as default
+    console.log('Music Players initialized - Apple Music active by default');
     
     // YouTube tracklist generation
     generateYouTubeTracklist();
@@ -506,18 +506,11 @@ function stopSpotifyPlayer() {
     console.log('Spotify player stopped (direct link mode)');
 }
 
-// Apple Music Player停止（iframe再読み込みで停止）
+// Apple Music Player停止（直接リンク方式のため実質的な停止処理なし）
 function stopAppleMusicPlayer() {
-    const appleMusicIframe = document.querySelector('#apple-music-player iframe');
-    if (appleMusicIframe) {
-        const currentSrc = appleMusicIframe.src;
-        appleMusicIframe.src = '';
-        // 少し待ってから元のURLに戻す（再生は停止される）
-        setTimeout(() => {
-            appleMusicIframe.src = currentSrc;
-        }, 100);
-        console.log('Apple Music player stopped');
-    }
+    // 直接リンク方式では埋め込みプレイヤーがないため、停止処理は不要
+    // ただし、一貫性のためにログを出力
+    console.log('Apple Music player stopped (direct link mode)');
 }
 
 // セクション移動検知とプレイヤー停止

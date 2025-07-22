@@ -238,13 +238,13 @@
                 </div>
                 
                 <div class="platform-selector">
-                    <button class="platform-btn active" data-platform="spotify">
-                        <i class="fab fa-spotify"></i>
-                        Spotify
-                    </button>
-                    <button class="platform-btn" data-platform="apple-music">
+                    <button class="platform-btn active" data-platform="apple-music">
                         <i class="fab fa-apple"></i>
                         Apple Music
+                    </button>
+                    <button class="platform-btn" data-platform="spotify">
+                        <i class="fab fa-spotify"></i>
+                        Spotify
                     </button>
                     <button class="platform-btn" data-platform="youtube">
                         <i class="fab fa-youtube"></i>
@@ -257,7 +257,24 @@
                 </div>
 
                 <div class="player-container">
-                    <div class="player-embed" id="spotify-player">
+                    <div class="player-embed" id="apple-music-player">
+                        <div class="apple-music-direct-container">
+                            <div class="apple-music-header">
+                                <div class="apple-music-logo">
+                                    <i class="fab fa-apple"></i>
+                                    <span>Apple Music</span>
+                                </div>
+                            </div>
+                            
+                            <div class="apple-music-playlist-link">
+                                <a href="https://music.apple.com/jp/playlist/appriver-%E5%85%AC%E5%BC%8F%E3%83%97%E3%83%AC%E3%82%A4%E3%83%AA%E3%82%B9%E3%83%88/pl.u-V9D7vD9FEP64AZ" target="_blank" class="apple-music-full-playlist-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>プレイリストを開く</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-embed" id="spotify-player" style="display: none;">
                         <div class="spotify-direct-container">
                             <div class="spotify-header">
                                 <div class="spotify-logo">
@@ -273,9 +290,6 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="player-embed" id="apple-music-player" style="display: none;">
-                        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/artist/%E3%82%A2%E3%83%83%E3%83%97%E3%83%AA%E3%83%90%E3%83%BC/1816403477"></iframe>
                     </div>
                     <div class="player-embed" id="youtube-player" style="display: none;">
                         <div class="youtube-split-container">
