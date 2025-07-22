@@ -2014,7 +2014,8 @@ footer {
     .spotify-full-playlist-btn {
         padding: 1.2rem 2rem;
         font-size: 1rem;
-        min-width: 250px;
+        width: auto;
+        min-width: auto;
         border-radius: 50px;
         gap: 1rem;
     }
