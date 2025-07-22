@@ -2098,6 +2098,26 @@ footer {
         font-size: 0.7rem;
     }
     
+    /* Platform Selector Mobile - 2x2 Grid */
+    .platform-selector {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+        max-width: 300px;
+        margin: 0 auto 2rem auto;
+    }
+    
+    .platform-btn {
+        padding: 0.8rem 0.6rem;
+        min-width: auto;
+        font-size: 0.85rem;
+    }
+    
+    .platform-btn i {
+        font-size: 1.4rem;
+        margin-bottom: 0.3rem;
+    }
+    
     /* Song Slider Extra Small Mobile */
     .song-slider {
         height: 300px;
