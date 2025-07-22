@@ -1996,6 +1996,38 @@ footer {
         scroll-behavior: smooth;
     }
     
+    /* Spotify Mobile Optimizations */
+    .spotify-direct-container {
+        padding: 2rem 1rem;
+        min-height: 350px;
+        gap: 1.5rem;
+    }
+    
+    .spotify-logo i {
+        font-size: 3rem;
+    }
+    
+    .spotify-logo span {
+        font-size: 2rem;
+    }
+    
+    .spotify-full-playlist-btn {
+        padding: 1.2rem 2rem;
+        font-size: 1rem;
+        min-width: 250px;
+        border-radius: 50px;
+        gap: 1rem;
+    }
+    
+    .spotify-full-playlist-btn i {
+        font-size: 1rem;
+    }
+    
+    .spotify-full-playlist-btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(232, 164, 139, 0.5);
+    }
+    
     .close-lyrics-btn {
         padding: 10px 16px;
         margin: 1.0rem auto 1.2rem auto;
