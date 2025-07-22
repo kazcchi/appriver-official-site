@@ -1214,157 +1214,93 @@ section h2::after {
 .spotify-direct-container {
     background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
     border-radius: 20px;
-    padding: 2rem;
+    padding: 4rem 2rem;
     border: 2px solid rgba(232, 164, 139, 0.3);
     box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
     min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 2rem;
 }
 
 .spotify-header {
-    text-align: center;
-    margin-bottom: 2rem;
+    flex-shrink: 0;
 }
 
 .spotify-logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
-    margin-bottom: 0.5rem;
+    gap: 1.2rem;
 }
 
 .spotify-logo i {
-    font-size: 2.5rem;
+    font-size: 4rem;
     color: #1db954;
+    animation: pulse 2s ease-in-out infinite alternate;
+    filter: drop-shadow(0 4px 8px rgba(29, 185, 84, 0.3));
 }
 
 .spotify-logo span {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #333;
-}
-
-.spotify-subtitle {
-    font-size: 1rem;
-    color: #666;
-    opacity: 0.8;
+    letter-spacing: -0.5px;
 }
 
 .spotify-playlist-link {
-    text-align: center;
-    margin-bottom: 2rem;
+    flex-shrink: 0;
 }
 
 .spotify-full-playlist-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
-    background: linear-gradient(135deg, #1db954 0%, #1ed760 100%);
+    gap: 1.2rem;
+    background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
     color: white;
-    padding: 1.2rem 2rem;
-    border-radius: 50px;
+    padding: 1.8rem 3.5rem;
+    border-radius: 60px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     transition: all 0.3s ease;
-    border: 3px solid #1db954;
-    box-shadow: 0 6px 20px rgba(29, 185, 84, 0.3);
-    flex-direction: column;
-    text-align: center;
+    border: 3px solid #e8a48b;
+    box-shadow: 0 10px 30px rgba(232, 164, 139, 0.4);
+    position: relative;
+    overflow: hidden;
+    min-width: 300px;
+}
+
+.spotify-full-playlist-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.spotify-full-playlist-btn:hover::before {
+    left: 100%;
 }
 
 .spotify-full-playlist-btn:hover {
-    background: linear-gradient(135deg, #1ed760 0%, #1db954 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(29, 185, 84, 0.4);
+    background: linear-gradient(135deg, #d49175 0%, #c17d61 100%);
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 15px 40px rgba(232, 164, 139, 0.6);
 }
 
-.spotify-full-playlist-btn .btn-subtitle {
-    font-size: 0.85rem;
-    font-weight: 400;
-    opacity: 0.9;
-    margin-top: 0.3rem;
+.spotify-full-playlist-btn i {
+    font-size: 1.2rem;
 }
 
-.spotify-tracklist {
-    max-height: 300px;
-    overflow-y: auto;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(232, 164, 139, 0.2);
-}
 
-.spotify-track-item {
-    display: flex;
-    align-items: center;
-    padding: 0.8rem 1rem;
-    border-bottom: 1px solid rgba(232, 164, 139, 0.1);
-    transition: all 0.2s ease;
-    gap: 1rem;
-}
-
-.spotify-track-item:hover {
-    background: rgba(232, 164, 139, 0.08);
-}
-
-.spotify-track-item:last-child {
-    border-bottom: none;
-}
-
-.spotify-track-num {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #e8a48b;
-    min-width: 2rem;
-    text-align: center;
-    background: rgba(232, 164, 139, 0.15);
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.spotify-track-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-}
-
-.spotify-track-name {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #333;
-}
-
-.spotify-track-album {
-    font-size: 0.85rem;
-    color: #666;
-    opacity: 0.8;
-}
-
-.spotify-track-link {
-    color: #e8a48b;
-    font-size: 1.1rem;
-    padding: 0.5rem;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    text-decoration: none;
-}
-
-.spotify-track-link:hover {
-    background: rgba(232, 164, 139, 0.15);
-    color: #c17d61;
-    transform: scale(1.1);
-}
 
 /* YouTube Split Layout Styles */
 .youtube-split-container {
