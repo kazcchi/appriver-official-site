@@ -1289,11 +1289,11 @@ section h2::after {
     gap: 0.8rem;
     background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
     color: white;
-    padding: 0.8rem 1rem;
+    padding: 1.5rem 1rem;
     border-radius: 40px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
     border: 2px solid #e8a48b;
     box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
@@ -1301,6 +1301,7 @@ section h2::after {
     overflow: hidden;
     width: calc(140px * 4 + 1rem * 3);
     max-width: 100%;
+    min-height: calc(60px * 2 + 1rem);
 }
 
 .spotify-full-playlist-btn::before {
@@ -1325,7 +1326,7 @@ section h2::after {
 }
 
 .spotify-full-playlist-btn i {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 /* Apple Music Direct Layout Styles */
@@ -1380,11 +1381,11 @@ section h2::after {
     gap: 0.8rem;
     background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
     color: white;
-    padding: 0.8rem 1rem;
+    padding: 1.5rem 1rem;
     border-radius: 40px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
     border: 2px solid #e8a48b;
     box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
@@ -1392,6 +1393,7 @@ section h2::after {
     overflow: hidden;
     width: calc(140px * 4 + 1rem * 3);
     max-width: 100%;
+    min-height: calc(60px * 2 + 1rem);
 }
 
 .apple-music-full-playlist-btn::before {
@@ -1416,7 +1418,7 @@ section h2::after {
 }
 
 .apple-music-full-playlist-btn i {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 /* Amazon Music Direct Layout Styles */
@@ -1471,11 +1473,11 @@ section h2::after {
     gap: 0.8rem;
     background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
     color: white;
-    padding: 0.8rem 1rem;
+    padding: 1.5rem 1rem;
     border-radius: 40px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
     border: 2px solid #e8a48b;
     box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
@@ -1483,6 +1485,7 @@ section h2::after {
     overflow: hidden;
     width: calc(140px * 4 + 1rem * 3);
     max-width: 100%;
+    min-height: calc(60px * 2 + 1rem);
 }
 
 .amazon-music-full-playlist-btn::before {
@@ -1507,7 +1510,7 @@ section h2::after {
 }
 
 .amazon-music-full-playlist-btn i {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 /* YouTube Direct Layout Styles */
@@ -1562,11 +1565,11 @@ section h2::after {
     gap: 0.8rem;
     background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
     color: white;
-    padding: 0.8rem 1rem;
+    padding: 1.5rem 1rem;
     border-radius: 40px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
     border: 2px solid #e8a48b;
     box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
@@ -1574,6 +1577,7 @@ section h2::after {
     overflow: hidden;
     width: calc(140px * 4 + 1rem * 3);
     max-width: 100%;
+    min-height: calc(60px * 2 + 1rem);
 }
 
 .youtube-full-playlist-btn::before {
@@ -1598,7 +1602,7 @@ section h2::after {
 }
 
 .youtube-full-playlist-btn i {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 
@@ -1989,8 +1993,8 @@ footer {
     }
     
     .spotify-full-playlist-btn {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.85rem;
+        padding: 1.2rem 1.2rem;
+        font-size: 0.95rem;
         font-weight: 600;
         width: calc(75px * 4 + 0.5rem * 3);
         max-width: 90%;
@@ -2000,10 +2004,11 @@ footer {
         box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
+        min-height: calc(60px * 2 + 0.5rem);
     }
     
     .spotify-full-playlist-btn i {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     
     .spotify-full-playlist-btn:active {
@@ -2028,8 +2033,8 @@ footer {
     }
     
     .apple-music-full-playlist-btn {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.85rem;
+        padding: 1.2rem 1.2rem;
+        font-size: 0.95rem;
         font-weight: 600;
         width: calc(75px * 4 + 0.5rem * 3);
         max-width: 90%;
@@ -2039,10 +2044,11 @@ footer {
         box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
+        min-height: calc(60px * 2 + 0.5rem);
     }
     
     .apple-music-full-playlist-btn i {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     
     .apple-music-full-playlist-btn:active {
@@ -2072,8 +2078,8 @@ footer {
     }
     
     .amazon-music-full-playlist-btn {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.85rem;
+        padding: 1.2rem 1.2rem;
+        font-size: 0.95rem;
         font-weight: 600;
         width: calc(75px * 4 + 0.5rem * 3);
         max-width: 90%;
@@ -2083,10 +2089,11 @@ footer {
         box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
+        min-height: calc(60px * 2 + 0.5rem);
     }
     
     .amazon-music-full-playlist-btn i {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     
     .amazon-music-full-playlist-btn:active {
@@ -2111,8 +2118,8 @@ footer {
     }
     
     .youtube-full-playlist-btn {
-        padding: 0.8rem 1.2rem;
-        font-size: 0.85rem;
+        padding: 1.2rem 1.2rem;
+        font-size: 0.95rem;
         font-weight: 600;
         width: calc(75px * 4 + 0.5rem * 3);
         max-width: 90%;
@@ -2122,10 +2129,11 @@ footer {
         box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
+        min-height: calc(60px * 2 + 0.5rem);
     }
     
     .youtube-full-playlist-btn i {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     
     .youtube-full-playlist-btn:active {
