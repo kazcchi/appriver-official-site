@@ -292,38 +292,19 @@
                         </div>
                     </div>
                     <div class="player-embed" id="youtube-player" style="display: none;">
-                        <div class="youtube-split-container">
-                            <!-- 左側: YouTube個別制御プレイヤー -->
-                            <div class="youtube-player-left">
-                                <div class="player-section">
-                                    <!-- 楽曲情報表示エリア -->
-                                    <div class="now-playing-info" id="now-playing-info">
-                                        <div class="track-info">
-                                            <div class="track-title" id="current-track-title">楽曲を選択してください</div>
-                                        </div>
-                                        <div class="track-status" id="track-status">待機中</div>
-                                    </div>
-                                    <!-- YouTube Player API用のコンテナ（プレイリスト削除済み） -->
-                                    <div id="youtube-player-container" style="width: 100%; height: 300px; border-radius: 12px; background: #000;"></div>
+                        <div class="youtube-direct-container">
+                            <div class="youtube-header">
+                                <div class="youtube-logo">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>YouTube</span>
                                 </div>
                             </div>
                             
-                            <!-- 右側: 楽曲インデックスリスト -->
-                            <div class="youtube-tracklist-right">
-                                <div class="tracklist-section">
-                                    <!-- ソート制御ボタン -->
-                                    <div class="sort-controls">
-                                        <button class="sort-btn sort-active sort-desc" id="youtube-sort-release" title="最新リリース順">
-                                            <span>⚡️ Latest</span>
-                                        </button>
-                                        <button class="sort-btn" id="youtube-sort-oldest" title="古いリリース順">
-                                            <span>💎 Oldest</span>
-                                        </button>
-                                    </div>
-                                    <div class="tracklist-scroll" id="youtube-tracklist">
-                                        <!-- 楽曲リストは songs-data.js から動的生成 -->
-                                    </div>
-                                </div>
+                            <div class="youtube-playlist-link">
+                                <a href="https://www.youtube.com/@appriver12" target="_blank" class="youtube-full-playlist-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>チャンネルを開く</span>
+                                </a>
                             </div>
                         </div>
                     </div>
