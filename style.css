@@ -1241,16 +1241,16 @@ section h2::after {
 .spotify-direct-container {
     background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
     border-radius: 20px;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     border: 2px solid rgba(232, 164, 139, 0.3);
     box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
-    min-height: 400px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .spotify-header {
@@ -1286,20 +1286,21 @@ section h2::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 1.2rem;
+    gap: 0.8rem;
     background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
     color: white;
-    padding: 1.8rem 3.5rem;
-    border-radius: 60px;
+    padding: 0.8rem 1rem;
+    border-radius: 40px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1.3rem;
+    font-weight: 600;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
-    border: 3px solid #e8a48b;
-    box-shadow: 0 10px 30px rgba(232, 164, 139, 0.4);
+    border: 2px solid #e8a48b;
+    box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
     position: relative;
     overflow: hidden;
-    min-width: 300px;
+    width: calc(140px * 4 + 1rem * 3);
+    max-width: 100%;
 }
 
 .spotify-full-playlist-btn::before {
@@ -1324,23 +1325,23 @@ section h2::after {
 }
 
 .spotify-full-playlist-btn i {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /* Apple Music Direct Layout Styles */
 .apple-music-direct-container {
     background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
     border-radius: 20px;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     border: 2px solid rgba(232, 164, 139, 0.3);
     box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
-    min-height: 400px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .apple-music-header {
@@ -1376,20 +1377,21 @@ section h2::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 1.2rem;
+    gap: 0.8rem;
     background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
     color: white;
-    padding: 1.8rem 3.5rem;
-    border-radius: 60px;
+    padding: 0.8rem 1rem;
+    border-radius: 40px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1.3rem;
+    font-weight: 600;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
-    border: 3px solid #e8a48b;
-    box-shadow: 0 10px 30px rgba(232, 164, 139, 0.4);
+    border: 2px solid #e8a48b;
+    box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
     position: relative;
     overflow: hidden;
-    min-width: 300px;
+    width: calc(140px * 4 + 1rem * 3);
+    max-width: 100%;
 }
 
 .apple-music-full-playlist-btn::before {
@@ -1414,23 +1416,23 @@ section h2::after {
 }
 
 .apple-music-full-playlist-btn i {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /* Amazon Music Direct Layout Styles */
 .amazon-music-direct-container {
     background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
     border-radius: 20px;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     border: 2px solid rgba(232, 164, 139, 0.3);
     box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
-    min-height: 400px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .amazon-music-header {
@@ -1466,20 +1468,21 @@ section h2::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 1.2rem;
+    gap: 0.8rem;
     background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
     color: white;
-    padding: 1.8rem 3.5rem;
-    border-radius: 60px;
+    padding: 0.8rem 1rem;
+    border-radius: 40px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1.3rem;
+    font-weight: 600;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
-    border: 3px solid #e8a48b;
-    box-shadow: 0 10px 30px rgba(232, 164, 139, 0.4);
+    border: 2px solid #e8a48b;
+    box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
     position: relative;
     overflow: hidden;
-    min-width: 300px;
+    width: calc(140px * 4 + 1rem * 3);
+    max-width: 100%;
 }
 
 .amazon-music-full-playlist-btn::before {
@@ -1504,23 +1507,23 @@ section h2::after {
 }
 
 .amazon-music-full-playlist-btn i {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /* YouTube Direct Layout Styles */
 .youtube-direct-container {
     background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
     border-radius: 20px;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     border: 2px solid rgba(232, 164, 139, 0.3);
     box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
-    min-height: 400px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .youtube-header {
@@ -1556,20 +1559,21 @@ section h2::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 1.2rem;
+    gap: 0.8rem;
     background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
     color: white;
-    padding: 1.8rem 3.5rem;
-    border-radius: 60px;
+    padding: 0.8rem 1rem;
+    border-radius: 40px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 1.3rem;
+    font-weight: 600;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
-    border: 3px solid #e8a48b;
-    box-shadow: 0 10px 30px rgba(232, 164, 139, 0.4);
+    border: 2px solid #e8a48b;
+    box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
     position: relative;
     overflow: hidden;
-    min-width: 300px;
+    width: calc(140px * 4 + 1rem * 3);
+    max-width: 100%;
 }
 
 .youtube-full-playlist-btn::before {
@@ -1594,7 +1598,7 @@ section h2::after {
 }
 
 .youtube-full-playlist-btn i {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
@@ -1985,21 +1989,21 @@ footer {
     }
     
     .spotify-full-playlist-btn {
-        padding: 1.2rem 2rem;
-        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        font-size: 0.85rem;
         font-weight: 600;
-        width: auto;
-        min-width: 240px;
-        border-radius: 50px;
-        gap: 1rem;
+        width: calc(75px * 4 + 0.5rem * 3);
+        max-width: 90%;
+        border-radius: 40px;
+        gap: 0.6rem;
         border-width: 2px;
-        box-shadow: 0 6px 20px rgba(232, 164, 139, 0.25);
+        box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
     }
     
     .spotify-full-playlist-btn i {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
     
     .spotify-full-playlist-btn:active {
@@ -2024,21 +2028,21 @@ footer {
     }
     
     .apple-music-full-playlist-btn {
-        padding: 1.2rem 2rem;
-        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        font-size: 0.85rem;
         font-weight: 600;
-        width: auto;
-        min-width: 240px;
-        border-radius: 50px;
-        gap: 1rem;
+        width: calc(75px * 4 + 0.5rem * 3);
+        max-width: 90%;
+        border-radius: 40px;
+        gap: 0.6rem;
         border-width: 2px;
-        box-shadow: 0 6px 20px rgba(232, 164, 139, 0.25);
+        box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
     }
     
     .apple-music-full-playlist-btn i {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
     
     .apple-music-full-playlist-btn:active {
@@ -2068,21 +2072,21 @@ footer {
     }
     
     .amazon-music-full-playlist-btn {
-        padding: 1.2rem 2rem;
-        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        font-size: 0.85rem;
         font-weight: 600;
-        width: auto;
-        min-width: 240px;
-        border-radius: 50px;
-        gap: 1rem;
+        width: calc(75px * 4 + 0.5rem * 3);
+        max-width: 90%;
+        border-radius: 40px;
+        gap: 0.6rem;
         border-width: 2px;
-        box-shadow: 0 6px 20px rgba(232, 164, 139, 0.25);
+        box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
     }
     
     .amazon-music-full-playlist-btn i {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
     
     .amazon-music-full-playlist-btn:active {
@@ -2107,21 +2111,21 @@ footer {
     }
     
     .youtube-full-playlist-btn {
-        padding: 1.2rem 2rem;
-        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        font-size: 0.85rem;
         font-weight: 600;
-        width: auto;
-        min-width: 240px;
-        border-radius: 50px;
-        gap: 1rem;
+        width: calc(75px * 4 + 0.5rem * 3);
+        max-width: 90%;
+        border-radius: 40px;
+        gap: 0.6rem;
         border-width: 2px;
-        box-shadow: 0 6px 20px rgba(232, 164, 139, 0.25);
+        box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
     }
     
     .youtube-full-playlist-btn i {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
     
     .youtube-full-playlist-btn:active {
