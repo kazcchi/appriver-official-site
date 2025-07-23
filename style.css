@@ -1978,37 +1978,53 @@ footer {
     
     /* Spotify Mobile Optimizations - コンパクト */
     .spotify-direct-container {
-        padding: 2rem 1rem;
-        min-height: 320px;
-        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+        min-height: 300px;
+        gap: 0;
+        justify-content: space-between;
+    }
+    
+    .spotify-header {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .spotify-logo i {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
     }
     
     .spotify-logo span {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         font-weight: 600;
     }
     
+    .spotify-playlist-link {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
     .spotify-full-playlist-btn {
-        padding: 1.2rem 1.2rem;
-        font-size: 0.95rem;
-        font-weight: 600;
+        padding: 0.8rem 1rem;
+        font-size: 1.2rem;
+        font-weight: 700;
         width: calc(75px * 4 + 0.5rem * 3);
         max-width: 90%;
-        border-radius: 40px;
-        gap: 0.6rem;
+        border-radius: 30px;
+        gap: 0.8rem;
         border-width: 2px;
         box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
-        min-height: calc(60px * 2 + 0.5rem);
+        height: 60px;
+        min-height: 60px;
     }
     
     .spotify-full-playlist-btn i {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     
     .spotify-full-playlist-btn:active {
@@ -2018,37 +2034,53 @@ footer {
     
     /* Apple Music Mobile Optimizations - コンパクト */
     .apple-music-direct-container {
-        padding: 2rem 1rem;
-        min-height: 320px;
-        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+        min-height: 300px;
+        gap: 0;
+        justify-content: space-between;
+    }
+    
+    .apple-music-header {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .apple-music-logo i {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
     }
     
     .apple-music-logo span {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         font-weight: 600;
     }
     
+    .apple-music-playlist-link {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
     .apple-music-full-playlist-btn {
-        padding: 1.2rem 1.2rem;
-        font-size: 0.95rem;
-        font-weight: 600;
+        padding: 0.8rem 1rem;
+        font-size: 1.2rem;
+        font-weight: 700;
         width: calc(75px * 4 + 0.5rem * 3);
         max-width: 90%;
-        border-radius: 40px;
-        gap: 0.6rem;
+        border-radius: 30px;
+        gap: 0.8rem;
         border-width: 2px;
         box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
-        min-height: calc(60px * 2 + 0.5rem);
+        height: 60px;
+        min-height: 60px;
     }
     
     .apple-music-full-playlist-btn i {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     
     .apple-music-full-playlist-btn:active {
@@ -2063,37 +2095,53 @@ footer {
     
     /* Amazon Music Mobile Optimizations - コンパクト */
     .amazon-music-direct-container {
-        padding: 2rem 1rem;
-        min-height: 320px;
-        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+        min-height: 300px;
+        gap: 0;
+        justify-content: space-between;
+    }
+    
+    .amazon-music-header {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .amazon-music-logo i {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
     }
     
     .amazon-music-logo span {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         font-weight: 600;
     }
     
+    .amazon-music-playlist-link {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
     .amazon-music-full-playlist-btn {
-        padding: 1.2rem 1.2rem;
-        font-size: 0.95rem;
-        font-weight: 600;
+        padding: 0.8rem 1rem;
+        font-size: 1.2rem;
+        font-weight: 700;
         width: calc(75px * 4 + 0.5rem * 3);
         max-width: 90%;
-        border-radius: 40px;
-        gap: 0.6rem;
+        border-radius: 30px;
+        gap: 0.8rem;
         border-width: 2px;
         box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
-        min-height: calc(60px * 2 + 0.5rem);
+        height: 60px;
+        min-height: 60px;
     }
     
     .amazon-music-full-playlist-btn i {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     
     .amazon-music-full-playlist-btn:active {
@@ -2103,37 +2151,53 @@ footer {
     
     /* YouTube Mobile Optimizations - コンパクト */
     .youtube-direct-container {
-        padding: 2rem 1rem;
-        min-height: 320px;
-        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+        min-height: 300px;
+        gap: 0;
+        justify-content: space-between;
+    }
+    
+    .youtube-header {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .youtube-logo i {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
     }
     
     .youtube-logo span {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         font-weight: 600;
     }
     
+    .youtube-playlist-link {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
     .youtube-full-playlist-btn {
-        padding: 1.2rem 1.2rem;
-        font-size: 0.95rem;
-        font-weight: 600;
+        padding: 0.8rem 1rem;
+        font-size: 1.2rem;
+        font-weight: 700;
         width: calc(75px * 4 + 0.5rem * 3);
         max-width: 90%;
-        border-radius: 40px;
-        gap: 0.6rem;
+        border-radius: 30px;
+        gap: 0.8rem;
         border-width: 2px;
         box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
-        min-height: calc(60px * 2 + 0.5rem);
+        height: 60px;
+        min-height: 60px;
     }
     
     .youtube-full-playlist-btn i {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     
     .youtube-full-playlist-btn:active {
