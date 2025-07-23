@@ -152,7 +152,7 @@ function stopAllPlayers() {
 
 // 現在のセクションを取得
 function getCurrentSection() {
-    const sections = ['home', 'songs-lyrics', 'album', 'music-players', 'links'];
+    const sections = ['home', 'music-players', 'songs-lyrics', 'album', 'links'];
     const scrollTop = window.pageYOffset;
     const windowHeight = window.innerHeight;
     const middle = scrollTop + windowHeight / 2;

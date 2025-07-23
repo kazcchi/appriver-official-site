@@ -1055,10 +1055,13 @@ section h2::after {
 
 .players-description {
     text-align: center;
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
-    opacity: 0.9;
-    font-weight: 300;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+    font-weight: 500;
+    color: #444;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
 }
 
 .platform-selector {
@@ -1074,37 +1077,42 @@ section h2::after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(232, 164, 139, 0.8);
-    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, rgba(232, 164, 139, 0.9) 0%, rgba(212, 145, 117, 0.9) 100%);
+    padding: 1.2rem 1.8rem;
     border-radius: 15px;
-    border: 2px solid rgba(232, 164, 139, 0.6);
+    border: 2px solid rgba(232, 164, 139, 0.7);
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(15px);
-    min-width: 120px;
+    min-width: 140px;
     font-family: inherit;
     font-weight: 600;
     position: relative;
     z-index: 2;
+    box-shadow: 0 4px 12px rgba(232, 164, 139, 0.3);
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 1rem;
 }
 
 .platform-btn i {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
 .platform-btn:hover {
-    background: rgba(232, 164, 139, 0.9);
+    background: linear-gradient(135deg, rgba(232, 164, 139, 1) 0%, rgba(212, 145, 117, 1) 100%);
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 25px rgba(232, 164, 139, 0.4);
 }
 
 .platform-btn.active {
-    background: white;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f4f0 100%);
     color: #e8a48b;
     border-color: #e8a48b;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-width: 3px;
+    box-shadow: 0 8px 20px rgba(232, 164, 139, 0.3);
 }
 
 .platform-btn.coming-soon {
@@ -1197,17 +1205,36 @@ section h2::after {
     text-align: center;
     position: relative;
     z-index: 2;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+    background: linear-gradient(135deg, rgba(255, 247, 240, 0.95) 0%, rgba(248, 236, 228, 0.95) 100%);
+    padding: 1.8rem 2.5rem;
+    border-radius: 18px;
+    border: 3px solid rgba(232, 164, 139, 0.4);
+    box-shadow: 0 6px 20px rgba(232, 164, 139, 0.2);
+    backdrop-filter: blur(15px);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5rem;
 }
 
 .player-note p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    font-style: italic;
+    font-size: 1.3rem;
+    opacity: 1;
+    font-style: normal;
+    font-weight: 600;
+    color: #4a3a2a;
+    line-height: 1.8;
+    margin: 0;
+    letter-spacing: 0.3px;
+    text-align: center;
 }
 
 .player-note i {
-    margin-right: 0.5rem;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    color: #e8a48b;
+    vertical-align: middle;
 }
 
 /* Spotify Direct Layout Styles */
@@ -1941,65 +1968,82 @@ footer {
         scroll-behavior: smooth;
     }
     
-    /* Spotify Mobile Optimizations */
+    /* Spotify Mobile Optimizations - 中高年向け */
     .spotify-direct-container {
-        padding: 2rem 1rem;
-        min-height: 350px;
-        gap: 1.5rem;
+        padding: 2.5rem 1.2rem;
+        min-height: 380px;
+        gap: 2rem;
     }
     
     .spotify-logo i {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
     
     .spotify-logo span {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        font-weight: 700;
     }
     
     .spotify-full-playlist-btn {
-        padding: 1.2rem 2rem;
-        font-size: 1rem;
+        padding: 1.6rem 2.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
         width: auto;
-        min-width: auto;
-        border-radius: 50px;
-        gap: 1rem;
+        min-width: 280px;
+        border-radius: 60px;
+        gap: 1.2rem;
+        border-width: 3px;
+        box-shadow: 0 8px 25px rgba(232, 164, 139, 0.3);
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
     }
     
     .spotify-full-playlist-btn i {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     
-    .spotify-full-playlist-btn:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 10px 25px rgba(232, 164, 139, 0.5);
+    .spotify-full-playlist-btn:active {
+        transform: translateY(-1px) scale(0.98);
+        box-shadow: 0 6px 20px rgba(232, 164, 139, 0.4);
     }
     
-    /* Apple Music Mobile Optimizations */
+    /* Apple Music Mobile Optimizations - 中高年向け */
     .apple-music-direct-container {
-        padding: 2rem 1rem;
-        min-height: 350px;
-        gap: 1.5rem;
+        padding: 2.5rem 1.2rem;
+        min-height: 380px;
+        gap: 2rem;
     }
     
     .apple-music-logo i {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
     
     .apple-music-logo span {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        font-weight: 700;
     }
     
     .apple-music-full-playlist-btn {
-        padding: 1.2rem 2rem;
-        font-size: 1rem;
+        padding: 1.6rem 2.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
         width: auto;
-        min-width: auto;
-        border-radius: 50px;
-        gap: 1rem;
+        min-width: 280px;
+        border-radius: 60px;
+        gap: 1.2rem;
+        border-width: 3px;
+        box-shadow: 0 8px 25px rgba(232, 164, 139, 0.3);
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
     }
     
     .apple-music-full-playlist-btn i {
-        font-size: 1rem;
+        font-size: 1.3rem;
+    }
+    
+    .apple-music-full-playlist-btn:active {
+        transform: translateY(-1px) scale(0.98);
+        box-shadow: 0 6px 20px rgba(232, 164, 139, 0.4);
     }
     
     .apple-music-full-playlist-btn:hover {
@@ -2007,70 +2051,82 @@ footer {
         box-shadow: 0 10px 25px rgba(232, 164, 139, 0.5);
     }
     
-    /* Amazon Music Mobile Optimizations */
+    /* Amazon Music Mobile Optimizations - 中高年向け */
     .amazon-music-direct-container {
-        padding: 2rem 1rem;
-        min-height: 350px;
-        gap: 1.5rem;
+        padding: 2.5rem 1.2rem;
+        min-height: 380px;
+        gap: 2rem;
     }
     
     .amazon-music-logo i {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
     
     .amazon-music-logo span {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        font-weight: 700;
     }
     
     .amazon-music-full-playlist-btn {
-        padding: 1.2rem 2rem;
-        font-size: 1rem;
+        padding: 1.6rem 2.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
         width: auto;
-        min-width: auto;
-        border-radius: 50px;
-        gap: 1rem;
+        min-width: 280px;
+        border-radius: 60px;
+        gap: 1.2rem;
+        border-width: 3px;
+        box-shadow: 0 8px 25px rgba(232, 164, 139, 0.3);
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
     }
     
     .amazon-music-full-playlist-btn i {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     
-    .amazon-music-full-playlist-btn:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 10px 25px rgba(232, 164, 139, 0.5);
+    .amazon-music-full-playlist-btn:active {
+        transform: translateY(-1px) scale(0.98);
+        box-shadow: 0 6px 20px rgba(232, 164, 139, 0.4);
     }
     
-    /* YouTube Mobile Optimizations */
+    /* YouTube Mobile Optimizations - 中高年向け */
     .youtube-direct-container {
-        padding: 2rem 1rem;
-        min-height: 350px;
-        gap: 1.5rem;
+        padding: 2.5rem 1.2rem;
+        min-height: 380px;
+        gap: 2rem;
     }
     
     .youtube-logo i {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
     
     .youtube-logo span {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        font-weight: 700;
     }
     
     .youtube-full-playlist-btn {
-        padding: 1.2rem 2rem;
-        font-size: 1rem;
+        padding: 1.6rem 2.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
         width: auto;
-        min-width: auto;
-        border-radius: 50px;
-        gap: 1rem;
+        min-width: 280px;
+        border-radius: 60px;
+        gap: 1.2rem;
+        border-width: 3px;
+        box-shadow: 0 8px 25px rgba(232, 164, 139, 0.3);
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
     }
     
     .youtube-full-playlist-btn i {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     
-    .youtube-full-playlist-btn:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 10px 25px rgba(232, 164, 139, 0.5);
+    .youtube-full-playlist-btn:active {
+        transform: translateY(-1px) scale(0.98);
+        box-shadow: 0 6px 20px rgba(232, 164, 139, 0.4);
     }
     
     .close-lyrics-btn {
@@ -2096,19 +2152,39 @@ footer {
         }
     }
 
-    /* Music Players Mobile */
+    /* Music Players Mobile - 中高年向け最適化 */
+    .players-description {
+        font-size: 1.2rem;
+        margin-bottom: 1.8rem;
+        padding: 0 1rem;
+        line-height: 1.8;
+    }
+    
     .platform-selector {
-        gap: 0.8rem;
+        gap: 0.6rem;
+        margin-bottom: 2.5rem;
+        padding: 0 0.5rem;
     }
     
     .platform-btn {
-        min-width: 90px;
-        padding: 0.8rem 1rem;
+        min-width: 85px;
+        padding: 1rem 0.8rem;
+        font-size: 0.85rem;
+        border-radius: 15px;
+        min-height: 70px;
+        border-width: 3px;
+        box-shadow: 0 6px 15px rgba(232, 164, 139, 0.25);
     }
     
     .platform-btn i {
-        font-size: 1.5rem;
-        margin-bottom: 0.3rem;
+        font-size: 1.6rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .platform-btn.active {
+        border-width: 4px;
+        box-shadow: 0 8px 20px rgba(232, 164, 139, 0.4);
+        transform: scale(1.02);
     }
     
     .player-container {
@@ -2133,12 +2209,24 @@ footer {
         font-size: 1.3rem;
     }
     
-    .players-description {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
+    .player-note {
+        padding: 1.5rem 1.2rem;
+        margin-bottom: 2rem;
+        border-radius: 20px;
+        border-width: 3px;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     
     .player-note p {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1.9;
+        text-align: center;
+    }
+    
+    .player-note i {
+        font-size: 1.3rem;
+        margin-right: 0.8rem;
     }
 }
