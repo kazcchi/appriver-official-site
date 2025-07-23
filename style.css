@@ -1978,10 +1978,10 @@ footer {
     
     /* Spotify Mobile Optimizations - コンパクト */
     .spotify-direct-container {
-        padding: 1.5rem 1rem;
-        min-height: 300px;
-        gap: 0;
-        justify-content: space-between;
+        padding: 1rem;
+        min-height: auto;
+        gap: 0.8rem;
+        justify-content: center;
     }
     
     .spotify-header {
@@ -2034,10 +2034,10 @@ footer {
     
     /* Apple Music Mobile Optimizations - コンパクト */
     .apple-music-direct-container {
-        padding: 1.5rem 1rem;
-        min-height: 300px;
-        gap: 0;
-        justify-content: space-between;
+        padding: 1rem;
+        min-height: auto;
+        gap: 0.8rem;
+        justify-content: center;
     }
     
     .apple-music-header {
@@ -2095,10 +2095,10 @@ footer {
     
     /* Amazon Music Mobile Optimizations - コンパクト */
     .amazon-music-direct-container {
-        padding: 1.5rem 1rem;
-        min-height: 300px;
-        gap: 0;
-        justify-content: space-between;
+        padding: 1rem;
+        min-height: auto;
+        gap: 0.8rem;
+        justify-content: center;
     }
     
     .amazon-music-header {
@@ -2151,10 +2151,10 @@ footer {
     
     /* YouTube Mobile Optimizations - コンパクト */
     .youtube-direct-container {
-        padding: 1.5rem 1rem;
-        min-height: 300px;
-        gap: 0;
-        justify-content: space-between;
+        padding: 1rem;
+        min-height: auto;
+        gap: 0.8rem;
+        justify-content: center;
     }
     
     .youtube-header {
