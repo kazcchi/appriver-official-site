@@ -35,10 +35,13 @@
             z-index: 1000;
             opacity: 0;
             animation: fadeInGuide 1s ease-out 2s forwards;
+            -webkit-animation: fadeInGuide 1s ease-out 2s forwards;
+            will-change: opacity, transform;
         }
 
         .scroll-guide.hidden {
             animation: fadeOutGuide 0.5s ease-out forwards;
+            -webkit-animation: fadeOutGuide 0.5s ease-out forwards;
         }
 
         /* 指のイラスト */
@@ -51,6 +54,8 @@
             margin: 0 auto 20px auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             animation: fingerSlide 3s ease-in-out infinite;
+            -webkit-animation: fingerSlide 3s ease-in-out infinite;
+            will-change: transform;
         }
 
         /* 爪部分 */
@@ -80,19 +85,41 @@
             margin: 0 auto;
             opacity: 0.6;
             animation: trailSlide 3s ease-in-out infinite;
+            -webkit-animation: trailSlide 3s ease-in-out infinite;
         }
 
         /* 指のスライドアニメーション */
         @keyframes fingerSlide {
             0% {
                 transform: translateY(50px);
+                -webkit-transform: translateY(50px);
                 opacity: 0.8;
             }
             50% {
                 transform: translateY(-50px);
+                -webkit-transform: translateY(-50px);
                 opacity: 1;
             }
             100% {
+                transform: translateY(50px);
+                -webkit-transform: translateY(50px);
+                opacity: 0.8;
+            }
+        }
+        
+        @-webkit-keyframes fingerSlide {
+            0% {
+                -webkit-transform: translateY(50px);
+                transform: translateY(50px);
+                opacity: 0.8;
+            }
+            50% {
+                -webkit-transform: translateY(-50px);
+                transform: translateY(-50px);
+                opacity: 1;
+            }
+            100% {
+                -webkit-transform: translateY(50px);
                 transform: translateY(50px);
                 opacity: 0.8;
             }
@@ -100,26 +127,68 @@
 
         /* 軌跡のアニメーション */
         @keyframes trailSlide {
-            0% {
-                opacity: 0.3;
-            }
-            50% {
-                opacity: 0.8;
-            }
-            100% {
-                opacity: 0.3;
-            }
+            0% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.3; }
+        }
+        
+        @-webkit-keyframes trailSlide {
+            0% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+            100% { opacity: 0.3; }
         }
 
         /* ガイド表示・非表示 */
         @keyframes fadeInGuide {
-            from { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-            to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            from { 
+                opacity: 0; 
+                transform: translate(-50%, -50%) scale(0.8);
+                -webkit-transform: translate(-50%, -50%) scale(0.8);
+            }
+            to { 
+                opacity: 1; 
+                transform: translate(-50%, -50%) scale(1);
+                -webkit-transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        
+        @-webkit-keyframes fadeInGuide {
+            from { 
+                opacity: 0; 
+                -webkit-transform: translate(-50%, -50%) scale(0.8);
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+            to { 
+                opacity: 1; 
+                -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
+            }
         }
 
         @keyframes fadeOutGuide {
-            from { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-            to { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            from { 
+                opacity: 1; 
+                transform: translate(-50%, -50%) scale(1);
+                -webkit-transform: translate(-50%, -50%) scale(1);
+            }
+            to { 
+                opacity: 0; 
+                transform: translate(-50%, -50%) scale(0.8);
+                -webkit-transform: translate(-50%, -50%) scale(0.8);
+            }
+        }
+        
+        @-webkit-keyframes fadeOutGuide {
+            from { 
+                opacity: 1; 
+                -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
+            }
+            to { 
+                opacity: 0; 
+                -webkit-transform: translate(-50%, -50%) scale(0.8);
+                transform: translate(-50%, -50%) scale(0.8);
+            }
         }
 
         /* スマホ対応 */
@@ -197,6 +266,12 @@
         if (localStorage.getItem('appriver_scroll_guide_shown')) {
             scrollGuide.style.display = 'none';
         }
+        
+        // デバッグ用：強制表示（スマホテスト用）
+        setTimeout(() => {
+            scrollGuide.style.opacity = '1';
+            scrollGuide.style.display = 'block';
+        }, 100);
 
         // 10秒後自動消去
         setTimeout(() => {
