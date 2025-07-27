@@ -122,6 +122,8 @@
             pullIndicator.style.top = '10px';
             
             setTimeout(() => {
+                // リロード完了フラグを設定
+                localStorage.setItem('appriver_reload_completed', 'true');
                 window.location.reload();
             }, 500);
         }
@@ -141,6 +143,8 @@
             // ダブルタップ検出
             e.preventDefault();
             if (confirm('ページを更新しますか？')) {
+                // リロード完了フラグを設定
+                localStorage.setItem('appriver_reload_completed', 'true');
                 window.location.reload();
             }
         }

@@ -37,14 +37,13 @@ body {
 /* Reload Guide */
 .reload-guide {
     position: fixed;
-    top: 25%;
+    top: 35%;
     left: 50%;
-    width: 150px;
+    width: 120px;
     height: 200px;
-    margin-left: -75px;
+    margin-left: -60px;
     margin-top: -100px;
     z-index: 1000;
-    animation: reloadPullDown 2.5s ease-in-out infinite;
     transition: opacity 0.5s ease-out;
     display: none;
     text-align: center;
@@ -52,47 +51,59 @@ body {
 
 .reload-guide img {
     width: 100%;
-    height: 75%;
+    height: 60px;
     object-fit: contain;
     opacity: 0.8;
     filter: brightness(0) invert(1) drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+    animation: reloadIconMove 1s ease-out;
 }
 
 .reload-text {
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    margin-top: 10px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-top: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    opacity: 0;
+    animation: textFadeIn 1.5s ease-out 1s forwards;
 }
 
 .reload-sub-text {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 12px;
-    margin-top: 5px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-    line-height: 1.3;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 14px;
+    margin-top: 8px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    line-height: 1.4;
+    opacity: 0;
+    animation: textFadeIn 1.5s ease-out 1s forwards;
 }
 
-@keyframes reloadPullDown {
+@keyframes reloadIconMove {
     0% { 
-        transform: translateY(-40px); 
-        opacity: 0.6; 
-    }
-    50% { 
-        transform: translateY(40px); 
-        opacity: 1; 
+        transform: translateY(-80px); 
+        opacity: 0.3; 
     }
     100% { 
-        transform: translateY(40px); 
-        opacity: 0.3; 
+        transform: translateY(0); 
+        opacity: 0.8; 
+    }
+}
+
+@keyframes textFadeIn {
+    0% { 
+        opacity: 0; 
+        transform: translateY(10px);
+    }
+    100% { 
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
 /* Scroll Guide */
 .scroll-guide {
     position: fixed;
-    top: 60%;
+    top: 70%;
     left: 50%;
     width: 150px;
     height: 150px;
@@ -130,19 +141,25 @@ body {
 /* Mobile responsive for guides */
 @media (max-width: 768px) {
     .reload-guide {
-        width: 120px;
+        width: 100px;
         height: 160px;
-        margin-left: -60px;
+        margin-left: -50px;
         margin-top: -80px;
-        top: 30%;
+        top: 40%;
+    }
+    
+    .reload-guide img {
+        height: 50px;
     }
     
     .reload-text {
-        font-size: 14px;
+        font-size: 16px;
+        margin-top: 12px;
     }
     
     .reload-sub-text {
-        font-size: 11px;
+        font-size: 12px;
+        margin-top: 6px;
     }
     
     .scroll-guide {
@@ -150,7 +167,7 @@ body {
         height: 120px;
         margin-left: -60px;
         margin-top: -60px;
-        top: 65%;
+        top: 75%;
     }
 }
 

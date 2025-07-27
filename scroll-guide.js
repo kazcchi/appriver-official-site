@@ -7,10 +7,13 @@
     
     if (!reloadGuide || !scrollGuide) return;
 
+    // リロード済みかチェック
+    const reloadCompleted = localStorage.getItem('appriver_reload_completed');
+    
     // リロードガイド表示関数
     function showReloadGuide() {
-        // 既に表示済みかチェック
-        if (localStorage.getItem('appriver_guides_shown')) {
+        // リロード済みの場合は表示しない
+        if (reloadCompleted) {
             return;
         }
         
@@ -25,7 +28,8 @@
         reloadGuide.style.opacity = '0';
         setTimeout(() => {
             reloadGuide.style.display = 'none';
-            showScrollGuide();
+            // 2秒後にスクロールガイド表示
+            setTimeout(showScrollGuide, 2000);
         }, 500);
     }
 
@@ -43,7 +47,6 @@
         setTimeout(() => {
             scrollGuide.style.display = 'none';
         }, 500);
-        localStorage.setItem('appriver_guides_shown', 'true');
     }
 
     // スクロール検知
@@ -56,31 +59,52 @@
         }
     }
 
+    // リロード検知（PWAリロード完了時に呼ばれる）
+    window.reloadCompleted = function() {
+        localStorage.setItem('appriver_reload_completed', 'true');
+    };
+
     // イベントリスナー設定
     window.addEventListener('scroll', handleScroll, {passive: true});
 
     // 初期化
     function init() {
-        // 3秒後にリロードガイド表示
-        setTimeout(() => {
-            if (!hasScrolled) {
-                showReloadGuide();
-            }
-        }, 3000);
+        if (reloadCompleted) {
+            // リロード済みの場合は2秒後にスクロールガイドのみ表示
+            setTimeout(() => {
+                if (!hasScrolled) {
+                    showScrollGuide();
+                }
+            }, 2000);
+            
+            // 20秒後に自動非表示
+            setTimeout(() => {
+                if (!hasScrolled) {
+                    hideScrollGuide();
+                }
+            }, 20000);
+        } else {
+            // 初回の場合は2秒後にリロードガイド表示
+            setTimeout(() => {
+                if (!hasScrolled) {
+                    showReloadGuide();
+                }
+            }, 2000);
 
-        // 8秒後にスクロールガイドに切り替え
-        setTimeout(() => {
-            if (!hasScrolled) {
-                hideReloadGuide();
-            }
-        }, 8000);
+            // 4.5秒後（アニメーション完了後）にスクロールガイドに切り替え
+            setTimeout(() => {
+                if (!hasScrolled && !reloadCompleted) {
+                    hideReloadGuide();
+                }
+            }, 4500);
 
-        // 25秒後に自動非表示
-        setTimeout(() => {
-            if (!hasScrolled) {
-                hideScrollGuide();
-            }
-        }, 25000);
+            // 25秒後に自動非表示
+            setTimeout(() => {
+                if (!hasScrolled) {
+                    hideScrollGuide();
+                }
+            }, 25000);
+        }
     }
 
     // ページ読み込み完了時に初期化
