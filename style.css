@@ -16,6 +16,24 @@ body {
     scroll-padding-top: 100px;
 }
 
+/* PWA専用スタイル */
+.pwa-mode {
+    padding-top: var(--safe-area-inset-top, 0);
+    padding-bottom: var(--safe-area-inset-bottom, 0);
+}
+
+/* PWAでのステータスバー対応 */
+@media (display-mode: standalone) {
+    body {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    
+    header {
+        padding-top: env(safe-area-inset-top);
+    }
+}
+
 /* Scroll Guide */
 .scroll-guide {
     position: fixed;

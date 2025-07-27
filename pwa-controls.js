@@ -1,5 +1,18 @@
 // PWA Controls - リロード機能の改善
 (function() {
+    // PWA状態検出
+    const isPWA = window.matchMedia('(display-mode: standalone)').matches || 
+                  window.navigator.standalone ||
+                  document.referrer.includes('android-app://');
+    
+    console.log('PWA Mode:', isPWA);
+    
+    // PWAの場合、フルスクリーン対応
+    if (isPWA) {
+        document.documentElement.style.setProperty('--safe-area-inset-top', 'env(safe-area-inset-top)');
+        document.documentElement.style.setProperty('--safe-area-inset-bottom', 'env(safe-area-inset-bottom)');
+        document.body.classList.add('pwa-mode');
+    }
     // Service Worker登録（キャッシュ管理用）
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
