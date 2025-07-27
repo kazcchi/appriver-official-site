@@ -54,7 +54,6 @@ body {
     height: 100px;
     object-fit: contain;
     opacity: 0;
-    filter: invert(1) brightness(2) drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
     animation: reloadIconMove 1s ease-out forwards;
     transform: translateY(-80px);
 }
