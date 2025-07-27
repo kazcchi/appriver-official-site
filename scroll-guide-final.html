@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appriver - スクロールガイド</title>
+    <style>
+        body {
+            margin: 0;
+            height: 200vh;
+            background: linear-gradient(180deg, #ffeee6 0%, #f9f0e8 100%);
+            font-family: 'Hiragino Maru Gothic ProN', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            color: #333;
+            text-align: center;
+            font-family: 'Chalkboard', cursive;
+        }
+
+        /* スクロールガイド */
+        .scroll-guide {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 140px;
+            height: 160px;
+            margin-left: -70px;
+            margin-top: -80px;
+            background: rgba(232, 164, 139, 0.95);
+            border: 3px solid rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            z-index: 1000;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        /* 手のアイコン - より自然な形 */
+        .hand-icon {
+            width: 50px;
+            height: 60px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        /* 手のひら */
+        .palm {
+            width: 35px;
+            height: 45px;
+            background: #d49175;
+            border: 2px solid #333;
+            border-radius: 18px 18px 12px 12px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        /* 親指 */
+        .thumb {
+            position: absolute;
+            width: 12px;
+            height: 20px;
+            background: #d49175;
+            border: 2px solid #333;
+            border-radius: 8px;
+            left: -8px;
+            top: 15px;
+            transform: rotate(-20deg);
+        }
+
+        /* 指先のハイライト */
+        .palm::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            margin-left: -8px;
+            width: 16px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 8px;
+        }
+
+        /* 下向き矢印 */
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 12px solid white;
+            margin: 5px auto 10px auto;
+            animation: bounce 1.5s ease-in-out infinite;
+        }
+
+        /* バウンスアニメーション */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); opacity: 0.7; }
+            50% { transform: translateY(8px); opacity: 1; }
+        }
+
+        /* 手のスライドアニメーション */
+        .hand-icon {
+            animation: handSlide 2s ease-in-out infinite;
+        }
+
+        @keyframes handSlide {
+            0% { transform: translateY(10px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(10px); }
+        }
+
+        .guide-text {
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* フェードアウト */
+        .scroll-guide.fade-out {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.9);
+            transition: all 0.4s ease-out;
+        }
+
+        /* 下のセクション */
+        .demo-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(232, 164, 139, 0.1);
+        }
+
+        .demo-section h2 {
+            font-size: 2.5rem;
+            color: #e8a48b;
+            text-align: center;
+        }
+
+        /* モバイル調整 */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .scroll-guide {
+                width: 120px;
+                height: 140px;
+                margin-left: -60px;
+                margin-top: -70px;
+            }
+            
+            .hand-icon {
+                width: 40px;
+                height: 50px;
+            }
+            
+            .palm {
+                width: 28px;
+                height: 36px;
+            }
+            
+            .thumb {
+                width: 10px;
+                height: 16px;
+                left: -6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>appriver</h1>
+        </div>
+        
+        <!-- スクロールガイド -->
+        <div class="scroll-guide" id="scrollGuide">
+            <div class="hand-icon">
+                <div class="palm">
+                    <div class="thumb"></div>
+                </div>
+            </div>
+            <div class="arrow-down"></div>
+            <div class="guide-text">下にスクロール</div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>スクロール完了！</h2>
+    </div>
+
+    <script>
+        let hasScrolled = false;
+        const scrollGuide = document.getElementById('scrollGuide');
+
+        // ガイド表示
+        function showGuide() {
+            // 既に表示済みかチェック
+            if (localStorage.getItem('appriver_scroll_guide_shown')) {
+                return;
+            }
+            
+            scrollGuide.style.display = 'flex';
+            setTimeout(() => {
+                scrollGuide.style.opacity = '1';
+            }, 100);
+        }
+
+        // ガイド非表示
+        function hideGuide() {
+            scrollGuide.classList.add('fade-out');
+            setTimeout(() => {
+                scrollGuide.style.display = 'none';
+            }, 400);
+            localStorage.setItem('appriver_scroll_guide_shown', 'true');
+        }
+
+        // スクロール検知
+        window.addEventListener('scroll', function() {
+            const scrollY = window.scrollY || window.pageYOffset;
+            
+            if (!hasScrolled && scrollY > 20) {
+                hasScrolled = true;
+                hideGuide();
+            }
+        }, {passive: true});
+
+        // 初期化
+        setTimeout(() => {
+            if (!hasScrolled) {
+                showGuide();
+            }
+        }, 2000);
+
+        // 15秒後に自動非表示
+        setTimeout(() => {
+            if (!hasScrolled) {
+                hideGuide();
+            }
+        }, 15000);
+    </script>
+</body>
+</html>
