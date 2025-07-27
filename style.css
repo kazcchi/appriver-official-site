@@ -53,7 +53,7 @@ body {
     width: 150px;
     height: 100px;
     object-fit: contain;
-    opacity: 0.8;
+    opacity: 0;
     filter: brightness(0) invert(1) drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
     animation: reloadIconMove 1s ease-out;
 }
@@ -83,6 +83,10 @@ body {
 @keyframes reloadIconMove {
     0% { 
         transform: translateY(-80px); 
+        opacity: 0; 
+    }
+    50% { 
+        transform: translateY(-40px); 
         opacity: 0.8; 
     }
     100% { 
