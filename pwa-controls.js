@@ -47,7 +47,7 @@
     // プルリフレッシュインジケーター作成
     const pullIndicator = document.createElement('div');
     pullIndicator.id = 'pull-indicator';
-    pullIndicator.innerHTML = '↓ 引っ張って更新';
+    pullIndicator.innerHTML = '↓ ひっぱって更新';
     pullIndicator.style.cssText = `
         position: fixed;
         top: -60px;
@@ -95,11 +95,11 @@
             document.body.style.transition = 'none';
             
             if (pullDistance > pullThreshold) {
-                pullIndicator.innerHTML = '↑ 離して更新';
+                pullIndicator.innerHTML = '↑ はなして更新';
                 pullIndicator.style.backgroundColor = '#d49175';
                 pullIndicator.style.top = '10px';
             } else {
-                pullIndicator.innerHTML = '↓ 引っ張って更新';
+                pullIndicator.innerHTML = '↓ ひっぱって更新';
                 pullIndicator.style.backgroundColor = '#e8a48b';
                 pullIndicator.style.top = `${dampedDistance - 50}px`;
             }
