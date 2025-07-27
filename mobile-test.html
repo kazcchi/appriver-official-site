@@ -19,18 +19,15 @@
     <p>Time: <span id="time">loading...</span></p>
     
     <script>
-        // JavaScript test
         document.getElementById('js-test').innerHTML = '✅ JavaScript works';
         document.getElementById('time').textContent = new Date().toLocaleTimeString();
         
-        // Animation test  
         setTimeout(function() {
             var box = document.getElementById('box');
             box.style.background = 'green';
             box.style.transform = 'scale(1.5)';
         }, 2000);
         
-        // Touch test
         document.addEventListener('touchstart', function() {
             document.body.style.background = '#00ff00';
         });
