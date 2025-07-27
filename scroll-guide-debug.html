@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スクロールガイド デバッグ版</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 200vh;
+            background: #ffeee6;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, #ffeee6 0%, #f9f0e8 100%);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            color: #333;
+            text-align: center;
+        }
+
+        /* デバッグパネル */
+        .debug-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            color: #00ff00;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 14px;
+            z-index: 3000;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        /* スクロールガイド - 最もシンプル */
+        .scroll-guide {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 150px;
+            margin-left: -100px;
+            margin-top: -75px;
+            background: rgba(232, 164, 139, 0.9);
+            border: 3px solid #e8a48b;
+            border-radius: 15px;
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .scroll-guide.hidden {
+            display: none !important;
+        }
+
+        /* 指のイラスト - 超シンプル */
+        .finger {
+            width: 40px;
+            height: 60px;
+            background: #d49175;
+            border: 2px solid #333;
+            border-radius: 20px 20px 10px 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .finger::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            margin-left: -8px;
+            width: 16px;
+            height: 10px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .guide-text {
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        /* アニメーションクラス */
+        .finger.animate {
+            transform: translateY(-20px);
+            transition: transform 1s ease-in-out;
+        }
+
+        .demo-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(232, 164, 139, 0.2);
+        }
+
+        .demo-section h2 {
+            font-size: 2rem;
+            color: #e8a48b;
+        }
+
+        /* スマホ用調整 */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .scroll-guide {
+                width: 150px;
+                height: 120px;
+                margin-left: -75px;
+                margin-top: -60px;
+            }
+            
+            .finger {
+                width: 30px;
+                height: 45px;
+            }
+            
+            .debug-panel {
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- デバッグパネル -->
+    <div class="debug-panel" id="debugPanel"></div>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>appriver</h1>
+        </div>
+        
+        <!-- スクロールガイド -->
+        <div class="scroll-guide" id="scrollGuide">
+            <div class="finger" id="finger"></div>
+            <div class="guide-text">下にスクロール</div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>スクロール成功！</h2>
+    </div>
+
+    <script>
+        // デバッグログ
+        const debugPanel = document.getElementById('debugPanel');
+        const logs = [];
+        
+        function log(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            const logMessage = `[${timestamp}] ${message}`;
+            logs.push(logMessage);
+            console.log(logMessage);
+            
+            // 最新10件のログを表示
+            debugPanel.innerHTML = logs.slice(-10).join('<br>');
+        }
+
+        // 変数初期化
+        let hasScrolled = false;
+        let guideVisible = false;
+        const scrollGuide = document.getElementById('scrollGuide');
+        const finger = document.getElementById('finger');
+
+        log('スクリプト開始');
+        log('User Agent: ' + navigator.userAgent.substring(0, 50) + '...');
+        log('画面サイズ: ' + window.innerWidth + 'x' + window.innerHeight);
+
+        // DOM要素チェック
+        if (scrollGuide) {
+            log('scrollGuide要素: 見つかりました');
+        } else {
+            log('scrollGuide要素: 見つかりません！');
+        }
+
+        if (finger) {
+            log('finger要素: 見つかりました');
+        } else {
+            log('finger要素: 見つかりません！');
+        }
+
+        // ガイド表示関数
+        function showGuide() {
+            log('showGuide() 実行開始');
+            
+            try {
+                // LocalStorageチェック
+                const shown = localStorage.getItem('appriver_scroll_guide_shown');
+                log('LocalStorage確認: ' + (shown || 'なし'));
+                
+                if (shown) {
+                    log('既に表示済みのためスキップ');
+                    return;
+                }
+
+                // 表示
+                scrollGuide.style.display = 'flex';
+                guideVisible = true;
+                log('ガイド表示完了');
+
+                // 3秒後にアニメーション開始
+                setTimeout(() => {
+                    if (guideVisible && finger) {
+                        finger.classList.add('animate');
+                        log('アニメーション開始');
+                        
+                        // アニメーションループ
+                        setInterval(() => {
+                            if (guideVisible && finger) {
+                                finger.classList.toggle('animate');
+                            }
+                        }, 2000);
+                    }
+                }, 1000);
+
+            } catch (error) {
+                log('showGuide()エラー: ' + error.message);
+            }
+        }
+
+        // ガイド非表示関数
+        function hideGuide() {
+            log('hideGuide() 実行');
+            
+            try {
+                scrollGuide.classList.add('hidden');
+                guideVisible = false;
+                localStorage.setItem('appriver_scroll_guide_shown', 'true');
+                log('ガイド非表示完了');
+            } catch (error) {
+                log('hideGuide()エラー: ' + error.message);
+            }
+        }
+
+        // スクロール検知
+        function handleScroll() {
+            const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (!hasScrolled && scrollY > 10) {
+                hasScrolled = true;
+                log('スクロール検知: ' + scrollY + 'px');
+                hideGuide();
+            }
+        }
+
+        // イベントリスナー設定
+        try {
+            window.addEventListener('scroll', handleScroll, { passive: true });
+            log('スクロールイベント設定完了');
+        } catch (error) {
+            log('スクロールイベント設定エラー: ' + error.message);
+        }
+
+        // タッチイベント（スマホ用）
+        try {
+            window.addEventListener('touchstart', function() {
+                log('タッチ検知');
+            }, { passive: true });
+            log('タッチイベント設定完了');
+        } catch (error) {
+            log('タッチイベント設定エラー: ' + error.message);
+        }
+
+        // 初期化
+        function init() {
+            log('初期化開始');
+            
+            try {
+                // 3秒後にガイド表示
+                setTimeout(() => {
+                    log('3秒経過 - ガイド表示開始');
+                    if (!hasScrolled) {
+                        showGuide();
+                    }
+                }, 3000);
+                
+                // 20秒後に自動非表示
+                setTimeout(() => {
+                    log('20秒経過 - 自動非表示');
+                    if (guideVisible) {
+                        hideGuide();
+                    }
+                }, 20000);
+                
+                log('初期化完了');
+            } catch (error) {
+                log('初期化エラー: ' + error.message);
+            }
+        }
+
+        // ページ読み込み完了時
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                log('DOMContentLoaded');
+                init();
+            });
+        } else {
+            log('DOM既に読み込み済み');
+            init();
+        }
+
+        // ページ完全読み込み
+        window.addEventListener('load', function() {
+            log('ページ完全読み込み完了');
+        });
+
+        // エラーキャッチ
+        window.addEventListener('error', function(e) {
+            log('JavaScriptエラー: ' + e.message);
+        });
+
+        // 30秒後にデバッグパネル非表示
+        setTimeout(() => {
+            if (debugPanel) {
+                debugPanel.style.display = 'none';
+            }
+        }, 30000);
+    </script>
+</body>
+</html>
