@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finger Test</title>
+</head>
+<body style="background: #ffeee6; padding: 20px; text-align: center;">
+    
+    <h1>指アイコンテスト</h1>
+    
+    <!-- テスト1: 絵文字 -->
+    <div style="margin: 20px 0; padding: 20px; background: orange; border-radius: 10px;">
+        <h2>絵文字テスト</h2>
+        <div style="font-size: 48px;">👆</div>
+        <p>絵文字が見える？</p>
+    </div>
+    
+    <!-- テスト2: シンプルな図形 -->
+    <div style="margin: 20px 0; padding: 20px; background: lightblue; border-radius: 10px;">
+        <h2>図形テスト</h2>
+        <div style="
+            width: 60px; 
+            height: 60px; 
+            background: #d49175; 
+            border: 3px solid #333; 
+            border-radius: 50%; 
+            margin: 10px auto;
+        "></div>
+        <p>茶色い丸が見える？</p>
+    </div>
+    
+    <!-- テスト3: 指の形 -->
+    <div style="margin: 20px 0; padding: 20px; background: lightgreen; border-radius: 10px;">
+        <h2>指の形テスト</h2>
+        <div style="position: relative; width: 60px; height: 60px; margin: 20px auto;">
+            <!-- 人差し指 -->
+            <div style="
+                width: 15px; 
+                height: 30px; 
+                background: #d49175; 
+                border: 2px solid #333; 
+                border-radius: 8px; 
+                position: absolute; 
+                top: 0; 
+                left: 50%; 
+                margin-left: -7.5px;
+            "></div>
+            <!-- 手の甲 -->
+            <div style="
+                width: 35px; 
+                height: 25px; 
+                background: #d49175; 
+                border: 2px solid #333; 
+                border-radius: 15px; 
+                position: absolute; 
+                bottom: 0; 
+                left: 50%; 
+                margin-left: -17.5px;
+            "></div>
+        </div>
+        <p>指の形が見える？</p>
+    </div>
+    
+    <!-- テスト4: アニメーション -->
+    <div style="margin: 20px 0; padding: 20px; background: pink; border-radius: 10px;">
+        <h2>アニメーションテスト</h2>
+        <div id="animatedBox" style="
+            width: 50px; 
+            height: 50px; 
+            background: red; 
+            margin: 10px auto; 
+            transition: all 1s;
+        "></div>
+        <p>赤い四角が動く？</p>
+    </div>
+
+    <script>
+        // アニメーションテスト
+        setInterval(function() {
+            const box = document.getElementById('animatedBox');
+            if (box.style.transform === 'translateY(-20px)') {
+                box.style.transform = 'translateY(20px)';
+            } else {
+                box.style.transform = 'translateY(-20px)';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
