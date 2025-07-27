@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Test</title>
+</head>
+<body>
+    <!-- 最初に必ず表示される要素 -->
+    <div style="background: red; color: white; padding: 20px; font-size: 20px; position: fixed; top: 0; left: 0; right: 0; z-index: 9999;">
+        iPhone テスト開始
+    </div>
+    
+    <!-- メイン画面 -->
+    <div style="height: 100vh; background: #ffeee6; display: flex; align-items: center; justify-content: center; padding-top: 80px;">
+        <h1 style="font-size: 2rem; color: #333;">appriver</h1>
+    </div>
+    
+    <!-- スクロールガイド - 最初から表示 -->
+    <div id="guide" style="
+        background: orange;
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-left: -50px;
+        margin-top: -50px;
+        z-index: 8888;
+        border: 3px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+    ">
+        ガイド
+    </div>
+    
+    <!-- 下の画面 -->
+    <div style="height: 100vh; background: #e8a48b; display: flex; align-items: center; justify-content: center;">
+        <h2 style="font-size: 1.5rem; color: white;">スクロール完了</h2>
+    </div>
+
+    <script>
+        // 即座に実行
+        console.log('iPhone Script Start');
+        
+        // 要素取得
+        var guide = document.getElementById('guide');
+        console.log('Guide element:', guide);
+        
+        // 5秒後に色変更（動作確認）
+        setTimeout(function() {
+            console.log('5秒経過');
+            if (guide) {
+                guide.style.background = 'green';
+                guide.innerHTML = '5秒後';
+            }
+        }, 5000);
+        
+        // スクロール検知
+        window.addEventListener('scroll', function() {
+            var scrollY = window.scrollY || window.pageYOffset;
+            console.log('Scroll:', scrollY);
+            
+            if (scrollY > 10) {
+                console.log('スクロール検知');
+                if (guide) {
+                    guide.style.background = 'blue';
+                    guide.innerHTML = 'スクロール';
+                }
+            }
+        });
+        
+        // タッチ検知
+        document.addEventListener('touchstart', function() {
+            console.log('Touch detected');
+        });
+        
+        console.log('Script loaded');
+    </script>
+</body>
+</html>
