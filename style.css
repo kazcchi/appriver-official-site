@@ -39,9 +39,9 @@ body {
     position: fixed;
     top: 35%;
     left: 50%;
-    width: 150px;
+    width: 300px;
     height: 200px;
-    margin-left: -75px;
+    margin-left: -150px;
     margin-top: -100px;
     z-index: 1000;
     transition: opacity 0.5s ease-out;
@@ -50,7 +50,7 @@ body {
 }
 
 .reload-guide img {
-    width: 100%;
+    width: 150px;
     height: 100px;
     object-fit: contain;
     opacity: 0.8;
@@ -143,14 +143,15 @@ body {
 /* Mobile responsive for guides */
 @media (max-width: 768px) {
     .reload-guide {
-        width: 120px;
+        width: 280px;
         height: 180px;
-        margin-left: -60px;
+        margin-left: -140px;
         margin-top: -90px;
         top: 40%;
     }
     
     .reload-guide img {
+        width: 120px;
         height: 80px;
     }
     
