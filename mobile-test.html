@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Test</title>
+</head>
+<body style="background: #ff0000; color: white; font-size: 24px; padding: 20px; text-align: center;">
+    <h1>📱 MOBILE TEST SUCCESS! 📱</h1>
+    <p>✅ HTML works</p>
+    <p>✅ CSS works</p>
+    <p id="js-test">❌ JavaScript test...</p>
+    
+    <div style="margin: 20px 0; padding: 20px; background: orange; border-radius: 10px;">
+        <div id="box" style="width: 50px; height: 50px; background: blue; margin: 10px auto; transition: all 1s;"></div>
+        <p>👆 Blue box should change</p>
+    </div>
+    
+    <p>Time: <span id="time">loading...</span></p>
+    
+    <script>
+        // JavaScript test
+        document.getElementById('js-test').innerHTML = '✅ JavaScript works';
+        document.getElementById('time').textContent = new Date().toLocaleTimeString();
+        
+        // Animation test  
+        setTimeout(function() {
+            var box = document.getElementById('box');
+            box.style.background = 'green';
+            box.style.transform = 'scale(1.5)';
+        }, 2000);
+        
+        // Touch test
+        document.addEventListener('touchstart', function() {
+            document.body.style.background = '#00ff00';
+        });
+    </script>
+</body>
+</html>
