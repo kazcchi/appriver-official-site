@@ -50,65 +50,14 @@
             backdrop-filter: blur(10px);
         }
 
-        /* 指アイコン - イラスト版 */
+        /* 指アイコン - 絵文字版 */
         .finger-icon {
-            width: 48px;
-            height: 48px;
+            font-size: 48px;
+            line-height: 1;
             margin-bottom: 15px;
             animation: fingerSwipeUp 2.5s ease-in-out infinite;
-            position: relative;
-        }
-
-        /* 手の甲 */
-        .hand-back {
-            width: 32px;
-            height: 28px;
-            background: #d49175;
-            border: 2px solid #333;
-            border-radius: 14px;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            margin-left: -16px;
-        }
-
-        /* 人差し指（上向き） */
-        .index-finger {
-            width: 12px;
-            height: 24px;
-            background: #d49175;
-            border: 2px solid #333;
-            border-radius: 6px 6px 3px 3px;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            margin-left: -6px;
-        }
-
-        /* 指の爪 */
-        .index-finger::before {
-            content: '';
-            position: absolute;
-            top: 2px;
-            left: 50%;
-            margin-left: -4px;
-            width: 8px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 4px;
-        }
-
-        /* 親指 */
-        .thumb {
-            width: 10px;
-            height: 16px;
-            background: #d49175;
-            border: 2px solid #333;
-            border-radius: 5px;
-            position: absolute;
-            bottom: 8px;
-            right: -6px;
-            transform: rotate(20deg);
+            display: block;
+            text-align: center;
         }
 
         /* 下向き矢印 */
@@ -190,27 +139,7 @@
             }
             
             .finger-icon {
-                width: 36px;
-                height: 36px;
-            }
-            
-            .hand-back {
-                width: 24px;
-                height: 20px;
-                margin-left: -12px;
-            }
-            
-            .index-finger {
-                width: 9px;
-                height: 18px;
-                margin-left: -4.5px;
-            }
-            
-            .thumb {
-                width: 8px;
-                height: 12px;
-                bottom: 6px;
-                right: -4px;
+                font-size: 36px;
             }
         }
     </style>
@@ -223,12 +152,7 @@
         
         <!-- スクロールガイド -->
         <div class="scroll-guide" id="scrollGuide">
-            <div class="finger-icon">
-                <div class="index-finger"></div>
-                <div class="hand-back">
-                    <div class="thumb"></div>
-                </div>
-            </div>
+            <div class="finger-icon">👆</div>
             <div class="arrow-down"></div>
             <div class="guide-text">下にスクロール</div>
         </div>
