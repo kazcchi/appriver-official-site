@@ -50,73 +50,12 @@
             backdrop-filter: blur(10px);
         }
 
-        /* 手のアイコン - 手の甲 */
-        .hand-icon {
-            width: 50px;
-            height: 60px;
-            position: relative;
+        /* 指アイコン */
+        .finger-icon {
+            font-size: 48px;
+            line-height: 1;
             margin-bottom: 15px;
-        }
-
-        /* 手の甲部分 */
-        .palm {
-            width: 35px;
-            height: 35px;
-            background: #d49175;
-            border: 2px solid #333;
-            border-radius: 15px;
-            position: relative;
-            margin: 0 auto;
-        }
-
-        /* 人差し指 */
-        .finger {
-            position: absolute;
-            width: 8px;
-            height: 25px;
-            background: #d49175;
-            border: 2px solid #333;
-            border-radius: 4px 4px 2px 2px;
-            bottom: -23px;
-            left: 50%;
-            margin-left: -4px;
-        }
-
-        /* 親指 */
-        .thumb {
-            position: absolute;
-            width: 10px;
-            height: 18px;
-            background: #d49175;
-            border: 2px solid #333;
-            border-radius: 6px;
-            right: -8px;
-            top: 12px;
-            transform: rotate(15deg);
-        }
-
-        /* 手の甲の関節線 */
-        .palm::before {
-            content: '';
-            position: absolute;
-            top: 12px;
-            left: 8px;
-            right: 8px;
-            height: 1px;
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        /* 指の爪 */
-        .finger::before {
-            content: '';
-            position: absolute;
-            top: 2px;
-            left: 50%;
-            margin-left: -3px;
-            width: 6px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 3px;
+            animation: fingerSwipeUp 2.5s ease-in-out infinite;
         }
 
         /* 下向き矢印 */
@@ -136,15 +75,23 @@
             50% { transform: translateY(8px); opacity: 1; }
         }
 
-        /* 手のスライドアニメーション */
-        .hand-icon {
-            animation: handSlide 2s ease-in-out infinite;
-        }
-
-        @keyframes handSlide {
-            0% { transform: translateY(10px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(10px); }
+        /* スワイプアップアニメーション（画面下から上へ） */
+        @keyframes fingerSwipeUp {
+            0% { 
+                transform: translateY(40px); 
+                opacity: 0.6; 
+            }
+            20% { 
+                opacity: 1; 
+            }
+            80% { 
+                transform: translateY(-40px); 
+                opacity: 1; 
+            }
+            100% { 
+                transform: translateY(-40px); 
+                opacity: 0.3; 
+            }
         }
 
         .guide-text {
@@ -189,26 +136,8 @@
                 margin-top: -70px;
             }
             
-            .hand-icon {
-                width: 40px;
-                height: 50px;
-            }
-            
-            .palm {
-                width: 28px;
-                height: 28px;
-            }
-            
-            .finger {
-                width: 6px;
-                height: 20px;
-                bottom: -18px;
-            }
-            
-            .thumb {
-                width: 8px;
-                height: 14px;
-                right: -6px;
+            .finger-icon {
+                font-size: 36px;
             }
         }
     </style>
@@ -221,12 +150,7 @@
         
         <!-- スクロールガイド -->
         <div class="scroll-guide" id="scrollGuide">
-            <div class="hand-icon">
-                <div class="palm">
-                    <div class="finger"></div>
-                    <div class="thumb"></div>
-                </div>
-            </div>
+            <div class="finger-icon">👆</div>
             <div class="arrow-down"></div>
             <div class="guide-text">下にスクロール</div>
         </div>
