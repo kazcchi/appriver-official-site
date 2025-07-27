@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>モバイル対応スクロールガイド</title>
+</head>
+<body style="margin:0; height:200vh; background:#ffeee6; font-family:Arial,sans-serif; position:relative;">
+
+    <!-- 画面上部デバッグ表示 -->
+    <div id="mobileDebug" style="position:absolute; top:0; left:0; right:0; background:rgba(0,0,0,0.8); color:#00ff00; padding:10px; font-size:14px; z-index:5000; font-family:monospace;">
+        モバイルテスト開始...
+    </div>
+
+    <!-- メインコンテンツ -->
+    <div style="height:100vh; display:flex; align-items:center; justify-content:center;">
+        <h1 style="font-size:3rem; color:#333; text-align:center;">appriver</h1>
+    </div>
+
+    <!-- スクロールガイド - 超シンプル版 -->
+    <div id="scrollGuide" style="
+        position: absolute;
+        top: 50vh;
+        left: 50%;
+        width: 120px;
+        height: 120px;
+        margin-left: -60px;
+        margin-top: -60px;
+        background: rgba(232,164,139,0.95);
+        border: 3px solid #333;
+        border-radius: 15px;
+        z-index: 4000;
+        display: none;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+    ">
+        <!-- 指のアイコン - 超シンプル -->
+        <div id="finger" style="
+            width: 30px;
+            height: 40px;
+            background: #d49175;
+            border: 2px solid #333;
+            border-radius: 15px 15px 8px 8px;
+            margin: 0 auto 10px auto;
+            position: relative;
+        ">
+            <!-- 爪 -->
+            <div style="
+                position: absolute;
+                top: 3px;
+                left: 50%;
+                margin-left: -6px;
+                width: 12px;
+                height: 8px;
+                background: white;
+                border-radius: 6px;
+            "></div>
+        </div>
+        
+        <div style="color:white; font-size:12px; font-weight:bold;">スクロール</div>
+    </div>
+
+    <!-- 下のセクション -->
+    <div style="height:100vh; display:flex; align-items:center; justify-content:center; background:rgba(232,164,139,0.2);">
+        <h2 style="font-size:2rem; color:#e8a48b;">スクロール成功！</h2>
+    </div>
+
+    <script>
+        // モバイルデバッグ関数
+        const debug = document.getElementById('mobileDebug');
+        const logs = [];
+        
+        function mlog(msg) {
+            const time = new Date().toLocaleTimeString();
+            const logMsg = `[${time}] ${msg}`;
+            logs.push(logMsg);
+            console.log(logMsg);
+            debug.innerHTML = logs.slice(-5).join('<br>');
+        }
+
+        // 変数
+        let scrolled = false;
+        const guide = document.getElementById('scrollGuide');
+        const finger = document.getElementById('finger');
+
+        mlog('スクリプト開始');
+        mlog('UA: ' + (navigator.userAgent.includes('Mobile') ? 'モバイル' : 'デスクトップ'));
+        mlog('画面: ' + window.innerWidth + 'x' + window.innerHeight);
+
+        // 要素確認
+        mlog('ガイド要素: ' + (guide ? 'OK' : 'NG'));
+        mlog('指要素: ' + (finger ? 'OK' : 'NG'));
+
+        // 表示関数 - 最もシンプル
+        function showGuide() {
+            mlog('ガイド表示開始');
+            
+            try {
+                // LocalStorage確認
+                if (localStorage.getItem('guide_shown')) {
+                    mlog('既に表示済み');
+                    return;
+                }
+                
+                // 直接表示
+                guide.style.display = 'block';
+                guide.style.opacity = '1';
+                mlog('表示完了');
+                
+                // 指のアニメーション - インライン
+                let up = true;
+                setInterval(() => {
+                    if (scrolled) return;
+                    finger.style.transform = up ? 'translateY(-10px)' : 'translateY(10px)';
+                    finger.style.transition = 'transform 0.8s ease';
+                    up = !up;
+                }, 1000);
+                
+            } catch (e) {
+                mlog('表示エラー: ' + e.message);
+            }
+        }
+
+        // 非表示関数
+        function hideGuide() {
+            mlog('ガイド非表示');
+            guide.style.opacity = '0';
+            guide.style.transition = 'opacity 0.3s';
+            setTimeout(() => {
+                guide.style.display = 'none';
+            }, 300);
+            localStorage.setItem('guide_shown', 'true');
+        }
+
+        // スクロール検知 - 最もシンプル
+        window.addEventListener('scroll', function() {
+            const y = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (!scrolled && y > 5) {
+                scrolled = true;
+                mlog('スクロール検知: ' + y + 'px');
+                hideGuide();
+            }
+        }, {passive: true});
+
+        // タッチ検知
+        window.addEventListener('touchstart', function() {
+            mlog('タッチ検知');
+        }, {passive: true});
+
+        // 初期化 - 即座に実行
+        mlog('初期化開始');
+        
+        // 2秒後に表示
+        setTimeout(() => {
+            mlog('2秒経過 - 表示実行');
+            if (!scrolled) {
+                showGuide();
+            }
+        }, 2000);
+
+        // 15秒後に自動非表示
+        setTimeout(() => {
+            mlog('15秒経過 - 自動非表示');
+            if (!scrolled) {
+                hideGuide();
+            }
+        }, 15000);
+
+        // 10秒後にデバッグ非表示
+        setTimeout(() => {
+            debug.style.display = 'none';
+        }, 10000);
+
+        // エラーキャッチ
+        window.addEventListener('error', (e) => {
+            mlog('JSエラー: ' + e.message);
+        });
+
+        mlog('初期化完了');
+    </script>
+</body>
+</html>
