@@ -50,7 +50,7 @@
             backdrop-filter: blur(10px);
         }
 
-        /* 手のアイコン - より自然な形 */
+        /* 手のアイコン - 手の甲 */
         .hand-icon {
             width: 50px;
             height: 60px;
@@ -58,41 +58,65 @@
             margin-bottom: 15px;
         }
 
-        /* 手のひら */
+        /* 手の甲部分 */
         .palm {
             width: 35px;
-            height: 45px;
+            height: 35px;
             background: #d49175;
             border: 2px solid #333;
-            border-radius: 18px 18px 12px 12px;
+            border-radius: 15px;
             position: relative;
             margin: 0 auto;
+        }
+
+        /* 人差し指 */
+        .finger {
+            position: absolute;
+            width: 8px;
+            height: 25px;
+            background: #d49175;
+            border: 2px solid #333;
+            border-radius: 4px 4px 2px 2px;
+            bottom: -23px;
+            left: 50%;
+            margin-left: -4px;
         }
 
         /* 親指 */
         .thumb {
             position: absolute;
-            width: 12px;
-            height: 20px;
+            width: 10px;
+            height: 18px;
             background: #d49175;
             border: 2px solid #333;
-            border-radius: 8px;
-            left: -8px;
-            top: 15px;
-            transform: rotate(-20deg);
+            border-radius: 6px;
+            right: -8px;
+            top: 12px;
+            transform: rotate(15deg);
         }
 
-        /* 指先のハイライト */
+        /* 手の甲の関節線 */
         .palm::before {
             content: '';
             position: absolute;
-            top: 8px;
+            top: 12px;
+            left: 8px;
+            right: 8px;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        /* 指の爪 */
+        .finger::before {
+            content: '';
+            position: absolute;
+            top: 2px;
             left: 50%;
-            margin-left: -8px;
-            width: 16px;
-            height: 12px;
-            background: rgba(255, 255, 255, 0.6);
-            border-radius: 8px;
+            margin-left: -3px;
+            width: 6px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 3px;
         }
 
         /* 下向き矢印 */
@@ -172,13 +196,19 @@
             
             .palm {
                 width: 28px;
-                height: 36px;
+                height: 28px;
+            }
+            
+            .finger {
+                width: 6px;
+                height: 20px;
+                bottom: -18px;
             }
             
             .thumb {
-                width: 10px;
-                height: 16px;
-                left: -6px;
+                width: 8px;
+                height: 14px;
+                right: -6px;
             }
         }
     </style>
@@ -193,6 +223,7 @@
         <div class="scroll-guide" id="scrollGuide">
             <div class="hand-icon">
                 <div class="palm">
+                    <div class="finger"></div>
                     <div class="thumb"></div>
                 </div>
             </div>
