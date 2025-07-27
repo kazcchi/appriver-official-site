@@ -24,58 +24,99 @@
         });
     }
 
-    // Pull-to-refresh機能
+    // Pull-to-refresh機能（iOS PWA対応）
     let startY = 0;
     let currentY = 0;
-    let pullThreshold = 100;
+    let pullThreshold = 80;
     let isRefreshing = false;
+    let isPulling = false;
+
+    // プルリフレッシュインジケーター作成
+    const pullIndicator = document.createElement('div');
+    pullIndicator.id = 'pull-indicator';
+    pullIndicator.innerHTML = '↓ 引っ張って更新';
+    pullIndicator.style.cssText = `
+        position: fixed;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #e8a48b;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 0 0 10px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        z-index: 9999;
+        transition: top 0.3s ease-out;
+        text-align: center;
+    `;
+    document.body.appendChild(pullIndicator);
 
     // タッチ開始
     document.addEventListener('touchstart', function(e) {
-        if (window.scrollY === 0) {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop <= 5) { // より厳しい条件
             startY = e.touches[0].clientY;
+            isPulling = true;
         }
-    }, {passive: true});
+    }, {passive: false});
 
     // タッチ移動
     document.addEventListener('touchmove', function(e) {
-        if (window.scrollY === 0 && !isRefreshing) {
-            currentY = e.touches[0].clientY;
-            const pullDistance = currentY - startY;
+        if (!isPulling || isRefreshing) return;
+        
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > 5) {
+            isPulling = false;
+            return;
+        }
+
+        currentY = e.touches[0].clientY;
+        const pullDistance = currentY - startY;
+        
+        if (pullDistance > 0) {
+            e.preventDefault(); // スクロールを防ぐ
             
-            if (pullDistance > 0) {
-                // プルダウン表示
-                document.body.style.transform = `translateY(${Math.min(pullDistance / 3, 50)}px)`;
-                document.body.style.transition = 'none';
-                
-                if (pullDistance > pullThreshold) {
-                    // リフレッシュ可能状態
-                    document.body.style.backgroundColor = '#e8a48b20';
-                }
+            const dampedDistance = Math.min(pullDistance * 0.4, 60);
+            document.body.style.transform = `translateY(${dampedDistance}px)`;
+            document.body.style.transition = 'none';
+            
+            if (pullDistance > pullThreshold) {
+                pullIndicator.innerHTML = '↑ 離して更新';
+                pullIndicator.style.backgroundColor = '#d49175';
+                pullIndicator.style.top = '10px';
+            } else {
+                pullIndicator.innerHTML = '↓ 引っ張って更新';
+                pullIndicator.style.backgroundColor = '#e8a48b';
+                pullIndicator.style.top = `${dampedDistance - 50}px`;
             }
         }
-    }, {passive: true});
+    }, {passive: false});
 
     // タッチ終了
     document.addEventListener('touchend', function(e) {
-        if (window.scrollY === 0 && !isRefreshing) {
-            const pullDistance = currentY - startY;
+        if (!isPulling) return;
+        
+        const pullDistance = currentY - startY;
+        
+        document.body.style.transition = 'transform 0.3s ease-out';
+        document.body.style.transform = '';
+        pullIndicator.style.top = '-60px';
+        
+        if (pullDistance > pullThreshold && !isRefreshing) {
+            isRefreshing = true;
+            pullIndicator.innerHTML = '更新中...';
+            pullIndicator.style.top = '10px';
             
-            document.body.style.transition = 'transform 0.3s ease-out, background-color 0.3s ease-out';
-            document.body.style.transform = '';
-            document.body.style.backgroundColor = '';
-            
-            if (pullDistance > pullThreshold) {
-                // リロード実行
-                isRefreshing = true;
-                setTimeout(() => {
-                    window.location.reload();
-                }, 300);
-            }
+            setTimeout(() => {
+                window.location.reload();
+            }, 500);
         }
+        
         startY = 0;
         currentY = 0;
-    }, {passive: true});
+        isPulling = false;
+    }, {passive: false});
 
     // ダブルタップでリロード（iOS PWA用）
     let lastTap = 0;
