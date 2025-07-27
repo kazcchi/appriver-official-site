@@ -9,6 +9,8 @@
 
     // リロード済みかチェック
     const reloadCompleted = localStorage.getItem('appriver_reload_completed');
+    // スクロール済みかチェック
+    const scrollCompleted = localStorage.getItem('appriver_scroll_completed');
     
     // リロードガイド表示関数
     function showReloadGuide() {
@@ -35,6 +37,11 @@
 
     // スクロールガイド表示関数
     function showScrollGuide() {
+        // スクロール済みの場合は表示しない
+        if (scrollCompleted) {
+            return;
+        }
+        
         scrollGuide.style.display = 'block';
         setTimeout(() => {
             scrollGuide.style.opacity = '1';
@@ -47,6 +54,8 @@
         setTimeout(() => {
             scrollGuide.style.display = 'none';
         }, 500);
+        // スクロール完了をLocalStorageに記録
+        localStorage.setItem('appriver_scroll_completed', 'true');
     }
 
     // スクロール検知
@@ -69,6 +78,11 @@
 
     // 初期化
     function init() {
+        // 両方完了済みの場合は何も表示しない
+        if (reloadCompleted && scrollCompleted) {
+            return;
+        }
+        
         if (reloadCompleted) {
             // リロード済みの場合は2秒後にスクロールガイドのみ表示
             setTimeout(() => {
@@ -91,12 +105,12 @@
                 }
             }, 2000);
 
-            // 4.5秒後（アニメーション完了後）にスクロールガイドに切り替え
+            // 5.5秒後（テキスト表示2.5秒後）にスクロールガイドに切り替え
             setTimeout(() => {
                 if (!hasScrolled && !reloadCompleted) {
                     hideReloadGuide();
                 }
-            }, 4500);
+            }, 5500);
 
             // 25秒後に自動非表示
             setTimeout(() => {
