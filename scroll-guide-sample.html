@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スクロールガイド サンプル</title>
+    <style>
+        body {
+            margin: 0;
+            height: 200vh;
+            background: linear-gradient(180deg, #ffeee6 0%, #f9f0e8 25%, #fff5f2 50%, #f5ebe6 75%, #f0e0d6 100%);
+            font-family: 'Hiragino Maru Gothic ProN', sans-serif;
+        }
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            color: #333;
+            text-align: center;
+        }
+
+        /* スクロールガイド */
+        .scroll-guide {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            opacity: 0;
+            animation: fadeInGuide 1s ease-out 2s forwards;
+        }
+
+        .scroll-guide.hidden {
+            animation: fadeOutGuide 0.5s ease-out forwards;
+        }
+
+        /* 指のイラスト */
+        .finger {
+            width: 50px;
+            height: 70px;
+            background: linear-gradient(145deg, #e8a48b 0%, #d49175 100%);
+            border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
+            position: relative;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fingerSlide 3s ease-in-out infinite;
+        }
+
+        /* 爪部分 */
+        .finger::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
+        }
+
+        /* 軌跡の点線 */
+        .finger-trail {
+            width: 2px;
+            height: 100px;
+            background: repeating-linear-gradient(
+                to bottom,
+                #e8a48b 0px,
+                #e8a48b 8px,
+                transparent 8px,
+                transparent 16px
+            );
+            margin: 0 auto;
+            opacity: 0.6;
+            animation: trailSlide 3s ease-in-out infinite;
+        }
+
+        /* 指のスライドアニメーション */
+        @keyframes fingerSlide {
+            0% {
+                transform: translateY(50px);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateY(-50px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(50px);
+                opacity: 0.8;
+            }
+        }
+
+        /* 軌跡のアニメーション */
+        @keyframes trailSlide {
+            0% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 0.3;
+            }
+        }
+
+        /* ガイド表示・非表示 */
+        @keyframes fadeInGuide {
+            from { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        }
+
+        @keyframes fadeOutGuide {
+            from { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            to { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+        }
+
+        /* スマホ対応 */
+        @media (max-width: 768px) {
+            .finger {
+                width: 40px;
+                height: 60px;
+            }
+            
+            .finger::before {
+                width: 16px;
+                height: 12px;
+                top: 6px;
+            }
+            
+            .finger-trail {
+                height: 80px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* デモ用セクション */
+        .demo-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(232, 164, 139, 0.1);
+        }
+
+        .demo-section h2 {
+            font-size: 3rem;
+            color: #e8a48b;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>appriver</h1>
+        </div>
+        
+        <!-- スクロールガイド -->
+        <div class="scroll-guide" id="scrollGuide">
+            <div class="finger"></div>
+            <div class="finger-trail"></div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <h2>スクロールしました！</h2>
+    </div>
+
+    <script>
+        // スクロールガイドの制御
+        let hasScrolled = false;
+        const scrollGuide = document.getElementById('scrollGuide');
+
+        // スクロール検知
+        window.addEventListener('scroll', function() {
+            if (!hasScrolled && window.scrollY > 10) {
+                hasScrolled = true;
+                scrollGuide.classList.add('hidden');
+                
+                // LocalStorageに保存（実際の実装時用）
+                localStorage.setItem('appriver_scroll_guide_shown', 'true');
+            }
+        });
+
+        // LocalStorageチェック（実際の実装時用）
+        if (localStorage.getItem('appriver_scroll_guide_shown')) {
+            scrollGuide.style.display = 'none';
+        }
+
+        // 10秒後自動消去
+        setTimeout(() => {
+            if (!hasScrolled) {
+                scrollGuide.classList.add('hidden');
+            }
+        }, 10000);
+    </script>
+</body>
+</html>
