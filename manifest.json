@@ -3,7 +3,7 @@
   "short_name": "appriver",
   "description": "appriver公式サイト。SUNO AIで作成した楽曲を配信中。",
   "start_url": "/",
-  "display": "standalone",
+  "display": "minimal-ui",
   "background_color": "#ffeee6",
   "theme_color": "#e8a48b",
   "orientation": "portrait-primary",
