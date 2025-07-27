@@ -51,9 +51,10 @@ body {
 
 .reload-guide img {
     width: 150px;
-    height: 100px;
+    height: 150px;
     object-fit: contain;
     opacity: 0;
+    filter: brightness(0) invert(1);
     animation: reloadIconMove 1s ease-out forwards;
     transform: translateY(-80px);
 }
