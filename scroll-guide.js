@@ -71,9 +71,12 @@
     // リロード検知（PWAリロード完了時に呼ばれる）
     window.reloadCompleted = function() {
         localStorage.setItem('appriver_reload_completed', 'true');
-        // リロード実行時にリロードガイドを非表示にしてスクロールガイドを表示
+        // リロード実行時にリロードガイドを非表示（スクロールガイドは独立して動作）
         if (reloadGuide.style.display === 'block') {
-            hideReloadGuide();
+            reloadGuide.style.opacity = '0';
+            setTimeout(() => {
+                reloadGuide.style.display = 'none';
+            }, 500);
         }
     };
 
@@ -82,34 +85,14 @@
 
     // 初期化
     function init() {
-        // 両方完了済みの場合は何も表示しない
-        if (reloadCompleted && scrollCompleted) {
-            return;
-        }
-        
-        if (reloadCompleted) {
-            // リロード済みの場合は2秒後にスクロールガイドのみ表示
-            setTimeout(() => {
-                if (!hasScrolled) {
-                    showScrollGuide();
-                }
-            }, 2000);
-            
-            // 20秒後に自動非表示
-            setTimeout(() => {
-                if (!hasScrolled) {
-                    hideScrollGuide();
-                }
-            }, 20000);
-        } else {
-            // 初回の場合は2秒後にリロードガイド表示（スクロールに関係なく表示）
+        // リロードガイドの初期化（リロード未完了の場合のみ）
+        if (!reloadCompleted) {
+            // 2秒後にリロードガイド表示
             setTimeout(() => {
                 showReloadGuide();
             }, 2000);
 
-            // リロードが完了するまでリロードガイドを表示し続ける
-
-            // 25秒後に自動非表示（リロードガイドのみ）
+            // 25秒後にリロードガイド自動非表示
             setTimeout(() => {
                 if (reloadGuide.style.display === 'block') {
                     reloadGuide.style.opacity = '0';
@@ -118,6 +101,23 @@
                     }, 500);
                 }
             }, 25000);
+        }
+        
+        // スクロールガイドの独立した初期化（スクロール未完了の場合のみ）
+        if (!scrollCompleted) {
+            // 5秒後にスクロールガイド表示（リロードガイドとは独立）
+            setTimeout(() => {
+                if (!hasScrolled) {
+                    showScrollGuide();
+                }
+            }, 5000);
+            
+            // 30秒後にスクロールガイド自動非表示
+            setTimeout(() => {
+                if (!hasScrolled) {
+                    hideScrollGuide();
+                }
+            }, 30000);
         }
     }
 
