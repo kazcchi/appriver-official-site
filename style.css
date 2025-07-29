@@ -50,16 +50,8 @@ body {
     }
 }
 
-/* Swipe Guide */
+/* Swipe Guide - Mobile Only */
 .swipe-guide {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    text-align: center;
-    opacity: 0;
-    animation: swipeTextFadeInBlink 1s ease-out 3s forwards;
     display: none;
 }
 
@@ -97,18 +89,8 @@ body {
     }
 }
 
-/* Scroll Guide */
+/* Scroll Guide - Mobile Only */
 .scroll-guide {
-    position: fixed;
-    top: 70%;
-    left: 50%;
-    width: 150px;
-    height: 150px;
-    margin-left: -75px;
-    margin-top: -75px;
-    z-index: 1000;
-    animation: fingerSwipeUp 2.5s ease-in-out infinite;
-    transition: opacity 0.5s ease-out;
     display: none;
 }
 
@@ -180,13 +162,6 @@ body {
         margin-top: 1rem;
     }
     
-    .scroll-guide {
-        width: 120px;
-        height: 140px;
-        margin-left: -60px;
-        margin-top: -70px;
-        top: 75%;
-    }
     
     .scroll-text {
         font-size: 0.9rem;
@@ -200,7 +175,29 @@ body {
     }
     
     .swipe-guide {
+        position: absolute;
         top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        text-align: center;
+        opacity: 0;
+        animation: swipeTextFadeInBlink 1s ease-out 3s forwards;
+        display: none;
+    }
+    
+    .scroll-guide {
+        position: fixed;
+        top: 70%;
+        left: 50%;
+        width: 120px;
+        height: 140px;
+        margin-left: -60px;
+        margin-top: -70px;
+        z-index: 1000;
+        animation: fingerSwipeUp 2.5s ease-in-out infinite;
+        transition: opacity 0.5s ease-out;
+        display: none;
     }
 }
 
