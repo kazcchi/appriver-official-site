@@ -91,9 +91,12 @@ body {
 /* Mobile responsive for guides */
 @media (max-width: 768px) {
     .reload-guide {
+        position: fixed;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
         text-align: center;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
         opacity: 0;
         animation: reloadTextFadeIn 1s ease-out 2s forwards;
         display: none;
