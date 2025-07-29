@@ -87,37 +87,20 @@
     function init() {
         // リロードガイドの初期化（リロード未完了の場合のみ）
         if (!reloadCompleted) {
-            // 2秒後にリロードガイド表示
+            // 2秒後にリロードガイド表示（ダブルタップされるまで表示継続）
             setTimeout(() => {
                 showReloadGuide();
             }, 2000);
-
-            // 25秒後にリロードガイド自動非表示
-            setTimeout(() => {
-                if (reloadGuide.style.display === 'block') {
-                    reloadGuide.style.opacity = '0';
-                    setTimeout(() => {
-                        reloadGuide.style.display = 'none';
-                    }, 500);
-                }
-            }, 25000);
         }
         
         // スクロールガイドの独立した初期化（スクロール未完了の場合のみ）
         if (!scrollCompleted) {
-            // 5秒後にスクロールガイド表示（リロードガイドとは独立）
+            // 5秒後にスクロールガイド表示（スクロールされるまで表示継続）
             setTimeout(() => {
                 if (!hasScrolled) {
                     showScrollGuide();
                 }
             }, 5000);
-            
-            // 30秒後にスクロールガイド自動非表示
-            setTimeout(() => {
-                if (!hasScrolled) {
-                    hideScrollGuide();
-                }
-            }, 30000);
         }
     }
 
