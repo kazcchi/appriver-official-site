@@ -433,6 +433,7 @@ section h2::after {
 .album-section {
     background: linear-gradient(135deg, #f8f3ef 0%, #f2e8e1 100%);
     position: relative;
+    padding-top: 3rem;
 }
 
 .album-section::before {
@@ -1973,7 +1974,7 @@ footer {
     
     /* Album Section Mobile Optimizations */
     .album-section {
-        padding: 2rem 0;
+        padding: 4rem 0 2rem 0;
     }
     
     .album-info {
