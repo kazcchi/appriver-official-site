@@ -142,11 +142,9 @@
         if (tapLength < 500 && tapLength > 0) {
             // ダブルタップ検出
             e.preventDefault();
-            if (confirm('ページを更新しますか？')) {
-                // リロード完了フラグを設定
-                localStorage.setItem('appriver_reload_completed', 'true');
-                window.location.reload();
-            }
+            // リロード完了フラグを設定（確認なしで即実行）
+            localStorage.setItem('appriver_reload_completed', 'true');
+            window.location.reload();
         }
         lastTap = currentTime;
     });

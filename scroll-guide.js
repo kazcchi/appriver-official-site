@@ -98,19 +98,12 @@
                 }
             }, 20000);
         } else {
-            // 初回の場合は2秒後にリロードガイド表示
+            // 初回の場合は2秒後にリロードガイド表示（スクロールに関係なく表示）
             setTimeout(() => {
-                if (!hasScrolled) {
-                    showReloadGuide();
-                }
+                showReloadGuide();
             }, 2000);
 
-            // 5.5秒後（テキスト表示2.5秒後）にスクロールガイドに切り替え
-            setTimeout(() => {
-                if (!hasScrolled && !reloadCompleted) {
-                    hideReloadGuide();
-                }
-            }, 5500);
+            // リロードが完了するまでリロードガイドを表示し続ける
 
             // 25秒後に自動非表示
             setTimeout(() => {

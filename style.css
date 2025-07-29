@@ -92,7 +92,8 @@ body {
 @media (max-width: 768px) {
     .reload-guide {
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
         opacity: 0;
         animation: reloadTextFadeIn 1s ease-out 2s forwards;
         display: none;
