@@ -34,21 +34,9 @@ body {
     }
 }
 
-/* Reload Guide */
+/* Reload Guide - Mobile Only */
 .reload-guide {
-    text-align: center;
-    margin-top: 2rem;
-    opacity: 0;
-    animation: reloadTextFadeIn 1s ease-out 2s forwards;
     display: none;
-}
-
-.reload-text {
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 300;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    letter-spacing: 0.5px;
 }
 
 @keyframes reloadTextFadeIn {
@@ -102,8 +90,27 @@ body {
 
 /* Mobile responsive for guides */
 @media (max-width: 768px) {
+    .reload-guide {
+        text-align: center;
+        margin-top: 2rem;
+        opacity: 0;
+        animation: reloadTextFadeIn 1s ease-out 2s forwards;
+        display: none;
+    }
+    
     .reload-text {
-        font-size: 1rem;
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-shadow: 0 0 10px rgba(255,255,255,0.5), 2px 2px 8px rgba(0,0,0,0.7);
+        letter-spacing: 0.8px;
+        background: linear-gradient(45deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+        padding: 0.6rem 1.2rem;
+        border-radius: 25px;
+        border: 1px solid rgba(255,255,255,0.3);
+        backdrop-filter: blur(10px);
+        display: inline-block;
+        margin-top: 1rem;
     }
     
     .scroll-guide {
