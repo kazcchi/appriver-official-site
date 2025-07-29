@@ -53,7 +53,7 @@ body {
 /* Swipe Guide */
 .swipe-guide {
     position: absolute;
-    top: 30%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
@@ -67,13 +67,11 @@ body {
     color: #ff6b6b;
     font-size: 1.1rem;
     font-weight: 600;
-    text-shadow: 0 0 15px rgba(255,107,107,0.8), 2px 2px 8px rgba(0,0,0,0.7);
     letter-spacing: 0.8px;
-    background: linear-gradient(45deg, rgba(255,107,107,0.2) 0%, rgba(255,107,107,0.1) 100%);
-    padding: 0.6rem 1.2rem;
-    border-radius: 25px;
-    border: 2px solid rgba(255,107,107,0.6);
-    backdrop-filter: blur(10px);
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    border: 2px solid #ff6b6b;
+    background: rgba(255, 255, 255, 0.9);
     display: inline-block;
     animation: blinkEffect 1.5s ease-in-out infinite;
 }
@@ -92,11 +90,9 @@ body {
 @keyframes blinkEffect {
     0%, 100% { 
         opacity: 1;
-        box-shadow: 0 0 20px rgba(255,107,107,0.6);
     }
     50% { 
-        opacity: 0.6;
-        box-shadow: 0 0 30px rgba(255,107,107,0.9);
+        opacity: 0.5;
     }
 }
 
@@ -203,7 +199,7 @@ body {
     }
     
     .swipe-guide {
-        top: 25%;
+        top: 10%;
     }
 }
 
