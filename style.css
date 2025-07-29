@@ -91,16 +91,21 @@ body {
 /* Mobile responsive for guides */
 @media (max-width: 768px) {
     .hero {
-        padding-top: 4rem;
+        padding-top: 2rem;
     }
     
     .reload-guide {
         text-align: center;
-        margin-top: 2rem;
-        margin-bottom: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
         opacity: 0;
         animation: reloadTextFadeIn 1s ease-out 2s forwards;
         display: none;
+        width: 100%;
+    }
+    
+    .hero-content {
+        margin-top: 0;
     }
     
     .reload-text {
