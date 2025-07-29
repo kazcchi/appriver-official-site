@@ -1,5 +1,13 @@
-// ガイドシステムの制御（リロード→スクロール）
+// ガイドシステムの制御（リロード→スクロール）- モバイルのみ
 (function() {
+    // モバイルかどうかをチェック
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+    
+    // モバイルでない場合は処理を停止
+    if (!isMobile()) return;
+    
     let hasScrolled = false;
     let hasReloaded = false;
     const reloadGuide = document.getElementById('reloadGuide');
@@ -82,6 +90,18 @@
 
     // イベントリスナー設定
     window.addEventListener('scroll', handleScroll, {passive: true});
+    
+    // リサイズ時にモバイルでなくなった場合はガイドを非表示
+    window.addEventListener('resize', () => {
+        if (!isMobile()) {
+            if (reloadGuide) {
+                reloadGuide.style.display = 'none';
+            }
+            if (scrollGuide) {
+                scrollGuide.style.display = 'none';
+            }
+        }
+    });
 
     // 初期化
     function init() {

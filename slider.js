@@ -67,9 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize
   updateCards();
   
+  // モバイルかどうかをチェック
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
+  
   // スワイプガイドの表示制御
   function showSwipeGuide() {
-    if (!swipeCompleted && !hasSwipedOnce && swipeGuide) {
+    if (!swipeCompleted && !hasSwipedOnce && swipeGuide && isMobile()) {
       swipeGuide.style.display = 'block';
       setTimeout(() => {
         swipeGuide.style.opacity = '1';
@@ -88,10 +93,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  // 3秒後にスワイプガイドを表示
-  setTimeout(() => {
-    showSwipeGuide();
-  }, 3000);
+  // モバイルの場合のみ3秒後にスワイプガイドを表示
+  if (isMobile()) {
+    setTimeout(() => {
+      showSwipeGuide();
+    }, 3000);
+  }
+  
+  // リサイズ時にモバイルでなくなった場合はスワイプガイドを非表示
+  window.addEventListener('resize', () => {
+    if (!isMobile() && swipeGuide) {
+      swipeGuide.style.display = 'none';
+    }
+  });
 
   // Button controls
   if (nextBtn) {
