@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const track = slider.querySelector('.slider-track');
   const prevBtn = slider.querySelector('.slider-btn.prev');
   const nextBtn = slider.querySelector('.slider-btn.next');
+  const swipeGuide = document.getElementById('swipeGuide');
 
   let allCards = Array.from(track.children);
   
@@ -25,6 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Start with first card (sorted by search-sort functionality)
   let currentIndex = 0;
+  
+  // スワイプガイドの管理
+  const swipeCompleted = localStorage.getItem('appriver_swipe_completed');
+  let hasSwipedOnce = false;
   
   // Function to update card positions
   function updateCards() {
@@ -61,6 +66,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize
   updateCards();
+  
+  // スワイプガイドの表示制御
+  function showSwipeGuide() {
+    if (!swipeCompleted && !hasSwipedOnce && swipeGuide) {
+      swipeGuide.style.display = 'block';
+      setTimeout(() => {
+        swipeGuide.style.opacity = '1';
+      }, 100);
+    }
+  }
+  
+  function hideSwipeGuide() {
+    if (swipeGuide) {
+      swipeGuide.style.opacity = '0';
+      setTimeout(() => {
+        swipeGuide.style.display = 'none';
+      }, 500);
+      localStorage.setItem('appriver_swipe_completed', 'true');
+      hasSwipedOnce = true;
+    }
+  }
+  
+  // 3秒後にスワイプガイドを表示
+  setTimeout(() => {
+    showSwipeGuide();
+  }, 3000);
 
   // Button controls
   if (nextBtn) {
@@ -69,6 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('Next button clicked');
       currentIndex = (currentIndex + 1) % cards.length;
       updateCards();
+      // スワイプガイドを非表示
+      hideSwipeGuide();
     });
   }
 
@@ -78,6 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('Previous button clicked');
       currentIndex = (currentIndex - 1 + cards.length) % cards.length;
       updateCards();
+      // スワイプガイドを非表示
+      hideSwipeGuide();
     });
   }
 
@@ -201,6 +236,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         updateCards();
       }
+      // スワイプガイドを非表示（どちらの処理でも）
+      hideSwipeGuide();
     }
   }, { passive: true });
 
