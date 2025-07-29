@@ -53,38 +53,50 @@ body {
 /* Swipe Guide */
 .swipe-guide {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
     text-align: center;
     opacity: 0;
-    animation: swipeTextFadeIn 1s ease-out 3s forwards;
+    animation: swipeTextFadeInBlink 1s ease-out 3s forwards;
     display: none;
 }
 
 .swipe-text {
-    color: #ffffff;
+    color: #ff6b6b;
     font-size: 1.1rem;
-    font-weight: 500;
-    text-shadow: 0 0 10px rgba(255,255,255,0.5), 2px 2px 8px rgba(0,0,0,0.7);
+    font-weight: 600;
+    text-shadow: 0 0 15px rgba(255,107,107,0.8), 2px 2px 8px rgba(0,0,0,0.7);
     letter-spacing: 0.8px;
-    background: linear-gradient(45deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+    background: linear-gradient(45deg, rgba(255,107,107,0.2) 0%, rgba(255,107,107,0.1) 100%);
     padding: 0.6rem 1.2rem;
     border-radius: 25px;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 2px solid rgba(255,107,107,0.6);
     backdrop-filter: blur(10px);
     display: inline-block;
+    animation: blinkEffect 1.5s ease-in-out infinite;
 }
 
-@keyframes swipeTextFadeIn {
+@keyframes swipeTextFadeInBlink {
     0% { 
         opacity: 0;
         transform: translate(-50%, -50%) translateY(10px);
     }
     100% { 
-        opacity: 0.9;
+        opacity: 1;
         transform: translate(-50%, -50%) translateY(0);
+    }
+}
+
+@keyframes blinkEffect {
+    0%, 100% { 
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(255,107,107,0.6);
+    }
+    50% { 
+        opacity: 0.6;
+        box-shadow: 0 0 30px rgba(255,107,107,0.9);
     }
 }
 
@@ -188,6 +200,10 @@ body {
         font-size: 1rem;
         padding: 0.5rem 1rem;
         letter-spacing: 0.6px;
+    }
+    
+    .swipe-guide {
+        top: 25%;
     }
 }
 
