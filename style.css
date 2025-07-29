@@ -36,69 +36,28 @@ body {
 
 /* Reload Guide */
 .reload-guide {
-    position: fixed;
-    top: 35%;
-    left: 50%;
-    width: 300px;
-    height: 200px;
-    margin-left: -150px;
-    margin-top: -100px;
-    z-index: 1000;
-    transition: opacity 0.5s ease-out;
-    display: none;
     text-align: center;
-}
-
-.reload-guide img {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
+    margin-top: 2rem;
     opacity: 0;
-    filter: brightness(0) invert(1);
-    animation: reloadIconMove 1s ease-out forwards;
-    transform: translateY(-80px);
+    animation: reloadTextFadeIn 1s ease-out 2s forwards;
+    display: none;
 }
 
 .reload-text {
     color: white;
-    font-size: 20px;
-    font-weight: normal;
-    margin-top: 15px;
-    opacity: 0;
-    animation: textFadeIn 2.5s ease-out 1s forwards;
-    text-align: center;
-    white-space: nowrap;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 0.5px;
 }
 
-.reload-sub-text {
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 20px;
-    margin-top: 8px;
-    line-height: 1.4;
-    opacity: 0;
-    animation: textFadeIn 2.5s ease-out 1s forwards;
-    text-align: center;
-    white-space: nowrap;
-}
-
-@keyframes reloadIconMove {
+@keyframes reloadTextFadeIn {
     0% { 
-        transform: translateY(-80px); 
         opacity: 0;
-    }
-    100% { 
-        transform: translateY(0); 
-        opacity: 0.8;
-    }
-}
-
-@keyframes textFadeIn {
-    0% { 
-        opacity: 0; 
         transform: translateY(10px);
     }
     100% { 
-        opacity: 1;
+        opacity: 0.9;
         transform: translateY(0);
     }
 }
@@ -143,27 +102,8 @@ body {
 
 /* Mobile responsive for guides */
 @media (max-width: 768px) {
-    .reload-guide {
-        width: 280px;
-        height: 180px;
-        margin-left: -140px;
-        margin-top: -90px;
-        top: 40%;
-    }
-    
-    .reload-guide img {
-        width: 120px;
-        height: 120px;
-    }
-    
     .reload-text {
-        font-size: 18px;
-        margin-top: 12px;
-    }
-    
-    .reload-sub-text {
-        font-size: 18px;
-        margin-top: 6px;
+        font-size: 1rem;
     }
     
     .scroll-guide {
