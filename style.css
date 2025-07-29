@@ -90,13 +90,14 @@ body {
 
 /* Mobile responsive for guides */
 @media (max-width: 768px) {
+    .hero {
+        padding-top: 4rem;
+    }
+    
     .reload-guide {
-        position: fixed;
-        top: 15%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1000;
         text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
         opacity: 0;
         animation: reloadTextFadeIn 1s ease-out 2s forwards;
         display: none;
