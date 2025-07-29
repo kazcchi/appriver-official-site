@@ -65,15 +65,16 @@ body {
 
 .swipe-text {
     color: #d49175;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    letter-spacing: 0.8px;
-    padding: 0.4rem 0.8rem;
-    border-radius: 15px;
+    letter-spacing: 0.5px;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
     border: 2px solid #d49175;
     background: rgba(255, 255, 255, 0.9);
     display: inline-block;
     animation: blinkEffect 1.5s ease-in-out infinite;
+    white-space: nowrap;
 }
 
 @keyframes swipeTextFadeInBlink {
@@ -193,9 +194,9 @@ body {
     }
     
     .swipe-text {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-        letter-spacing: 0.6px;
+        font-size: 0.8rem;
+        padding: 0.25rem 0.5rem;
+        letter-spacing: 0.3px;
     }
     
     .swipe-guide {
