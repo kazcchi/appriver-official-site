@@ -71,6 +71,10 @@
     // リロード検知（PWAリロード完了時に呼ばれる）
     window.reloadCompleted = function() {
         localStorage.setItem('appriver_reload_completed', 'true');
+        // リロード実行時にリロードガイドを非表示にしてスクロールガイドを表示
+        if (reloadGuide.style.display === 'block') {
+            hideReloadGuide();
+        }
     };
 
     // イベントリスナー設定
@@ -105,10 +109,13 @@
 
             // リロードが完了するまでリロードガイドを表示し続ける
 
-            // 25秒後に自動非表示
+            // 25秒後に自動非表示（リロードガイドのみ）
             setTimeout(() => {
-                if (!hasScrolled) {
-                    hideScrollGuide();
+                if (reloadGuide.style.display === 'block') {
+                    reloadGuide.style.opacity = '0';
+                    setTimeout(() => {
+                        reloadGuide.style.display = 'none';
+                    }, 500);
                 }
             }, 25000);
         }
