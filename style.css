@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 120px;
 }
 
 /* PWA専用スタイル */
@@ -414,6 +414,7 @@ section h2 {
     position: relative;
     letter-spacing: -1px;
     text-transform: lowercase;
+    padding-top: 2rem;
 }
 
 section h2::after {
@@ -1810,6 +1811,7 @@ footer {
     
     section h2 {
         font-size: 2rem;
+        padding-top: 1.5rem;
     }
     
     /* Song Slider Mobile */
