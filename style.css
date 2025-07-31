@@ -2375,7 +2375,7 @@ footer {
         margin-top: 1rem;
         animation: blinkEffect 1.5s ease-in-out infinite;
         line-height: 1.2;
-        max-width: 140px;
+        max-width: 180px;
         text-align: center;
     }
     
