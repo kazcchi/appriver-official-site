@@ -2350,9 +2350,12 @@ footer {
     
     /* Reload Guide - Mobile Only */
     .reload-guide {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
         text-align: center;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
         opacity: 0;
         animation: reloadTextFadeIn 1s ease-out 2s forwards;
         display: none;
@@ -2392,5 +2395,12 @@ footer {
         50% { 
             opacity: 0.4;
         }
+    }
+}
+
+/* Desktop - Hide all guides completely */
+@media (min-width: 769px) {
+    .reload-guide {
+        display: none !important;
     }
 }
