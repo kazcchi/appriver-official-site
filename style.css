@@ -2400,9 +2400,52 @@ footer {
     }
 }
 
+    /* Scroll Guide - Mobile Only */
+    .scroll-guide {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        text-align: center;
+        opacity: 0;
+        animation: scrollTextFadeIn 1s ease-out 2s forwards;
+        display: none;
+    }
+    
+    .scroll-text {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        background: linear-gradient(45deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.15) 100%);
+        padding: 0.4rem 0.8rem;
+        border-radius: 18px;
+        border: 2px solid rgba(255,255,255,0.5);
+        backdrop-filter: blur(15px);
+        display: inline-block;
+        margin-top: 1rem;
+        animation: blinkEffect 1.5s ease-in-out infinite;
+        line-height: 1.15;
+        max-width: 180px;
+        text-align: center;
+    }
+    
+    @keyframes scrollTextFadeIn {
+        0% { 
+            opacity: 0;
+            transform: translateX(-50%) translateY(10px);
+        }
+        100% { 
+            opacity: 0.9;
+            transform: translateX(-50%) translateY(0);
+        }
+    }
+}
+
 /* Desktop - Hide all guides completely */
 @media (min-width: 769px) {
-    .reload-guide {
+    .reload-guide, .scroll-guide {
         display: none !important;
     }
 }
