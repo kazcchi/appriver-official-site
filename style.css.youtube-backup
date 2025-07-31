@@ -1055,13 +1055,10 @@ section h2::after {
 
 .players-description {
     text-align: center;
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-    opacity: 0.95;
-    font-weight: 500;
-    color: #444;
-    letter-spacing: 0.5px;
-    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    opacity: 0.9;
+    font-weight: 300;
 }
 
 .platform-selector {
@@ -1077,42 +1074,37 @@ section h2::after {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(232, 164, 139, 0.9) 0%, rgba(212, 145, 117, 0.9) 100%);
-    padding: 1.2rem 1.8rem;
+    background: rgba(232, 164, 139, 0.8);
+    padding: 1rem 1.5rem;
     border-radius: 15px;
-    border: 2px solid rgba(232, 164, 139, 0.7);
+    border: 2px solid rgba(232, 164, 139, 0.6);
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(15px);
-    min-width: 140px;
+    min-width: 120px;
     font-family: inherit;
     font-weight: 600;
     position: relative;
     z-index: 2;
-    box-shadow: 0 4px 12px rgba(232, 164, 139, 0.3);
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-    font-size: 1rem;
 }
 
 .platform-btn i {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
 
 .platform-btn:hover {
-    background: linear-gradient(135deg, rgba(232, 164, 139, 1) 0%, rgba(212, 145, 117, 1) 100%);
+    background: rgba(232, 164, 139, 0.9);
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(232, 164, 139, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .platform-btn.active {
-    background: linear-gradient(135deg, #ffffff 0%, #f8f4f0 100%);
+    background: white;
     color: #e8a48b;
     border-color: #e8a48b;
-    border-width: 3px;
-    box-shadow: 0 8px 20px rgba(232, 164, 139, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .platform-btn.coming-soon {
@@ -1205,52 +1197,33 @@ section h2::after {
     text-align: center;
     position: relative;
     z-index: 2;
-    margin-bottom: 2.5rem;
-    background: linear-gradient(135deg, rgba(255, 247, 240, 0.95) 0%, rgba(248, 236, 228, 0.95) 100%);
-    padding: 1.8rem 2.5rem;
-    border-radius: 18px;
-    border: 3px solid rgba(232, 164, 139, 0.4);
-    box-shadow: 0 6px 20px rgba(232, 164, 139, 0.2);
-    backdrop-filter: blur(15px);
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .player-note p {
-    font-size: 1.3rem;
-    opacity: 1;
-    font-style: normal;
-    font-weight: 600;
-    color: #4a3a2a;
-    line-height: 1.8;
-    margin: 0;
-    letter-spacing: 0.3px;
-    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-style: italic;
 }
 
 .player-note i {
-    margin-right: 1rem;
-    font-size: 1.4rem;
-    color: #e8a48b;
-    vertical-align: middle;
+    margin-right: 0.5rem;
 }
 
 /* Spotify Direct Layout Styles */
 .spotify-direct-container {
     background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
     border-radius: 20px;
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
     border: 2px solid rgba(232, 164, 139, 0.3);
     box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
-    min-height: 350px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-align: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .spotify-header {
@@ -1286,22 +1259,20 @@ section h2::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 1.2rem;
     background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
     color: white;
-    padding: 1.5rem 1rem;
-    border-radius: 40px;
+    padding: 1.8rem 3.5rem;
+    border-radius: 60px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 1.3rem;
     transition: all 0.3s ease;
-    border: 2px solid #e8a48b;
-    box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
+    border: 3px solid #e8a48b;
+    box-shadow: 0 10px 30px rgba(232, 164, 139, 0.4);
     position: relative;
     overflow: hidden;
-    width: calc(140px * 4 + 1rem * 3);
-    max-width: 100%;
-    min-height: calc(60px * 2 + 1rem);
+    min-width: 300px;
 }
 
 .spotify-full-playlist-btn::before {
@@ -1333,16 +1304,16 @@ section h2::after {
 .apple-music-direct-container {
     background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
     border-radius: 20px;
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
     border: 2px solid rgba(232, 164, 139, 0.3);
     box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
-    min-height: 350px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-align: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .apple-music-header {
@@ -1378,22 +1349,20 @@ section h2::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 1.2rem;
     background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
     color: white;
-    padding: 1.5rem 1rem;
-    border-radius: 40px;
+    padding: 1.8rem 3.5rem;
+    border-radius: 60px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 1.3rem;
     transition: all 0.3s ease;
-    border: 2px solid #e8a48b;
-    box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
+    border: 3px solid #e8a48b;
+    box-shadow: 0 10px 30px rgba(232, 164, 139, 0.4);
     position: relative;
     overflow: hidden;
-    width: calc(140px * 4 + 1rem * 3);
-    max-width: 100%;
-    min-height: calc(60px * 2 + 1rem);
+    min-width: 300px;
 }
 
 .apple-music-full-playlist-btn::before {
@@ -1425,16 +1394,16 @@ section h2::after {
 .amazon-music-direct-container {
     background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
     border-radius: 20px;
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
     border: 2px solid rgba(232, 164, 139, 0.3);
     box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
-    min-height: 350px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-align: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .amazon-music-header {
@@ -1470,22 +1439,20 @@ section h2::after {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 1.2rem;
     background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
     color: white;
-    padding: 1.5rem 1rem;
-    border-radius: 40px;
+    padding: 1.8rem 3.5rem;
+    border-radius: 60px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 1.3rem;
     transition: all 0.3s ease;
-    border: 2px solid #e8a48b;
-    box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
+    border: 3px solid #e8a48b;
+    box-shadow: 0 10px 30px rgba(232, 164, 139, 0.4);
     position: relative;
     overflow: hidden;
-    width: calc(140px * 4 + 1rem * 3);
-    max-width: 100%;
-    min-height: calc(60px * 2 + 1rem);
+    min-width: 300px;
 }
 
 .amazon-music-full-playlist-btn::before {
@@ -1513,98 +1480,349 @@ section h2::after {
     font-size: 1.2rem;
 }
 
-/* YouTube Direct Layout Styles */
-.youtube-direct-container {
+/* YouTube Split Layout Styles */
+.youtube-split-container {
     background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
     border-radius: 20px;
-    padding: 3rem 2rem;
+    padding: 1.5rem;
     border: 2px solid rgba(232, 164, 139, 0.3);
     box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
-    min-height: 350px;
+    display: flex;
+    gap: 1.5rem;
+    min-height: 400px;
+}
+
+/* 左側: YouTubeプレイヤー */
+.youtube-player-left {
+    flex: 1;
+    min-width: 0;
+}
+
+.player-section {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+/* 楽曲情報表示エリア */
+.now-playing-info {
+    background: linear-gradient(135deg, rgba(232, 164, 139, 0.1) 0%, rgba(232, 164, 139, 0.05) 100%);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(232, 164, 139, 0.2);
+    display: flex;
     justify-content: space-between;
-    text-align: center;
-    gap: 1.5rem;
+    align-items: center;
 }
 
-.youtube-header {
-    flex-shrink: 0;
+.track-info {
+    flex: 1;
 }
 
-.youtube-logo {
+.track-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.track-status {
+    font-size: 0.9rem;
+    color: #e8a48b;
+    font-weight: 600;
+    background: rgba(232, 164, 139, 0.15);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    border: 2px solid rgba(232, 164, 139, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.track-status.playing {
+    color: #c17d61;
+    background: linear-gradient(135deg, rgba(212, 145, 117, 0.2), rgba(193, 125, 97, 0.15));
+    border-color: rgba(193, 125, 97, 0.4);
+    box-shadow: 0 2px 8px rgba(193, 125, 97, 0.2);
+    animation: glow-pulse 2s ease-in-out infinite alternate;
+}
+
+.track-status.paused {
+    color: #d49175;
+    background: rgba(212, 145, 117, 0.12);
+    border-color: rgba(212, 145, 117, 0.3);
+}
+
+.track-status.loading {
+    color: #f0b89f;
+    background: linear-gradient(135deg, rgba(240, 184, 159, 0.2), rgba(232, 164, 139, 0.15));
+    border-color: rgba(240, 184, 159, 0.4);
+    animation: loading-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+    0% { box-shadow: 0 2px 8px rgba(193, 125, 97, 0.2); }
+    100% { box-shadow: 0 4px 16px rgba(193, 125, 97, 0.4); }
+}
+
+@keyframes loading-shimmer {
+    0%, 100% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+
+.youtube-player-left iframe {
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    flex: 1;
+}
+
+/* 右側: 楽曲リスト */
+.youtube-tracklist-right {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.tracklist-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+/* ソート制御ボタン */
+.sort-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.sort-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.2rem;
-}
-
-.youtube-logo i {
-    font-size: 4rem;
-    color: #ff0000;
-    animation: pulse 2s ease-in-out infinite alternate;
-    filter: drop-shadow(0 4px 8px rgba(255, 0, 0, 0.3));
-}
-
-.youtube-logo span {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    letter-spacing: -0.5px;
-}
-
-.youtube-playlist-link {
-    flex-shrink: 0;
-}
-
-.youtube-full-playlist-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
-    background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
-    color: white;
-    padding: 1.5rem 1rem;
-    border-radius: 40px;
-    text-decoration: none;
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(232, 164, 139, 0.3);
+    border-radius: 25px;
+    padding: 0.6rem 1rem;
+    color: #666;
+    cursor: pointer;
+    font-size: 0.8rem;
     font-weight: 600;
+    transition: all 0.3s ease;
+    min-height: 40px;
+}
+
+.sort-btn:hover {
+    background: rgba(232, 164, 139, 0.1);
+    border-color: rgba(232, 164, 139, 0.5);
+    color: #e8a48b;
+    transform: translateY(-1px);
+}
+
+.sort-btn.sort-active {
+    background: linear-gradient(135deg, #e8a48b, #d49175);
+    border-color: #d49175;
+    color: white;
+    box-shadow: 0 4px 12px rgba(232, 164, 139, 0.3);
+}
+
+
+.tracklist-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    max-height: 300px;
+}
+
+/* スクロールバーのスタイリング */
+.tracklist-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tracklist-scroll::-webkit-scrollbar-track {
+    background: rgba(232, 164, 139, 0.1);
+    border-radius: 3px;
+}
+
+.tracklist-scroll::-webkit-scrollbar-thumb {
+    background: rgba(232, 164, 139, 0.4);
+    border-radius: 3px;
+}
+
+.tracklist-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(232, 164, 139, 0.6);
+}
+
+/* 楽曲アイテム */
+.index-track {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border: 1px solid rgba(232, 164, 139, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-height: 44px;
+}
+
+.index-track:hover {
+    background: rgba(232, 164, 139, 0.1);
+    border-color: rgba(232, 164, 139, 0.4);
+    transform: translateX(3px);
+    box-shadow: 0 2px 8px rgba(232, 164, 139, 0.2);
+}
+
+.index-track.playing {
+    background: rgba(232, 164, 139, 0.2);
+    border-color: #e8a48b;
+    transform: translateX(3px);
+    box-shadow: 0 4px 12px rgba(232, 164, 139, 0.3);
+}
+
+.index-track.playing .track-num {
+    color: #d49175;
+    font-weight: 700;
+}
+
+/* 再生中楽曲の基本スタイルは個別の[data-state]で管理 */
+
+.track-num {
+    font-weight: 600;
+    color: #e8a48b;
+    min-width: 2rem;
+    font-size: 0.9rem;
+    font-family: monospace;
+}
+
+.track-name {
+    flex: 1;
+    margin-left: 0.8rem;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+.play-pause-btn {
+    background: linear-gradient(135deg, #e8a48b, #d49175);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    border: 2px solid #e8a48b;
-    box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    overflow: hidden;
-    width: calc(140px * 4 + 1rem * 3);
-    max-width: 100%;
-    min-height: calc(60px * 2 + 1rem);
+    box-shadow: 0 4px 12px rgba(232, 164, 139, 0.3);
 }
 
-.youtube-full-playlist-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.6s ease;
+.play-pause-btn:hover {
+    background: linear-gradient(135deg, #d49175, #c17d61);
+    transform: scale(1.15);
+    box-shadow: 0 6px 16px rgba(232, 164, 139, 0.4);
 }
 
-.youtube-full-playlist-btn:hover::before {
-    left: 100%;
+.play-pause-btn i {
+    line-height: 1;
+    font-weight: 900;
 }
 
-.youtube-full-playlist-btn:hover {
-    background: linear-gradient(135deg, #d49175 0%, #c17d61 100%);
-    transform: translateY(-5px) scale(1.08);
-    box-shadow: 0 15px 40px rgba(232, 164, 139, 0.6);
+/* 再生中スタイル（テーマカラー濃いめ） */
+.play-pause-btn[data-state="playing"] {
+    background: linear-gradient(135deg, #d49175, #c17d61);
+    box-shadow: 0 4px 12px rgba(212, 145, 117, 0.4);
 }
 
-.youtube-full-playlist-btn i {
-    font-size: 1.2rem;
+.play-pause-btn[data-state="playing"]:hover {
+    background: linear-gradient(135deg, #c17d61, #b06b4d);
+    box-shadow: 0 6px 16px rgba(212, 145, 117, 0.5);
 }
 
+/* 読み込み中スタイル（テーマカラー明るめ） */
+.play-pause-btn[data-state="loading"] {
+    background: linear-gradient(135deg, #f0b89f, #e8a48b);
+    cursor: not-allowed;
+    box-shadow: 0 4px 12px rgba(240, 184, 159, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+/* アイコン位置調整 */
+.play-pause-btn .fa-play {
+    margin-left: 2px; /* 再生アイコンを少し右に */
+}
+
+.play-pause-btn .fa-pause {
+    letter-spacing: -1px; /* 一時停止アイコンを少し詰める */
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+    .youtube-split-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .youtube-player-left,
+    .youtube-tracklist-right {
+        flex: none;
+    }
+    
+    .youtube-player-left iframe {
+        height: 250px;
+    }
+    
+    .tracklist-scroll {
+        max-height: 250px;
+    }
+    
+    .sort-controls {
+        margin-bottom: 0.8rem;
+        gap: 0.4rem;
+    }
+    
+    .sort-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.75rem;
+        min-height: 36px;
+    }
+    
+    .sort-btn span {
+        font-size: 1rem; /* 絵文字サイズ調整 */
+    }
+    
+    .index-track {
+        padding: 0.7rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .track-name {
+        font-size: 0.85rem;
+    }
+    
+    .play-pause-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1rem;
+    }
+}
 
 /* Footer */
 footer {
@@ -1838,50 +2056,8 @@ footer {
         }
     }
     
-    /* Album Section Mobile Optimizations */
-    .album-section {
-        padding: 2rem 0;
-    }
-    
-    .album-info {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        text-align: center;
-        max-width: 100%;
-        padding: 0 1rem;
-    }
-    
-    .album-artwork-image,
-    .placeholder-artwork {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
-    }
-    
-    .placeholder-artwork {
-        font-size: 1.8rem;
-    }
-    
     .album-details h3 {
-        font-size: 1.8rem;
-        margin-bottom: 0.8rem;
-    }
-    
-    .track-count {
-        font-size: 1rem;
-        margin-bottom: 0.4rem;
-    }
-    
-    .release-date {
-        font-size: 1.1rem;
-        margin-bottom: 0.8rem;
-        line-height: 1.4;
-    }
-    
-    .stream-link {
-        padding: 10px 25px;
-        font-size: 0.9rem;
-        border-radius: 20px;
+        font-size: 2rem;
     }
     
     nav {
@@ -2018,116 +2194,65 @@ footer {
         scroll-behavior: smooth;
     }
     
-    /* Spotify Mobile Optimizations - コンパクト */
+    /* Spotify Mobile Optimizations */
     .spotify-direct-container {
-        padding: 1rem;
-        min-height: auto;
-        gap: 0.8rem;
-        justify-content: center;
-    }
-    
-    .spotify-header {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 2rem 1rem;
+        min-height: 350px;
+        gap: 1.5rem;
     }
     
     .spotify-logo i {
-        font-size: 2.2rem;
+        font-size: 3rem;
     }
     
     .spotify-logo span {
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
-    
-    .spotify-playlist-link {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-size: 2rem;
     }
     
     .spotify-full-playlist-btn {
-        padding: 0.8rem 1rem;
-        font-size: 1.2rem;
-        font-weight: 700;
-        width: calc(75px * 4 + 0.5rem * 3);
-        max-width: 90%;
-        border-radius: 30px;
-        gap: 0.8rem;
-        border-width: 2px;
-        box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
-        touch-action: manipulation;
-        -webkit-tap-highlight-color: transparent;
-        height: 60px;
-        min-height: 60px;
+        padding: 1.2rem 2rem;
+        font-size: 1rem;
+        width: auto;
+        min-width: auto;
+        border-radius: 50px;
+        gap: 1rem;
     }
     
     .spotify-full-playlist-btn i {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     
-    .spotify-full-playlist-btn:active {
-        transform: translateY(-1px) scale(0.98);
-        box-shadow: 0 4px 15px rgba(232, 164, 139, 0.3);
+    .spotify-full-playlist-btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(232, 164, 139, 0.5);
     }
     
-    /* Apple Music Mobile Optimizations - コンパクト */
+    /* Apple Music Mobile Optimizations */
     .apple-music-direct-container {
-        padding: 1rem;
-        min-height: auto;
-        gap: 0.8rem;
-        justify-content: center;
-    }
-    
-    .apple-music-header {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 2rem 1rem;
+        min-height: 350px;
+        gap: 1.5rem;
     }
     
     .apple-music-logo i {
-        font-size: 2.2rem;
+        font-size: 3rem;
     }
     
     .apple-music-logo span {
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
-    
-    .apple-music-playlist-link {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-size: 2rem;
     }
     
     .apple-music-full-playlist-btn {
-        padding: 0.8rem 1rem;
-        font-size: 1.2rem;
-        font-weight: 700;
-        width: calc(75px * 4 + 0.5rem * 3);
-        max-width: 90%;
-        border-radius: 30px;
-        gap: 0.8rem;
-        border-width: 2px;
-        box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
-        touch-action: manipulation;
-        -webkit-tap-highlight-color: transparent;
-        height: 60px;
-        min-height: 60px;
+        padding: 1.2rem 2rem;
+        font-size: 1rem;
+        width: auto;
+        min-width: auto;
+        border-radius: 50px;
+        gap: 1rem;
     }
     
     .apple-music-full-playlist-btn i {
-        font-size: 1.3rem;
-    }
-    
-    .apple-music-full-playlist-btn:active {
-        transform: translateY(-1px) scale(0.98);
-        box-shadow: 0 4px 15px rgba(232, 164, 139, 0.3);
+        font-size: 1rem;
     }
     
     .apple-music-full-playlist-btn:hover {
@@ -2135,116 +2260,37 @@ footer {
         box-shadow: 0 10px 25px rgba(232, 164, 139, 0.5);
     }
     
-    /* Amazon Music Mobile Optimizations - コンパクト */
+    /* Amazon Music Mobile Optimizations */
     .amazon-music-direct-container {
-        padding: 1rem;
-        min-height: auto;
-        gap: 0.8rem;
-        justify-content: center;
-    }
-    
-    .amazon-music-header {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 2rem 1rem;
+        min-height: 350px;
+        gap: 1.5rem;
     }
     
     .amazon-music-logo i {
-        font-size: 2.2rem;
+        font-size: 3rem;
     }
     
     .amazon-music-logo span {
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
-    
-    .amazon-music-playlist-link {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-size: 2rem;
     }
     
     .amazon-music-full-playlist-btn {
-        padding: 0.8rem 1rem;
-        font-size: 1.2rem;
-        font-weight: 700;
-        width: calc(75px * 4 + 0.5rem * 3);
-        max-width: 90%;
-        border-radius: 30px;
-        gap: 0.8rem;
-        border-width: 2px;
-        box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
-        touch-action: manipulation;
-        -webkit-tap-highlight-color: transparent;
-        height: 60px;
-        min-height: 60px;
+        padding: 1.2rem 2rem;
+        font-size: 1rem;
+        width: auto;
+        min-width: auto;
+        border-radius: 50px;
+        gap: 1rem;
     }
     
     .amazon-music-full-playlist-btn i {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     
-    .amazon-music-full-playlist-btn:active {
-        transform: translateY(-1px) scale(0.98);
-        box-shadow: 0 4px 15px rgba(232, 164, 139, 0.3);
-    }
-    
-    /* YouTube Mobile Optimizations - コンパクト */
-    .youtube-direct-container {
-        padding: 1rem;
-        min-height: auto;
-        gap: 0.8rem;
-        justify-content: center;
-    }
-    
-    .youtube-header {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .youtube-logo i {
-        font-size: 2.2rem;
-    }
-    
-    .youtube-logo span {
-        font-size: 1.4rem;
-        font-weight: 600;
-    }
-    
-    .youtube-playlist-link {
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .youtube-full-playlist-btn {
-        padding: 0.8rem 1rem;
-        font-size: 1.2rem;
-        font-weight: 700;
-        width: calc(75px * 4 + 0.5rem * 3);
-        max-width: 90%;
-        border-radius: 30px;
-        gap: 0.8rem;
-        border-width: 2px;
-        box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
-        touch-action: manipulation;
-        -webkit-tap-highlight-color: transparent;
-        height: 60px;
-        min-height: 60px;
-    }
-    
-    .youtube-full-playlist-btn i {
-        font-size: 1.3rem;
-    }
-    
-    .youtube-full-playlist-btn:active {
-        transform: translateY(-1px) scale(0.98);
-        box-shadow: 0 4px 15px rgba(232, 164, 139, 0.3);
+    .amazon-music-full-playlist-btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(232, 164, 139, 0.5);
     }
     
     .close-lyrics-btn {
@@ -2270,39 +2316,19 @@ footer {
         }
     }
 
-    /* Music Players Mobile - 1ページ収まるサイズ */
-    .players-description {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        padding: 0 1rem;
-        line-height: 1.5;
-    }
-    
+    /* Music Players Mobile */
     .platform-selector {
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
-        padding: 0 0.5rem;
+        gap: 0.8rem;
     }
     
     .platform-btn {
-        min-width: 75px;
-        padding: 0.7rem 0.6rem;
-        font-size: 0.8rem;
-        border-radius: 12px;
-        min-height: 60px;
-        border-width: 2px;
-        box-shadow: 0 4px 10px rgba(232, 164, 139, 0.2);
+        min-width: 90px;
+        padding: 0.8rem 1rem;
     }
     
     .platform-btn i {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         margin-bottom: 0.3rem;
-    }
-    
-    .platform-btn.active {
-        border-width: 3px;
-        box-shadow: 0 6px 15px rgba(232, 164, 139, 0.3);
-        transform: scale(1.01);
     }
     
     .player-container {
@@ -2327,70 +2353,12 @@ footer {
         font-size: 1.3rem;
     }
     
-    .player-note {
-        padding: 1rem 0.8rem;
-        margin-bottom: 1.2rem;
-        border-radius: 15px;
-        border-width: 2px;
-        margin-left: 1rem;
-        margin-right: 1rem;
+    .players-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .player-note p {
-        font-size: 0.9rem;
-        font-weight: 500;
-        line-height: 1.6;
-        text-align: center;
-    }
-    
-    .player-note i {
-        font-size: 1rem;
-        margin-right: 0.6rem;
-    }
-    
-    /* Reload Guide - Mobile Only */
-    .reload-guide {
-        text-align: center;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        opacity: 0;
-        animation: reloadTextFadeIn 1s ease-out 2s forwards;
-        display: none;
-    }
-    
-    .reload-text {
-        color: #ffffff;
-        font-size: 1.1rem;
-        font-weight: 500;
-        text-shadow: 0 0 10px rgba(255,255,255,0.5), 2px 2px 8px rgba(0,0,0,0.7);
-        letter-spacing: 0.8px;
-        background: linear-gradient(45deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
-        padding: 0.6rem 1.2rem;
-        border-radius: 25px;
-        border: 1px solid rgba(255,255,255,0.3);
-        backdrop-filter: blur(10px);
-        display: inline-block;
-        margin-top: 1rem;
-        animation: blinkEffect 1.5s ease-in-out infinite;
-    }
-    
-    @keyframes reloadTextFadeIn {
-        0% { 
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        100% { 
-            opacity: 0.9;
-            transform: translateY(0);
-        }
-    }
-    
-    @keyframes blinkEffect {
-        0%, 100% { 
-            opacity: 0.9;
-        }
-        50% { 
-            opacity: 0.4;
-        }
+        font-size: 0.8rem;
     }
 }
