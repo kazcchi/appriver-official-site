@@ -35,165 +35,6 @@ body {
 }
 
 
-/* Mobile responsive for guides */
-@media (max-width: 768px) {
-    /* Reload Guide - Mobile Only */
-    .reload-guide {
-        text-align: center;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        opacity: 0;
-        animation: reloadTextFadeIn 1s ease-out 2s forwards;
-        display: none;
-    }
-    
-    .reload-text {
-        color: #ffffff;
-        font-size: 1.1rem;
-        font-weight: 500;
-        text-shadow: 0 0 10px rgba(255,255,255,0.5), 2px 2px 8px rgba(0,0,0,0.7);
-        letter-spacing: 0.8px;
-        background: linear-gradient(45deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
-        padding: 0.6rem 1.2rem;
-        border-radius: 25px;
-        border: 1px solid rgba(255,255,255,0.3);
-        backdrop-filter: blur(10px);
-        display: inline-block;
-        margin-top: 1rem;
-    }
-    
-    @keyframes reloadTextFadeIn {
-        0% { 
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        100% { 
-            opacity: 0.9;
-            transform: translateY(0);
-        }
-    }
-    
-    /* Scroll Guide - Mobile Only */
-    .scroll-guide {
-        position: fixed;
-        top: 70%;
-        left: 50%;
-        width: 120px;
-        height: 140px;
-        margin-left: -60px;
-        margin-top: -70px;
-        z-index: 1000;
-        animation: fingerSwipeUp 2.5s ease-in-out infinite;
-        transition: opacity 0.5s ease-out;
-        display: none;
-    }
-    
-    .scroll-guide img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        opacity: 0.8;
-        filter: brightness(0) invert(1) drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
-    }
-    
-    .scroll-text {
-        color: white;
-        font-size: 0.9rem;
-        font-weight: 400;
-        text-align: center;
-        margin-top: 0.3rem;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        opacity: 0.9;
-    }
-    
-    @keyframes fingerSwipeUp {
-        0% { 
-            transform: translateY(80px); 
-            opacity: 0.6; 
-        }
-        50% { 
-            transform: translateY(-40px); 
-            opacity: 1; 
-        }
-        100% { 
-            transform: translateY(-40px); 
-            opacity: 0.3; 
-        }
-    }
-    
-    /* Swipe Guide - Mobile Only */
-    .swipe-guide {
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 100;
-        text-align: center;
-        opacity: 0;
-        animation: swipeTextFadeInBlink 1s ease-out 3s forwards;
-        display: none;
-    }
-    
-    .swipe-text {
-        color: #d49175;
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 0.3px;
-        padding: 0.25rem 0.5rem;
-        border-radius: 12px;
-        border: 2px solid #d49175;
-        background: rgba(255, 255, 255, 0.9);
-        display: inline-block;
-        animation: blinkEffect 1.5s ease-in-out infinite;
-        white-space: nowrap;
-    }
-    
-    @keyframes swipeTextFadeInBlink {
-        0% { 
-            opacity: 0;
-            transform: translate(-50%, -50%) translateY(10px);
-        }
-        100% { 
-            opacity: 1;
-            transform: translate(-50%, -50%) translateY(0);
-        }
-    }
-    
-    @keyframes blinkEffect {
-        0%, 100% { 
-            opacity: 1;
-        }
-        50% { 
-            opacity: 0.5;
-        }
-    }
-    
-    .swipe-guide {
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 100;
-        text-align: center;
-        opacity: 0;
-        animation: swipeTextFadeInBlink 1s ease-out 3s forwards;
-        display: none;
-    }
-    
-    .scroll-guide {
-        position: fixed;
-        top: 70%;
-        left: 50%;
-        width: 120px;
-        height: 140px;
-        margin-left: -60px;
-        margin-top: -70px;
-        z-index: 1000;
-        animation: fingerSwipeUp 2.5s ease-in-out infinite;
-        transition: opacity 0.5s ease-out;
-        display: none;
-    }
-}
 
 /* Loading Animation */
 @keyframes slideInFromTop {
@@ -2528,5 +2369,129 @@ footer {
     .player-note i {
         font-size: 1rem;
         margin-right: 0.6rem;
+    }
+}
+
+/* Mobile Guide System Styles */
+@media (max-width: 768px) {
+    .reload-guide, .scroll-guide, .swipe-guide {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10000;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        text-align: center;
+        pointer-events: none;
+        width: 280px;
+    }
+
+    /* Reload Guide Styles */
+    .reload-guide img {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        opacity: 0;
+        filter: brightness(0) invert(1);
+        animation: reloadIconMove 1s ease-out forwards;
+        transform: translateY(-80px);
+    }
+
+    @keyframes reloadIconMove {
+        0% {
+            opacity: 0;
+            transform: translateY(-80px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .reload-text, .reload-sub-text {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        opacity: 0;
+        animation: fadeInText 0.5s ease-out 1.5s forwards;
+        font-size: 18px;
+    }
+
+    .reload-text {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .reload-sub-text {
+        line-height: 1.2;
+    }
+
+    @keyframes fadeInText {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    /* Scroll Guide Styles */
+    .scroll-guide img {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        opacity: 0;
+        filter: brightness(0) invert(1);
+        animation: scrollIconBounce 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollIconBounce {
+        0%, 100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        50% {
+            opacity: 0.7;
+            transform: translateY(20px);
+        }
+    }
+
+    .scroll-text {
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Swipe Guide Styles */
+    .swipe-guide img {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        opacity: 0;
+        filter: brightness(0) invert(1);
+        animation: swipeIconSwing 2s ease-in-out infinite;
+    }
+
+    @keyframes swipeIconSwing {
+        0%, 100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        25% {
+            opacity: 0.8;
+            transform: translateX(-15px);
+        }
+        75% {
+            opacity: 0.8;
+            transform: translateX(15px);
+        }
+    }
+
+    .swipe-text {
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
     }
 }
