@@ -17,9 +17,14 @@
     
     // ガイド表示関数
     function showSwipeGuide() {
-        if (swipeCompleted) return;
+        if (swipeCompleted) {
+            console.log('Swipe guide already completed');
+            return;
+        }
         
+        console.log('Showing swipe guide');
         swipeGuide.style.display = 'block';
+        swipeGuide.style.animation = 'swipeTextFadeIn 1s ease-out forwards';
         setTimeout(() => {
             swipeGuide.style.opacity = '1';
         }, 100);
@@ -72,9 +77,11 @@
     
     // 初期化
     function init() {
+        console.log('Swipe guide init - completed:', swipeCompleted);
         if (!swipeCompleted) {
             // 4秒後にガイド表示
             setTimeout(() => {
+                console.log('4 seconds passed, showing swipe guide');
                 showSwipeGuide();
             }, 4000);
         }

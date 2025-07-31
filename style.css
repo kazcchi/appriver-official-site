@@ -2450,7 +2450,6 @@ footer {
         z-index: 3;
         text-align: center;
         opacity: 0;
-        animation: swipeTextFadeIn 1s ease-out 2s forwards;
         display: none;
     }
     
