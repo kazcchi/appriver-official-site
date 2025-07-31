@@ -22,12 +22,12 @@
             return;
         }
         
-        console.log('Showing swipe guide');
+        console.log('Showing swipe guide - setting styles');
         swipeGuide.style.display = 'block';
-        swipeGuide.style.animation = 'swipeTextFadeIn 1s ease-out forwards';
-        setTimeout(() => {
-            swipeGuide.style.opacity = '1';
-        }, 100);
+        swipeGuide.style.opacity = '1';
+        swipeGuide.style.zIndex = '9999';
+        swipeGuide.style.backgroundColor = 'red'; // テスト用
+        console.log('Swipe guide styles applied');
     }
     
     // ガイド非表示関数
@@ -78,12 +78,15 @@
     // 初期化
     function init() {
         console.log('Swipe guide init - completed:', swipeCompleted);
+        console.log('Swipe guide element:', swipeGuide);
+        console.log('Slider element:', slider);
+        
         if (!swipeCompleted) {
-            // 4秒後にガイド表示
+            // テスト用：2秒後に表示
             setTimeout(() => {
-                console.log('4 seconds passed, showing swipe guide');
+                console.log('2 seconds passed, showing swipe guide');
                 showSwipeGuide();
-            }, 4000);
+            }, 2000);
         }
     }
     
