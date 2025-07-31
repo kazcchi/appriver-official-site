@@ -2363,18 +2363,19 @@ footer {
     
     .reload-text {
         color: #ffffff;
-        font-size: 1.1rem;
-        font-weight: 500;
-        text-shadow: 0 0 10px rgba(255,255,255,0.5), 2px 2px 8px rgba(0,0,0,0.7);
-        letter-spacing: 0.8px;
-        background: linear-gradient(45deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
-        padding: 0.6rem 1.2rem;
-        border-radius: 25px;
-        border: 1px solid rgba(255,255,255,0.3);
-        backdrop-filter: blur(10px);
+        font-size: 1.3rem;
+        font-weight: 600;
+        text-shadow: 0 0 15px rgba(255,255,255,0.8), 3px 3px 10px rgba(0,0,0,0.8);
+        letter-spacing: 1px;
+        background: linear-gradient(45deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.15) 100%);
+        padding: 0.8rem 1.5rem;
+        border-radius: 30px;
+        border: 2px solid rgba(255,255,255,0.5);
+        backdrop-filter: blur(15px);
         display: inline-block;
         margin-top: 1rem;
         animation: blinkEffect 1.5s ease-in-out infinite;
+        line-height: 1.4;
     }
     
     @keyframes reloadTextFadeIn {
