@@ -2380,11 +2380,11 @@ footer {
     @keyframes reloadTextFadeIn {
         0% { 
             opacity: 0;
-            transform: translateY(10px);
+            transform: translateX(-50%) translateY(10px);
         }
         100% { 
             opacity: 0.9;
-            transform: translateY(0);
+            transform: translateX(-50%) translateY(0);
         }
     }
     
