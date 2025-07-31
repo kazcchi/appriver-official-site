@@ -17,17 +17,11 @@
     
     // ガイド表示関数
     function showSwipeGuide() {
-        if (swipeCompleted) {
-            console.log('Swipe guide already completed');
-            return;
-        }
+        if (swipeCompleted) return;
         
-        console.log('Showing swipe guide - setting styles');
         swipeGuide.style.display = 'block';
         swipeGuide.style.opacity = '1';
         swipeGuide.style.zIndex = '9999';
-        swipeGuide.style.backgroundColor = 'red'; // テスト用
-        console.log('Swipe guide styles applied');
     }
     
     // ガイド非表示関数
@@ -77,16 +71,11 @@
     
     // 初期化
     function init() {
-        console.log('Swipe guide init - completed:', swipeCompleted);
-        console.log('Swipe guide element:', swipeGuide);
-        console.log('Slider element:', slider);
-        
         if (!swipeCompleted) {
-            // テスト用：2秒後に表示
+            // 4秒後にガイド表示
             setTimeout(() => {
-                console.log('2 seconds passed, showing swipe guide');
                 showSwipeGuide();
-            }, 2000);
+            }, 4000);
         }
     }
     
