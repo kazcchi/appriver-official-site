@@ -115,7 +115,7 @@ body {
         margin-top: 1rem;
         animation: blinkEffect 1.5s ease-in-out infinite;
         line-height: 1.15;
-        max-width: 180px;
+        white-space: nowrap;
         text-align: center;
     }
     
@@ -2617,7 +2617,7 @@ footer {
         margin-top: 1rem;
         animation: blinkEffect 1.5s ease-in-out infinite;
         line-height: 1.15;
-        max-width: 180px;
+        white-space: nowrap;
         text-align: center;
     }
     
@@ -2657,7 +2657,7 @@ footer {
         margin-top: 1rem;
         animation: blinkEffect 1.5s ease-in-out infinite;
         line-height: 1.15;
-        max-width: 180px;
+        white-space: nowrap;
         text-align: center;
     }
     
