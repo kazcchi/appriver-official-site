@@ -92,15 +92,18 @@ body {
     
     /* Scroll Guide - Mobile Only */
     .scroll-guide {
-        position: fixed;
+        position: absolute;
         top: 75%;
-        left: 52%;
+        left: 50%;
         transform: translateX(-50%);
         z-index: 3;
         text-align: center;
         opacity: 0;
         animation: scrollTextFadeIn 1s ease-out 2s forwards;
         display: none;
+        background: rgba(255,0,0,0.2);
+        width: 200px;
+        margin-left: -100px;
     }
     
     .scroll-text {
@@ -2596,15 +2599,18 @@ footer {
     
     /* Scroll Guide - Mobile Only */
     .scroll-guide {
-        position: fixed;
+        position: absolute;
         top: 75%;
-        left: 52%;
+        left: 50%;
         transform: translateX(-50%);
         z-index: 3;
         text-align: center;
         opacity: 0;
         animation: scrollTextFadeIn 1s ease-out 2s forwards;
         display: none;
+        background: rgba(255,0,0,0.2);
+        width: 200px;
+        margin-left: -100px;
     }
     
     .scroll-text {
