@@ -94,12 +94,10 @@ body {
     .scroll-guide {
         position: absolute;
         top: 75%;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        right: 0;
         z-index: 3;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        text-align: center;
         opacity: 0;
         animation: scrollTextFadeIn 1s ease-out 2s forwards;
         display: none;
@@ -2600,12 +2598,10 @@ footer {
     .scroll-guide {
         position: absolute;
         top: 75%;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        right: 0;
         z-index: 3;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        text-align: center;
         opacity: 0;
         animation: scrollTextFadeIn 1s ease-out 2s forwards;
         display: none;
