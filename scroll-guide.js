@@ -18,7 +18,7 @@
     function showScrollGuide() {
         if (scrollCompleted) return;
         
-        scrollGuide.style.display = 'block';
+        scrollGuide.style.display = 'flex';
         setTimeout(() => {
             scrollGuide.style.opacity = '1';
         }, 100);

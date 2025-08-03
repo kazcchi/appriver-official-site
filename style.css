@@ -44,7 +44,9 @@ body {
         left: 50%;
         transform: translateX(-50%);
         z-index: 3;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
         opacity: 0;
         animation: reloadTextFadeIn 1s ease-out 2s forwards;
         display: none;
@@ -61,7 +63,7 @@ body {
         border: 2px solid rgba(255,255,255,0.5);
         backdrop-filter: blur(15px);
         display: inline-block;
-        margin: 1rem auto 0 auto;
+        margin-top: 1rem;
         animation: blinkEffect 1.5s ease-in-out infinite;
         line-height: 1.2;
         max-width: 180px;
@@ -95,11 +97,12 @@ body {
         left: 50%;
         transform: translateX(-50%);
         z-index: 3;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
         opacity: 0;
         animation: scrollTextFadeIn 1s ease-out 2s forwards;
         display: none;
-        width: 100%;
     }
     
     .scroll-text {
@@ -113,7 +116,7 @@ body {
         border: 2px solid rgba(255,255,255,0.5);
         backdrop-filter: blur(15px);
         display: inline-block;
-        margin: 1rem auto 0 auto;
+        margin-top: 1rem;
         animation: blinkEffect 1.5s ease-in-out infinite;
         line-height: 1.15;
         white-space: nowrap;
@@ -1814,7 +1817,7 @@ footer {
     
     .nav-links {
         display: flex;
-        margin: 1rem auto 0 auto;
+        margin-top: 1rem;
         gap: 1rem;
     }
     
@@ -2547,7 +2550,9 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         z-index: 3;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
         opacity: 0;
         animation: reloadTextFadeIn 1s ease-out 2s forwards;
         display: none;
@@ -2564,7 +2569,7 @@ footer {
         border: 2px solid rgba(255,255,255,0.5);
         backdrop-filter: blur(15px);
         display: inline-block;
-        margin: 1rem auto 0 auto;
+        margin-top: 1rem;
         animation: blinkEffect 1.5s ease-in-out infinite;
         line-height: 1.2;
         max-width: 180px;
@@ -2598,11 +2603,12 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         z-index: 3;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
         opacity: 0;
         animation: scrollTextFadeIn 1s ease-out 2s forwards;
         display: none;
-        width: 100%;
     }
     
     .scroll-text {
@@ -2616,7 +2622,7 @@ footer {
         border: 2px solid rgba(255,255,255,0.5);
         backdrop-filter: blur(15px);
         display: inline-block;
-        margin: 1rem auto 0 auto;
+        margin-top: 1rem;
         animation: blinkEffect 1.5s ease-in-out infinite;
         line-height: 1.15;
         white-space: nowrap;
@@ -2641,7 +2647,9 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         z-index: 3;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
         opacity: 0;
         display: none;
     }
@@ -2656,7 +2664,7 @@ footer {
         border-radius: 18px;
         border: 2px solid #d49175;
         display: inline-block;
-        margin: 1rem auto 0 auto;
+        margin-top: 1rem;
         animation: blinkEffect 1.5s ease-in-out infinite;
         line-height: 1.15;
         white-space: nowrap;
