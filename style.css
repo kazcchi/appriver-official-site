@@ -41,7 +41,7 @@ body {
     .reload-guide {
         position: absolute;
         top: 20%;
-        left: 50%;
+        left: 52%;
         transform: translateX(-50%);
         z-index: 3;
         display: flex;
@@ -94,7 +94,7 @@ body {
     .scroll-guide {
         position: fixed;
         top: 75%;
-        left: 50%;
+        left: 52%;
         transform: translateX(-50%);
         z-index: 3;
         text-align: center;
@@ -2545,7 +2545,7 @@ footer {
     .reload-guide {
         position: absolute;
         top: 20%;
-        left: 50%;
+        left: 52%;
         transform: translateX(-50%);
         z-index: 3;
         display: flex;
@@ -2598,7 +2598,7 @@ footer {
     .scroll-guide {
         position: fixed;
         top: 75%;
-        left: 50%;
+        left: 52%;
         transform: translateX(-50%);
         z-index: 3;
         text-align: center;
@@ -2640,7 +2640,7 @@ footer {
     .swipe-guide {
         position: absolute;
         top: 3%;
-        left: 50%;
+        left: 52%;
         transform: translateX(-50%);
         z-index: 3;
         display: flex;
