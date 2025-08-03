@@ -92,10 +92,10 @@ body {
     
     /* Scroll Guide - Mobile Only */
     .scroll-guide {
-        position: absolute;
+        position: fixed;
         top: 75%;
-        left: 0;
-        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 3;
         text-align: center;
         opacity: 0;
@@ -2596,10 +2596,10 @@ footer {
     
     /* Scroll Guide - Mobile Only */
     .scroll-guide {
-        position: absolute;
+        position: fixed;
         top: 75%;
-        left: 0;
-        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 3;
         text-align: center;
         opacity: 0;
