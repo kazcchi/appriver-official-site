@@ -101,9 +101,7 @@ body {
         opacity: 0;
         animation: scrollTextFadeIn 1s ease-out 2s forwards;
         display: none;
-        background: rgba(255,0,0,0.2);
-        width: 200px;
-        margin-left: -100px;
+        width: 1px;
     }
     
     .scroll-text {
@@ -2608,9 +2606,7 @@ footer {
         opacity: 0;
         animation: scrollTextFadeIn 1s ease-out 2s forwards;
         display: none;
-        background: rgba(255,0,0,0.2);
-        width: 200px;
-        margin-left: -100px;
+        width: 1px;
     }
     
     .scroll-text {
