@@ -94,10 +94,9 @@ body {
     .scroll-guide {
         position: absolute;
         top: 85%;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        right: 0;
         z-index: 3;
-        width: 100%;
         text-align: center;
         opacity: 0;
         animation: scrollTextFadeIn 1s ease-out 2s forwards;
@@ -2599,10 +2598,9 @@ footer {
     .scroll-guide {
         position: absolute;
         top: 85%;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0;
+        right: 0;
         z-index: 3;
-        width: 100%;
         text-align: center;
         opacity: 0;
         animation: scrollTextFadeIn 1s ease-out 2s forwards;
