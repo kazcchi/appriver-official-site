@@ -93,7 +93,7 @@ body {
     /* Scroll Guide - Mobile Only */
     .scroll-guide {
         position: absolute;
-        top: 75%;
+        top: 60%;
         left: 50%;
         transform: translateX(-50%);
         z-index: 3;
@@ -101,7 +101,6 @@ body {
         opacity: 0;
         animation: scrollTextFadeIn 1s ease-out 2s forwards;
         display: none;
-        width: 1px;
     }
     
     .scroll-text {
@@ -2598,7 +2597,7 @@ footer {
     /* Scroll Guide - Mobile Only */
     .scroll-guide {
         position: absolute;
-        top: 75%;
+        top: 60%;
         left: 50%;
         transform: translateX(-50%);
         z-index: 3;
@@ -2606,7 +2605,6 @@ footer {
         opacity: 0;
         animation: scrollTextFadeIn 1s ease-out 2s forwards;
         display: none;
-        width: 1px;
     }
     
     .scroll-text {
