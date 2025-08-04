@@ -58,6 +58,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Pull to Refresh Indicator (Mobile Only) -->
+    <div id="pullToRefreshIndicator" class="pull-to-refresh-indicator">
+        <div class="pull-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2V6L8 2L12 2ZM12 2L16 6L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 6V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M8 18L12 22L16 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="pull-text">引っ張って更新</div>
+    </div>
+
     <header>
         <nav>
             <div class="logo">
@@ -382,6 +394,7 @@
     <script src="search-sort.js"></script>
     <script src="slider.js"></script>
     <script src="music-players.js"></script>
+    <script src="pull-to-refresh.js"></script>
     <script src="reload-guide.js"></script>
     <script src="scroll-guide.js"></script>
     <script src="swipe-guide.js"></script>
