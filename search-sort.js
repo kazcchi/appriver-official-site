@@ -183,8 +183,8 @@ class SearchSortManager {
 
     cardHTML += `
       <div class="card-actions">
-        <a href="${song.linkUrl}" target="_blank" class="stream-link small">listen now</a>
-        <button class="stream-link small secondary lyric-btn" data-song="${song.id}">lyric</button>
+        <a href="${song.linkUrl}" target="_blank" class="stream-link small">聴いてみる</a>
+        <button class="stream-link small secondary lyric-btn" data-song="${song.id}">歌詞</button>
       </div>
     `;
 
@@ -337,9 +337,9 @@ class SearchSortManager {
 
     if (releaseSortBtn) {
       if (this.currentSort === 'releaseDate') {
-        releaseSortBtn.textContent = this.currentOrder === 'desc' ? '⚡ Latest Release' : '💎 Oldest Release';
+        releaseSortBtn.textContent = this.currentOrder === 'desc' ? '⚡ 新しい順' : '💎 リリース順';
       } else {
-        releaseSortBtn.textContent = '⚡ Latest Release';
+        releaseSortBtn.textContent = '⚡ 新しい順';
       }
     }
 
