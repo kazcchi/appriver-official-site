@@ -46,7 +46,9 @@
             hideReloadGuide();
             // 実際のリロード実行
             setTimeout(() => {
-                window.location.reload();
+                // URLハッシュをクリアしてリロード（ホームに確実に戻る）
+                const cleanUrl = window.location.href.split('#')[0];
+                window.location.href = cleanUrl;
             }, 300);
         }
         lastTap = currentTime;

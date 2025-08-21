@@ -121,7 +121,9 @@
         setTimeout(() => {
             // Store scroll position to prevent jump after reload
             sessionStorage.setItem('pullRefreshReload', 'true');
-            location.reload();
+            // URLハッシュをクリアしてリロード（ホームに確実に戻る）
+            const cleanUrl = window.location.href.split('#')[0];
+            window.location.href = cleanUrl;
         }, 1000);
     }
     
