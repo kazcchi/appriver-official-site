@@ -342,45 +342,6 @@ nav {
     margin: 0 auto;
 }
 
-/* YASURAGIボタン化スタイル */
-.hero-release-button {
-    /* 基本スタイル（hero-release-infoを継承） */
-    font-size: 1.2rem;
-    margin-top: 2rem;
-    text-align: center;
-    line-height: 1.4;
-    text-decoration: none;
-    color: inherit;
-    
-    /* ボタン特有のスタイル */
-    display: inline-block;
-    background: linear-gradient(135deg, rgba(232, 164, 139, 0.9), rgba(255, 183, 149, 0.8));
-    color: #2c1810;
-    padding: 15px 25px;
-    border-radius: 15px;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(232, 164, 139, 0.3);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: 2px solid rgba(232, 164, 139, 0.5);
-    backdrop-filter: blur(10px);
-}
-
-.hero-release-button:hover,
-.hero-release-button:focus {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(232, 164, 139, 0.4);
-    background: linear-gradient(135deg, rgba(232, 164, 139, 1), rgba(255, 183, 149, 0.9));
-    border-color: rgba(232, 164, 139, 0.8);
-    text-decoration: none;
-    color: #2c1810;
-}
-
-.hero-release-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 10px rgba(232, 164, 139, 0.3);
-}
-
 /* Sections */
 section {
     padding: 5rem 0;
@@ -2017,14 +1978,6 @@ footer {
     .hero-release-info.new-release {
         padding: 10px 16px;
         border-radius: 12px;
-    }
-    
-    .hero-release-button {
-        font-size: 1rem;
-        margin-top: 1.5rem;
-        padding: 12px 20px;
-        border-radius: 12px;
-        touch-action: manipulation; /* モバイルでのタップ最適化 */
     }
     
     .placeholder-artwork {
