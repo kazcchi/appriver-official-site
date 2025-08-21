@@ -97,15 +97,11 @@
                 <p class="description">created with SUNO AI</p>
                 
                 <!-- YASURAGI Release Info -->
-                <a href="https://linkco.re/1gXERgmA" 
-                   target="_blank" 
-                   class="hero-release-button new-release"
-                   aria-label="YASURAGIアルバムを聴く">
+                <div class="hero-release-info new-release">
                     2025.8.22<br>
                     2ndアルバム「YASURAGI」<br>
-                    全ストアにて配信開始<br>
-                    今すぐ聴く
-                </a>
+                    全ストアにて配信開始
+                </div>
             </div>
             
             <!-- スクロールガイド -->
