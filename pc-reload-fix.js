@@ -12,19 +12,26 @@
     
     // ページロード時の処理
     function handlePageLoad() {
-        // リロード検知フラグがあるかチェック
+        // リロード検知フラグとスクロール位置をチェック
         const wasReloaded = sessionStorage.getItem('pc_page_reloaded');
+        const savedScrollY = sessionStorage.getItem('pc_scroll_position');
         
         if (wasReloaded) {
             // リロード後の処理
             sessionStorage.removeItem('pc_page_reloaded');
+            sessionStorage.removeItem('pc_scroll_position');
             
-            // URLにハッシュがある場合はクリアしてホームに戻る
+            // 保存されたスクロール位置を数値に変換
+            const previousScrollY = savedScrollY ? parseInt(savedScrollY, 10) : 0;
+            
+            // URLハッシュがある場合は必ずクリア
             if (window.location.hash) {
-                // ハッシュをクリア
                 history.replaceState(null, null, window.location.pathname + window.location.search);
-                
-                // ホームセクションにスクロール
+            }
+            
+            // リロード前にスクロールしていた場合、またはハッシュがあった場合は
+            // 必ずホームセクションに戻る
+            if (previousScrollY > 100 || window.location.hash) {
                 setTimeout(() => {
                     const homeSection = document.getElementById('home');
                     if (homeSection) {
@@ -32,6 +39,11 @@
                     } else {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     }
+                }, 100);
+            } else {
+                // トップ付近にいた場合でも確実にトップに戻す
+                setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 }, 100);
             }
         }
@@ -41,6 +53,8 @@
     function handleBeforeUnload() {
         // F5、Ctrl+R、ブラウザのリロードボタンなどでリロードされる前に実行
         sessionStorage.setItem('pc_page_reloaded', 'true');
+        // 現在のスクロール位置も保存
+        sessionStorage.setItem('pc_scroll_position', window.scrollY.toString());
     }
     
     // リサイズ時にデスクトップでなくなった場合はイベントリスナーを削除
