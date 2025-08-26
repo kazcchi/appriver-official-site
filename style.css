@@ -301,7 +301,7 @@ nav {
 
 .artist-name {
     font-size: 6rem;
-    font-weight: 700;
+    font-weight: 900;
     font-family: 'Klee One', 'Chalkboard', 'Chalkboard SE', 'Bradley Hand', 'Marker Felt', cursive;
     margin-bottom: 1rem;
     color: white;
@@ -709,7 +709,7 @@ section h2::after {
 
 .single-item h3 {
     font-size: 2.2rem;
-    font-weight: 700;
+    font-weight: 900;
     font-family: 'Hiragino Maru Gothic ProN', 'M PLUS 2', 'Noto Sans JP', sans-serif;
     margin-bottom: 1.5rem;
     color: white;
@@ -1476,7 +1476,7 @@ section h2::after {
 
 .spotify-logo span {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 900;
     color: #333;
     letter-spacing: -0.5px;
 }
@@ -1568,7 +1568,7 @@ section h2::after {
 
 .apple-music-logo span {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 900;
     color: #333;
     letter-spacing: -0.5px;
 }
@@ -1660,7 +1660,7 @@ section h2::after {
 
 .amazon-music-logo span {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 900;
     color: #333;
     letter-spacing: -0.5px;
 }
@@ -1752,7 +1752,7 @@ section h2::after {
 
 .youtube-logo span {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 900;
     color: #333;
     letter-spacing: -0.5px;
 }
@@ -1838,7 +1838,7 @@ footer {
     .artist-name {
         font-size: 5rem;
         font-family: 'Klee One', 'Chalkboard', 'Chalkboard SE', 'Bradley Hand', 'Marker Felt', cursive;
-        font-weight: 700;
+        font-weight: 900;
     }
     
     .tagline {
@@ -2002,7 +2002,7 @@ footer {
     .artist-name {
         font-size: 4.5rem;
         font-family: 'Klee One', 'Chalkboard', 'Chalkboard SE', 'Bradley Hand', 'Marker Felt', cursive;
-        font-weight: 700;
+        font-weight: 900;
     }
     
     .tagline {
@@ -2273,7 +2273,7 @@ footer {
     .spotify-full-playlist-btn {
         padding: 0.8rem 1rem;
         font-size: 1.2rem;
-        font-weight: 700;
+        font-weight: 900;
         width: calc(75px * 4 + 0.5rem * 3);
         max-width: 90%;
         border-radius: 30px;
@@ -2329,7 +2329,7 @@ footer {
     .apple-music-full-playlist-btn {
         padding: 0.8rem 1rem;
         font-size: 1.2rem;
-        font-weight: 700;
+        font-weight: 900;
         width: calc(75px * 4 + 0.5rem * 3);
         max-width: 90%;
         border-radius: 30px;
@@ -2390,7 +2390,7 @@ footer {
     .amazon-music-full-playlist-btn {
         padding: 0.8rem 1rem;
         font-size: 1.2rem;
-        font-weight: 700;
+        font-weight: 900;
         width: calc(75px * 4 + 0.5rem * 3);
         max-width: 90%;
         border-radius: 30px;
@@ -2446,7 +2446,7 @@ footer {
     .youtube-full-playlist-btn {
         padding: 0.8rem 1rem;
         font-size: 1.2rem;
-        font-weight: 700;
+        font-weight: 900;
         width: calc(75px * 4 + 0.5rem * 3);
         max-width: 90%;
         border-radius: 30px;
