@@ -449,6 +449,7 @@ section h2::after {
     100% { left: -100%; }
 }
 
+/* モバイル（デフォルト）- SOW準拠 */
 .albums-container {
     display: flex;
     flex-direction: column;
@@ -456,26 +457,106 @@ section h2::after {
     align-items: center;
 }
 
-@media (min-width: 768px) {
+/* タブレット対応（768px-1023px）- SOW準拠 */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .albums-container {
+        gap: 2.5rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .album-info {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 2rem;
+        max-width: 550px;
+        text-align: left;
+    }
+    
+    .album-artwork-image {
+        width: 180px;
+        height: 180px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease;
+    }
+    
+    .placeholder-artwork {
+        width: 180px;
+        height: 180px;
+        transition: width 0.3s ease, height 0.3s ease;
+    }
+}
+
+/* 小型PC対応（1024px-1399px）- SOW準拠 */
+@media (min-width: 1024px) and (max-width: 1399px) {
     .albums-container {
         flex-direction: row;
         justify-content: center;
         gap: 3rem;
+        flex-wrap: wrap;
     }
     
     .album-info {
-        flex: 1;
-        max-width: 400px;
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        gap: 2.5rem;
+        max-width: 480px;
+        flex: 0 1 480px;
+        text-align: left;
+    }
+    
+    .album-artwork-image {
+        width: 200px;
+        height: 200px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease;
+    }
+    
+    .placeholder-artwork {
+        width: 200px;
+        height: 200px;
+        transition: width 0.3s ease, height 0.3s ease;
     }
 }
 
+/* 大型PC対応（1400px以上）- SOW準拠 */
+@media (min-width: 1400px) {
+    .albums-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .album-info {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 3rem;
+        max-width: 550px;
+        flex: 0 1 550px;
+        text-align: left;
+    }
+    
+    .album-artwork-image {
+        width: 240px;
+        height: 240px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease;
+    }
+    
+    .placeholder-artwork {
+        width: 240px;
+        height: 240px;
+        transition: width 0.3s ease, height 0.3s ease;
+    }
+}
+
+/* モバイルベース - SOW準拠 */
 .album-info {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 3rem;
-    align-items: center;
-    max-width: 800px;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 400px;
     width: 100%;
+    text-align: center;
     animation: slideInFromLeft 1s ease-out 0.3s both;
 }
 
@@ -494,7 +575,7 @@ section h2::after {
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 25px 50px rgba(212, 145, 117, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease;
     display: block;
 }
 
@@ -517,7 +598,7 @@ section h2::after {
     border-radius: 20px;
     box-shadow: 0 25px 50px rgba(212, 145, 117, 0.3);
     margin: 0 auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.3s ease, height 0.3s ease;
     position: relative;
     overflow: hidden;
     letter-spacing: -1px;
@@ -532,23 +613,24 @@ section h2::after {
 }
 
 .album-details h3 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: normal;
     font-family: 'Hiragino Maru Gothic ProN', 'M PLUS 2', 'Noto Sans JP', sans-serif;
     margin-bottom: 1rem;
     color: #333;
     letter-spacing: -1px;
     text-transform: uppercase;
+    line-height: 1.2;
 }
 
 .track-count {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     color: #666;
     margin-bottom: 0.5rem;
 }
 
 .release-date {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 2.2vw, 1.3rem);
     font-weight: 600;
     color: #e8a48b;
     margin-bottom: 1rem;
