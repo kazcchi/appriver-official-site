@@ -1706,8 +1706,8 @@ section h2::after {
     font-size: 1.2rem;
 }
 
-/* Amazon Music Direct Layout Styles */
-.amazon-music-direct-container {
+/* Others Platform Direct Layout Styles */
+.others-direct-container {
     background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
     border-radius: 20px;
     padding: 3rem 2rem;
@@ -1722,36 +1722,36 @@ section h2::after {
     gap: 1.5rem;
 }
 
-.amazon-music-header {
+.others-header {
     flex-shrink: 0;
 }
 
-.amazon-music-logo {
+.others-logo {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.2rem;
 }
 
-.amazon-music-logo i {
+.others-logo i {
     font-size: 4rem;
-    color: #ff9900;
+    color: #667eea;
     animation: pulse 2s ease-in-out infinite alternate;
-    filter: drop-shadow(0 4px 8px rgba(255, 153, 0, 0.3));
+    filter: drop-shadow(0 4px 8px rgba(102, 126, 234, 0.3));
 }
 
-.amazon-music-logo span {
+.others-logo span {
     font-size: 2.5rem;
     font-weight: 900;
     color: #333;
     letter-spacing: -0.5px;
 }
 
-.amazon-music-playlist-link {
+.others-playlist-link {
     flex-shrink: 0;
 }
 
-.amazon-music-full-playlist-btn {
+.others-full-playlist-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1773,7 +1773,7 @@ section h2::after {
     min-height: calc(60px * 2 + 1rem);
 }
 
-.amazon-music-full-playlist-btn::before {
+.others-full-playlist-btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1784,17 +1784,17 @@ section h2::after {
     transition: left 0.6s ease;
 }
 
-.amazon-music-full-playlist-btn:hover::before {
+.others-full-playlist-btn:hover::before {
     left: 100%;
 }
 
-.amazon-music-full-playlist-btn:hover {
+.others-full-playlist-btn:hover {
     background: linear-gradient(135deg, #d49175 0%, #c17d61 100%);
     transform: translateY(-5px) scale(1.08);
     box-shadow: 0 15px 40px rgba(232, 164, 139, 0.6);
 }
 
-.amazon-music-full-playlist-btn i {
+.others-full-playlist-btn i {
     font-size: 1.2rem;
 }
 
@@ -2438,38 +2438,38 @@ footer {
         box-shadow: 0 10px 25px rgba(232, 164, 139, 0.5);
     }
     
-    /* Amazon Music Mobile Optimizations - コンパクト */
-    .amazon-music-direct-container {
+    /* Others Platform Mobile Optimizations - コンパクト */
+    .others-direct-container {
         padding: 1rem;
         min-height: auto;
         gap: 0.8rem;
         justify-content: center;
     }
     
-    .amazon-music-header {
+    .others-header {
         height: 60px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     
-    .amazon-music-logo i {
+    .others-logo i {
         font-size: 2.2rem;
     }
     
-    .amazon-music-logo span {
+    .others-logo span {
         font-size: 1.4rem;
         font-weight: 600;
     }
     
-    .amazon-music-playlist-link {
+    .others-playlist-link {
         height: 60px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     
-    .amazon-music-full-playlist-btn {
+    .others-full-playlist-btn {
         padding: 0.8rem 1rem;
         font-size: 1.2rem;
         font-weight: 900;
@@ -2485,11 +2485,11 @@ footer {
         min-height: 60px;
     }
     
-    .amazon-music-full-playlist-btn i {
+    .others-full-playlist-btn i {
         font-size: 1.3rem;
     }
     
-    .amazon-music-full-playlist-btn:active {
+    .others-full-playlist-btn:active {
         transform: translateY(-1px) scale(0.98);
         box-shadow: 0 4px 15px rgba(232, 164, 139, 0.3);
     }
