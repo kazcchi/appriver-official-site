@@ -383,24 +383,24 @@ nav {
 
 /* Karaoke Coupon Button */
 .hero-karaoke-coupon-button {
-    font-size: 1.2rem;
-    margin-top: 2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.3;
     text-decoration: none;
     color: inherit;
     display: inline-block;
     
     background: linear-gradient(135deg, rgba(255, 193, 7, 0.9), rgba(255, 235, 59, 0.8));
     border: 2px solid rgba(255, 193, 7, 0.6);
-    border-radius: 15px;
-    padding: 15px 25px;
+    border-radius: 12px;
+    padding: 10px 18px;
     font-weight: 600;
     color: #2c1810;
     box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
     transition: all 0.3s ease;
     position: absolute;
-    top: 85%;
+    top: 78%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -2151,12 +2151,12 @@ footer {
     }
     
     .hero-karaoke-coupon-button {
-        font-size: 1rem;
-        margin-top: 1.5rem;
-        padding: 12px 20px;
-        border-radius: 12px;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        padding: 8px 15px;
+        border-radius: 10px;
         touch-action: manipulation; /* モバイルでのタップ最適化 */
-        top: 87%; /* モバイルでは少し下に調整 */
+        top: 80%; /* モバイルでの位置調整 */
     }
     
     .placeholder-artwork {
