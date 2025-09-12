@@ -381,47 +381,6 @@ nav {
     box-shadow: 0 2px 10px rgba(232, 164, 139, 0.3);
 }
 
-/* Karaoke Coupon Button */
-.hero-karaoke-coupon-button {
-    font-size: 1rem;
-    margin-top: 1rem;
-    text-align: center;
-    line-height: 1.3;
-    text-decoration: none;
-    color: inherit;
-    display: inline-block;
-    
-    background: linear-gradient(135deg, rgba(255, 193, 7, 0.9), rgba(255, 235, 59, 0.8));
-    border: 2px solid rgba(255, 193, 7, 0.6);
-    border-radius: 12px;
-    padding: 10px 18px;
-    font-weight: 600;
-    color: #2c1810;
-    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
-    transition: all 0.3s ease;
-    position: absolute;
-    top: 78%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    display: inline-block; /* ボタン表示開始 */
-}
-
-.hero-karaoke-coupon-button:hover,
-.hero-karaoke-coupon-button:focus {
-    transform: translate(-50%, -2px);
-    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
-    background: linear-gradient(135deg, rgba(255, 193, 7, 1), rgba(255, 235, 59, 0.9));
-    border-color: rgba(255, 193, 7, 0.8);
-    text-decoration: none;
-    color: #2c1810;
-}
-
-.hero-karaoke-coupon-button:active {
-    transform: translate(-50%, 0);
-    box-shadow: 0 2px 10px rgba(255, 193, 7, 0.3);
-}
-
 /* Sections */
 section {
     padding: 5rem 0;
@@ -2150,15 +2109,6 @@ footer {
         touch-action: manipulation; /* モバイルでのタップ最適化 */
     }
     
-    .hero-karaoke-coupon-button {
-        font-size: 0.9rem;
-        margin-top: 1rem;
-        padding: 8px 15px;
-        border-radius: 10px;
-        touch-action: manipulation; /* モバイルでのタップ最適化 */
-        top: 80%; /* モバイルでの位置調整 */
-    }
-    
     .placeholder-artwork {
         width: 200px;
         height: 200px;
@@ -2838,10 +2788,6 @@ footer {
 /* Desktop - Hide all guides completely */
 @media (min-width: 769px) {
     .reload-guide, .scroll-guide, .swipe-guide {
-        display: none !important;
-    }
-    
-    .hero-karaoke-coupon-button {
         display: none !important;
     }
 }
