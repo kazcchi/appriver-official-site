@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>appriver - 公式サイト</title>
+    <meta name="description" content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
+    
+    <!-- OGP Meta Tags -->
+    <meta property="og:title" content="appriver - 公式サイト">
+    <meta property="og:description" content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
+    <meta property="og:image" content="https://appriver.jp/OGP.png">
+    <meta property="og:url" content="https://appriver.jp/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="appriver">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="appriver - 公式サイト">
+    <meta name="twitter:description" content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
+    <meta name="twitter:image" content="https://appriver.jp/OGP.png">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#e8a48b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="appriver">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="appriver">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="https://www.appriver.jp/manifest.json">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-touch-icon-57x57.png">
+    
+    <!-- Standard Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#e8a48b">
+    <meta name="msapplication-TileImage" content="/icons/apple-touch-icon-144x144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=M+PLUS+2:wght@100;200;300;400;500;600;700;800;900&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Pull to Refresh Indicator (Mobile Only) -->
+    <div id="pullToRefreshIndicator" class="pull-to-refresh-indicator">
+        <div class="pull-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2V6L8 2L12 2ZM12 2L16 6L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 6V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M8 18L12 22L16 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="pull-text">引っ張って更新</div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>appriver</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item">home</a></li>
+                <li><a href="#music-players" class="nav-item">players</a></li>
+                <li><a href="#songs-lyrics" class="nav-item">songs&lyrics</a></li>
+                <li><a href="#album" class="nav-item">album</a></li>
+                <li><a href="#links" class="nav-item">links</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <!-- リロードガイド -->
+            <div id="reloadGuide" class="reload-guide">
+                <div class="reload-text">画面を2回<br>タップして更新</div>
+            </div>
+            
+            <div class="hero-content">
+                <h1 class="artist-name">appriver</h1>
+                <p class="description">created with SUNO AI</p>
+                
+                <!-- YASURAGI Release Info -->
+                <a href="https://linkco.re/1gXERgmA" 
+                   target="_blank" 
+                   class="hero-release-button new-release"
+                   aria-label="YASURAGIアルバムを聴く">
+                    2025.8.22<br>
+                    2ndアルバム「YASURAGI」<br>
+                    全ストアにて配信開始<br>
+                    今すぐ聴く
+                </a>
+            </div>
+            
+            <!-- スクロールガイド -->
+            <div id="scrollGuide" class="scroll-guide">
+                <div class="scroll-text">画面をスクロール</div>
+            </div>
+        </section>
+
+        <section id="music-players" class="music-players-section">
+            <div class="container">
+                <h2>MUSIC PLAYERS</h2>
+                <p class="players-description">お好みのプラットフォームの<br>ボタンを押してください</p>
+                <div class="player-note">
+                    <p><i class="fas fa-info-circle"></i> フル再生には各プラットフォームの<br>サブスクリプションが必要です</p>
+                </div>
+                
+                <div class="platform-selector">
+                    <button class="platform-btn active" data-platform="apple-music">
+                        <i class="fab fa-apple"></i>
+                        Apple Music
+                    </button>
+                    <button class="platform-btn" data-platform="spotify">
+                        <i class="fab fa-spotify"></i>
+                        Spotify
+                    </button>
+                    <button class="platform-btn" data-platform="amazon-music">
+                        <i class="fab fa-amazon"></i>
+                        Amazon Music
+                    </button>
+                    <button class="platform-btn" data-platform="youtube">
+                        <i class="fab fa-youtube"></i>
+                        YouTube
+                    </button>
+                </div>
+
+                <div class="player-container">
+                    <div class="player-embed" id="apple-music-player">
+                        <div class="apple-music-direct-container">
+                            <div class="apple-music-header">
+                                <div class="apple-music-logo">
+                                    <i class="fab fa-apple"></i>
+                                    <span>Apple Music</span>
+                                </div>
+                            </div>
+                            
+                            <div class="apple-music-playlist-link">
+                                <a href="https://music.apple.com/jp/playlist/appriver-%E5%85%AC%E5%BC%8F%E3%83%97%E3%83%AC%E3%82%A4%E3%83%AA%E3%82%B9%E3%83%88/pl.u-V9D7vD9FEP64AZ" target="_blank" class="apple-music-full-playlist-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>プレイリストを開く</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-embed" id="spotify-player" style="display: none;">
+                        <div class="spotify-direct-container">
+                            <div class="spotify-header">
+                                <div class="spotify-logo">
+                                    <i class="fab fa-spotify"></i>
+                                    <span>Spotify</span>
+                                </div>
+                            </div>
+                            
+                            <div class="spotify-playlist-link">
+                                <a href="https://open.spotify.com/playlist/1Y4ICAnET0o7CPHRycOriz" target="_blank" class="spotify-full-playlist-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>プレイリストを開く</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-embed" id="youtube-player" style="display: none;">
+                        <div class="youtube-direct-container">
+                            <div class="youtube-header">
+                                <div class="youtube-logo">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>YouTube</span>
+                                </div>
+                            </div>
+                            
+                            <div class="youtube-playlist-link">
+                                <a href="https://www.youtube.com/@appriver12" target="_blank" class="youtube-full-playlist-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>チャンネルを開く</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-embed" id="amazon-music-player" style="display: none;">
+                        <div class="amazon-music-direct-container">
+                            <div class="amazon-music-header">
+                                <div class="amazon-music-logo">
+                                    <i class="fab fa-amazon"></i>
+                                    <span>Amazon Music</span>
+                                </div>
+                            </div>
+                            
+                            <div class="amazon-music-playlist-link">
+                                <a href="https://music.amazon.co.jp/user-playlists/2f0011faf39b4e6586c4e9133263f85ajajp?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_fg7FrqMypTT58ZGI3tpEVjYlK" target="_blank" class="amazon-music-full-playlist-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>プレイリストを開く</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="songs-lyrics" class="lyrics-section">
+            <div class="container">
+                <h2>SONGS & LYRICS</h2>
+
+                <!-- Search & Sort Controls Start -->
+                <div class="search-sort-controls">
+                    <div class="search-container">
+                        <input type="text" id="song-search" placeholder="楽曲名・アルバム名で検索..." class="search-input">
+                        <button id="search-clear" class="search-clear" style="display: none;">×</button>
+                    </div>
+                    <div class="sort-container">
+                        <button id="sort-release" class="sort-btn sort-active sort-desc">⚡ 新しい順</button>
+                        <button id="sort-reading" class="sort-btn">📝 あ→ん</button>
+                    </div>
+                    <div id="search-result-count" class="search-result-count" style="display: none;"></div>
+                </div>
+                <!-- Search & Sort Controls End -->
+
+                <!-- Song Slider Start -->
+                <div class="song-slider">
+                    <!-- スワイプガイド -->
+                    <div id="swipeGuide" class="swipe-guide">
+                        <div class="swipe-text">左右にスワイプ</div>
+                    </div>
+                    
+                    <button class="slider-btn prev">&#10094;</button>
+                    <div class="slider-track">
+                        <!-- Latest Songs -->
+                        <div class="slider-card" data-link="https://linkco.re/RZYccEGt">
+                            <h3>君を守りたい</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/RZYccEGt" target="_blank" class="stream-link small">聴いてみる</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="kimiwomamoritai">歌詞</button>
+                            </div>
+                        </div>
+                        <div class="slider-card" data-link="https://linkco.re/MU4uQntZ">
+                            <h3>あの日々</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/MU4uQntZ" target="_blank" class="stream-link small">聴いてみる</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="anohibi">歌詞</button>
+                            </div>
+                        </div>
+                        <div class="slider-card" data-link="https://linkco.re/5GGDQ6m3">
+                            <h3>時間をこえて</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/5GGDQ6m3" target="_blank" class="stream-link small">聴いてみる</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="tokiwokoete">歌詞</button>
+                            </div>
+                        </div>
+                        <!-- Existing Songs -->
+                        <div class="slider-card" data-link="https://linkco.re/Hb9nfMcM">
+                            <h3>いのちの理由</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/Hb9nfMcM" target="_blank" class="stream-link small">聴いてみる</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="inochi">歌詞</button>
+                            </div>
+                        </div>
+                        <div class="slider-card" data-link="https://linkco.re/DDaFCGVU">
+                            <h3>君の影</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/DDaFCGVU" target="_blank" class="stream-link small">聴いてみる</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="kage">歌詞</button>
+                            </div>
+                        </div>
+                        <div class="slider-card" data-link="https://linkco.re/bQ8vxgZd">
+                            <h3>心の羽</h3>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/bQ8vxgZd" target="_blank" class="stream-link small">聴いてみる</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="kokoro">歌詞</button>
+                            </div>
+                        </div>
+                        <div class="slider-card" data-link="https://linkco.re/E7hxe2Ay">
+                            <h3>優しい光</h3>
+                            <p class="song-subtitle">album: NUKUMORI</p>
+                            <div class="card-actions">
+                                <a href="https://linkco.re/E7hxe2Ay" target="_blank" class="stream-link small">聴いてみる</a>
+                                <button class="stream-link small secondary lyric-btn" data-song="yasashii">歌詞</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn next">&#10095;</button>
+                </div>
+                <!-- Song Slider End -->
+                
+                <!-- Lyrics Display -->
+                <div class="lyrics-display" id="lyrics-display" style="display: none;">
+                    <div class="lyrics-song-title" id="lyrics-title"></div>
+                    <div class="lyrics-scroll-container">
+                        <div class="lyrics-content" id="lyrics-content"></div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button class="close-lyrics-btn" id="close-lyrics">閉じる</button>
+                    </div>
+                </div>
+
+
+
+
+
+                        
+
+
+
+
+
+                        
+
+
+
+
+
+                        
+
+
+
+
+
+                        
+
+
+
+
+
+                        
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="album" class="album-section">
+            <div class="container">
+                <h2>ALBUM</h2>
+                <div class="albums-container">
+                    <!-- 2nd Album: YASURAGI -->
+                    <div class="album-info">
+                        <div class="album-artwork">
+                            <div class="album-artwork-container">
+                                <img src="yasuragi-album.jpg" alt="YASURAGI アルバムアート" class="album-artwork-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="placeholder-artwork">YASURAGI</div>
+                            </div>
+                        </div>
+                        <div class="album-details">
+                            <h3>YASURAGI</h3>
+                            <p class="track-count">15曲</p>
+                            <p class="release-date new-release">2025.8.22<br>全ストアにて配信開始</p>
+                            <a href="https://linkco.re/1gXERgmA" class="stream-link" target="_blank">聴いてみる</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 1st Album: NUKUMORI -->
+                    <div class="album-info">
+                        <div class="album-artwork">
+                            <div class="album-artwork-container">
+                                <img src="nukumori-album.jpg" alt="NUKUMORI アルバムアート" class="album-artwork-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="placeholder-artwork">NUKUMORI</div>
+                            </div>
+                        </div>
+                        <div class="album-details">
+                            <h3>NUKUMORI</h3>
+                            <p class="track-count">15曲</p>
+                            <p class="release-date">2025.6.28<br>全ストアにて配信中</p>
+                            <a href="https://linkco.re/E7hxe2Ay" class="stream-link" target="_blank">聴いてみる</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="links" class="links-section">
+            <div class="container">
+                <h2>Links</h2>
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/@appriver?is_from_webapp=1&sender_device=pc" target="_blank" class="social-link tiktok">
+                        <i class="fab fa-tiktok"></i>
+                        TikTok
+                    </a>
+                    <a href="https://www.tiktok.com/@appriver12?is_from_webapp=1&sender_device=pc" target="_blank" class="social-link tiktok">
+                        <i class="fab fa-tiktok"></i>
+                        TikTok 2
+                    </a>
+                    <a href="https://www.youtube.com/@appriver12" target="_blank" class="social-link youtube">
+                        <i class="fab fa-youtube"></i>
+                        YouTube
+                    </a>
+                    <a href="https://open.spotify.com/intl-ja/artist/2PbgbV4vBCzAUV9ZfHPG3Z" target="_blank" class="social-link spotify">
+                        <i class="fab fa-spotify"></i>
+                        Spotify
+                    </a>
+                    <a href="https://music.apple.com/jp/artist/%E3%82%A2%E3%83%83%E3%83%97%E3%83%AA%E3%83%90%E3%83%BC/1816403477" target="_blank" class="social-link apple-music">
+                        <i class="fab fa-apple"></i>
+                        Apple Music
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 appriver. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="songs-data.js"></script>
+    <script src="search-sort.js"></script>
+    <script src="slider.js"></script>
+    <script src="music-players.js"></script>
+    <script src="pull-to-refresh.js"></script>
+    <script src="reload-guide.js"></script>
+    <script src="pc-reload-fix.js"></script>
+    <script src="scroll-guide.js"></script>
+    <script src="swipe-guide.js"></script>
+</body>
+</html>
