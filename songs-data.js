@@ -9,7 +9,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-06-10',
     linkUrl: 'https://linkco.re/Hb9nfMcM',
-    youtubeVideoId: 'QYn4iccGVPo',
     lyrics: `空に問いかけた声が
 消えてゆくこの静寂の中で
 あの日見た夢の続きを
@@ -47,7 +46,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-06-11',
     linkUrl: 'https://linkco.re/DDaFCGVU',
-    youtubeVideoId: 'BBKyD1Mjgq4',
     lyrics: `もしあの時別れなければ
 今頃君とどこにいるの
 手をつなぎ笑っていたかな
@@ -85,7 +83,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-07-08',
     linkUrl: 'https://linkco.re/bQ8vxgZd',
-    youtubeVideoId: 'dXvDBX-P5d4',
     lyrics: `静かな夜に星が揺れて
 遠い記憶が胸を叩く
 失った日々の痛みさえも
@@ -123,7 +120,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28', // アルバムリリース日
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'uMgsLJ0dMjc',
     lyrics: `夜空にひとり 立ち尽くして
 星たちの声を 聞こうとして
 涙の理由は 誰にも言えず
@@ -161,7 +157,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: '55F9Xt8iIbk',
     lyrics: `もっと早くに出会えていたら
 この胸の痛み知らないまま
 淡い記憶が風に舞って
@@ -199,7 +194,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: '2x44W5sIbc8',
     lyrics: `君は今どこで過ごしてる
 空の向こうに想い飛ばしてる
 笑顔の中に隠れた涙
@@ -237,7 +231,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'PsIKAJ1sKSE',
     lyrics: `明日がもし辛い日でも
 心の中の星を頼ろう
 暗闇の中 微笑み探し
@@ -275,7 +268,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'V20iCcNCdC0',
     lyrics: `くすんだ空に映る星
 君と見た夜の隙間に
 消えてしまいそうな夢が
@@ -313,7 +305,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'HpC7txeP2Yg',
     lyrics: `最後に君を抱きしめて
 言葉はいらない この温もりで
 心が叫ぶ 君といたい
@@ -351,7 +342,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'uea6gYEWT3s',
     lyrics: `生きてきた今までの長い時間は
 辛い時も悲しい瞬間もあったのに
 手を伸ばせば消える希望の影
@@ -389,7 +379,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'ULz5uJJ3Zdw',
     lyrics: `部屋の中 静まり返る夜
 君の声だけ 寂しさ溶かす
 遠くにいるほど鮮やかになる
@@ -427,7 +416,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'JliD9Zfbko8',
     lyrics: `僕は今道を探してる
 暗闇の中光を見つけてる
 錆びついた心を磨きたい
@@ -465,7 +453,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'jI5NaydiY1A',
     lyrics: `自分を責めていた日々を
 罪だと思うのならば
 早く忘れられたなら
@@ -503,7 +490,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: '_HI9mK0V5qQ',
     lyrics: `今夜だけは一緒にいさせて
 月明かりが静かに揺れてる
 この部屋は時間さえ止まる
@@ -541,7 +527,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'HIhadaD5IEM',
     lyrics: `夜の静けさに包まれて
 涙はそっと頬を伝う
 言葉にならないこの痛み
@@ -579,7 +564,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'd-vBHc7uWS4',
     lyrics: `もしすべてをなくした時
 君がそばで笑うのなら
 僕は何も怖くない
@@ -617,7 +601,6 @@ const songsData = {
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
     linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'y_UF0yX54C4',
     lyrics: `夜空に響く風の音
 消えない影が心に宿る
 冷たい月の光の下
@@ -655,7 +638,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-07-17',
     linkUrl: 'https://linkco.re/5GGDQ6m3',
-    youtubeVideoId: '5SLxtUgs_TM',
     lyrics: `あの頃の君は笑ってた
 小さな夢を追いかけた
 夕焼けの空が泣いてた
@@ -693,7 +675,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-07-21',
     linkUrl: 'https://linkco.re/RZYccEGt',
-    youtubeVideoId: 'Xo6UwtA_Ivk',
     lyrics: `冷たい風が吹く夜に
 君の手をそっと握りしめて
 孤独な闇に包まれても
@@ -731,7 +712,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-07-17',
     linkUrl: 'https://linkco.re/MU4uQntZ',
-    youtubeVideoId: '3CqnGrnMf3c',
     lyrics: `夜空に浮かぶ星ひとつ
 君の影を映してる
 忘れたくないその声が
@@ -769,7 +749,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-07-29',
     linkUrl: 'https://linkco.re/UEetr9T1',
-    youtubeVideoId: '',
     lyrics: `夕焼けに染まる街角
 君の声がまだ聞こえる
 あの日の約束 握りしめ
@@ -807,7 +786,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-08-09',
     linkUrl: 'https://linkco.re/uhv5dtZx',
-    youtubeVideoId: '',
     lyrics: `冷たい風が心に触れ
 窓のそとでは雨がふりだし
 君の声が遠くで響く でも届かない
@@ -841,7 +819,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-08-07',
     linkUrl: 'https://linkco.re/pc0exyfX',
-    youtubeVideoId: '',
     lyrics: `静かな夜の海に
 涙がひとつ落ちた
 星が揺れているのか
@@ -875,7 +852,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `あの日の風が囁いてた
 君がいなけりゃ何も始まらない
 冷たい夜空に一人きり
@@ -913,7 +889,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `静かな街灯の下
 影が伸びてく消えないまま
 風がそっと名前を呼ぶようで
@@ -949,7 +924,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `君の笑顔が朝を染める
 光の中で息をする
 触れたいけど触れられない
@@ -983,7 +957,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `遠くなる声が響く夜
 胸の中で君を探す
 触れた指先が覚えてる
@@ -1021,7 +994,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `愛の炎は静かに消えて
 夜の闇に溶けていく
 ささやきは風にさらわれて
@@ -1059,7 +1031,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `夜空に浮かぶ星のように
 君との出逢い輝いてた
 だけど時間は止まらない
@@ -1097,7 +1068,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `小さな声で叫んでた
 誰も聞こえない空の下
 涙が頬をつたう夜
@@ -1131,7 +1101,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `静かな夜の風が吹く
 星たちが囁く夢の中
 君の笑顔 思い出すたび
@@ -1165,7 +1134,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `小さなともしびが揺れている
 静かな夜にひとりきり
 心の中で何かが囁く
@@ -1199,7 +1167,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `静かな夜に一人きり
 心の奥が痛むたび
 記憶の中で君が笑う
@@ -1237,7 +1204,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `君の笑顔が揺れる街角
 風が運ぶよ 優しい記憶を
 手をつないで 夢を語ったね
@@ -1271,7 +1237,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `あの人は今どこにいる
 風が答えを運ぶけど
 言葉にならない痛みだけ
@@ -1304,7 +1269,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `淡い光が差し込む朝
 君の笑顔が僕を包む
 何気ない日々が煌めき出す
@@ -1342,7 +1306,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `あの日の空は遠く霞んで
 涙の意味も知らなかった
 無邪気な笑顔で駆け抜けた日々
@@ -1380,7 +1343,6 @@ const songsData = {
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
     linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
     lyrics: `暗い空に星ひとつ
 孤独な夜に浮かぶ光
 君の笑顔で世界が変わる
@@ -1412,7 +1374,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-09-08',
     linkUrl: 'https://linkco.re/TMy1qy6G',
-    youtubeVideoId: '',
     lyrics: `あの日の風が胸を撫でて
 君の笑顔が瞼に浮かぶ
 触れられない距離がつらくて
@@ -1450,7 +1411,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-09-08',
     linkUrl: 'https://linkco.re/2MR6mb13',
-    youtubeVideoId: '',
     lyrics: `全てが崩れた日
 光は影に消えていく
 手にしてた夢のかけら
@@ -1488,7 +1448,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-09-08',
     linkUrl: 'https://linkco.re/5QG1gCmM',
-    youtubeVideoId: '',
     lyrics: `夜空に問いかけた 星たちは黙った
 答えのない日々が ただ過ぎていく
 心の隙間に 風が吹き抜ける
@@ -1524,7 +1483,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-09-08',
     linkUrl: 'https://linkco.re/yfBPxec0',
-    youtubeVideoId: '',
     lyrics: `君の涙が頬を伝う
 夜の静けさに溶ける音
 僕はただ見ているだけで
@@ -1562,7 +1520,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-09-08',
     linkUrl: 'https://linkco.re/CF0hpdYb',
-    youtubeVideoId: '',
     lyrics: `不安が夜を包み込む
 心は迷路の中で彷徨う
 明日が来るのが怖くて
@@ -1596,7 +1553,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-09-08',
     linkUrl: 'https://linkco.re/v1M8v9Vg',
-    youtubeVideoId: '',
     lyrics: `雲が流れる静かな朝
 風がそっと頬を撫でる
 この道を歩き続ける僕
@@ -1634,7 +1590,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-09-12',
     linkUrl: 'https://linkco.re/CaqfUEqa',
-    youtubeVideoId: '',
     lyrics: `いつかこの道を振り返る日が来る
 足跡は消えずに 砂に刻まれたまま
 遠い空に願いを込めた あの時の声
@@ -1665,7 +1620,6 @@ const songsData = {
     albumReading: '',
     releaseDate: '2025-09-12',
     linkUrl: 'https://linkco.re/NfUDu2vR',
-    youtubeVideoId: '',
     lyrics: `この道の先に何があるのか
 誰も教えてくれないけど
 風がささやく まだ進めと
@@ -1692,6 +1646,41 @@ const songsData = {
 闇の中でゆめ探すよ
 心の声が道を描く
 迷いながらも 進むんだ`,
+  },
+  sonosakinimieru: {
+    title: 'その先に見える未来',
+    reading: 'そのさきにみえるみらい',
+    album: '',
+    albumReading: '',
+    releaseDate: '2025-09-17',
+    linkUrl: 'https://linkco.re/AnF8HmUY',
+    lyrics: `静かに揺れる木漏れ日
+風がそっと頬を撫でて
+遠く響く声が呼ぶ
+あの日の夢が目を覚ます
+
+忘れかけたあのときを
+胸の奥で灯る光
+
+その先にみえる未来は
+涙の向こうに広がる空
+何度転んでも立ち上がれる
+希望の光が導く道
+
+雨上がりの虹を見て
+小さな花が笑ってる
+一歩ずつすすむ足跡
+確かに残る僕らの証
+
+その先に見える未来は
+闇の中でも消えない星
+たとえ迷っても歩き続ける
+心の声が囁く場所
+
+昨日の傷が強さに変わる
+明日を信じる翼に変わる
+失くしたものも愛した日々も
+全て抱きしめて進むだけ`,
   },
 };
 
