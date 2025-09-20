@@ -1,8 +1,61 @@
+# Dependencies
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Production builds
+dist/
+build/
+.vercel/
+
+# Backup files
 *.backup*
+*.backup.*
+
+# Minified files
 *.min.js
 *.min.css
-.vercel/
+
+# Lock files (auto-generated)
+package-lock.json
+yarn.lock
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git files
 .git/
-# HTMLファイルは手動管理（Prettierパーサー問題回避）
+
+# HTML files (complex structure, manual formatting preferred)
 *.html
+
+# Large data files (manual formatting for readability)
+songs-data.js
+
+# Image files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+
+# Temporary files
+*.tmp
+*.temp
+
+# Configuration files that should not be auto-formatted
+browserconfig.xml

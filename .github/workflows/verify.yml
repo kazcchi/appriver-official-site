@@ -13,6 +13,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout code
@@ -25,13 +26,25 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit
 
-      - name: Run format check
-        run: npm run format:check
+      - name: Run verification
+        run: npm run verify
 
-      - name: Run ESLint
-        run: npm run lint
+      - name: Check tool lock compliance
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            # Check for tool lock labels or commit messages
+            echo "🔒 Verifying tool lock compliance..."
+            
+            # Check commit messages for tool tags
+            git log --oneline origin/main..HEAD | grep -E '\[(Claude|Codex)\]' || {
+              echo "❌ Missing tool tag in commit messages. Please add [Claude] or [Codex] tag."
+              exit 1
+            }
+            
+            echo "✅ Tool lock compliance verified"
+          fi
 
-      - name: Verify all checks pass
-        run: echo "✅ All verification checks passed!"
+      - name: Success notification
+        run: echo "🎉 All verification checks passed! Ready for merge."
