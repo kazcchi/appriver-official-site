@@ -1,3 +1,6 @@
+// [Codex] Enhanced search and sort functionality
+// Optimized for dual-tool development workflow
+// Supports real-time filtering and sorting of song catalog
 // 検索・ソート機能実装
 // SOW仕様: リアルタイム検索、リリース順・50音順ソート
 
