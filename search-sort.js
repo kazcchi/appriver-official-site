@@ -138,7 +138,7 @@ class SearchSortManager {
   // ソート・フィルタの適用
   applySortAndFilter() {
     // 検索フィルタリング
-    let filtered = this.filterSongs(this.allSongs, this.currentSearch);
+    const filtered = this.filterSongs(this.allSongs, this.currentSearch);
 
     // ソート
     this.filteredSongs = this.sortSongs(filtered, this.currentSort, this.currentOrder);
@@ -168,7 +168,7 @@ class SearchSortManager {
   }
 
   // 楽曲カード生成
-  createSongCard(song, index) {
+  createSongCard(song, _index) {
     const card = document.createElement('div');
     card.className = 'slider-card';
     card.setAttribute('data-link', song.linkUrl);

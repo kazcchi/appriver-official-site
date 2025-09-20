@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtn = slider.querySelector('.slider-btn.prev');
   const nextBtn = slider.querySelector('.slider-btn.next');
 
-  let allCards = Array.from(track.children);
+  const allCards = Array.from(track.children);
 
   // Filter to get only real song cards (not "coming soon")
-  let cards = allCards.filter(card => !card.classList.contains('coming-soon'));
+  const cards = allCards.filter(card => !card.classList.contains('coming-soon'));
 
   // Hide coming soon cards
   allCards.forEach(card => {

@@ -72,7 +72,7 @@
 
       // Limit pull distance
       const clampedDistance = Math.min(pullDistance, MAX_PULL_DISTANCE);
-      const progress = clampedDistance / PULL_THRESHOLD;
+      const _progress = clampedDistance / PULL_THRESHOLD;
 
       // Show indicator
       indicator.classList.add('visible');
@@ -96,7 +96,7 @@
     }
   }
 
-  function handleTouchEnd(e) {
+  function handleTouchEnd(_e) {
     if (!isPulling || isRefreshing) return;
 
     // Trigger refresh if pulled enough

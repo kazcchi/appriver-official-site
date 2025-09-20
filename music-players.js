@@ -100,7 +100,7 @@ function setupSectionChangeListener() {
   const navLinks = document.querySelectorAll('.nav-item');
 
   navLinks.forEach(link => {
-    link.addEventListener('click', e => {
+    link.addEventListener('click', _e => {
       const href = link.getAttribute('href');
 
       // music-playersセクション以外に移動する場合、全プレイヤーを停止
