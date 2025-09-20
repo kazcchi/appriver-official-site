@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = slider.querySelector('.slider-btn.next');
 
   let allCards = Array.from(track.children);
-  
+
   // Filter to get only real song cards (not "coming soon")
   let cards = allCards.filter(card => !card.classList.contains('coming-soon'));
-  
+
   // Hide coming soon cards
   allCards.forEach(card => {
     if (card.classList.contains('coming-soon')) {
@@ -22,15 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.display = 'flex';
     }
   });
-  
+
   // Start with first card (sorted by search-sort functionality)
   let currentIndex = 0;
-  
+
   // Function to update card positions
   function updateCards() {
     cards.forEach((card, index) => {
       const relativeIndex = (index - currentIndex + cards.length) % cards.length;
-      
+
       if (relativeIndex === 0) {
         // Main card - center
         card.style.left = '50%';
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Button controls
   if (nextBtn) {
-    nextBtn.addEventListener('click', (e) => {
+    nextBtn.addEventListener('click', e => {
       e.preventDefault();
       console.log('Next button clicked');
       currentIndex = (currentIndex + 1) % cards.length;
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (prevBtn) {
-    prevBtn.addEventListener('click', (e) => {
+    prevBtn.addEventListener('click', e => {
       e.preventDefault();
       console.log('Previous button clicked');
       currentIndex = (currentIndex - 1 + cards.length) % cards.length;
@@ -82,10 +82,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // グローバル関数として定義（search-sort.jsから呼び出し可能）
-  window.initializeSliderEvents = function(sliderElement, cardsArray, updateCardsFunction, getCurrentIndexFunction, setCurrentIndexFunction) {
+  window.initializeSliderEvents = function (
+    sliderElement,
+    cardsArray,
+    updateCardsFunction,
+    getCurrentIndexFunction,
+    setCurrentIndexFunction
+  ) {
     // 既存のイベントリスナーを削除
     if (sliderElement._sliderEventListeners) {
-      sliderElement.removeEventListener('touchstart', sliderElement._sliderEventListeners.touchstart);
+      sliderElement.removeEventListener(
+        'touchstart',
+        sliderElement._sliderEventListeners.touchstart
+      );
       sliderElement.removeEventListener('touchmove', sliderElement._sliderEventListeners.touchmove);
       sliderElement.removeEventListener('touchend', sliderElement._sliderEventListeners.touchend);
     }
@@ -93,26 +102,26 @@ document.addEventListener('DOMContentLoaded', () => {
     let touchStartX = 0;
     let touchStartY = 0;
 
-    const touchStartHandler = (e) => {
+    const touchStartHandler = e => {
       touchStartX = e.touches[0].clientX;
       touchStartY = e.touches[0].clientY;
     };
 
-    const touchMoveHandler = (e) => {
+    const touchMoveHandler = e => {
       const touchCurrentX = e.touches[0].clientX;
       const touchCurrentY = e.touches[0].clientY;
       const diffX = Math.abs(touchCurrentX - touchStartX);
       const diffY = Math.abs(touchCurrentY - touchStartY);
-      
+
       if (diffX > diffY) {
         e.preventDefault();
       }
     };
 
-    const touchEndHandler = (e) => {
+    const touchEndHandler = e => {
       const touchEndX = e.changedTouches[0].clientX;
       const diff = touchStartX - touchEndX;
-      
+
       if (Math.abs(diff) > 50) {
         let newIndex;
         if (diff > 0) {
@@ -136,85 +145,98 @@ document.addEventListener('DOMContentLoaded', () => {
     sliderElement._sliderEventListeners = {
       touchstart: touchStartHandler,
       touchmove: touchMoveHandler,
-      touchend: touchEndHandler
+      touchend: touchEndHandler,
     };
   };
 
   // Touch/Swipe support - 初期設定（常に実行）
   let touchStartX = 0;
   let touchStartY = 0;
-  
-  slider.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-    touchStartY = e.touches[0].clientY;
-  }, { passive: true });
 
-  slider.addEventListener('touchmove', (e) => {
-    // Prevent scrolling during horizontal swipe
-    const touchCurrentX = e.touches[0].clientX;
-    const touchCurrentY = e.touches[0].clientY;
-    const diffX = Math.abs(touchCurrentX - touchStartX);
-    const diffY = Math.abs(touchCurrentY - touchStartY);
-    
-    if (diffX > diffY) {
-      e.preventDefault();
-    }
-  }, { passive: false });
+  slider.addEventListener(
+    'touchstart',
+    e => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    },
+    { passive: true }
+  );
 
-  slider.addEventListener('touchend', (e) => {
-    const touchEndX = e.changedTouches[0].clientX;
-    const diff = touchStartX - touchEndX;
-    
-    if (Math.abs(diff) > 50) { // minimum swipe distance
-      // 検索・ソート機能がアクティブな場合はその関数を使用
-      if (typeof window.searchSortUpdateCards === 'function' && 
+  slider.addEventListener(
+    'touchmove',
+    e => {
+      // Prevent scrolling during horizontal swipe
+      const touchCurrentX = e.touches[0].clientX;
+      const touchCurrentY = e.touches[0].clientY;
+      const diffX = Math.abs(touchCurrentX - touchStartX);
+      const diffY = Math.abs(touchCurrentY - touchStartY);
+
+      if (diffX > diffY) {
+        e.preventDefault();
+      }
+    },
+    { passive: false }
+  );
+
+  slider.addEventListener(
+    'touchend',
+    e => {
+      const touchEndX = e.changedTouches[0].clientX;
+      const diff = touchStartX - touchEndX;
+
+      if (Math.abs(diff) > 50) {
+        // minimum swipe distance
+        // 検索・ソート機能がアクティブな場合はその関数を使用
+        if (
+          typeof window.searchSortUpdateCards === 'function' &&
           typeof window.searchSortGetCurrentIndex === 'function' &&
           typeof window.searchSortSetCurrentIndex === 'function' &&
-          typeof window.searchSortGetCardsLength === 'function') {
-        
-        let newIndex;
-        const currentIdx = window.searchSortGetCurrentIndex();
-        const cardsLength = window.searchSortGetCardsLength();
-        
-        if (diff > 0) {
-          // Swipe left - next card
-          newIndex = (currentIdx + 1) % cardsLength;
+          typeof window.searchSortGetCardsLength === 'function'
+        ) {
+          let newIndex;
+          const currentIdx = window.searchSortGetCurrentIndex();
+          const cardsLength = window.searchSortGetCardsLength();
+
+          if (diff > 0) {
+            // Swipe left - next card
+            newIndex = (currentIdx + 1) % cardsLength;
+          } else {
+            // Swipe right - previous card
+            newIndex = (currentIdx - 1 + cardsLength) % cardsLength;
+          }
+
+          window.searchSortSetCurrentIndex(newIndex);
+          window.searchSortUpdateCards();
+          console.log(`Search-sort swipe: ${diff > 0 ? 'next' : 'prev'} -> index ${newIndex}`);
         } else {
-          // Swipe right - previous card
-          newIndex = (currentIdx - 1 + cardsLength) % cardsLength;
+          // 従来のスワイプ処理
+          if (diff > 0) {
+            // Swipe left - next card
+            console.log('Swiped left - next');
+            currentIndex = (currentIndex + 1) % cards.length;
+          } else {
+            // Swipe right - previous card
+            console.log('Swiped right - previous');
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+          }
+          updateCards();
         }
-        
-        window.searchSortSetCurrentIndex(newIndex);
-        window.searchSortUpdateCards();
-        console.log(`Search-sort swipe: ${diff > 0 ? 'next' : 'prev'} -> index ${newIndex}`);
-        
-      } else {
-        // 従来のスワイプ処理
-        if (diff > 0) {
-          // Swipe left - next card
-          console.log('Swiped left - next');
-          currentIndex = (currentIndex + 1) % cards.length;
-        } else {
-          // Swipe right - previous card
-          console.log('Swiped right - previous');
-          currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-        }
-        updateCards();
       }
-    }
-  }, { passive: true });
+    },
+    { passive: true }
+  );
 
   // Lyrics display functionality
   const lyricsDisplay = document.getElementById('lyrics-display');
   const lyricsTitle = document.getElementById('lyrics-title');
   const lyricsContent = document.getElementById('lyrics-content');
   const closeLyricsBtn = document.getElementById('close-lyrics');
-  
+
   // Add event listeners for lyric buttons
-  document.addEventListener('click', (e) => {
+  document.addEventListener('click', e => {
     if (e.target.classList.contains('lyric-btn')) {
       const songId = e.target.dataset.song;
-      
+
       // 新しいデータ構造との互換性
       let songData = null;
       if (typeof songsData !== 'undefined' && songsData[songId]) {
@@ -222,30 +244,31 @@ document.addEventListener('DOMContentLoaded', () => {
       } else if (typeof lyricsData !== 'undefined' && lyricsData[songId]) {
         songData = lyricsData[songId];
       }
-      
+
       if (songData) {
         lyricsTitle.textContent = songData.title;
-        lyricsContent.innerHTML = songData.lyrics.split('\n').map(line => 
-          line.trim() === '' ? '<br>' : `<p>${line}</p>`
-        ).join('');
+        lyricsContent.innerHTML = songData.lyrics
+          .split('\n')
+          .map(line => (line.trim() === '' ? '<br>' : `<p>${line}</p>`))
+          .join('');
         lyricsDisplay.style.display = 'block';
-        
+
         // Scroll to lyrics with proper offset for title visibility
         lyricsDisplay.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   });
-  
+
   // Close lyrics
   closeLyricsBtn.addEventListener('click', () => {
     lyricsDisplay.style.display = 'none';
-    
+
     // Scroll back to songs&lyrics section top
     const songsLyricsSection = document.getElementById('songs-lyrics');
     if (songsLyricsSection) {
-      songsLyricsSection.scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'start' 
+      songsLyricsSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
       });
     }
   });

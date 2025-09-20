@@ -5,7 +5,7 @@ class SearchSortManager {
   constructor() {
     this.currentSort = searchSortConfig.defaultSort;
     this.currentOrder = searchSortConfig.defaultOrder;
-    this.currentSearch = "";
+    this.currentSearch = '';
     this.allSongs = getSongsArray();
     this.filteredSongs = [...this.allSongs];
     this.isInitialized = false;
@@ -14,7 +14,7 @@ class SearchSortManager {
   // 初期化
   init() {
     if (this.isInitialized) return;
-    
+
     this.setupEventListeners();
     this.applySortAndFilter();
     this.isInitialized = true;
@@ -26,9 +26,12 @@ class SearchSortManager {
     // 検索ボックス
     const searchInput = document.getElementById('song-search');
     if (searchInput) {
-      searchInput.addEventListener('input', this.debounce((e) => {
-        this.handleSearch(e.target.value);
-      }, 300));
+      searchInput.addEventListener(
+        'input',
+        this.debounce(e => {
+          this.handleSearch(e.target.value);
+        }, 300)
+      );
     }
 
     // 検索クリアボタン
@@ -67,22 +70,23 @@ class SearchSortManager {
   clearSearch() {
     // 現在表示中の楽曲（検索結果で中央に表示されている楽曲）を記録
     const currentIndex = this.getCurrentIndex();
-    const currentDisplayedSong = this.filteredSongs.length > currentIndex ? this.filteredSongs[currentIndex] : null;
-    
-    this.currentSearch = "";
+    const currentDisplayedSong =
+      this.filteredSongs.length > currentIndex ? this.filteredSongs[currentIndex] : null;
+
+    this.currentSearch = '';
     const searchInput = document.getElementById('song-search');
     if (searchInput) {
-      searchInput.value = "";
+      searchInput.value = '';
     }
-    
+
     // 検索をクリアして全楽曲を表示
     this.applySortAndFilter();
-    
+
     // 検索結果で中央表示されていた楽曲があれば、それをトップに移動
     if (currentDisplayedSong) {
       this.moveTargetSongToTop(currentDisplayedSong);
     }
-    
+
     this.updateSearchUI();
   }
 
@@ -96,7 +100,7 @@ class SearchSortManager {
       this.currentSort = sortType;
       this.currentOrder = sortType === 'releaseDate' ? 'desc' : 'asc';
     }
-    
+
     this.applySortAndFilter();
     this.updateSortUI();
   }
@@ -135,10 +139,10 @@ class SearchSortManager {
   applySortAndFilter() {
     // 検索フィルタリング
     let filtered = this.filterSongs(this.allSongs, this.currentSearch);
-    
+
     // ソート
     this.filteredSongs = this.sortSongs(filtered, this.currentSort, this.currentOrder);
-    
+
     // スライダー更新
     this.updateSliderDisplay();
   }
@@ -170,7 +174,7 @@ class SearchSortManager {
     card.setAttribute('data-link', song.linkUrl);
 
     let cardHTML = `<h3>${song.title}</h3>`;
-    
+
     // アルバム情報表示
     if (song.album) {
       cardHTML += `<p class="song-subtitle">album: ${song.album}</p>`;
@@ -195,7 +199,7 @@ class SearchSortManager {
   // 検索語ハイライト
   highlightSearchTerm(html, searchTerm) {
     if (!searchTerm) return html;
-    
+
     const regex = new RegExp(`(${this.escapeRegExp(searchTerm)})`, 'gi');
     return html.replace(regex, '<mark class="search-highlight">$1</mark>');
   }
@@ -223,10 +227,10 @@ class SearchSortManager {
     const updateCards = () => {
       // search-sort managerのインデックスを同期
       this.setCurrentIndex(currentIndex);
-      
+
       cards.forEach((card, index) => {
         const relativeIndex = (index - currentIndex + cards.length) % cards.length;
-        
+
         if (relativeIndex === 0) {
           // Main card - center
           card.style.left = '50%';
@@ -263,7 +267,7 @@ class SearchSortManager {
     const nextBtn = document.querySelector('.slider-btn.next');
 
     if (nextBtn) {
-      nextBtn.onclick = (e) => {
+      nextBtn.onclick = e => {
         e.preventDefault();
         currentIndex = (currentIndex + 1) % cards.length;
         updateCards();
@@ -271,7 +275,7 @@ class SearchSortManager {
     }
 
     if (prevBtn) {
-      prevBtn.onclick = (e) => {
+      prevBtn.onclick = e => {
         e.preventDefault();
         currentIndex = (currentIndex - 1 + cards.length) % cards.length;
         updateCards();
@@ -281,7 +285,7 @@ class SearchSortManager {
     // グローバル変数でスワイプ用関数を公開（slider.jsから使用）
     window.searchSortUpdateCards = updateCards;
     window.searchSortGetCurrentIndex = () => currentIndex;
-    window.searchSortSetCurrentIndex = (newIndex) => {
+    window.searchSortSetCurrentIndex = newIndex => {
       currentIndex = newIndex;
       this.setCurrentIndex(currentIndex);
     };
@@ -352,7 +356,6 @@ class SearchSortManager {
     }
   }
 
-
   // 現在のインデックス管理用ヘルパー関数
   getCurrentIndex() {
     return this.currentSliderIndex || 0;
@@ -365,18 +368,18 @@ class SearchSortManager {
   // ターゲット曲をトップに移動
   moveTargetSongToTop(targetSong) {
     if (!targetSong || this.filteredSongs.length === 0) return;
-    
+
     // ターゲット曲のインデックスを見つける
     const targetIndex = this.filteredSongs.findIndex(song => song.id === targetSong.id);
-    
+
     if (targetIndex > 0) {
       // ターゲット曲を配列の先頭に移動
       const targetSongData = this.filteredSongs.splice(targetIndex, 1)[0];
       this.filteredSongs.unshift(targetSongData);
-      
+
       // スライダー表示を更新
       this.updateSliderDisplay();
-      
+
       console.log(`Moved "${targetSong.title}" to top position`);
     }
   }
@@ -414,6 +417,6 @@ const lyricsData = {};
 Object.entries(songsData || {}).forEach(([key, song]) => {
   lyricsData[key] = {
     title: song.title,
-    lyrics: song.lyrics
+    lyrics: song.lyrics,
   };
 });

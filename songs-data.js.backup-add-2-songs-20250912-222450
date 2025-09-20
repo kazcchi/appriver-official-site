@@ -3,13 +3,13 @@
 
 const songsData = {
   inochi: {
-    title: 'いのちの理由',
-    reading: 'いのちのりゆう',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-06-10',
-    linkUrl: 'https://linkco.re/Hb9nfMcM',
-    youtubeVideoId: 'QYn4iccGVPo',
+    title: "いのちの理由",
+    reading: "いのちのりゆう",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-06-10",
+    linkUrl: "https://linkco.re/Hb9nfMcM",
+    youtubeVideoId: "QYn4iccGVPo",
     lyrics: `空に問いかけた声が
 消えてゆくこの静寂の中で
 あの日見た夢の続きを
@@ -38,16 +38,16 @@ const songsData = {
 命の意味を問い続けて
 涙が流れるその理由を
 心の奥で感じた想い
-それが私を生かしてる`,
+それが私を生かしてる`
   },
   kage: {
-    title: '君の影',
-    reading: 'きみのかげ',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-06-11',
-    linkUrl: 'https://linkco.re/DDaFCGVU',
-    youtubeVideoId: 'BBKyD1Mjgq4',
+    title: "君の影",
+    reading: "きみのかげ",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-06-11",
+    linkUrl: "https://linkco.re/DDaFCGVU",
+    youtubeVideoId: "BBKyD1Mjgq4",
     lyrics: `もしあの時別れなければ
 今頃君とどこにいるの
 手をつなぎ笑っていたかな
@@ -76,16 +76,16 @@ const songsData = {
 君の声まだ聞こえる
 あの夜の風の中で
 忘れたいのに忘れられない
-心に響く君の影`,
+心に響く君の影`
   },
   kokoro: {
-    title: '心の羽',
-    reading: 'こころのはね',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-07-08',
-    linkUrl: 'https://linkco.re/bQ8vxgZd',
-    youtubeVideoId: 'dXvDBX-P5d4',
+    title: "心の羽",
+    reading: "こころのはね",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-07-08",
+    linkUrl: "https://linkco.re/bQ8vxgZd",
+    youtubeVideoId: "dXvDBX-P5d4",
     lyrics: `静かな夜に星が揺れて
 遠い記憶が胸を叩く
 失った日々の痛みさえも
@@ -114,16 +114,16 @@ const songsData = {
 心の旅路  迷いながら
 涙は道を照らしてくれる
 傷ついた羽根を休めて
-新しい空へ 飛び立つのさ`,
+新しい空へ 飛び立つのさ`
   },
   yasashii: {
-    title: '優しい光',
-    reading: 'やさしいひかり',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28', // アルバムリリース日
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'uMgsLJ0dMjc',
+    title: "優しい光",
+    reading: "やさしいひかり",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28", // アルバムリリース日
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "uMgsLJ0dMjc",
     lyrics: `夜空にひとり 立ち尽くして
 星たちの声を 聞こうとして
 涙の理由は 誰にも言えず
@@ -152,16 +152,16 @@ const songsData = {
 泣きたい時は ただ泣けばいい
 隠すことなく 涙を流せ
 傷ついた羽 根を休めて
-また飛べる日を 待てばいいだけ`,
+また飛べる日を 待てばいいだけ`
   },
   moshi: {
-    title: 'もし',
-    reading: 'もし',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: '55F9Xt8iIbk',
+    title: "もし",
+    reading: "もし",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28",
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "55F9Xt8iIbk",
     lyrics: `もっと早くに出会えていたら
 この胸の痛み知らないまま
 淡い記憶が風に舞って
@@ -190,16 +190,16 @@ const songsData = {
 もし明日が来ない命なら
 すべてを投げ捨て君の元へ
 今この瞬間だけを信じて
-時間のはざまで永遠を感じたい`,
+時間のはざまで永遠を感じたい`
   },
   imanani: {
-    title: '今何してるだろう',
-    reading: 'いまなにしてるだろう',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: '2x44W5sIbc8',
+    title: "今何してるだろう",
+    reading: "いまなにしてるだろう",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28",
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "2x44W5sIbc8",
     lyrics: `君は今どこで過ごしてる
 空の向こうに想い飛ばしてる
 笑顔の中に隠れた涙
@@ -228,16 +228,16 @@ const songsData = {
 今何しているだろう
 幸せをいっぱい溢れてるかな
 君といたあの日々が
-胸にそっと灯る記憶`,
+胸にそっと灯る記憶`
   },
   kimidake: {
-    title: '君だけのうた',
-    reading: 'きみだけのうた',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'PsIKAJ1sKSE',
+    title: "君だけのうた",
+    reading: "きみだけのうた",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28",
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "PsIKAJ1sKSE",
     lyrics: `明日がもし辛い日でも
 心の中の星を頼ろう
 暗闇の中 微笑み探し
@@ -266,16 +266,16 @@ const songsData = {
 泣いてもいい 泣いても強く
 涙は川になるから
 傷ついても咲き誇れる花
-新しい明日を描こう`,
+新しい明日を描こう`
   },
   namidaga: {
-    title: '涙が',
-    reading: 'なみだが',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'V20iCcNCdC0',
+    title: "涙が",
+    reading: "なみだが",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28",
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "V20iCcNCdC0",
     lyrics: `くすんだ空に映る星
 君と見た夜の隙間に
 消えてしまいそうな夢が
@@ -304,16 +304,16 @@ const songsData = {
 涙が頬を滑り落ちて
 君の声が遠く消えてく
 星がそっと瞬く度に
-君の影が心を揺らす`,
+君の影が心を揺らす`
   },
   konomama: {
-    title: 'このままずっと',
-    reading: 'このままずっと',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'HpC7txeP2Yg',
+    title: "このままずっと",
+    reading: "このままずっと",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28",
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "HpC7txeP2Yg",
     lyrics: `最後に君を抱きしめて
 言葉はいらない この温もりで
 心が叫ぶ 君といたい
@@ -342,16 +342,16 @@ const songsData = {
 このまま行かせたくないよ
 君を失う勇気はない
 今離れたら ずっと会えない
-この想いよ空に響け`,
+この想いよ空に響け`
   },
   mienai: {
-    title: '見えない光',
-    reading: 'みえないひかり',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'uea6gYEWT3s',
+    title: "見えない光",
+    reading: "みえないひかり",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28",
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "uea6gYEWT3s",
     lyrics: `生きてきた今までの長い時間は
 辛い時も悲しい瞬間もあったのに
 手を伸ばせば消える希望の影
@@ -380,16 +380,16 @@ const songsData = {
 風に吹かれて孤独を抱いて
 傷ついた心隠して歩く
 見えない光がここにあるなら
-今この瞬間を抱きしめていたい`,
+今この瞬間を抱きしめていたい`
   },
   yumedeshika: {
-    title: '夢でしか',
-    reading: 'ゆめでしか',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'ULz5uJJ3Zdw',
+    title: "夢でしか",
+    reading: "ゆめでしか",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28",
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "ULz5uJJ3Zdw",
     lyrics: `部屋の中 静まり返る夜
 君の声だけ 寂しさ溶かす
 遠くにいるほど鮮やかになる
@@ -418,16 +418,16 @@ const songsData = {
 夢でしか今は会えない
 近づくほどまた消えていく
 君の姿 ずっと忘れない
-夢の中君を抱きしめたい`,
+夢の中君を抱きしめたい`
   },
   bokunomichi: {
-    title: '僕の道は',
-    reading: 'ぼくのみちは',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'JliD9Zfbko8',
+    title: "僕の道は",
+    reading: "ぼくのみちは",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28",
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "JliD9Zfbko8",
     lyrics: `僕は今道を探してる
 暗闇の中光を見つけてる
 錆びついた心を磨きたい
@@ -456,16 +456,16 @@ const songsData = {
 僕は今空を見上げてる
 星のように輝きたい
 どんな壁も超えられるって
-信じて歩いて行くんだろう`,
+信じて歩いて行くんだろう`
   },
   subete: {
-    title: '全てなくしても',
-    reading: 'すべてなくしても',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'jI5NaydiY1A',
+    title: "全てなくしても",
+    reading: "すべてなくしても",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28",
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "jI5NaydiY1A",
     lyrics: `自分を責めていた日々を
 罪だと思うのならば
 早く忘れられたなら
@@ -494,16 +494,16 @@ const songsData = {
 全て何も気にしなくていいのなら
 今すぐ駆けて行くだろう
 全て何も無くてもいいのなら
-今度こそ僕はきっと迎えにいくだろう`,
+今度こそ僕はきっと迎えにいくだろう`
   },
   sabishikute: {
-    title: '寂しくて',
-    reading: 'さびしくて',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: '_HI9mK0V5qQ',
+    title: "寂しくて",
+    reading: "さびしくて",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28",
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "_HI9mK0V5qQ",
     lyrics: `今夜だけは一緒にいさせて
 月明かりが静かに揺れてる
 この部屋は時間さえ止まる
@@ -532,16 +532,16 @@ const songsData = {
 寂しくて1人ではいられない
 闇に飲み込まれそうで怖い
 せめて今だけ隣にいてよ
-壊れた心埋めてくれ`,
+壊れた心埋めてくれ`
   },
   kibou: {
-    title: '希望へ',
-    reading: 'きぼうへ',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'HIhadaD5IEM',
+    title: "希望へ",
+    reading: "きぼうへ",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28",
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "HIhadaD5IEM",
     lyrics: `夜の静けさに包まれて
 涙はそっと頬を伝う
 言葉にならないこの痛み
@@ -570,16 +570,16 @@ const songsData = {
 辛い時も笑顔忘れずに
 心に染みる光を抱いて
 どんな闇も越えていけるさ
-信じる力がここにある`,
+信じる力がここにある`
   },
   kimitoiru: {
-    title: '君といる',
-    reading: 'きみといる',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'd-vBHc7uWS4',
+    title: "君といる",
+    reading: "きみといる",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28",
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "d-vBHc7uWS4",
     lyrics: `もしすべてをなくした時
 君がそばで笑うのなら
 僕は何も怖くない
@@ -608,16 +608,16 @@ const songsData = {
 君がいれば何もいらない
 痛みも涙も消えるさ
 君がいなければどうなるだろう
-僕の世界は崩れ落ちる`,
+僕の世界は崩れ落ちる`
   },
   yumenomukou: {
-    title: '夢の向こう側',
-    reading: 'ゆめのむこうがわ',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
-    youtubeVideoId: 'y_UF0yX54C4',
+    title: "夢の向こう側",
+    reading: "ゆめのむこうがわ",
+    album: "NUKUMORI",
+    albumReading: "ぬくもり",
+    releaseDate: "2025-06-28",
+    linkUrl: "https://linkco.re/E7hxe2Ay",
+    youtubeVideoId: "y_UF0yX54C4",
     lyrics: `夜空に響く風の音
 消えない影が心に宿る
 冷たい月の光の下
@@ -646,16 +646,16 @@ const songsData = {
 悲しみが心を染める夜
 闇の中で彷徨う光
 希望の声が遠くで響く
-でも届かない夢の向こう側`,
+でも届かない夢の向こう側`
   },
   tokiwokoete: {
-    title: '時間をこえて',
-    reading: 'ときをこえて',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-07-17',
-    linkUrl: 'https://linkco.re/5GGDQ6m3',
-    youtubeVideoId: '5SLxtUgs_TM',
+    title: "時間をこえて",
+    reading: "ときをこえて",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-07-17",
+    linkUrl: "https://linkco.re/5GGDQ6m3",
+    youtubeVideoId: "5SLxtUgs_TM",
     lyrics: `あの頃の君は笑ってた
 小さな夢を追いかけた
 夕焼けの空が泣いてた
@@ -684,16 +684,16 @@ const songsData = {
 あの頃の君がここにいる
 時間を越えて響く歌
 戻れないけど忘れない
-心の奥で生きている`,
+心の奥で生きている`
   },
   kimiwomamoritai: {
-    title: '君を守りたい',
-    reading: 'きみをまもりたい',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-07-21',
-    linkUrl: 'https://linkco.re/RZYccEGt',
-    youtubeVideoId: 'Xo6UwtA_Ivk',
+    title: "君を守りたい",
+    reading: "きみをまもりたい",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-07-21",
+    linkUrl: "https://linkco.re/RZYccEGt",
+    youtubeVideoId: "Xo6UwtA_Ivk",
     lyrics: `冷たい風が吹く夜に
 君の手をそっと握りしめて
 孤独な闇に包まれても
@@ -722,16 +722,16 @@ const songsData = {
 僕が守るから 君の笑顔を
 涙がこぼれても 僕がそばにいる
 君の痛みさえ 分け合えるなら
-全てを捨てても 君を守りたい`,
+全てを捨てても 君を守りたい`
   },
   anohibi: {
-    title: 'あの日々',
-    reading: 'あのひび',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-07-17',
-    linkUrl: 'https://linkco.re/MU4uQntZ',
-    youtubeVideoId: '3CqnGrnMf3c',
+    title: "あの日々",
+    reading: "あのひび",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-07-17",
+    linkUrl: "https://linkco.re/MU4uQntZ",
+    youtubeVideoId: "3CqnGrnMf3c",
     lyrics: `夜空に浮かぶ星ひとつ
 君の影を映してる
 忘れたくないその声が
@@ -760,16 +760,16 @@ const songsData = {
 心の灯火 消えないように
 涙でそっと包み込む
 君と歩いたあの日々が
-今も私を導いてる`,
+今も私を導いてる`
   },
   modoreruna: {
-    title: '戻れるなら',
-    reading: 'もどれるなら',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-07-29',
-    linkUrl: 'https://linkco.re/UEetr9T1',
-    youtubeVideoId: '',
+    title: "戻れるなら",
+    reading: "もどれるなら",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-07-29",
+    linkUrl: "https://linkco.re/UEetr9T1",
+    youtubeVideoId: "",
     lyrics: `夕焼けに染まる街角
 君の声がまだ聞こえる
 あの日の約束 握りしめ
@@ -798,16 +798,16 @@ const songsData = {
 もしも戻れるなら あの瞬間へ
 君と笑った日々を抱きしめたい
 涙が溢れても 君がいれば
-もう一度だけ 夢を見てみたい`,
+もう一度だけ 夢を見てみたい`
   },
   machitsudukeru: {
-    title: '待ち続ける',
-    reading: 'まちつづける',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-08-09',
-    linkUrl: 'https://linkco.re/uhv5dtZx',
-    youtubeVideoId: '',
+    title: "待ち続ける",
+    reading: "まちつづける",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-08-09",
+    linkUrl: "https://linkco.re/uhv5dtZx",
+    youtubeVideoId: "",
     lyrics: `冷たい風が心に触れ
 窓のそとでは雨がふりだし
 君の声が遠くで響く でも届かない
@@ -832,16 +832,16 @@ const songsData = {
 時間を戻せたらと願っても
 僕はこれからも待ち続ける
 
-待ち続ける`,
+待ち続ける`
   },
   oresounakokoro: {
-    title: '折れそうな心',
-    reading: 'おれそうなこころ',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-08-07',
-    linkUrl: 'https://linkco.re/pc0exyfX',
-    youtubeVideoId: '',
+    title: "折れそうな心",
+    reading: "おれそうなこころ",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-08-07",
+    linkUrl: "https://linkco.re/pc0exyfX",
+    youtubeVideoId: "",
     lyrics: `静かな夜の海に
 涙がひとつ落ちた
 星が揺れているのか
@@ -866,16 +866,16 @@ const songsData = {
 折れそうな心に翼を
 飛べない日も風を感じて
 夢は消えない ほら見上げて
-その空が待っている`,
+その空が待っている`
   },
   deaeteanakereba: {
-    title: '出会えてなければ',
-    reading: 'であえてなければ',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "出会えてなければ",
+    reading: "であえてなければ",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `あの日の風が囁いてた
 君がいなけりゃ何も始まらない
 冷たい夜空に一人きり
@@ -904,16 +904,16 @@ const songsData = {
 あなたに出会えてなければ
 世界はもっと寂しい色
 君と共に描くこの夢
-それが私の全てになる`,
+それが私の全てになる`
   },
   itsumademo: {
-    title: 'いつまでも君を待ち続ける',
-    reading: 'いつまでもきみをまちつづける',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "いつまでも君を待ち続ける",
+    reading: "いつまでもきみをまちつづける",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `静かな街灯の下
 影が伸びてく消えないまま
 風がそっと名前を呼ぶようで
@@ -940,16 +940,16 @@ const songsData = {
 いつまでも待ち続ける
 その声をもう一度聞きたくて
 時間が止まるならそれでもいい
-君のためにここにいる`,
+君のためにここにいる`
   },
   itooshii: {
-    title: '愛おしい',
-    reading: 'いとおしい',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "愛おしい",
+    reading: "いとおしい",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `君の笑顔が朝を染める
 光の中で息をする
 触れたいけど触れられない
@@ -974,16 +974,16 @@ const songsData = {
 君の全てが愛おしい
 その涙もその笑顔も
 時間を止めて祈りたい
-君と一緒に歩きたい`,
+君と一緒に歩きたい`
   },
   kimidakegasubete: {
-    title: '君だけが全ての世界',
-    reading: 'きみだけがすべてのせかい',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "君だけが全ての世界",
+    reading: "きみだけがすべてのせかい",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `遠くなる声が響く夜
 胸の中で君を探す
 触れた指先が覚えてる
@@ -1012,16 +1012,16 @@ const songsData = {
 離れてられないこの想い
 君だけが全ての世界
 どんな距離も超えていくよ
-君と一緒に歩きたい`,
+君と一緒に歩きたい`
   },
   wasuretainoni: {
-    title: '忘れたいのに',
-    reading: 'わすれたいのに',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "忘れたいのに",
+    reading: "わすれたいのに",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `愛の炎は静かに消えて
 夜の闇に溶けていく
 ささやきは風にさらわれて
@@ -1050,16 +1050,16 @@ const songsData = {
 恋破れて夜に泣く
 星も沈む冷たい空
 夢の残像ただ追いかけ
-孤独な歌が響き渡る`,
+孤独な歌が響き渡る`
   },
   mottohayaku: {
-    title: 'もっと早くに出逢えてたなら',
-    reading: 'もっとはやくにであえてたなら',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "もっと早くに出逢えてたなら",
+    reading: "もっとはやくにであえてたなら",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `夜空に浮かぶ星のように
 君との出逢い輝いてた
 だけど時間は止まらない
@@ -1088,16 +1088,16 @@ const songsData = {
 もっと早くに出逢えてたなら
 この悲しみも知らなかった
 君と描く未来があった
-永遠に続く愛の物語`,
+永遠に続く愛の物語`
   },
   namidanosaki: {
-    title: '涙の先',
-    reading: 'なみだのさき',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "涙の先",
+    reading: "なみだのさき",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `小さな声で叫んでた
 誰も聞こえない空の下
 涙が頬をつたう夜
@@ -1122,16 +1122,16 @@ const songsData = {
 涙の先にはきっと笑顔がある
 壊れた心にも花が咲ける
 絶望の果てには新しい朝
-涙の先にはきっと夢が待つ`,
+涙の先にはきっと夢が待つ`
   },
   arigatouwo: {
-    title: 'ありがとうを伝えたくて',
-    reading: 'ありがとうをつたえたくて',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "ありがとうを伝えたくて",
+    reading: "ありがとうをつたえたくて",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `静かな夜の風が吹く
 星たちが囁く夢の中
 君の笑顔 思い出すたび
@@ -1156,16 +1156,16 @@ const songsData = {
 ありがとう ただ伝えたかった
 君の言葉が救った未来
 遠く離れても 心の中に
-君の笑顔が輝いてる`,
+君の笑顔が輝いてる`
   },
   susumusonosaki: {
-    title: '進むその先へ',
-    reading: 'すすむそのさきへ',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "進むその先へ",
+    reading: "すすむそのさきへ",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `小さなともしびが揺れている
 静かな夜にひとりきり
 心の中で何かが囁く
@@ -1190,16 +1190,16 @@ const songsData = {
 涙が流れるその訳は
 心が震える音だから
 絶望も希望も手を繋ぎ
-僕らは進む その先へ`,
+僕らは進む その先へ`
   },
   namidanohoshi: {
-    title: '涙の星',
-    reading: 'なみだのほし',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "涙の星",
+    reading: "なみだのほし",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `静かな夜に一人きり
 心の奥が痛むたび
 記憶の中で君が笑う
@@ -1228,16 +1228,16 @@ const songsData = {
 悲しみの波に飲まれても
 愛の欠片を探してる
 涙が星に変わるように
-心の空に光が欲しい`,
+心の空に光が欲しい`
   },
   futarinosora: {
-    title: 'ふたりの空へ',
-    reading: 'ふたりのそらへ',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "ふたりの空へ",
+    reading: "ふたりのそらへ",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `君の笑顔が揺れる街角
 風が運ぶよ 優しい記憶を
 手をつないで 夢を語ったね
@@ -1262,16 +1262,16 @@ const songsData = {
 いつまでも続く君との未来は
 風に乗る羽のように自由で
 言葉じゃ足りない 溢れる想いが
-奇跡を繋ぐよ 永遠の空へ`,
+奇跡を繋ぐよ 永遠の空へ`
   },
   anohitohaima: {
-    title: 'あの人は今',
-    reading: 'あのひとはいま',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "あの人は今",
+    reading: "あのひとはいま",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `あの人は今どこにいる
 風が答えを運ぶけど
 言葉にならない痛みだけ
@@ -1295,16 +1295,16 @@ const songsData = {
 
 涙は星になり
 影は月に消え
-この世界に何を残すのか`,
+この世界に何を残すのか`
   },
   kiminidetaeta: {
-    title: '君に出逢えた奇跡',
-    reading: 'きみにであえたきせき',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "君に出逢えた奇跡",
+    reading: "きみにであえたきせき",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `淡い光が差し込む朝
 君の笑顔が僕を包む
 何気ない日々が煌めき出す
@@ -1333,16 +1333,16 @@ const songsData = {
 君に出逢えた奇跡がここに
 涙も笑顔も分け合える日々
 どんな壁も乗り越えてゆける
-君と共に愛を奏でよう`,
+君と共に愛を奏でよう`
   },
   imawoikirunda: {
-    title: '今を生きるんだ',
-    reading: 'いまをいきるんだ',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "今を生きるんだ",
+    reading: "いまをいきるんだ",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `あの日の空は遠く霞んで
 涙の意味も知らなかった
 無邪気な笑顔で駆け抜けた日々
@@ -1371,16 +1371,16 @@ const songsData = {
 あの頃の自分よ 聞こえてるかい
 間違いだらけの旅路の果てに
 見つけた答えが君を強くする
-信じ続けて 夢を追いかけて`,
+信じ続けて 夢を追いかけて`
   },
   bokunosubete: {
-    title: '僕のすべて',
-    reading: 'ぼくのすべて',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
-    youtubeVideoId: '',
+    title: "僕のすべて",
+    reading: "ぼくのすべて",
+    album: "YASURAGI",
+    albumReading: "やすらぎ",
+    releaseDate: "2025-08-22",
+    linkUrl: "https://linkco.re/1gXERgmA",
+    youtubeVideoId: "",
     lyrics: `暗い空に星ひとつ
 孤独な夜に浮かぶ光
 君の笑顔で世界が変わる
@@ -1403,16 +1403,16 @@ const songsData = {
 君が僕のすべて
 この心のメロディ
 君なしでは生きられない
-このまま　はなさないから`,
+このまま　はなさないから`
   },
   hitoriinorudake: {
-    title: '1人祈るだけ',
-    reading: 'ひとりいのるだけ',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-09-08',
-    linkUrl: 'https://linkco.re/TMy1qy6G',
-    youtubeVideoId: '',
+    title: "1人祈るだけ",
+    reading: "ひとりいのるだけ",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-09-08",
+    linkUrl: "https://linkco.re/TMy1qy6G",
+    youtubeVideoId: "",
     lyrics: `あの日の風が胸を撫でて
 君の笑顔が瞼に浮かぶ
 触れられない距離がつらくて
@@ -1441,16 +1441,16 @@ const songsData = {
 叶わぬ恋に揺れるこの心
 追いかけるほど遠ざかる影
 切なさが夜を包み込んで
-星の下で1人祈るだけ`,
+星の下で1人祈るだけ`
   },
   yumenokakera: {
-    title: '夢のかけら',
-    reading: 'ゆめのかけら',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-09-08',
-    linkUrl: 'https://linkco.re/2MR6mb13',
-    youtubeVideoId: '',
+    title: "夢のかけら",
+    reading: "ゆめのかけら",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-09-08",
+    linkUrl: "https://linkco.re/2MR6mb13",
+    youtubeVideoId: "",
     lyrics: `全てが崩れた日
 光は影に消えていく
 手にしてた夢のかけら
@@ -1479,16 +1479,16 @@ const songsData = {
 全て無くしてもまだ
 愛のかけらは残ってる
 手を伸ばし掴む未来
-新たな命の息吹を感じて`,
+新たな命の息吹を感じて`
   },
   naitemoii: {
-    title: '泣いてもいい',
-    reading: 'ないてもいい',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-09-08',
-    linkUrl: 'https://linkco.re/5QG1gCmM',
-    youtubeVideoId: '',
+    title: "泣いてもいい",
+    reading: "ないてもいい",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-09-08",
+    linkUrl: "https://linkco.re/5QG1gCmM",
+    youtubeVideoId: "",
     lyrics: `夜空に問いかけた 星たちは黙った
 答えのない日々が ただ過ぎていく
 心の隙間に 風が吹き抜ける
@@ -1515,16 +1515,16 @@ const songsData = {
 泣いてもいいよ 泣いてもいい
 その涙が明日をつくる
 心に響く音がある
-悲しみも 愛に変わる`,
+悲しみも 愛に変わる`
   },
   kiminonamidahabokunosei: {
-    title: '君の涙は僕のせい',
-    reading: 'きみのなみだはぼくのせい',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-09-08',
-    linkUrl: 'https://linkco.re/yfBPxec0',
-    youtubeVideoId: '',
+    title: "君の涙は僕のせい",
+    reading: "きみのなみだはぼくのせい",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-09-08",
+    linkUrl: "https://linkco.re/yfBPxec0",
+    youtubeVideoId: "",
     lyrics: `君の涙が頬を伝う
 夜の静けさに溶ける音
 僕はただ見ているだけで
@@ -1553,16 +1553,16 @@ const songsData = {
 君の涙は僕のせい
 溢れる星が見つめる夜
 ごめんね それでも愛してる
-君を忘れられないよ`,
+君を忘れられないよ`
   },
   kibouwakienai: {
-    title: '希望は消えない',
-    reading: 'きぼうはきえない',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-09-08',
-    linkUrl: 'https://linkco.re/CF0hpdYb',
-    youtubeVideoId: '',
+    title: "希望は消えない",
+    reading: "きぼうはきえない",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-09-08",
+    linkUrl: "https://linkco.re/CF0hpdYb",
+    youtubeVideoId: "",
     lyrics: `不安が夜を包み込む
 心は迷路の中で彷徨う
 明日が来るのが怖くて
@@ -1587,16 +1587,16 @@ const songsData = {
 それでも進んでく
 不安で見えない未来でも
 小さな一歩でもいいから
-未来はきっと変わる`,
+未来はきっと変わる`
   },
   bokugamitaanosora: {
-    title: '僕が見たあの空',
-    reading: 'ぼくがみたあのそら',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-09-08',
-    linkUrl: 'https://linkco.re/v1M8v9Vg',
-    youtubeVideoId: '',
+    title: "僕が見たあの空",
+    reading: "ぼくがみたあのそら",
+    album: "",
+    albumReading: "",
+    releaseDate: "2025-09-08",
+    linkUrl: "https://linkco.re/v1M8v9Vg",
+    youtubeVideoId: "",
     lyrics: `雲が流れる静かな朝
 風がそっと頬を撫でる
 この道を歩き続ける僕
@@ -1625,89 +1625,23 @@ const songsData = {
 あの空へ手を伸ばすよ
 君と交わした夢の場所へ
 どんな闇も越えて行ける
-君がいるから強くなれる`,
-  },
-  itsukakono: {
-    title: 'いつかこの景色が思い出に変わる時',
-    reading: 'いつかこのけしきがおもいでにかわるとき',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-09-12',
-    linkUrl: 'https://linkco.re/CaqfUEqa',
-    youtubeVideoId: '',
-    lyrics: `いつかこの道を振り返る日が来る
-足跡は消えずに 砂に刻まれたまま
-遠い空に願いを込めた あの時の声
-
-いつかこの景色が 思い出に変わる時
-涙の意味もわかるかな
-手を伸ばして 風をつかんで
-心に刻むよ ここにいた証を
-
-揺れる木々の音 遠く響く鐘の声
-胸の奥にしまった 言葉が溶け出す
-微笑みの中で 見えた未来の・・
-
-何も持たず ただ進んだ
-不安も夢も抱えながら
-この場所が光に包まれる
-その瞬間を忘れない
-
-いつかこの景色が 思い出に変わる時
-涙の意味もわかるかな
-手を伸ばして 風をつかんで
-心に刻むよ ここにいた証を`,
-  },
-  konosakiga: {
-    title: 'この先が見えなくなっても',
-    reading: 'このさきがみえなくなっても',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-09-12',
-    linkUrl: 'https://linkco.re/NfUDu2vR',
-    youtubeVideoId: '',
-    lyrics: `この道の先に何があるのか
-誰も教えてくれないけど
-風がささやく まだ進めと
-足跡だけがあかしになる
-この先が見えなくなっても
-闇の中で光さがすよ
-心の声が道を描く
-迷いながらも 今は生きて
-
-雨に濡れた夜の静けさ
-涙隠すようにそっと包む
-手を伸ばして届かないさき
-それでも願い消えはしない
-この先が見えなくなっても
-闇の中で光探すよ
-心の声が道を描く
-迷いながらも 今は生きて
-
-痛みも不安も抱えたまま
-それでも夢は手放さない
-小さな一歩が未来を変える
-自分をしんじるだけ
-この先が見えなくなっても
-闇の中でゆめ探すよ
-心の声が道を描く
-迷いながらも 進むんだ`,
-  },
+君がいるから強くなれる`
+  }
 };
 
 // 検索・ソート設定
 const searchSortConfig = {
-  defaultSort: 'releaseDate', // デフォルトソート
-  defaultOrder: 'desc', // デフォルト順序（最新順）
-  searchFields: ['title', 'album'], // 検索対象フィールド
-  itemsPerPage: 20, // 最大表示件数
+  defaultSort: "releaseDate",          // デフォルトソート
+  defaultOrder: "desc",                // デフォルト順序（最新順）
+  searchFields: ["title", "album"],    // 検索対象フィールド
+  itemsPerPage: 20                     // 最大表示件数
 };
 
 // 楽曲データ配列取得関数
 function getSongsArray() {
   return Object.entries(songsData).map(([id, data]) => ({
     id,
-    ...data,
+    ...data
   }));
 }
 
