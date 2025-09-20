@@ -1,11 +1,13 @@
 # SOW: Music Playersセクション - Amazon Music → Others変更
 
 ## 概要
+
 appriver公式サイトのMUSIC PLAYERSセクションにおいて、Amazon Musicボタンを「Others」に変更し、プラットフォーム選択肢を「Apple Music」「Spotify」「YouTube」「Others」の4つに再構成する。本番環境に影響を与えずに実装する。
 
 ## 現状分析
 
 ### 現在のプラットフォーム構成
+
 ```html
 <button class="platform-btn active" data-platform="apple-music">Apple Music</button>
 <button class="platform-btn" data-platform="spotify">Spotify</button>
@@ -14,14 +16,16 @@ appriver公式サイトのMUSIC PLAYERSセクションにおいて、Amazon Musi
 ```
 
 ### 現在のプレーヤー表示
+
 - apple-music-player: Apple Musicプレイリストへのリンク
-- spotify-player: Spotifyプレイリストへのリンク  
+- spotify-player: Spotifyプレイリストへのリンク
 - amazon-music-player: Amazon Musicプレイリストへのリンク
 - youtube-player: YouTubeチャンネルへのリンク
 
 ## 要件
 
 ### 機能要件
+
 1. **プラットフォームボタン変更**
    - Amazon Music → Others
    - data-platform="amazon-music" → data-platform="others"
@@ -39,6 +43,7 @@ appriver公式サイトのMUSIC PLAYERSセクションにおいて、Amazon Musi
    - デフォルト選択状態（Apple Music active）の維持
 
 ### 技術要件
+
 1. **本番環境影響なし**
    - 新ブランチでの開発: `feature/music-players-amazon-to-others`
    - 段階的テスト・デプロイ
@@ -54,131 +59,135 @@ appriver公式サイトのMUSIC PLAYERSセクションにおいて、Amazon Musi
 ### HTML修正
 
 #### プラットフォームボタン変更
+
 ```html
 <!-- 変更前 -->
 <button class="platform-btn" data-platform="amazon-music">
-    <i class="fab fa-amazon"></i>
-    Amazon Music
+  <i class="fab fa-amazon"></i>
+  Amazon Music
 </button>
 
 <!-- 変更後 -->
 <button class="platform-btn" data-platform="others">
-    <i class="fas fa-external-link-alt"></i>
-    Others
+  <i class="fas fa-external-link-alt"></i>
+  Others
 </button>
 ```
 
 #### プレーヤー表示内容変更
+
 ```html
 <!-- 変更前: amazon-music-player -->
 <div class="player-embed" id="amazon-music-player" style="display: none;">
-    <div class="amazon-music-direct-container">
-        <div class="amazon-music-header">
-            <div class="amazon-music-logo">
-                <i class="fab fa-amazon"></i>
-                <span>Amazon Music</span>
-            </div>
-        </div>
-        <div class="amazon-music-playlist-link">
-            <a href="[Amazon Music URL]" target="_blank" class="amazon-music-full-playlist-btn">
-                <i class="fas fa-external-link-alt"></i>
-                <span>プレイリストを開く</span>
-            </a>
-        </div>
+  <div class="amazon-music-direct-container">
+    <div class="amazon-music-header">
+      <div class="amazon-music-logo">
+        <i class="fab fa-amazon"></i>
+        <span>Amazon Music</span>
+      </div>
     </div>
+    <div class="amazon-music-playlist-link">
+      <a href="[Amazon Music URL]" target="_blank" class="amazon-music-full-playlist-btn">
+        <i class="fas fa-external-link-alt"></i>
+        <span>プレイリストを開く</span>
+      </a>
+    </div>
+  </div>
 </div>
 
 <!-- 変更後: others-player -->
 <div class="player-embed" id="others-player" style="display: none;">
-    <div class="others-direct-container">
-        <div class="others-header">
-            <div class="others-logo">
-                <i class="fas fa-external-link-alt"></i>
-                <span>Other Platforms</span>
-            </div>
-        </div>
-        <div class="others-platforms">
-            <a href="[Amazon Music URL]" target="_blank" class="others-platform-btn">
-                <i class="fab fa-amazon"></i>
-                <span>Amazon Music</span>
-            </a>
-            <a href="[Line Music URL]" target="_blank" class="others-platform-btn">
-                <i class="fas fa-music"></i>
-                <span>Line Music</span>
-            </a>
-            <a href="[YouTube Music URL]" target="_blank" class="others-platform-btn">
-                <i class="fab fa-youtube"></i>
-                <span>YouTube Music</span>
-            </a>
-        </div>
+  <div class="others-direct-container">
+    <div class="others-header">
+      <div class="others-logo">
+        <i class="fas fa-external-link-alt"></i>
+        <span>Other Platforms</span>
+      </div>
     </div>
+    <div class="others-platforms">
+      <a href="[Amazon Music URL]" target="_blank" class="others-platform-btn">
+        <i class="fab fa-amazon"></i>
+        <span>Amazon Music</span>
+      </a>
+      <a href="[Line Music URL]" target="_blank" class="others-platform-btn">
+        <i class="fas fa-music"></i>
+        <span>Line Music</span>
+      </a>
+      <a href="[YouTube Music URL]" target="_blank" class="others-platform-btn">
+        <i class="fab fa-youtube"></i>
+        <span>YouTube Music</span>
+      </a>
+    </div>
+  </div>
 </div>
 ```
 
 ### CSS追加
+
 ```css
 /* Others Platform Styling */
 .others-direct-container {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 20px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
 }
 
 .others-header {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .others-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .others-platforms {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .others-platform-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
-    padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    text-decoration: none;
-    border-radius: 12px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .others-platform-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 @media (min-width: 768px) {
-    .others-platforms {
-        flex-direction: row;
-        gap: 1.5rem;
-    }
-    
-    .others-platform-btn {
-        flex: 1;
-    }
+  .others-platforms {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .others-platform-btn {
+    flex: 1;
+  }
 }
 ```
 
 ### JavaScript修正 (music-players.js)
+
 ```javascript
 // data-platform="amazon-music" → data-platform="others"
 // getElementById("amazon-music-player") → getElementById("others-player")
@@ -187,17 +196,20 @@ appriver公式サイトのMUSIC PLAYERSセクションにおいて、Amazon Musi
 ## 実装手順
 
 ### Step 1: 開発準備
+
 1. **新ブランチ作成**
+
    ```bash
    git checkout -b feature/music-players-amazon-to-others
    ```
 
 2. **現状バックアップ**
    - index.html.backup-amazon-to-others-YYYYMMDD
-   - style.css.backup-amazon-to-others-YYYYMMDD  
+   - style.css.backup-amazon-to-others-YYYYMMDD
    - music-players.js.backup-amazon-to-others-YYYYMMDD
 
 ### Step 2: ファイル修正
+
 1. **index.html修正**
    - プラットフォームボタンの変更
    - プレーヤー表示部分の変更
@@ -211,6 +223,7 @@ appriver公式サイトのMUSIC PLAYERSセクションにおいて、Amazon Musi
    - イベントリスナー更新
 
 ### Step 3: テスト
+
 1. **ローカル環境確認**
    - 4つのプラットフォームボタン表示確認
    - Others選択時の複数リンク表示確認
@@ -222,12 +235,14 @@ appriver公式サイトのMUSIC PLAYERSセクションにおいて、Amazon Musi
    - レスポンシブデザイン確認
 
 ### Step 4: デプロイ
+
 1. **Vercelプレビュー環境確認**
 2. **承認後mainブランチマージ**
 
 ## 必要なリンクURL
 
 ### Others プラットフォーム用リンク
+
 1. **Amazon Music**: 既存のAmazon MusicプレイリストURL
 2. **Line Music**: appriverのLine Musicアーティストページ/プレイリスト
 3. **YouTube Music**: appriverのYouTube Musicアーティストページ
@@ -235,11 +250,13 @@ appriver公式サイトのMUSIC PLAYERSセクションにおいて、Amazon Musi
 ## リスク分析
 
 ### リスク要因
+
 1. **機能破綻リスク**: プラットフォーム切り替えJavaScript修正時のバグ
 2. **リンク不備リスク**: Others内の各プラットフォームリンクの不正確性
 3. **デザイン崩れリスク**: 新しいOthersプレーヤーのスタイリング不備
 
 ### 対策
+
 1. **段階的テスト**: 各修正ファイルごとの動作確認
 2. **リンク事前確認**: 実装前の全リンクURL検証
 3. **既存コードベース踏襲**: 現在のスタイリングパターンの継承
@@ -247,6 +264,7 @@ appriver公式サイトのMUSIC PLAYERSセクションにおいて、Amazon Musi
 ## 成功基準
 
 ### 必須要件
+
 - [ ] プラットフォームボタンが「Apple Music」「Spotify」「YouTube」「Others」の4つ表示される
 - [ ] Others選択時に複数プラットフォームリンクが表示される
 - [ ] 既存3プラットフォームの機能が完全保持される
@@ -254,14 +272,16 @@ appriver公式サイトのMUSIC PLAYERSセクションにおいて、Amazon Musi
 - [ ] 各プラットフォームリンクが正常動作する
 
 ### 品質要件
+
 - [ ] レスポンシブデザインが正常動作する
 - [ ] 既存デザインとの統一性が保たれる
 - [ ] アクセシビリティが維持される
 - [ ] ページ読み込み速度に影響がない
 
 ## 見積もり時間
+
 - **分析・設計**: 30分
 - **実装**: 120分
-- **テスト**: 60分  
+- **テスト**: 60分
 - **デプロイ**: 30分
 - **総作業時間**: 3.5時間

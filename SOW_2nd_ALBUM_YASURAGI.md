@@ -1,11 +1,13 @@
 # SOW: 2ndアルバム「YASURAGI」追加機能
 
 ## 概要
+
 appriver公式サイトに2ndアルバム「YASURAGI」を追加する。既存の1stアルバム「NUKUMORI」の前に配置し、最新アルバムとして表示する。
 
 ## 要件
 
 ### 機能要件
+
 1. **アルバムセクションの拡張**
    - 現在の単一アルバム表示を複数アルバム表示に変更
    - 2つのアルバムカードを横並びまたは縦並びで表示
@@ -22,6 +24,7 @@ appriver公式サイトに2ndアルバム「YASURAGI」を追加する。既存�
    - 表示順序: YASURAGIの後（2番目のアルバムとして）
 
 ### 技術要件
+
 1. **レスポンシブデザイン対応**
    - デスクトップ: 横並び表示
    - モバイル: 縦並び表示
@@ -38,60 +41,68 @@ appriver公式サイトに2ndアルバム「YASURAGI」を追加する。既存�
 ## 実装仕様
 
 ### HTML構造
+
 ```html
 <section id="album" class="album-section">
-    <div class="container">
-        <h2>ALBUM</h2>
-        <div class="albums-container">
-            <!-- 2nd Album: YASURAGI -->
-            <div class="album-info">
-                <div class="album-artwork">
-                    <div class="album-artwork-container">
-                        <img src="yasuragi-album.jpg" alt="YASURAGI アルバムアート" class="album-artwork-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                        <div class="placeholder-artwork">YASURAGI</div>
-                    </div>
-                </div>
-                <div class="album-details">
-                    <h3>YASURAGI</h3>
-                    <p class="track-count">15曲</p>
-                    <p class="release-date">2025.8.22　　全ストアにて配信スタート</p>
-                    <a href="#" class="stream-link" target="_blank">聴いてみる</a>
-                </div>
-            </div>
-            
-            <!-- 1st Album: NUKUMORI -->
-            <div class="album-info">
-                <!-- 既存のNUKUMORIアルバム情報 -->
-            </div>
+  <div class="container">
+    <h2>ALBUM</h2>
+    <div class="albums-container">
+      <!-- 2nd Album: YASURAGI -->
+      <div class="album-info">
+        <div class="album-artwork">
+          <div class="album-artwork-container">
+            <img
+              src="yasuragi-album.jpg"
+              alt="YASURAGI アルバムアート"
+              class="album-artwork-image"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+            />
+            <div class="placeholder-artwork">YASURAGI</div>
+          </div>
         </div>
+        <div class="album-details">
+          <h3>YASURAGI</h3>
+          <p class="track-count">15曲</p>
+          <p class="release-date">2025.8.22　　全ストアにて配信スタート</p>
+          <a href="#" class="stream-link" target="_blank">聴いてみる</a>
+        </div>
+      </div>
+
+      <!-- 1st Album: NUKUMORI -->
+      <div class="album-info">
+        <!-- 既存のNUKUMORIアルバム情報 -->
+      </div>
     </div>
+  </div>
 </section>
 ```
 
 ### CSS追加/修正
+
 ```css
 .albums-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
-    .albums-container {
-        flex-direction: row;
-        justify-content: center;
-        gap: 3rem;
-    }
-    
-    .album-info {
-        flex: 1;
-        max-width: 400px;
-    }
+  .albums-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .album-info {
+    flex: 1;
+    max-width: 400px;
+  }
 }
 ```
 
 ### アセット要件
+
 1. **YASURAGIアルバムアート**
    - ファイル名: yasuragi-album.jpg
    - 推奨サイズ: 600x600px以上
@@ -103,6 +114,7 @@ appriver公式サイトに2ndアルバム「YASURAGI」を追加する。既存�
    - linkco.reまたは直接リンクでの実装
 
 ## 開発フロー
+
 1. ✅ SOW作成と仕様確定
 2. ⏳ 新規ブランチ作成（feature/add-2nd-album-yasuragi）
 3. ⏳ HTML構造の修正
@@ -113,6 +125,7 @@ appriver公式サイトに2ndアルバム「YASURAGI」を追加する。既存�
 8. ⏳ 本番環境へのマージ
 
 ## テスト項目
+
 - [ ] デスクトップでの2アルバム横並び表示
 - [ ] モバイルでの2アルバム縦並び表示
 - [ ] 各アルバムの情報表示
@@ -122,6 +135,7 @@ appriver公式サイトに2ndアルバム「YASURAGI」を追加する。既存�
 - [ ] 既存機能への影響確認
 
 ## リスク要因
+
 1. **デザイン調整**
    - 2つのアルバムカードが画面に収まらない場合の対応
    - 既存デザインとの調和
@@ -134,6 +148,7 @@ appriver公式サイトに2ndアルバム「YASURAGI」を追加する。既存�
    - YASURAGI配信開始前のリンク設定（リリース日: 2025.8.22）
 
 ## 成功基準
+
 - YASURAGIアルバムが最新アルバムとして適切に表示される
 - 既存のNUKUMORIアルバム情報が保持される
 - レスポンシブデザインが正常に動作する
