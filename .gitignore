@@ -6,3 +6,6 @@ npm-debug.log*
 .env.local
 .env.production
 *.log
+
+# backup
+songs-data.js.backup-before-merge-*
