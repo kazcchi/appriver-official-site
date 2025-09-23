@@ -7,5 +7,11 @@ npm-debug.log*
 .env.production
 *.log
 
+# dev runtime
+.devserver/
+# temp scripts
+temp_*.js
 # backup
 songs-data.js.backup-before-merge-*
+# backup snapshots
+songs-data.js.backup-*
