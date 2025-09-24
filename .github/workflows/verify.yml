@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -37,8 +39,11 @@ jobs:
             # Check for tool lock labels or commit messages
             echo "🔒 Verifying tool lock compliance..."
             
-            # Check commit messages for tool tags
-            git log --oneline origin/main..HEAD | grep -E '\[(Claude|Codex)\]' || {
+            # Fetch base branch to ensure history exists
+  　　　　　　git fetch --no-tags --depth=100 origin ${{ github.event.pull_request.base.ref }}:
+  ${{ github.event.pull_request.base.ref }} || true
+            # Check commit messages between base SHA and HEAD for tool tags
+            git log --oneline ${{ github.event_pull_request.base.sha }}..HEAD | grep -E '\[(Claude|Codex)\]' || {
               echo "❌ Missing tool tag in commit messages. Please add [Claude] or [Codex] tag."
               exit 1
             }
