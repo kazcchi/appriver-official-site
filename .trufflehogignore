@@ -1,0 +1,5 @@
+# TruffleHog exclude paths (minimized)
+# 大容量データ/歌詞のみのファイルは誤検知を避ける
+songs-data.js
+songs-data.js.backup*
+
