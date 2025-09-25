@@ -39,7 +39,7 @@ SUNO AIで制作した楽曲で音楽配信する新人アーティスト「appr
 - [「いのちの理由」](https://linkco.re/Hb9nfMcM)
 - [TikTok @appriver12](https://www.tiktok.com/@appriver12?is_from_webapp=1&sender_device=pc)
 
-<!-- CI: pr-required-check smoke -->
+<!-- CI: pr-required-check smoke v2 -->
 
 ## 運用クイックガイド（本番）
 
