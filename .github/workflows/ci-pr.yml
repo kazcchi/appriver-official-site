@@ -1,11 +1,6 @@
-name: ci-push
-
+name: ci-pr
 on:
-  push:
-    branches: [ main ]
-  group: ci-${{ github.ref }}
-  cancel-in-progress: true
-
+  pull_request:
 jobs:
   smoke:
     runs-on: ubuntu-latest
@@ -14,18 +9,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Use Node
         uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: 'npm'
-
       - name: Install deps (ci)
         run: npm ci
-
       - name: Build (if present)
         run: npm run build --if-present
-
       - name: Syntax check songs-data.js (ESM import)
         run: node --input-type=module -e "import('./songs-data.js').then(()=>console.log('syntax ok')).catch(e=>{console.error(e); process.exit(1);})"
