@@ -38,3 +38,29 @@ SUNO AIで制作した楽曲で音楽配信する新人アーティスト「appr
 - [アルバム「NUKUMORI」](https://linkco.re/E7hxe2Ay)
 - [「いのちの理由」](https://linkco.re/Hb9nfMcM)
 - [TikTok @appriver12](https://www.tiktok.com/@appriver12?is_from_webapp=1&sender_device=pc)
+
+## 運用クイックガイド（開発）
+
+- フロー: ブランチ作成 → 変更 → PR作成 → Vercelプレビュー確認 → Squash and merge → 開発Productionデプロイ確認
+- プレビューURL: PRの「Checks → Vercel」から確認
+- Production（開発用）: Vercelのプロジェクト「appriver-claude-dev」→ 最新のProductionデプロイの Domains
+
+### 楽曲追加の要点
+
+- 追加先: `songs-data.js` の `songsData` に1オブジェクト追加（ID重複禁止）
+- 日付: `YYYY-MM-DD`（例: 2025-09-17）
+- 歌詞: バッククォート`を含めない（テンプレート文字列使用のため）
+- 配信リンク: LinkCore等のURL
+
+### CI / ルールの要点
+
+- 必須チェック（推奨）: `CI / smoke (pull_request)`
+- verify: PR差分のコミットメッセージに `[Codex]` または `[Claude]` を含める
+- secrets-scan: TruffleHog v3 + 差分スキャン + `.trufflehogignore` で `songs-data.js` とバックアップを除外
+- Prettier: `.github/workflows/*.yml` は整形対象外（.prettierignore 済み）
+
+### トラブルシューティング
+
+- RequiredがExpectedのまま: ルールで必須チェック名を「CI / smoke (pull_request)」に統一
+- verifyで`origin/main..HEAD`のエラー: checkoutに`fetch-depth: 0`、比較は`base.sha..HEAD`（現状対応済み）
+- secrets-scan誤検知: `@v3`固定・`--only-verified`・`.trufflehogignore`の見直し
