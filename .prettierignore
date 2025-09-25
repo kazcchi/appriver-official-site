@@ -59,3 +59,4 @@ songs-data.js
 
 # Configuration files that should not be auto-formatted
 browserconfig.xml
+.github/workflows/*.yml
