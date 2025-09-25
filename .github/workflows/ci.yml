@@ -1,7 +1,6 @@
-name: CI
+name: ci-push
 
 on:
-  pull_request:
   push:
     branches: [ main ]
 
