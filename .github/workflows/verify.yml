@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -34,15 +36,12 @@ jobs:
       - name: Check tool lock compliance
         run: |
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-            # Check for tool lock labels or commit messages
             echo "🔒 Verifying tool lock compliance..."
-            
-            # Check commit messages for tool tags
-            git log --oneline origin/main..HEAD | grep -E '\[(Claude|Codex)\]' || {
+            git fetch --no-tags --depth=100 origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }} || true
+            git log --oneline ${{ github.event.pull_request.base.sha }}..HEAD | grep -E '\[(Claude|Codex)\]' || {
               echo "❌ Missing tool tag in commit messages. Please add [Claude] or [Codex] tag."
               exit 1
             }
-            
             echo "✅ Tool lock compliance verified"
           fi
 
