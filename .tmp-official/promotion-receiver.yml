@@ -1,0 +1,174 @@
+# 注意: このファイルは「本番リポジトリ」に配置してください。
+# 注意: このファイルは「本番リポジトリ」に配置してください。
+# ここ（dev）では参照用に追加しています。後続で official ブランチとして提案します。
+# ここ（dev）では参照用に追加しています。後続で official ブランチとして提案します。
+
+
+name: promotion-receiver
+name: promotion-receiver
+
+
+on:
+on:
+  repository_dispatch:
+  repository_dispatch:
+    types: [promote]
+    types: [promote]
+
+
+permissions:
+permissions:
+  contents: write
+  contents: write
+  pull-requests: write
+  pull-requests: write
+
+
+jobs:
+jobs:
+  receive-and-create-pr:
+  receive-and-create-pr:
+    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
+    steps:
+    steps:
+      - name: Checkout official repo
+      - name: Checkout official repo
+        uses: actions/checkout@v4
+        uses: actions/checkout@v4
+        with:
+        with:
+          fetch-depth: 0
+          fetch-depth: 0
+
+
+      - name: Setup Git
+      - name: Setup Git
+        run: |
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+
+      - name: Add dev remote & fetch
+      - name: Add dev remote & fetch
+        env:
+        env:
+          SRC_REPO: ${{ github.event.client_payload.source_repo }}
+          SRC_REPO: ${{ github.event.client_payload.source_repo }}
+          SRC_BRANCH: ${{ github.event.client_payload.source_branch }}
+          SRC_BRANCH: ${{ github.event.client_payload.source_branch }}
+        run: |
+        run: |
+          set -euo pipefail
+          set -euo pipefail
+          : "${SRC_REPO:?missing source_repo}"
+          : "${SRC_REPO:?missing source_repo}"
+          : "${SRC_BRANCH:=main}"
+          : "${SRC_BRANCH:=main}"
+          git remote add dev https://github.com/${SRC_REPO}.git
+          git remote add dev https://github.com/${SRC_REPO}.git
+          git fetch dev ${SRC_BRANCH}
+          git fetch dev ${SRC_BRANCH}
+          echo "DEV_REF=FETCH_HEAD" >> $GITHUB_ENV
+          echo "DEV_REF=FETCH_HEAD" >> $GITHUB_ENV
+
+
+      - name: Compute change set
+      - name: Compute change set
+        run: |
+        run: |
+          set -euo pipefail
+          set -euo pipefail
+          git checkout -B promote/work
+          git checkout -B promote/work
+          git reset --hard origin/main
+          git reset --hard origin/main
+          git diff --name-status origin/main..${DEV_REF} | tee /tmp/changes.txt
+          git diff --name-status origin/main..${DEV_REF} | tee /tmp/changes.txt
+          echo "CHANGED=$(wc -l < /tmp/changes.txt)" >> $GITHUB_ENV
+          echo "CHANGED=$(wc -l < /tmp/changes.txt)" >> $GITHUB_ENV
+
+
+      - name: Apply changes from dev
+      - name: Apply changes from dev
+        if: env.CHANGED != '0'
+        if: env.CHANGED != '0'
+        run: |
+        run: |
+          set -euo pipefail
+          set -euo pipefail
+          while IFS=$'\t' read -r status file || [[ -n "$status" ]]; do
+          while IFS=$'\t' read -r status file || [[ -n "$status" ]]; do
+            [ -z "$file" ] && continue
+            [ -z "$file" ] && continue
+            case "$status" in
+            case "$status" in
+              M|A)
+              M|A)
+                mkdir -p "$(dirname "$file")"
+                mkdir -p "$(dirname "$file")"
+                git show ${DEV_REF}:"$file" > "$file" || true
+                git show ${DEV_REF}:"$file" > "$file" || true
+                git add "$file"
+                git add "$file"
+                ;;
+                ;;
+              D)
+              D)
+                if [ -f "$file" ]; then
+                if [ -f "$file" ]; then
+                  git rm -f "$file"
+                  git rm -f "$file"
+                fi
+                fi
+                ;;
+                ;;
+              *) ;;
+              *) ;;
+            esac
+            esac
+          done < /tmp/changes.txt
+          done < /tmp/changes.txt
+
+
+      - name: Create PR to main
+      - name: Create PR to main
+        if: env.CHANGED != '0'
+        if: env.CHANGED != '0'
+        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v5
+        with:
+        with:
+          branch: promote/${{ github.event.client_payload.source_branch }}-${{ github.run_id }}
+          branch: promote/${{ github.event.client_payload.source_branch }}-${{ github.run_id }}
+          base: main
+          base: main
+          title: "[promote] from ${{ github.event.client_payload.source_repo }}:${{ github.event.client_payload.source_branch }}"
+          title: "[promote] from ${{ github.event.client_payload.source_repo }}:${{ github.event.client_payload.source_branch }}"
+          body: |
+          body: |
+            自動昇格PRです。
+            自動昇格PRです。
+            - Source: `${{ github.event.client_payload.source_repo }}:${{ github.event.client_payload.source_branch }}`
+            - Source: `${{ github.event.client_payload.source_repo }}:${{ github.event.client_payload.source_branch }}`
+            - Head SHA: `${{ github.event.client_payload.head_sha }}`
+            - Head SHA: `${{ github.event.client_payload.head_sha }}`
+            - 変更ファイルは dev と official の diff を反映（削除含む）
+            - 変更ファイルは dev と official の diff を反映（削除含む）
+          commit-message: "[promote] sync from dev"
+          commit-message: "[promote] sync from dev"
+          delete-branch: true
+          delete-branch: true
+
+
+      - name: No changes
+      - name: No changes
+        if: env.CHANGED == '0'
+        if: env.CHANGED == '0'
+        run: echo "No changes to promote."
+        run: echo "No changes to promote."
+
+
