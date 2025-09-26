@@ -1,0 +1,42 @@
+name: promote-to-official
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_branch:
+        description: '開発側の昇格元ブランチ'
+        required: false
+        default: 'main'
+  push:
+    branches: [ main ]
+
+jobs:
+  dispatch:
+    name: Dispatch promote event to official
+    runs-on: ubuntu-latest
+    if: >-
+      ${{ github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[promote]') }}
+    steps:
+      - name: Prepare payload
+        id: prep
+        run: |
+          BRANCH="${{ github.event_name == 'workflow_dispatch' && inputs.source_branch || 'main' }}"
+          SHA="${{ github.sha }}"
+          REPO="${{ github.repository }}"
+          echo "branch=$BRANCH" >> $GITHUB_OUTPUT
+          echo "sha=$SHA" >> $GITHUB_OUTPUT
+          echo "repo=$REPO" >> $GITHUB_OUTPUT
+
+      - name: Send repository_dispatch to official
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.OFFICIAL_REPO_TOKEN }}
+          repository: kazcchi/appriver-official-site
+          event-type: promote
+          client-payload: |
+            {
+              "source_branch": "${{ steps.prep.outputs.branch }}",
+              "head_sha": "${{ steps.prep.outputs.sha }}",
+              "source_repo": "${{ steps.prep.outputs.repo }}"
+            }
+
