@@ -54,6 +54,6 @@ export default [
       semi: ['error', 'always'],
       quotes: ['error', 'single', { avoidEscape: true }],
     },
-    ignores: ['node_modules/**', '*.backup*', '*.min.js', '.vercel/**'],
+    ignores: ['node_modules/**', '*.backup*', '*.min.js', '.vercel/**', 'song-template.snippet.js'],
   },
 ];
