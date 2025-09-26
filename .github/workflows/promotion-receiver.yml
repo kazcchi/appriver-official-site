@@ -39,24 +39,32 @@ jobs:
           set -euo pipefail
           git checkout -B promote/work
           git reset --hard origin/main
-          git diff --name-status origin/main..${DEV_REF} | tee /tmp/changes.txt
+          # 検出強化: リネーム/コピーも検出
+          git diff --name-status -M -C origin/main..${DEV_REF} | tee /tmp/changes.txt
           echo "CHANGED=$(wc -l < /tmp/changes.txt)" >> $GITHUB_ENV
 
       - name: Apply changes from dev
         if: env.CHANGED != '0'
         run: |
           set -euo pipefail
-          while IFS=$'\t' read -r status file || [[ -n "$status" ]]; do
-            [ -z "$file" ] && continue
+          while IFS=$'\t' read -r status pathA pathB || [[ -n "$status" ]]; do
+            [ -z "$status" ] && continue
+            # 変更タイプごとにターゲットパスを決定
+            target="$pathA"
             case "$status" in
-              M|A)
-                mkdir -p "$(dirname "$file")"
-                git show ${DEV_REF}:"$file" > "$file" || true
-                git add "$file"
+              R*|C*) target="$pathB" ;;
+            esac
+
+            case "$status" in
+              M|A|R*|C*)
+                [ -z "$target" ] && continue
+                mkdir -p "$(dirname "$target")"
+                git show ${DEV_REF}:"$target" > "$target" || true
+                git add "$target"
                 ;;
               D)
-                if [ -f "$file" ]; then
-                  git rm -f "$file"
+                if [ -n "$pathA" ] && [ -f "$pathA" ]; then
+                  git rm -f "$pathA"
                 fi
                 ;;
               *) ;;
@@ -81,4 +89,3 @@ jobs:
       - name: No changes
         if: env.CHANGED == '0'
         run: echo "No changes to promote."
-
