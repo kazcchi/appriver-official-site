@@ -1,0 +1,91 @@
+name: promotion-receiver
+
+on:
+  repository_dispatch:
+    types: [promote]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  receive-and-create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout official repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Add dev remote & fetch
+        env:
+          SRC_REPO: ${{ github.event.client_payload.source_repo }}
+          SRC_BRANCH: ${{ github.event.client_payload.source_branch }}
+        run: |
+          set -euo pipefail
+          : "${SRC_REPO:?missing source_repo}"
+          : "${SRC_BRANCH:=main}"
+          git remote add dev https://github.com/${SRC_REPO}.git
+          git fetch dev ${SRC_BRANCH}
+          echo "DEV_REF=FETCH_HEAD" >> $GITHUB_ENV
+
+      - name: Compute change set
+        run: |
+          set -euo pipefail
+          git checkout -B promote/work
+          git reset --hard origin/main
+          # 検出強化: リネーム/コピーも検出
+          git diff --name-status -M -C origin/main..${DEV_REF} | tee /tmp/changes.txt
+          echo "CHANGED=$(wc -l < /tmp/changes.txt)" >> $GITHUB_ENV
+
+      - name: Apply changes from dev
+        if: env.CHANGED != '0'
+        run: |
+          set -euo pipefail
+          while IFS=$'\t' read -r status pathA pathB || [[ -n "$status" ]]; do
+            [ -z "$status" ] && continue
+            # 変更タイプごとにターゲットパスを決定
+            target="$pathA"
+            case "$status" in
+              R*|C*) target="$pathB" ;;
+            esac
+
+            case "$status" in
+              M|A|R*|C*)
+                [ -z "$target" ] && continue
+                mkdir -p "$(dirname "$target")"
+                git show ${DEV_REF}:"$target" > "$target" || true
+                git add "$target"
+                ;;
+              D)
+                if [ -n "$pathA" ] && [ -f "$pathA" ]; then
+                  git rm -f "$pathA"
+                fi
+                ;;
+              *) ;;
+            esac
+          done < /tmp/changes.txt
+
+      - name: Create PR to main
+        if: env.CHANGED != '0'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          branch: promote/${{ github.event.client_payload.source_branch }}-${{ github.run_id }}
+          base: main
+          title: "[promote] from ${{ github.event.client_payload.source_repo }}:${{ github.event.client_payload.source_branch }}"
+          body: |
+            自動昇格PRです。
+            - Source: `${{ github.event.client_payload.source_repo }}:${{ github.event.client_payload.source_branch }}`
+            - Head SHA: `${{ github.event.client_payload.head_sha }}`
+            - 変更ファイルは dev と official の diff を反映（削除含む）
+          commit-message: "[promote] sync from dev"
+          delete-branch: true
+
+      - name: No changes
+        if: env.CHANGED == '0'
+        run: echo "No changes to promote."
