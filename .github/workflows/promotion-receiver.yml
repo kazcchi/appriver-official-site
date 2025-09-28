@@ -16,6 +16,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Git
         run: |
@@ -70,7 +71,24 @@ jobs:
               *) ;;
             esac
           done < /tmp/changes.txt
+      - name: Debug changes
+        run: |
+          echo "CHANGED=${CHANGED}"
+          echo "----- /tmp/changes.txt -----"
+          cat /tmp/changes.txt || true
+          echo "----- git status (unstaged) -----"
+          git status --porcelain
+          echo "----- git diff --stat (unstaged) -----"
+          git diff --stat || true
+          echo "----- git diff --cached --stat (staged) -----"
+          git diff --cached --stat || true
 
+      - name: Decide create-pr necessity
+        run: |
+            if git diff --quiet --exit-code && git diff --cached --quiet --exit-code; then
+              echo "No actual changes after apply. Skipping PR."
+              echo "CHANGED=0" >> $GITHUB_ENV
+            fi
       - name: Create PR to main
         if: env.CHANGED != '0'
         uses: peter-evans/create-pull-request@v5
