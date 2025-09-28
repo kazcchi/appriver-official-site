@@ -105,6 +105,7 @@ jobs:
           fi
       - name: Create PR to main
         if: env.CHANGED != '0'
+        id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.OFFICIAL_SELF_TOKEN }}
@@ -118,6 +119,12 @@ jobs:
             - 変更ファイルは dev と official の diff を反映（削除含む）
           commit-message: "[promote] sync from dev"
           delete-branch: true
+
+      - name: Show PR URL
+        if: env.CHANGED != '0'
+        run: |
+          echo "Pull Request URL: ${{ steps.cpr.outputs.pull-request-url }}"
+          echo "Pull Request Number: ${{ steps.cpr.outputs.pull-request-number }}"
 
       - name: No changes
         if: env.CHANGED == '0'
