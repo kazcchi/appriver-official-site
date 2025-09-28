@@ -44,6 +44,18 @@ jobs:
           git diff --name-status -M -C origin/main..${DEV_REF} | tee /tmp/changes.txt
           echo "CHANGED=$(wc -l < /tmp/changes.txt)" >> $GITHUB_ENV
 
+      - name: Filter change list (allowed paths only)
+        run: |
+          set -euo pipefail
+          # 許可する昇格対象（ルート直下の主要ファイル）
+          ALLOW_REGEX='^(index\.html|style\.css|songs-data\.js|search-sort\.js|slider\.js|music-players\.js|vercel\.json)$'
+          awk -F '\t' -v re="$ALLOW_REGEX" '{
+            status=$1; a=$2; b=$3;
+            p=a; if (status ~ /^[RC]/ && b!="") p=b;
+            if (p ~ re) print $0;
+          }' /tmp/changes.txt | tee /tmp/changes.filtered.txt
+          echo "CHANGED=$(wc -l < /tmp/changes.filtered.txt)" >> $GITHUB_ENV
+
       - name: Apply changes from dev
         if: env.CHANGED != '0'
         run: |
@@ -70,12 +82,14 @@ jobs:
                 ;;
               *) ;;
             esac
-          done < /tmp/changes.txt
+          done < /tmp/changes.filtered.txt
       - name: Debug changes
         run: |
           echo "CHANGED=${CHANGED}"
           echo "----- /tmp/changes.txt -----"
           cat /tmp/changes.txt || true
+          echo "----- /tmp/changes.filtered.txt -----"
+          cat /tmp/changes.filtered.txt || true
           echo "----- git status (unstaged) -----"
           git status --porcelain
           echo "----- git diff --stat (unstaged) -----"
@@ -85,10 +99,10 @@ jobs:
 
       - name: Decide create-pr necessity
         run: |
-            if git diff --quiet --exit-code && git diff --cached --quiet --exit-code; then
-              echo "No actual changes after apply. Skipping PR."
-              echo "CHANGED=0" >> $GITHUB_ENV
-            fi
+          if git diff --quiet --exit-code && git diff --cached --quiet --exit-code; then
+            echo "No actual changes after apply. Skipping PR."
+            echo "CHANGED=0" >> $GITHUB_ENV
+          fi
       - name: Create PR to main
         if: env.CHANGED != '0'
         uses: peter-evans/create-pull-request@v5
