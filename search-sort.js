@@ -125,9 +125,16 @@ class SearchSortManager {
       let comparison = 0;
 
       if (sortType === 'releaseDate') {
-        const dateA = new Date(a.releaseDate);
-        const dateB = new Date(b.releaseDate);
-        comparison = dateA.getTime() - dateB.getTime();
+        // 安定動作のため文字列比較（YYYY-MM-DD前提）
+        const sA = this.isValidReleaseDate(a.releaseDate) ? a.releaseDate : '0000-00-00';
+        const sB = this.isValidReleaseDate(b.releaseDate) ? b.releaseDate : '0000-00-00';
+        if (!this.isValidReleaseDate(a.releaseDate)) {
+          console.warn('[songs] invalid releaseDate (treated as oldest):', a.id, a.releaseDate);
+        }
+        if (!this.isValidReleaseDate(b.releaseDate)) {
+          console.warn('[songs] invalid releaseDate (treated as oldest):', b.id, b.releaseDate);
+        }
+        comparison = sA.localeCompare(sB);
       } else if (sortType === 'reading') {
         comparison = a.reading.localeCompare(b.reading, 'ja');
       }
@@ -136,6 +143,11 @@ class SearchSortManager {
     });
 
     return sorted;
+  }
+
+  // リリース日形式の簡易バリデーション（YYYY-MM-DD）
+  isValidReleaseDate(dateStr) {
+    return typeof dateStr === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(dateStr);
   }
 
   // ソート・フィルタの適用
