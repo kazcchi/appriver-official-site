@@ -1,0 +1,133 @@
+name: promotion-receiver
+
+on:
+  repository_dispatch:
+    types: [promote]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  receive-and-create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout official repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Add dev remote & fetch
+        env:
+          SRC_REPO: ${{ github.event.client_payload.source_repo }}
+          SRC_BRANCH: ${{ github.event.client_payload.source_branch }}
+        run: |
+          set -euo pipefail
+          : "${SRC_REPO:?missing source_repo}"
+          : "${SRC_BRANCH:=main}"
+          git remote add dev https://github.com/${SRC_REPO}.git
+          git fetch dev ${SRC_BRANCH}
+          echo "DEV_REF=FETCH_HEAD" >> $GITHUB_ENV
+
+      - name: Compute change set
+        run: |
+          set -euo pipefail
+          # ベースを常に main（remoteに存在する追跡ブランチ）に固定
+          git checkout -B main origin/main
+          # 検出強化: リネーム/コピーも検出
+          git diff --name-status -M -C origin/main..${DEV_REF} | tee /tmp/changes.txt
+          echo "CHANGED=$(wc -l < /tmp/changes.txt)" >> $GITHUB_ENV
+
+      - name: Filter change list (allowed paths only)
+        run: |
+          set -euo pipefail
+          # 許可する昇格対象（ルート直下の主要ファイル）
+          ALLOW_REGEX='^(index\.html|style\.css|songs-data\.js|search-sort\.js|slider\.js|music-players\.js|vercel\.json)$'
+          awk -F '\t' -v re="$ALLOW_REGEX" '{
+            status=$1; a=$2; b=$3;
+            p=a; if (status ~ /^[RC]/ && b!="") p=b;
+            if (p ~ re) print $0;
+          }' /tmp/changes.txt | tee /tmp/changes.filtered.txt
+          echo "CHANGED=$(wc -l < /tmp/changes.filtered.txt)" >> $GITHUB_ENV
+
+      - name: Apply changes from dev
+        if: env.CHANGED != '0'
+        run: |
+          set -euo pipefail
+          while IFS=$'\t' read -r status pathA pathB || [[ -n "$status" ]]; do
+            [ -z "$status" ] && continue
+            # 変更タイプごとにターゲットパスを決定
+            target="$pathA"
+            case "$status" in
+              R*|C*) target="$pathB" ;;
+            esac
+
+            case "$status" in
+              M|A|R*|C*)
+                [ -z "$target" ] && continue
+                mkdir -p "$(dirname "$target")"
+                git show ${DEV_REF}:"$target" > "$target" || true
+                git add "$target"
+                ;;
+              D)
+                if [ -n "$pathA" ] && [ -f "$pathA" ]; then
+                  git rm -f "$pathA"
+                fi
+                ;;
+              *) ;;
+            esac
+          done < /tmp/changes.filtered.txt
+      - name: Debug changes
+        run: |
+          echo "CHANGED=${CHANGED}"
+          echo "----- current branch -----"
+          (git symbolic-ref --short HEAD || git rev-parse --short HEAD) 2>/dev/null || true
+          echo "----- /tmp/changes.txt -----"
+          cat /tmp/changes.txt || true
+          echo "----- /tmp/changes.filtered.txt -----"
+          cat /tmp/changes.filtered.txt || true
+          echo "----- git status (unstaged) -----"
+          git status --porcelain
+          echo "----- git diff --stat (unstaged) -----"
+          git diff --stat || true
+          echo "----- git diff --cached --stat (staged) -----"
+          git diff --cached --stat || true
+
+      - name: Decide create-pr necessity
+        run: |
+          if git diff --quiet --exit-code && git diff --cached --quiet --exit-code; then
+            echo "No actual changes after apply. Skipping PR."
+            echo "CHANGED=0" >> $GITHUB_ENV
+          fi
+      - name: Create PR to main
+        if: env.CHANGED != '0'
+        id: cpr
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.OFFICIAL_SELF_TOKEN }}
+          branch: promote/${{ github.event.client_payload.source_branch }}-${{ github.run_id }}
+          base: main
+          title: "[promote] from ${{ github.event.client_payload.source_repo }}:${{ github.event.client_payload.source_branch }}"
+          body: |
+            自動昇格PRです。
+            - Source: `${{ github.event.client_payload.source_repo }}:${{ github.event.client_payload.source_branch }}`
+            - Head SHA: `${{ github.event.client_payload.head_sha }}`
+            - 変更ファイルは dev と official の diff を反映（削除含む）
+          commit-message: "[promote] sync from dev"
+          delete-branch: true
+
+      - name: Show PR URL
+        if: env.CHANGED != '0'
+        run: |
+          echo "Pull Request URL: ${{ steps.cpr.outputs.pull-request-url }}"
+          echo "Pull Request Number: ${{ steps.cpr.outputs.pull-request-number }}"
+
+      - name: No changes
+        if: env.CHANGED == '0'
+        run: echo "No changes to promote."
