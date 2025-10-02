@@ -65,7 +65,7 @@
     <script>
       (function () {
         var params = new URLSearchParams(location.search);
-        var to = params.get('to');
+        var to = window.REDIRECT_TO || params.get('to');
         try {
           if (to) to = decodeURIComponent(to);
         } catch (_) {}
