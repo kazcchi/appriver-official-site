@@ -56,6 +56,7 @@ SUNO AIで制作した楽曲で音楽配信する新人アーティスト「appr
 
 - 必須チェック（推奨）: `CI / smoke (pull_request)`
 - verify: PR差分のコミットメッセージに `[Codex]` または `[Claude]` を含める
+- ローカル: `commit-msg` フックで同タグを強制（Husky）。コミット時に未記載だと拒否されます。
 - secrets-scan: TruffleHog v3 + 差分スキャン + `.trufflehogignore` で `songs-data.js` とバックアップを除外
 - Prettier: `.github/workflows/*.yml` は整形対象外（.prettierignore 済み）
 
