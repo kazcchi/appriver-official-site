@@ -101,10 +101,26 @@
         }
 
         // ページビュー送信の猶予を確保してから遷移（約300ms）
+        // 戻るで再訪した場合は自動遷移を抑止
         window.addEventListener('load', function () {
-          setTimeout(function () {
-            if (to) location.replace(to);
-          }, 300);
+          try {
+            var m2 = (location.pathname || '').match(/\/out\/([^\/?#]+)/);
+            var slug2 = m2 && m2[1];
+            var key = slug2 ? 'out_redirected_' + slug2 : 'out_redirected_generic';
+            var already = sessionStorage.getItem(key);
+            if (already) {
+              // 2回目以降はボタンのみ表示
+              return;
+            }
+            setTimeout(function () {
+              if (to) {
+                try { sessionStorage.setItem(key, '1'); } catch (_) {}
+                location.assign(to);
+              }
+            }, 300);
+          } catch (_) {
+            setTimeout(function () { if (to) location.assign(to); }, 300);
+          }
         });
       })();
     </script>
