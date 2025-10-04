@@ -22,51 +22,5 @@
         }
       ]
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/out/apple-music",
-      "destination": "/out/index.html?to=https%3A%2F%2Fmusic.apple.com%2Fjp%2Fplaylist%2Fappriver-%25E5%2585%25AC%25E5%25BC%258F%25E3%2583%2597%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%2Fpl.u-V9D7vD9FEP64AZ&platform=apple-music"
-    },
-    {
-      "source": "/out/spotify",
-      "destination": "/out/index.html?to=https%3A%2F%2Fopen.spotify.com%2Fplaylist%2F1Y4ICAnET0o7CPHRycOriz&platform=spotify"
-    },
-    {
-      "source": "/out/youtube",
-      "destination": "/out/index.html?to=https%3A%2F%2Fwww.youtube.com%2F%40appriver12&platform=youtube"
-    },
-    {
-      "source": "/out/others",
-      "destination": "/out/index.html?to=https%3A%2F%2Fwww.tunecore.co.jp%2Fartists%3Fid%3D991248&platform=others"
-    },
-    {
-      "source": "/out/spotify-artist",
-      "destination": "/out/index.html?to=https%3A%2F%2Fopen.spotify.com%2Fintl-ja%2Fartist%2F2PbgbV4vBCzAUV9ZfHPG3Z&platform=spotify"
-    },
-    {
-      "source": "/out/apple-artist",
-      "destination": "/out/index.html?to=https%3A%2F%2Fmusic.apple.com%2Fjp%2Fartist%2F%25E3%2582%25A2%25E3%2583%2583%25E3%2583%2597%25E3%2583%25AA%25E3%2583%2590%25E3%2583%25BC%2F1816403477&platform=apple-music"
-    },
-    {
-      "source": "/out/tiktok",
-      "destination": "/out/index.html?to=https%3A%2F%2Fwww.tiktok.com%2F%40appriver%3Fis_from_webapp%3D1%26sender_device%3Dpc&platform=tiktok"
-    },
-    {
-      "source": "/out/tiktok2",
-      "destination": "/out/index.html?to=https%3A%2F%2Fwww.tiktok.com%2F%40appriver12%3Fis_from_webapp%3D1%26sender_device%3Dpc&platform=tiktok"
-    },
-    {
-      "source": "/out/yasuragi",
-      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2F1gXERgmA&platform=album"
-    },
-    {
-      "source": "/out/nukumori",
-      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2FE7hxe2Ay&platform=album"
-    },
-    {
-      "source": "/out/karaoke-coupon",
-      "destination": "/out/index.html?to=https%3A%2F%2Fsocial.kicks.video%2Fv1%2Fre%2Fkr%2F82108%2Fjoysound_coupon%3Futm_source%3Dvk%26utm_medium%3Dsw%26utm_campaign%3Dshare%26utm_term%3D82108&platform=coupon"
-    }
   ]
 }
