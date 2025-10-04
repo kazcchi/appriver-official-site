@@ -47,7 +47,7 @@
     },
     {
       "source": "/out/line-music",
-      "destination": "/out/index.html?to=https%3A%2F%2Fmusic.line.me%2Fwebapp%2Fplaylist%2Fupi7nLrdtfvhxjzl9Eel6t3v5zzqyDypzjJn%3FmyAlbumIf%3Dtrue&platform=line"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmusic.line.me%2Fplaylist%2Fupi7nLrdtfvhxjzl9Eel6t3v5zzqyDypzjJn&platform=line"
     },
     {
       "source": "/out/others",
