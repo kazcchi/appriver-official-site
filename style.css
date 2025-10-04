@@ -2459,19 +2459,20 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.6rem;
-    max-width: 360px;
-    margin: 0 auto 1.5rem auto;
+    max-width: 340px;
+    margin: 0 auto 1.2rem auto;
   }
 
   .platform-btn {
-    padding: 0.6rem 0.4rem;
+    padding: 0.55rem 0.35rem;
     min-width: auto;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
   }
 
   .platform-btn i {
-    font-size: 1.2rem;
-    margin-bottom: 0.25rem;
+    font-size: 1.15rem;
+    margin-bottom: 0.2rem;
   }
 
   /* Song Slider Extra Small Mobile */
