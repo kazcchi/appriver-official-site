@@ -1,6 +1,15 @@
 {
   "headers": [
     {
+      "source": "/songs-data.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
       "source": "/manifest.json",
       "headers": [
         {
@@ -66,7 +75,7 @@
     },
     {
       "source": "/out/karaoke-coupon",
-      "destination": "/out/index.html?to=https%3A%2F%2Fsocial.kicks.video%2Fv1%2Fre%2Fkr%2F83855%2Fjoysound_coupon&platform=coupon"
+      "destination": "/out/index.html?to=https%3A%2F%2Fsocial.kicks.video%2Fv1%2Fre%2Fkr%2F83855%2Fjoysound_coupon%3Futm_source%3Dvk%26utm_medium%3Dsw%26utm_campaign%3Dshare%26utm_term%3D83855&platform=coupon"
     }
   ]
 }
