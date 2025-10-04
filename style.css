@@ -2944,3 +2944,8 @@ footer {
     display: none !important;
   }
 }
+
+/* Hidden attribute should always hide (override component display rules) */
+[hidden] {
+  display: none !important;
+}
