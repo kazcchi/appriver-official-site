@@ -49,6 +49,11 @@
       track('playlist_outbound_click', { platform: 'others' });
       return;
     }
+    const lineBtn = target.closest('.line-full-playlist-btn');
+    if (lineBtn) {
+      track('playlist_outbound_click', { platform: 'line-music' });
+      return;
+    }
 
     // 3) フッター等のソーシャル/配信リンク
     const social = target.closest('.social-link');

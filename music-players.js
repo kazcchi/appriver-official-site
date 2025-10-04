@@ -63,6 +63,16 @@ function stopAllOtherPlayers(currentPlatform) {
     stopOthersPlayer();
   }
 
+  // Amazon停止
+  if (currentPlatform !== 'amazon') {
+    stopAmazonPlayer();
+  }
+
+  // LINE Music停止
+  if (currentPlatform !== 'line-music') {
+    stopLineMusicPlayer();
+  }
+
   console.log(`Stopped all players except ${currentPlatform}`);
 }
 
@@ -92,6 +102,16 @@ function stopOthersPlayer() {
   // 直接リンク方式では埋め込みプレイヤーがないため、停止処理は不要
   // ただし、一貫性のためにログを出力
   console.log('Others player stopped (direct link mode)');
+}
+
+// Amazon Music 停止（直接リンク表示のため実質不要）
+function stopAmazonPlayer() {
+  console.log('Amazon Music player stopped (placeholder mode)');
+}
+
+// LINE Music 停止（直接リンク表示のため実質不要）
+function stopLineMusicPlayer() {
+  console.log('LINE Music player stopped (placeholder mode)');
 }
 
 // セクション移動検知とプレイヤー停止

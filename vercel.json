@@ -46,6 +46,10 @@
       "destination": "/out/index.html?to=https%3A%2F%2Fwww.youtube.com%2F%40appriver12&platform=youtube"
     },
     {
+      "source": "/out/line-music",
+      "destination": "/out/index.html?to=https%3A%2F%2Fmusic.line.me%2Fwebapp%2Fplaylist%2Fupi7nLrdtfvhxjzl9Eel6t3v5zzqyDypzjJn%3FmyAlbumIf%3Dtrue&platform=line"
+    },
+    {
       "source": "/out/others",
       "destination": "/out/index.html?to=https%3A%2F%2Fwww.tunecore.co.jp%2Fartists%3Fid%3D991248&platform=others"
     },

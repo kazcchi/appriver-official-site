@@ -2020,6 +2020,97 @@ section h2::after {
   font-size: 1.2rem;
 }
 
+/* LINE Music Direct Layout Styles */
+.line-direct-container {
+  background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  border: 2px solid rgba(232, 164, 139, 0.3);
+  box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.line-header {
+  flex-shrink: 0;
+}
+
+.line-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.line-logo i {
+  font-size: 4rem;
+  color: #06c755; /* LINE brand color */
+  animation: pulse 2s ease-in-out infinite alternate;
+  filter: drop-shadow(0 4px 8px rgba(6, 199, 85, 0.3));
+}
+
+.line-logo span {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.line-playlist-link {
+  flex-shrink: 0;
+}
+
+.line-full-playlist-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
+  color: white;
+  padding: 1.5rem 1rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid #e8a48b;
+  box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
+  position: relative;
+  overflow: hidden;
+  width: calc(140px * 4 + 1rem * 3);
+  max-width: 100%;
+  min-height: calc(60px * 2 + 1rem);
+}
+
+.line-full-playlist-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.line-full-playlist-btn:hover::before {
+  left: 100%;
+}
+
+.line-full-playlist-btn:hover {
+  background: linear-gradient(135deg, #d49175 0%, #c17d61 100%);
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 15px 40px rgba(232, 164, 139, 0.6);
+}
+
+.line-full-playlist-btn i {
+  font-size: 1.2rem;
+}
 /* Footer */
 footer {
   background: #333;
@@ -2363,24 +2454,24 @@ footer {
     font-size: 0.7rem;
   }
 
-  /* Platform Selector Mobile - 2x2 Grid */
+  /* Platform Selector Mobile - 3x2 Grid (6 buttons) */
   .platform-selector {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.8rem;
-    max-width: 300px;
-    margin: 0 auto 2rem auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+    max-width: 360px;
+    margin: 0 auto 1.5rem auto;
   }
 
   .platform-btn {
-    padding: 0.8rem 0.6rem;
+    padding: 0.6rem 0.4rem;
     min-width: auto;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .platform-btn i {
-    font-size: 1.4rem;
-    margin-bottom: 0.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
   }
 
   /* Song Slider Extra Small Mobile */
@@ -2679,6 +2770,59 @@ footer {
     min-height: 60px;
   }
 
+  /* LINE Music Mobile Optimizations - コンパクト */
+  .line-direct-container {
+    padding: 1rem;
+    min-height: auto;
+    gap: 0.8rem;
+    justify-content: center;
+  }
+
+  .line-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .line-logo i {
+    font-size: 2.2rem;
+  }
+  .line-logo span {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .line-playlist-link {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .line-full-playlist-btn {
+    padding: 0.8rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    width: calc(75px * 4 + 0.5rem * 3);
+    max-width: 90%;
+    border-radius: 30px;
+    gap: 0.8rem;
+    border-width: 2px;
+    box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    height: 60px;
+    min-height: 60px;
+  }
+
+  .line-full-playlist-btn i {
+    font-size: 1.3rem;
+  }
+  .line-full-playlist-btn:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 4px 15px rgba(232, 164, 139, 0.3);
+  }
   .youtube-full-playlist-btn i {
     font-size: 1.3rem;
   }
