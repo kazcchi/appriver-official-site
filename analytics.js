@@ -34,6 +34,11 @@
       track('playlist_outbound_click', { platform: 'apple-music' });
       return;
     }
+    const appleEmbed = target.closest('.apple-music-embed-btn');
+    if (appleEmbed) {
+      track('playlist_outbound_click', { platform: 'apple-music-embed' });
+      return;
+    }
     const spotify = target.closest('.spotify-full-playlist-btn');
     if (spotify) {
       track('playlist_outbound_click', { platform: 'spotify' });
