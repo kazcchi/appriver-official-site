@@ -112,10 +112,16 @@
               // 2回目以降はボタンのみ表示
               return;
             }
+            var isIOS = /iP(hone|od|ad)/.test(navigator.userAgent);
             setTimeout(function () {
               if (to) {
                 try { sessionStorage.setItem(key, '1'); } catch (_) {}
-                location.assign(to);
+                // iOSは戻る時に前ページへ復帰しやすいよう replace を使用
+                if (isIOS) {
+                  location.replace(to);
+                } else {
+                  location.assign(to);
+                }
               }
             }, 300);
           } catch (_) {
