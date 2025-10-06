@@ -179,7 +179,7 @@
                             </div>
                             
                             <div class="apple-music-playlist-link">
-                                <a href="/out/apple-music-select/" class="apple-music-full-playlist-btn">
+                                <a href="/out/apple-music-select/index.html" class="apple-music-full-playlist-btn">
                                     <i class="fas fa-external-link-alt"></i>
                                     <span>プレイリストを開く</span>
                                 </a>
@@ -430,5 +430,55 @@
     <script src="scroll-guide.js"></script>
     <script src="swipe-guide.js"></script>
     <script src="analytics.js"></script>
+    <!-- Apple Select Modal -->
+    <div id="appleSelectModal" class="select-modal" aria-hidden="true">
+      <div class="select-modal-backdrop" data-close="apple-select"></div>
+      <div class="select-modal-card" role="dialog" aria-labelledby="appleSelectTitle">
+        <div class="select-modal-header">
+          <h3 id="appleSelectTitle">Apple Music を開く</h3>
+          <button class="select-modal-close" aria-label="閉じる" data-close="apple-select">×</button>
+        </div>
+        <p class="select-modal-desc">開き方を選択してください。</p>
+        <div class="select-modal-actions">
+          <a class="apple-music-embed-btn" href="/out/apple-music-embed/">
+            <i class="fas fa-external-link-alt"></i>
+            <span>ブラウザで開く</span>
+          </a>
+          <a class="apple-music-full-playlist-btn" href="/out/apple-music/">
+            <i class="fas fa-external-link-alt"></i>
+            <span>アプリで開く</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        const openBtn = document.querySelector('[data-open="apple-select"]');
+        const modal = document.getElementById('appleSelectModal');
+        if (!openBtn || !modal) return;
+        function openModal(e) {
+          e.preventDefault();
+          modal.setAttribute('aria-hidden', 'false');
+          modal.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+          modal.setAttribute('aria-hidden', 'true');
+          modal.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+        openBtn.addEventListener('click', openModal);
+        modal.addEventListener('click', function (e) {
+          const t = e.target;
+          if (!t) return;
+          if (t.matches('[data-close="apple-select"]')) {
+            closeModal();
+          }
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+        });
+      })();
+    </script>
 </body>
 </html>
