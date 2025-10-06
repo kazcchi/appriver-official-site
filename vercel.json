@@ -46,6 +46,10 @@
       "destination": "/out/index.html?to=https%3A%2F%2Fembed.music.apple.com%2Fjp%2Fplaylist%2Fappriver-%25E5%2585%25AC%25E5%25BC%258F%25E3%2583%2597%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%2Fpl.u-V9D7vD9FEP64AZ&platform=apple-music-embed"
     },
     {
+      "source": "/out/apple-music-embed/",
+      "destination": "/out/index.html?to=https%3A%2F%2Fembed.music.apple.com%2Fjp%2Fplaylist%2Fappriver-%25E5%2585%25AC%25E5%25BC%258F%25E3%2583%2597%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%2Fpl.u-V9D7vD9FEP64AZ&platform=apple-music-embed"
+    },
+    {
       "source": "/out/spotify",
       "destination": "/out/index.html?to=https%3A%2F%2Fopen.spotify.com%2Fplaylist%2F1Y4ICAnET0o7CPHRycOriz&platform=spotify"
     },

@@ -3105,3 +3105,63 @@ footer {
 [hidden] {
   display: none !important;
 }
+
+/* Select Modal (Apple) */
+.select-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.select-modal.open {
+  display: flex;
+}
+.select-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+.select-modal-card {
+  position: relative;
+  width: min(560px, 92vw);
+  background: #fff;
+  border-radius: 14px;
+  padding: 1rem 1rem 1.2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.select-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+.select-modal-header h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.select-modal-close {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+}
+.select-modal-desc {
+  margin: 0.2rem 0 0.8rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+.select-modal-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+}
+@media (min-width: 480px) {
+  .select-modal-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
