@@ -2729,37 +2729,37 @@ footer {
   }
 
   /* Amazon Mobile Optimizations - コンパクト */
-  .amazon-direct-container {
+  #amazon-player .amazon-direct-container {
     padding: 1rem;
     min-height: auto;
     gap: 0.8rem;
     justify-content: center;
   }
 
-  .amazon-header {
+  #amazon-player .amazon-header {
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .amazon-logo i {
+  #amazon-player .amazon-logo i {
     font-size: 2.2rem;
   }
 
-  .amazon-logo span {
+  #amazon-player .amazon-logo span {
     font-size: 1.4rem;
     font-weight: 600;
   }
 
-  .amazon-artist-link {
+  #amazon-player .amazon-artist-link {
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .amazon-artist-btn {
+  #amazon-player .amazon-artist-btn {
     padding: 0.8rem 1rem;
     font-size: 1.2rem;
     font-weight: 900;
@@ -2775,11 +2775,11 @@ footer {
     min-height: 60px;
   }
 
-  .amazon-artist-btn i {
+  #amazon-player .amazon-artist-btn i {
     font-size: 1.3rem;
   }
 
-  .amazon-artist-btn:active {
+  #amazon-player .amazon-artist-btn:active {
     transform: translateY(-1px) scale(0.98);
     box-shadow: 0 4px 15px rgba(232, 164, 139, 0.3);
   }
