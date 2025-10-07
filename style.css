@@ -2820,6 +2820,62 @@ footer {
     font-size: 1.3rem;
   }
 
+  /* Amazon Mobile Optimizations - コンパクト */
+  .amazon-direct-container {
+    padding: 1rem;
+    min-height: auto;
+    gap: 0.8rem;
+    justify-content: center;
+  }
+
+  .amazon-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .amazon-logo i {
+    font-size: 2.2rem;
+  }
+
+  .amazon-logo span {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .amazon-artist-link {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .amazon-artist-btn {
+    padding: 0.8rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    width: calc(75px * 4 + 0.5rem * 3);
+    max-width: 90%;
+    border-radius: 30px;
+    gap: 0.8rem;
+    border-width: 2px;
+    box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    height: 60px;
+    min-height: 60px;
+  }
+
+  .amazon-artist-btn i {
+    font-size: 1.3rem;
+  }
+
+  .amazon-artist-btn:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 4px 15px rgba(232, 164, 139, 0.3);
+  }
+
   .others-full-playlist-btn:active {
     transform: translateY(-1px) scale(0.98);
     box-shadow: 0 4px 15px rgba(232, 164, 139, 0.3);
