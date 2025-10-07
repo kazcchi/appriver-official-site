@@ -106,7 +106,8 @@ function stopOthersPlayer() {
 
 // Amazon Music 停止（直接リンク表示のため実質不要）
 function stopAmazonPlayer() {
-  console.log('Amazon Music player stopped (placeholder mode)');
+  // 直接リンク方式では埋め込みプレイヤーがないため、停止処理は不要
+  console.log('Amazon Music player stopped (direct link mode)');
 }
 
 // LINE Music 停止（直接リンク表示のため実質不要）
@@ -156,6 +157,7 @@ function stopAllPlayers() {
   stopSpotifyPlayer();
   stopAppleMusicPlayer();
   stopOthersPlayer();
+  stopAmazonPlayer();
   console.log('All music players stopped');
 }
 

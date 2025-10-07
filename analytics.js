@@ -44,6 +44,11 @@
       track('playlist_outbound_click', { platform: 'spotify' });
       return;
     }
+    const amazon = target.closest('.amazon-artist-btn');
+    if (amazon) {
+      track('playlist_outbound_click', { platform: 'amazon' });
+      return;
+    }
     const youtube = target.closest('.youtube-full-playlist-btn');
     if (youtube) {
       track('playlist_outbound_click', { platform: 'youtube' });
