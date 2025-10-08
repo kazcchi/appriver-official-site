@@ -2775,6 +2775,12 @@ footer {
     min-height: 60px;
   }
 
+  /* タップ後の戻りで:hoverが残留しても拡大しないように調整 */
+  #amazon-player .amazon-artist-btn:hover {
+    transform: none;
+    box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
+  }
+
   #amazon-player .amazon-artist-btn i {
     font-size: 1.3rem;
   }
