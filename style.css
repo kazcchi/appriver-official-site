@@ -687,6 +687,26 @@ section h2::after {
   box-shadow: 0 35px 70px rgba(212, 145, 117, 0.4);
 }
 
+/* KOMOREBI 強調（濃いオレンジのアニメーション） */
+.album-info.komorebi .album-artwork-image,
+.album-info.komorebi .placeholder-artwork {
+  animation: komorebiGlow 3.5s ease-in-out infinite;
+}
+
+@keyframes komorebiGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 25px 60px rgba(255, 140, 0, 0.45),
+      0 0 0 0 rgba(255, 140, 0, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 35px 90px rgba(255, 115, 0, 0.65),
+      0 0 20px 8px rgba(255, 115, 0, 0.25);
+  }
+}
+
 .placeholder-artwork {
   width: 300px;
   height: 300px;
