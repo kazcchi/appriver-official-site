@@ -3186,7 +3186,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  background: linear-gradient(135deg, var(--accent, #e8a48b) 0%, var(--accent-dark, #d49175) 100%);
+  background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
   color: white;
   padding: 1.5rem 1rem;
   border-radius: 40px;
@@ -3194,8 +3194,8 @@ footer {
   font-weight: 600;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  border: 2px solid var(--accent, #e8a48b);
-  box-shadow: 0 6px 20px color-mix(in srgb, var(--accent, #e8a48b) 30%, transparent);
+  border: 2px solid #e8a48b;
+  box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
   position: relative;
   overflow: hidden;
   width: calc(140px * 4 + 1rem * 3);
@@ -3219,13 +3219,9 @@ footer {
 }
 
 .platform-action-btn:hover {
-  background: linear-gradient(
-    135deg,
-    var(--accent-dark, #d49175) 0%,
-    color-mix(in srgb, var(--accent-dark, #d49175) 85%, black) 100%
-  );
+  background: linear-gradient(135deg, #d49175 0%, #c17d61 100%);
   transform: translateY(-5px) scale(1.08);
-  box-shadow: 0 15px 40px color-mix(in srgb, var(--accent, #e8a48b) 60%, transparent);
+  box-shadow: 0 15px 40px rgba(232, 164, 139, 0.6);
 }
 
 .platform-action-btn i {
