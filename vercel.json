@@ -10,14 +10,6 @@
       ]
     },
     {
-      "source": "/out/komorebi",
-      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2F3mY4fgvVt&platform=album"
-    },
-    {
-      "source": "/out/komorebi/",
-      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2F3mY4fgvVt&platform=album"
-    },
-    {
       "source": "/manifest.json",
       "headers": [
         {
@@ -49,6 +41,14 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/out/komorebi",
+      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2F3mY4fgvVt&platform=album"
+    },
+    {
+      "source": "/out/komorebi/",
+      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2F3mY4fgvVt&platform=album"
+    },
     {
       "source": "/out/apple-music",
       "destination": "/out/index.html?to=https%3A%2F%2Fmusic.apple.com%2Fjp%2Fplaylist%2Fappriver-%25E5%2585%25AC%25E5%25BC%258F%25E3%2583%2597%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%2Fpl.u-V9D7vD9FEP64AZ&platform=apple-music"
