@@ -1,4 +1,5 @@
 // 楽曲データ管理 
+// KOMOREBI: LinkCoreを3mY4fgvVtに統一（official同期用メタ更新）
 // SOW仕様: 検索・ソート機能対応のデータ構造
 
 const songsData = {
