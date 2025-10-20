@@ -1965,7 +1965,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 15,
     lyrics: `君に出会えた奇跡を
 心の奥に刻むよ
@@ -2003,7 +2003,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 14,
     lyrics: `お互い分かり合えなかった
 ぶつかり合ってばかりの日々
@@ -2041,7 +2041,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 13,
     lyrics: `星が瞬く夜空の下で
 君と出会えた奇跡がある
@@ -2074,7 +2074,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 12,
     lyrics: `涙が頬を伝う夜
 何も見えない霧の中
@@ -2108,7 +2108,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 11,
     lyrics: `星が降る夜に静かに
 君の笑顔が浮かぶよ
@@ -2142,7 +2142,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 10,
     lyrics: `失くした鍵の先に
 探してた夢があった
@@ -2174,7 +2174,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 9,
     lyrics: `窓辺に映る夕暮れの影
 心の隅で消えた声が響く
@@ -2208,7 +2208,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 8,
     lyrics: `夕焼けの空を見上げて
 君の笑顔が浮かぶんだ
@@ -2236,7 +2236,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 7,
     lyrics: `遠く見える あの空の端
 消えた夢の声 聞こえるか
@@ -2270,7 +2270,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 6,
     lyrics: `どんなに暗い夜でも
 星がひとつ光るように
@@ -2310,7 +2310,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 5,
     lyrics: `静かな夜に君を想う
 消えない願いがあるんだ
@@ -2344,7 +2344,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 4,
     lyrics: `夜の空に浮かぶ月
 君の影を探してる
@@ -2382,7 +2382,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 3,
     lyrics: `夜の風が髪を揺らして
 街の灯りが遠く消える
@@ -2420,7 +2420,7 @@ const songsData = {
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/3mY4fgvVt',
+    linkUrl: 'https://linkco.re/n4fg1c51',
     displayPriority: 2,
     lyrics: `星が消えた空の下
 涙が光る頬を伝う

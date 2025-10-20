@@ -43,11 +43,11 @@
   "rewrites": [
     {
       "source": "/out/komorebi",
-      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2F3mY4fgvVt&platform=album"
+      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2Fn4fg1c51&platform=album"
     },
     {
       "source": "/out/komorebi/",
-      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2F3mY4fgvVt&platform=album"
+      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2Fn4fg1c51&platform=album"
     },
     {
       "source": "/out/apple-music",
