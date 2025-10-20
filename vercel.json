@@ -10,6 +10,14 @@
       ]
     },
     {
+      "source": "/out/komorebi",
+      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2F3mY4fgvVt&platform=album"
+    },
+    {
+      "source": "/out/komorebi/",
+      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2F3mY4fgvVt&platform=album"
+    },
+    {
       "source": "/manifest.json",
       "headers": [
         {
