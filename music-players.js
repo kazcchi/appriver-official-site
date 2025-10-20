@@ -104,8 +104,9 @@ function stopOthersPlayer() {
   console.log('Others player stopped (direct link mode)');
 }
 
-// Amazon Music 停止（直接リンク方式のため実質的な停止処理なし）
+// Amazon Music 停止（直接リンク表示のため実質不要）
 function stopAmazonPlayer() {
+  // 直接リンク方式では埋め込みプレイヤーがないため、停止処理は不要
   console.log('Amazon Music player stopped (direct link mode)');
 }
 

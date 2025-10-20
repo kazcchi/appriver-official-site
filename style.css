@@ -1812,6 +1812,98 @@ section h2::after {
   min-height: calc(60px * 2 + 1rem);
 }
 
+/* Amazon Music Direct Layout Styles */
+.amazon-direct-container {
+  background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  border: 2px solid rgba(232, 164, 139, 0.3);
+  box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.amazon-header {
+  flex-shrink: 0;
+}
+
+.amazon-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.amazon-logo i {
+  font-size: 4rem;
+  color: #ff9900; /* Amazon brand accent */
+  animation: pulse 2s ease-in-out infinite alternate;
+  filter: drop-shadow(0 4px 8px rgba(255, 153, 0, 0.3));
+}
+
+.amazon-logo span {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.amazon-artist-link {
+  flex-shrink: 0;
+}
+
+.amazon-artist-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
+  color: white;
+  padding: 1.5rem 1rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid #e8a48b;
+  box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
+  position: relative;
+  overflow: hidden;
+  width: calc(140px * 4 + 1rem * 3);
+  max-width: 100%;
+  min-height: calc(60px * 2 + 1rem);
+}
+
+.amazon-artist-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.amazon-artist-btn:hover::before {
+  left: 100%;
+}
+
+.amazon-artist-btn:hover {
+  background: linear-gradient(135deg, #d49175 0%, #c17d61 100%);
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 15px 40px rgba(232, 164, 139, 0.6);
+}
+
+.amazon-artist-btn i {
+  font-size: 1.2rem;
+}
+
 .apple-music-full-playlist-btn::before,
 .apple-music-embed-btn::before {
   content: '';
@@ -2729,37 +2821,37 @@ footer {
   }
 
   /* Amazon Mobile Optimizations - コンパクト */
-  #amazon-player .amazon-direct-container {
+  .amazon-direct-container {
     padding: 1rem;
     min-height: auto;
     gap: 0.8rem;
     justify-content: center;
   }
 
-  #amazon-player .amazon-header {
+  .amazon-header {
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  #amazon-player .amazon-logo i {
+  .amazon-logo i {
     font-size: 2.2rem;
   }
 
-  #amazon-player .amazon-logo span {
+  .amazon-logo span {
     font-size: 1.4rem;
     font-weight: 600;
   }
 
-  #amazon-player .amazon-artist-link {
+  .amazon-artist-link {
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  #amazon-player .amazon-artist-btn {
+  .amazon-artist-btn {
     padding: 0.8rem 1rem;
     font-size: 1.2rem;
     font-weight: 900;
@@ -2774,16 +2866,12 @@ footer {
     height: 60px;
     min-height: 60px;
   }
-  /* タップ後の戻りで:hoverが残留しても拡大しないように調整 */
-  #amazon-player .amazon-artist-btn:hover {
-    transform: none;
-    box-shadow: 0 4px 15px rgba(232, 164, 139, 0.2);
-  }
-  #amazon-player .amazon-artist-btn i {
+
+  .amazon-artist-btn i {
     font-size: 1.3rem;
   }
 
-  #amazon-player .amazon-artist-btn:active {
+  .amazon-artist-btn:active {
     transform: translateY(-1px) scale(0.98);
     box-shadow: 0 4px 15px rgba(232, 164, 139, 0.3);
   }
@@ -3224,96 +3312,4 @@ footer {
   .select-modal-actions {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-/* Amazon Music Direct Layout Styles */
-.amazon-direct-container {
-  background: linear-gradient(135deg, #fff9f7 0%, #f5f0ec 50%, #f0e8e1 100%);
-  border-radius: 20px;
-  padding: 3rem 2rem;
-  border: 2px solid rgba(232, 164, 139, 0.3);
-  box-shadow: 0 8px 30px rgba(232, 164, 139, 0.1);
-  min-height: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  gap: 1.5rem;
-}
-
-.amazon-header {
-  flex-shrink: 0;
-}
-
-.amazon-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.2rem;
-}
-
-.amazon-logo i {
-  font-size: 4rem;
-  color: #ff9900; /* Amazon brand accent */
-  animation: pulse 2s ease-in-out infinite alternate;
-  filter: drop-shadow(0 4px 8px rgba(255, 153, 0, 0.3));
-}
-
-.amazon-logo span {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: #333;
-  letter-spacing: -0.5px;
-}
-
-.amazon-artist-link {
-  flex-shrink: 0;
-}
-
-.amazon-artist-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-  background: linear-gradient(135deg, #e8a48b 0%, #d49175 100%);
-  color: white;
-  padding: 1.5rem 1rem;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  border: 2px solid #e8a48b;
-  box-shadow: 0 6px 20px rgba(232, 164, 139, 0.3);
-  position: relative;
-  overflow: hidden;
-  width: calc(140px * 4 + 1rem * 3);
-  max-width: 100%;
-  min-height: calc(60px * 2 + 1rem);
-}
-
-.amazon-artist-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.6s ease;
-}
-
-.amazon-artist-btn:hover::before {
-  left: 100%;
-}
-
-.amazon-artist-btn:hover {
-  background: linear-gradient(135deg, #d49175 0%, #c17d61 100%);
-  transform: translateY(-5px) scale(1.08);
-  box-shadow: 0 15px 40px rgba(232, 164, 139, 0.6);
-}
-
-.amazon-artist-btn i {
-  font-size: 1.2rem;
 }

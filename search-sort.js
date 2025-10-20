@@ -124,7 +124,19 @@ class SearchSortManager {
     const sorted = [...songs].sort((a, b) => {
       let comparison = 0;
 
-      if (sortType === 'releaseDate') {
+      if (sortType === 'custom') {
+        // displayPriority を優先（未指定は 0）
+        const pa = typeof a.displayPriority === 'number' ? a.displayPriority : 0;
+        const pb = typeof b.displayPriority === 'number' ? b.displayPriority : 0;
+        if (pa !== pb) {
+          comparison = pa - pb; // 後で order で反転
+        } else {
+          // 同優先度（=未指定同士など）はリリース日（降順既定）で安定化
+          const sA = this.isValidReleaseDate(a.releaseDate) ? a.releaseDate : '0000-00-00';
+          const sB = this.isValidReleaseDate(b.releaseDate) ? b.releaseDate : '0000-00-00';
+          comparison = sA.localeCompare(sB);
+        }
+      } else if (sortType === 'releaseDate') {
         // 安定動作のため文字列比較（YYYY-MM-DD前提）
         const sA = this.isValidReleaseDate(a.releaseDate) ? a.releaseDate : '0000-00-00';
         const sB = this.isValidReleaseDate(b.releaseDate) ? b.releaseDate : '0000-00-00';
@@ -338,8 +350,10 @@ class SearchSortManager {
       }
     });
 
-    // アクティブ状態設定
-    const activeBtn = this.currentSort === 'releaseDate' ? releaseSortBtn : readingSortBtn;
+    // アクティブ状態設定（既定: custom は非アクティブ）
+    let activeBtn = null;
+    if (this.currentSort === 'releaseDate') activeBtn = releaseSortBtn;
+    if (this.currentSort === 'reading') activeBtn = readingSortBtn;
     if (activeBtn) {
       activeBtn.classList.add('sort-active');
       activeBtn.classList.add(this.currentOrder === 'asc' ? 'sort-asc' : 'sort-desc');
