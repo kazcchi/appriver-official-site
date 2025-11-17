@@ -77,6 +77,74 @@ const songsData = {
 忘れたいのに忘れられない
 心に響く君の影`,
   },
+  todokanai: {
+    title: '届かない・・',
+    reading: 'とどかない',
+    album: '',
+    albumReading: '',
+    releaseDate: '2025-11-09',
+    linkUrl: 'https://linkco.re/fHu4AV0N',
+    lyrics: `空に響く静かな声
+影を追う君の後ろ姿
+白い息が夜を染める
+
+雪が降るたび心が震える
+何を失い何を残せる
+
+悲しみの雪が降りつもる
+冷たい風に夢が散る
+この手を伸ばしても届かない
+君の影ただ消えていく
+
+街灯の下でひとり泣いた
+足跡さえも雪に隠れて
+時間だけが過ぎていく
+
+思い出の中に君が笑う
+それでも今は涙が止まらない
+
+悲しみの雪が降りつもる
+心の隙間に白く積もる
+何度叫んでも届かない
+君の名前ただ響くだけ`,
+  },
+  kimitointajikan: {
+    title: '君といた時間',
+    reading: 'きみといたじかん',
+    album: '',
+    albumReading: '',
+    releaseDate: '2025-11-18',
+    linkUrl: 'https://linkco.re/pH8saDth',
+    lyrics: `君と歩いたこの道は
+今も静かに僕を呼ぶ
+風が運ぶ君の声
+心の奥で響いている
+
+君といた時間をまだ照らしている
+あの日の笑顔が消えない光
+何度季節が変わっても
+僕の中で生き続ける
+
+星空の下 ふたりの影
+優しい夜が包んでいた
+君の手の温もりさえ
+忘れたくない思い出の中
+
+君といた時間をまだ照らしている
+胸に刻まれた永遠のあかり
+たとえ遠く離れても
+君は僕のすべてになる
+
+雨の匂い 窓辺の景色
+君が教えてくれた世界
+全てが今も僕の中で
+鮮やかに彩ってる
+
+君といた時間をまだ照らしている
+優しさの中で僕は生きる
+これから先の未来さえ
+今いない君と歩いていく`,
+  },
   kokoro: {
     title: '心の羽',
     reading: 'こころのはね',
@@ -2527,7 +2595,7 @@ const songsData = {
 
 // 検索・ソート設定
 const searchSortConfig = {
-  defaultSort: 'custom', // デフォルト: 追加した順（displayPriority優先）
+  defaultSort: 'releaseDate', // デフォルト: 新しい順（KOMOREBI内はdisplayPriorityで固定）
   defaultOrder: 'desc', // デフォルト順序（優先度の高い=新規追加が先頭）
   searchFields: ['title', 'album'], // 検索対象フィールド
   itemsPerPage: 20, // 最大表示件数

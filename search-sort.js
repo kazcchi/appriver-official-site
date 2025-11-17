@@ -147,6 +147,24 @@ class SearchSortManager {
           console.warn('[songs] invalid releaseDate (treated as oldest):', b.id, b.releaseDate);
         }
         comparison = sA.localeCompare(sB);
+
+        // tie-breaker: KOMOREBI 内は displayPriority で固定順にする
+        if (comparison === 0) {
+          const isKomoPair = a.album === 'KOMOREBI' && b.album === 'KOMOREBI';
+          if (isKomoPair) {
+            const pa = typeof a.displayPriority === 'number' ? a.displayPriority : 0;
+            const pb = typeof b.displayPriority === 'number' ? b.displayPriority : 0;
+            if (pa !== pb) {
+              comparison = pa - pb; // order で反転、desc で大きい順が先頭
+            } else {
+              // さらに同一の場合は読みで安定化
+              comparison = a.reading.localeCompare(b.reading, 'ja');
+            }
+          } else {
+            // その他の同日リリースは読みで安定化
+            comparison = a.reading.localeCompare(b.reading, 'ja');
+          }
+        }
       } else if (sortType === 'reading') {
         comparison = a.reading.localeCompare(b.reading, 'ja');
       }

@@ -53,6 +53,10 @@ SUNO AIで制作した楽曲で音楽配信する新人アーティスト「appr
 - 日付: `YYYY-MM-DD`（例: 2025-09-17）
 - 歌詞: バッククォート`を含めない（テンプレート文字列使用のため）
 - 配信リンク: LinkCore等のURL
+- 表示順ルール:
+  - 既定は「新しい順（releaseDate 降順）」
+  - アルバム「KOMOREBI」内は同日リリースのため、`displayPriority` で固定順（大きいほど先頭）
+  - KOMOREBI に曲を追加する場合は、既存の最大値+1を割り当てる（例: 現在最大15 → 新規は16）
 
 ### CI / ルールの要点（Ruleset: main-protection）
 
