@@ -2558,7 +2558,7 @@ const songsData = {
 
 // 検索・ソート設定
 const searchSortConfig = {
-  defaultSort: 'custom', // デフォルト: 追加した順（displayPriority優先）
+  defaultSort: 'releaseDate', // デフォルト: 新しい順（KOMOREBI内はdisplayPriorityで固定）
   defaultOrder: 'desc', // デフォルト順序（優先度の高い=新規追加が先頭）
   searchFields: ['title', 'album'], // 検索対象フィールド
   itemsPerPage: 20, // 最大表示件数
