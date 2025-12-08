@@ -388,15 +388,15 @@ nav {
 
   /* ボタン特有のスタイル */
   display: inline-block;
-  background: linear-gradient(135deg, #d2a842, #f2d87c, #fff4d6);
+  background: linear-gradient(135deg, #0f0f0f, #1f1f1f, #2f2f2f);
   background-size: 200% 200%;
   padding: 15px 25px;
   border-radius: 15px;
   font-weight: 600;
-  box-shadow: 0 8px 24px rgba(153, 123, 48, 0.38);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
   transition: all 0.3s ease;
   cursor: pointer;
-  border: 2px solid rgba(210, 168, 66, 0.85);
+  border: 2px solid rgba(80, 80, 80, 0.9);
   backdrop-filter: blur(10px);
   animation: konayukiGlow 4s ease-in-out infinite;
 }
