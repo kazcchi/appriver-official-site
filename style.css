@@ -393,21 +393,22 @@ nav {
   padding: 15px 25px;
   border-radius: 15px;
   font-weight: 600;
-  box-shadow: 0 8px 24px rgba(199, 153, 47, 0.36);
+  box-shadow: 0 8px 24px rgba(184, 160, 82, 0.38);
   transition: all 0.3s ease;
   cursor: pointer;
-  border: 2px solid rgba(243, 211, 111, 0.9);
+  border: 2px solid rgba(228, 202, 128, 0.95);
   backdrop-filter: blur(10px);
   animation: konayukiGlow 4s ease-in-out infinite;
+  background-color: #d8c16a;
 }
 
 .hero-release-button:hover,
 .hero-release-button:focus {
   transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(199, 153, 47, 0.45);
-  background: linear-gradient(135deg, #d9ac3b, #f8e08c, #fff6d8);
+  box-shadow: 0 14px 36px rgba(184, 160, 82, 0.45);
+  background: linear-gradient(135deg, #e2cb7c, #f9e8ae, #fff8e8);
   background-size: 200% 200%;
-  border-color: rgba(243, 211, 111, 0.95);
+  border-color: rgba(228, 202, 128, 1);
   text-decoration: none;
   color: #ffffff;
 }
