@@ -148,10 +148,10 @@ class SearchSortManager {
         }
         comparison = sA.localeCompare(sB);
 
-        // tie-breaker: KOMOREBI 内は displayPriority で固定順にする
+        // tie-breaker: 同一アルバムかつ同日リリースは displayPriority を優先
         if (comparison === 0) {
-          const isKomoPair = a.album === 'KOMOREBI' && b.album === 'KOMOREBI';
-          if (isKomoPair) {
+          const isSameAlbum = a.album && a.album === b.album;
+          if (isSameAlbum) {
             const pa = typeof a.displayPriority === 'number' ? a.displayPriority : 0;
             const pb = typeof b.displayPriority === 'number' ? b.displayPriority : 0;
             if (pa !== pb) {
