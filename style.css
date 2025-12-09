@@ -446,6 +446,22 @@ nav {
   box-shadow: 0 12px 28px rgba(153, 123, 48, 0.45) !important;
 }
 
+/* KONAYUKI アルバムのリリースラベル（表示のみ、ホバーなし） */
+.album-info.konayuki .album-release-badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d2a842, #f2d87c, #fff4d6);
+  background-size: 200% 200%;
+  color: #2c1810;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid rgba(243, 211, 111, 0.9);
+  box-shadow: 0 6px 18px rgba(153, 123, 48, 0.22);
+  animation: konayukiGlow 4s ease-in-out infinite;
+}
+
 /* Karaoke Coupon Button */
 .hero-karaoke-coupon-button {
   font-size: 1rem;
