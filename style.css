@@ -432,18 +432,18 @@ nav {
 
 /* CTA 背景確認用の強制上書き（通常時を黒系に固定） */
 .hero .hero-release-button {
-  background: linear-gradient(135deg, #c9b35e, #f0e0a0, #fff5d8) !important;
-  background-color: #d8c67a !important;
-  border-color: rgba(233, 211, 133, 0.95) !important;
-  box-shadow: 0 8px 24px rgba(184, 160, 82, 0.38) !important;
+  background: linear-gradient(135deg, #d2a842, #f2d87c, #fff4d6) !important;
+  background-color: #e2c977 !important;
+  border-color: rgba(243, 211, 111, 0.95) !important;
+  box-shadow: 0 8px 24px rgba(153, 123, 48, 0.38) !important;
 }
 
 .hero .hero-release-button:hover,
 .hero .hero-release-button:focus {
-  background: linear-gradient(135deg, #d7c26c, #f5e8b5, #fff8e8) !important;
-  background-color: #e4d49a !important;
-  border-color: rgba(233, 211, 133, 1) !important;
-  box-shadow: 0 12px 28px rgba(184, 160, 82, 0.45) !important;
+  background: linear-gradient(135deg, #e0ba52, #ffe28f, #fff8e8) !important;
+  background-color: #efd489 !important;
+  border-color: rgba(243, 211, 111, 1) !important;
+  box-shadow: 0 12px 28px rgba(153, 123, 48, 0.45) !important;
 }
 
 /* Karaoke Coupon Button */
