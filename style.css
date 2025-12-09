@@ -472,13 +472,13 @@ nav {
   color: inherit;
   display: inline-block;
 
-  background: linear-gradient(135deg, rgba(255, 193, 7, 0.9), rgba(255, 235, 59, 0.8));
-  border: 2px solid rgba(255, 193, 7, 0.6);
+  background: linear-gradient(135deg, #ff7a2f, #ff9b4a, #ffd3a3);
+  border: 2px solid rgba(255, 146, 74, 0.8);
   border-radius: 12px;
   padding: 10px 18px;
   font-weight: 600;
   color: #2c1810;
-  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 146, 74, 0.35);
   transition: all 0.3s ease;
   position: absolute;
   top: 78%;
@@ -491,16 +491,16 @@ nav {
 .hero-karaoke-coupon-button:hover,
 .hero-karaoke-coupon-button:focus {
   transform: translate(-50%, -2px);
-  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
-  background: linear-gradient(135deg, rgba(255, 193, 7, 1), rgba(255, 235, 59, 0.9));
-  border-color: rgba(255, 193, 7, 0.8);
+  box-shadow: 0 6px 20px rgba(255, 146, 74, 0.45);
+  background: linear-gradient(135deg, #ff8b3f, #ffad63, #ffe1b8);
+  border-color: rgba(255, 146, 74, 0.95);
   text-decoration: none;
   color: #2c1810;
 }
 
 .hero-karaoke-coupon-button:active {
   transform: translate(-50%, 0);
-  box-shadow: 0 2px 10px rgba(255, 193, 7, 0.3);
+  box-shadow: 0 2px 10px rgba(255, 146, 74, 0.35);
 }
 
 /* Sections */
