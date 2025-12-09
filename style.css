@@ -388,7 +388,7 @@ nav {
 
   /* ボタン特有のスタイル */
   display: inline-block;
-  background: linear-gradient(135deg, #c7992f, #f3d36f, #fff1c0);
+  background: linear-gradient(135deg, #0f0f0f, #1f1f1f, #2f2f2f);
   background-size: 200% 200%;
   padding: 15px 25px;
   border-radius: 15px;
