@@ -384,33 +384,34 @@ nav {
   text-align: center;
   line-height: 1.4;
   text-decoration: none;
-  color: #ffffff;
+  color: #1f2a14;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
 
   /* ボタン特有のスタイル */
   display: inline-block;
-  background: linear-gradient(135deg, #0f0f0f, #1f1f1f, #2f2f2f);
+  background: linear-gradient(135deg, #6fa451, #b8d66f, #f4d98a);
   background-size: 200% 200%;
   padding: 15px 25px;
   border-radius: 15px;
   font-weight: 600;
-  box-shadow: 0 8px 24px rgba(184, 160, 82, 0.38);
+  box-shadow: 0 8px 24px rgba(88, 126, 57, 0.35);
   transition: all 0.3s ease;
   cursor: pointer;
-  border: 2px solid rgba(228, 202, 128, 0.95);
+  border: 2px solid rgba(120, 165, 80, 0.95);
   backdrop-filter: blur(10px);
-  animation: konayukiGlow 4s ease-in-out infinite;
-  background-color: #d8c16a;
+  animation: tokoshieGlow 4s ease-in-out infinite;
+  background-color: #dfe6a2;
 }
 
 .hero-release-button:hover,
 .hero-release-button:focus {
   transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(184, 160, 82, 0.45);
-  background: linear-gradient(135deg, #e2cb7c, #f9e8ae, #fff8e8);
+  box-shadow: 0 14px 36px rgba(88, 126, 57, 0.45);
+  background: linear-gradient(135deg, #7fb863, #c3e07d, #f8e3a1);
   background-size: 200% 200%;
-  border-color: rgba(228, 202, 128, 1);
+  border-color: rgba(132, 176, 92, 1);
   text-decoration: none;
-  color: #ffffff;
+  color: #1f2a14;
 }
 
 .hero-release-button:active {
@@ -418,7 +419,7 @@ nav {
   box-shadow: 0 3px 12px rgba(162, 124, 47, 0.35);
 }
 
-@keyframes konayukiGlow {
+@keyframes tokoshieGlow {
   0% {
     background-position: 0% 50%;
   }
@@ -430,36 +431,20 @@ nav {
   }
 }
 
-/* CTA 背景確認用の強制上書き（通常時を黒系に固定） */
+/* CTA 背景色の強制上書き（TOKOSHIEカラー） */
 .hero .hero-release-button {
-  background: linear-gradient(135deg, #d2a842, #f2d87c, #fff4d6) !important;
-  background-color: #e2c977 !important;
-  border-color: rgba(243, 211, 111, 0.95) !important;
-  box-shadow: 0 8px 24px rgba(153, 123, 48, 0.38) !important;
+  background: linear-gradient(135deg, #6fa451, #b8d66f, #f4d98a) !important;
+  background-color: #dfe6a2 !important;
+  border-color: rgba(120, 165, 80, 0.95) !important;
+  box-shadow: 0 8px 24px rgba(88, 126, 57, 0.35) !important;
 }
 
 .hero .hero-release-button:hover,
 .hero .hero-release-button:focus {
-  background: linear-gradient(135deg, #e0ba52, #ffe28f, #fff8e8) !important;
-  background-color: #efd489 !important;
-  border-color: rgba(243, 211, 111, 1) !important;
-  box-shadow: 0 12px 28px rgba(153, 123, 48, 0.45) !important;
-}
-
-/* KONAYUKI アルバムのリリースラベル（表示のみ、ホバーなし） */
-.album-info.konayuki .album-release-badge {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 10px 14px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #d2a842, #f2d87c, #fff4d6);
-  background-size: 200% 200%;
-  color: #2c1810;
-  font-weight: 600;
-  text-align: center;
-  border: 1px solid rgba(243, 211, 111, 0.9);
-  box-shadow: 0 6px 18px rgba(153, 123, 48, 0.22);
-  animation: konayukiGlow 4s ease-in-out infinite;
+  background: linear-gradient(135deg, #7fb863, #c3e07d, #f8e3a1) !important;
+  background-color: #e7efb4 !important;
+  border-color: rgba(132, 176, 92, 1) !important;
+  box-shadow: 0 12px 28px rgba(88, 126, 57, 0.45) !important;
 }
 
 /* Karaoke Coupon Button */
@@ -790,17 +775,17 @@ section h2::after {
 }
 
 .new-release {
-  background: linear-gradient(45deg, #ff6b6b, #ffa500, #ff6b6b);
+  background: linear-gradient(45deg, #7fb863, #f4d98a, #7fb863);
   background-size: 200% 200%;
-  color: white;
+  color: #1f2a14;
   padding: 8px 16px;
   border-radius: 12px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.45);
   animation:
     newReleaseGlow 3s ease-in-out infinite,
     gradientShift 4s ease-in-out infinite;
-  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  box-shadow: 0 4px 15px rgba(88, 126, 57, 0.35);
   position: relative;
   overflow: hidden;
 }
@@ -820,14 +805,14 @@ section h2::after {
   0%,
   100% {
     box-shadow:
-      0 4px 15px rgba(255, 107, 107, 0.4),
-      0 0 20px rgba(255, 107, 107, 0.2);
+      0 4px 15px rgba(88, 126, 57, 0.35),
+      0 0 20px rgba(88, 126, 57, 0.2);
     transform: scale(1);
   }
   50% {
     box-shadow:
-      0 6px 25px rgba(255, 107, 107, 0.6),
-      0 0 30px rgba(255, 107, 107, 0.4);
+      0 6px 25px rgba(88, 126, 57, 0.5),
+      0 0 30px rgba(88, 126, 57, 0.35);
     transform: scale(1.02);
   }
 }
