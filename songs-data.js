@@ -82,11 +82,11 @@ const songsData = {
   wasurenai: {
     title: '忘れない',
     reading: 'わすれない',
-    album: 'KONAYUKI',
-    albumReading: 'こなゆき',
-    releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
-    displayPriority: 13,
+    album: 'TOKOSHIE / KONAYUKI',
+    albumReading: 'とこしえ / こなゆき',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 15,
     lyrics: `老いた庭に月の影
 手を繋ぎし記憶の糸
 時の川に流されても
@@ -452,11 +452,11 @@ You’re still in my heart
   aitakute: {
     title: '会いたくて',
     reading: 'あいたくて',
-    album: 'KONAYUKI',
-    albumReading: 'こなゆき',
-    releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
-    displayPriority: 4,
+    album: 'TOKOSHIE / KONAYUKI',
+    albumReading: 'とこしえ / こなゆき',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 2,
     lyrics: `君と出会ったあの日の空
 あの青さ今も忘れない
 風に乗って君の声が
@@ -558,11 +558,11 @@ You’re still in my heart
   saigonoyuki: {
     title: '最後の雪',
     reading: 'さいごのゆき',
-    album: 'KONAYUKI',
-    albumReading: 'こなゆき',
-    releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
-    displayPriority: 1,
+    album: 'TOKOSHIE / KONAYUKI',
+    albumReading: 'とこしえ / こなゆき',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 11,
     lyrics: `白い吐息が街を包む
 足跡だけが語る旅路
 消えない想い胸に秘めて
@@ -666,10 +666,11 @@ You’re still in my heart
   todokanai: {
     title: '届かない・・',
     reading: 'とどかない',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-11-09',
-    linkUrl: 'https://linkco.re/fHu4AV0N',
+    album: 'TOKOSHIE',
+    albumReading: 'とこしえ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 5,
     lyrics: `空に響く静かな声
 影を追う君の後ろ姿
 白い息が夜を染める
@@ -697,10 +698,11 @@ You’re still in my heart
   kimitointajikan: {
     title: '君といた時間',
     reading: 'きみといたじかん',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-11-18',
-    linkUrl: 'https://linkco.re/pH8saDth',
+    album: 'TOKOSHIE',
+    albumReading: 'とこしえ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 13,
     lyrics: `君と歩いたこの道は
 今も静かに僕を呼ぶ
 風が運ぶ君の声
@@ -769,12 +771,13 @@ You’re still in my heart
 新しい空へ 飛び立つのさ`,
   },
   yasashii: {
-    title: '優しい光',
-    reading: 'やさしいひかり',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28', // アルバムリリース日
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    title: '優しい光(Remix)',
+    reading: 'やさしいひかりりみっくす',
+    album: 'TOKOSHIE / NUKUMORI',
+    albumReading: 'とこしえ / ぬくもり',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 1,
     lyrics: `夜空にひとり 立ち尽くして
 星たちの声を 聞こうとして
 涙の理由は 誰にも言えず
@@ -993,10 +996,11 @@ You’re still in my heart
   mienai: {
     title: '見えない光',
     reading: 'みえないひかり',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    album: 'TOKOSHIE / NUKUMORI',
+    albumReading: 'とこしえ / ぬくもり',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 10,
     lyrics: `生きてきた今までの長い時間は
 辛い時も悲しい瞬間もあったのに
 手を伸ばせば消える希望の影
@@ -1178,10 +1182,11 @@ You’re still in my heart
   kibou: {
     title: '希望へ',
     reading: 'きぼうへ',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    album: 'TOKOSHIE / NUKUMORI',
+    albumReading: 'とこしえ / ぬくもり',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 6,
     lyrics: `夜の静けさに包まれて
 涙はそっと頬を伝う
 言葉にならないこの痛み
@@ -1326,10 +1331,11 @@ You’re still in my heart
   kimiwomamoritai: {
     title: '君を守りたい',
     reading: 'きみをまもりたい',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-07-21',
-    linkUrl: 'https://linkco.re/RZYccEGt',
+    album: 'TOKOSHIE',
+    albumReading: 'とこしえ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 3,
     lyrics: `冷たい風が吹く夜に
 君の手をそっと握りしめて
 孤独な闇に包まれても
@@ -1363,10 +1369,11 @@ You’re still in my heart
   anohibi: {
     title: 'あの日々',
     reading: 'あのひび',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-07-17',
-    linkUrl: 'https://linkco.re/MU4uQntZ',
+    album: 'TOKOSHIE',
+    albumReading: 'とこしえ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 9,
     lyrics: `夜空に浮かぶ星ひとつ
 君の影を映してる
 忘れたくないその声が
@@ -1608,10 +1615,11 @@ You’re still in my heart
   kimidakegasubete: {
     title: '君だけが全ての世界',
     reading: 'きみだけがすべてのせかい',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    album: 'TOKOSHIE / YASURAGI',
+    albumReading: 'とこしえ / やすらぎ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 8,
     lyrics: `遠くなる声が響く夜
 胸の中で君を探す
 触れた指先が覚えてる
@@ -2375,10 +2383,11 @@ You’re still in my heart
   namidagakierusonohimade: {
     title: '涙が消えるその日まで',
     reading: 'なみだがきえるそのひまで',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-09-17',
-    linkUrl: 'https://linkco.re/qBcbmfV0',
+    album: 'TOKOSHIE',
+    albumReading: 'とこしえ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 12,
     lyrics: `暗いよるの静けさに
 星が一つ泣いていた
 君の声が遠くなり
@@ -2583,10 +2592,11 @@ You’re still in my heart
   hikarihaitsumokokoniaru: {
     title: '光はいつもここにある',
     reading: 'ひかりはいつもここにある',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-09-30',
-    linkUrl: 'https://linkco.re/cGy228q0',
+    album: 'TOKOSHIE',
+    albumReading: 'とこしえ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 4,
     lyrics: `静かな夜にささやく声
 消えない影 心に残る
 涙の海に沈むような日々
@@ -2616,11 +2626,11 @@ You’re still in my heart
   deattekuretearigatou: {
     title: '出会ってくれてありがとう',
     reading: 'であってくれてありがとう',
-    album: 'KOMOREBI',
-    albumReading: 'こもれび',
-    releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
-    displayPriority: 15,
+    album: 'TOKOSHIE / KOMOREBI',
+    albumReading: 'とこしえ / こもれび',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 14,
     lyrics: `君に出会えた奇跡を
 心の奥に刻むよ
 光のように眩しい日々
@@ -3109,11 +3119,11 @@ You’re still in my heart
   namidademaegamienakunattemo: {
     title: '涙で前が見えなくなっても',
     reading: 'なみだでまえがみえなくなっても',
-    album: 'KOMOREBI',
-    albumReading: 'こもれび',
-    releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
-    displayPriority: 1,
+    album: 'TOKOSHIE / KOMOREBI',
+    albumReading: 'とこしえ / こもれび',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 7,
     lyrics: `涙で前が見えなくなって
 それでも足は止めないで
 傷ついた心を抱えたまま
