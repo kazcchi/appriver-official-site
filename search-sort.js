@@ -151,7 +151,12 @@ class SearchSortManager {
         // tie-breaker: 同一アルバムかつ同日リリースは displayPriority を優先
         if (comparison === 0) {
           const isSameAlbum = a.album && a.album === b.album;
-          if (isSameAlbum) {
+          const isTokoshieAlbum =
+            typeof a.album === 'string' &&
+            typeof b.album === 'string' &&
+            a.album.includes('TOKOSHIE') &&
+            b.album.includes('TOKOSHIE');
+          if (isSameAlbum || isTokoshieAlbum) {
             const pa = typeof a.displayPriority === 'number' ? a.displayPriority : 0;
             const pb = typeof b.displayPriority === 'number' ? b.displayPriority : 0;
             if (pa !== pb) {
