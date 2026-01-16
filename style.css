@@ -3345,3 +3345,39 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* PC: アルバム一覧を 2:2:1 に固定 */
+@media (min-width: 1024px) {
+  .albums-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem;
+    justify-items: center;
+  }
+
+  .album-info {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 520px;
+    text-align: left;
+  }
+
+  .albums-container .album-info:nth-child(odd):last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  .albums-container {
+    gap: 4rem;
+  }
+
+  .album-info {
+    grid-template-columns: 260px 1fr;
+    gap: 3rem;
+    max-width: 560px;
+  }
+}
