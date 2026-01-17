@@ -1,4 +1,4 @@
-name: verify
+name: CI
 
 on:
   pull_request:
@@ -11,7 +11,7 @@ permissions:
   pull-requests: read
 
 jobs:
-  verify:
+  smoke:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -36,7 +36,6 @@ jobs:
       - name: Check tool lock compliance
         run: |
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-            # Check for tool lock labels or commit messages
             echo "🔒 Verifying tool lock compliance..."
             
             # Fetch base branch to ensure history exists
@@ -47,7 +46,6 @@ jobs:
               echo "❌ Missing tool tag in commit messages. Please add [Claude] or [Codex] tag."
               exit 1
             }
-            
             echo "✅ Tool lock compliance verified"
           fi
 

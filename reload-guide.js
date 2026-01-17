@@ -5,6 +5,11 @@
     return window.innerWidth <= 768;
   }
 
+  // iOS判定
+  function isIOS() {
+    return typeof window !== 'undefined' && /iP(hone|od|ad)/.test(window.navigator.userAgent);
+  }
+
   // モバイルでない場合は処理を停止
   if (!isMobile()) return;
 
@@ -77,4 +82,28 @@
   } else {
     init();
   }
+
+  // iOS Safari の戻る復帰（bfcache）対策
+  // "◀️ appriver" で戻った際に真っ白になるケースを回避するため、
+  // bfcache 復帰時は1度だけ自動リロードを行う
+  window.addEventListener('pageshow', function (e) {
+    try {
+      const perf = typeof window !== 'undefined' ? window.performance : null;
+      const nav = perf && perf.getEntriesByType ? perf.getEntriesByType('navigation')[0] : null;
+      const isBack = (nav && nav.type === 'back_forward') || e.persisted;
+      if (isIOS() && isBack) {
+        const flag = sessionStorage.getItem('ios_back_reload_done');
+        if (!flag) {
+          sessionStorage.setItem('ios_back_reload_done', '1');
+          // できるだけ早く復帰させる
+          window.location.reload();
+        } else {
+          // 二重リロード防止フラグをクリア
+          sessionStorage.removeItem('ios_back_reload_done');
+        }
+      }
+    } catch {
+      // 失敗時は何もしない
+    }
+  });
 })();
