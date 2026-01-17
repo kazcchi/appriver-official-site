@@ -147,6 +147,29 @@ class SearchSortManager {
           console.warn('[songs] invalid releaseDate (treated as oldest):', b.id, b.releaseDate);
         }
         comparison = sA.localeCompare(sB);
+
+        // tie-breaker: 同一アルバムかつ同日リリースは displayPriority を優先
+        if (comparison === 0) {
+          const isSameAlbum = a.album && a.album === b.album;
+          const isTokoshieAlbum =
+            typeof a.album === 'string' &&
+            typeof b.album === 'string' &&
+            a.album.includes('TOKOSHIE') &&
+            b.album.includes('TOKOSHIE');
+          if (isSameAlbum || isTokoshieAlbum) {
+            const pa = typeof a.displayPriority === 'number' ? a.displayPriority : 0;
+            const pb = typeof b.displayPriority === 'number' ? b.displayPriority : 0;
+            if (pa !== pb) {
+              comparison = pa - pb; // order で反転、desc で大きい順が先頭
+            } else {
+              // さらに同一の場合は読みで安定化
+              comparison = a.reading.localeCompare(b.reading, 'ja');
+            }
+          } else {
+            // その他の同日リリースは読みで安定化
+            comparison = a.reading.localeCompare(b.reading, 'ja');
+          }
+        }
       } else if (sortType === 'reading') {
         comparison = a.reading.localeCompare(b.reading, 'ja');
       }

@@ -3,6 +3,592 @@
 // SOW仕様: 検索・ソート機能対応のデータ構造
 
 const songsData = {
+  fuyunokiseki: {
+    title: '冬の奇跡',
+    reading: 'ふゆのきせき',
+    album: 'KONAYUKI',
+    albumReading: 'こなゆき',
+    releaseDate: '2025-12-10',
+    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    displayPriority: 15,
+    lyrics: `静かな街 灯りが揺れる
+白い息が 夜空に溶けて
+手を繋ぐたび 温もり感じる
+君と僕だけの冬の奇跡
+
+雪が舞うたび 笑顔が輝く
+この瞬間が 永遠に続けばいい
+
+二人だけのクリスマスイブ
+星が降る夜に願い込めて
+君と過ごす この時間が
+何よりも愛しい 宝物だよ
+
+遠く響く 鐘の音優しく
+君の瞳に 明日が映る
+言葉じゃなくても 通じ合う心
+静けさの中で 聞こえる愛
+
+もしも世界が 闇に包まれても
+君がいるなら 僕は迷わない
+この雪の中で 二人の足跡
+消えない記憶に 刻みたいよ
+
+二人だけのクリスマスイブ
+星が降る夜に願い込めて
+君と過ごす この時間が
+何よりも愛しい 宝物だよ`,
+  },
+  yuki: {
+    title: '雪',
+    reading: 'ゆき',
+    album: 'KONAYUKI',
+    albumReading: 'こなゆき',
+    releaseDate: '2025-12-10',
+    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    displayPriority: 14,
+    lyrics: `粉雪が舞う夜に
+静けさが心にしみる
+白い息が空に溶けて
+遠い記憶がよみがえる
+
+粉雪よ 静かに降る
+僕の思いを届けてよ
+凍えた心 温めて
+君のもとへ 飛んでいき
+いま伝えて欲しい
+
+街灯の下 足音ひとつ
+消えてしまう 全て白く
+あの日の風に消えて
+冷たい雪が僕を包む
+
+雪の粒が語りかける
+君はどこで何を見てる
+この雪が君に届くなら
+全てを白に染めてくれ
+
+粉雪よ 静かに降り
+僕の思いを届けてよ
+凍えたこころ温めて
+君のもとへ 飛んでいき
+伝えてこの気持ちを
+
+粉雪の中で立ち尽くし
+君の名をただ呼び続ける
+雪が溶けるその日まで
+この想いよ 永遠に続け`,
+  },
+  wasurenai: {
+    title: '忘れない',
+    reading: 'わすれない',
+    album: 'TOKOSHIE / KONAYUKI',
+    albumReading: 'とこしえ / こなゆき',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 15,
+    lyrics: `老いた庭に月の影
+手を繋ぎし記憶の糸
+時の川に流されても
+思い出は記憶に残る
+
+聞こえるのはその声だけ
+この心にいつまでも
+たとえ名前を忘れても
+愛はここに残る
+
+桜散りて風が舞う
+言葉薄れ涙も消えゆく
+ただ笑顔の面影だけ
+胸に深く刻まれて
+
+忘れない 心の中でずっと
+この命尽きるとも
+たとえ記憶が途切れても
+愛は空に届きし永遠に
+
+星の夜に願うこと
+君の夢が咲き続け
+記憶の欠片が散りばめる
+永遠の絆
+
+忘れない このままずっと
+この心に刻まれし
+たとえ名前を忘れても
+愛はここに残る
+それは永遠に`,
+  },
+  naiteiikara: {
+    title: '泣いていいから',
+    reading: 'ないていいから',
+    album: 'KONAYUKI',
+    albumReading: 'こなゆき',
+    releaseDate: '2025-12-10',
+    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    displayPriority: 12,
+    lyrics: `暗い夜に隠れた声
+誰にも聞かれたくない痛み
+心の中で叫ぶだけ
+それで救われることはない
+
+隠さずに泣いていいから
+その涙は君の強さだ
+壊れた夢も拾い集めて
+新しい明日へ繋げよう
+
+君の影に潜む後悔
+手放す勇気を忘れた日々
+でもその傷が語るストーリー
+それが君を守る盾になる
+
+怖がらないで 深呼吸して
+涙の中に答えがある
+
+隠さずに泣いていいから
+その涙は君の証だ
+消えた光も探し続けて
+君だけの道を照らそう
+
+雨が降る日は傘はいらない
+その雫が君を洗い流す
+孤独な夜もいつか明ける
+君の心が空へと響く`,
+  },
+  mouichido: {
+    title: 'もう一度',
+    reading: 'もういちど',
+    album: 'KONAYUKI',
+    albumReading: 'こなゆき',
+    releaseDate: '2025-12-10',
+    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    displayPriority: 11,
+    lyrics: `カーテン越しの 朝の光
+今日も 空は 息をしてる
+消えた言葉の影を探して
+君をまだ忘れられずにいる
+あの日の空の青ささえ今は
+思い出すと苦しくて
+
+時計の針を止めたら
+何か変わるのかな
+
+もう一度 時間を戻せるとしたら
+君と出逢い君を守りたい
+戻せない日々を抱きしめながら
+いま後悔が残るだけ
+
+夕陽が街を染める静けさ
+僕は意味さえ知らずにいた
+君がいたその景色の中に
+僕は何を失ったのか
+
+記憶の扉を開けたら
+何が見えるのかな
+
+    もう一度 時間を戻せるとしたら
+    君と出逢い愛し続けるから
+    触れられぬ夢を抱きしめながら
+    まだ時間が過ぎていく`,
+  },
+  kimihe: {
+    title: '君へ',
+    reading: 'きみへ',
+    album: 'KONAYUKI',
+    albumReading: 'こなゆき',
+    releaseDate: '2025-12-10',
+    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    displayPriority: 10,
+    lyrics: `あれから何年経つのだろう
+いつだって
+当たり前に君は そばにいた
+弱さを見せるたび
+黙って手を差し出して
+何も言わずただ 守ってくれた
+
+不器用な僕は
+言葉にできずに
+優しさに甘えていた
+
+ありがとう 君がいてくれて
+ここまで歩いてこれた
+涙の夜も 迷う朝も
+君がいたから 越えられた
+好きだよ ただそれ以上に
+心から伝えたい
+出会えた奇跡に 今
+ありがとうを 君へ
+
+ぶつかって すれ違うたびに
+傷つけた言葉も あったね
+それでも離れず
+まっすぐ向き合って
+信じ続けてくれた
+
+自分よりも
+僕の幸せを
+願ってくれた君
+
+同じ明日を となりで
+これからも描こう
+何度でも伝えるよ
+ありがとう 愛してる`,
+  },
+  stillinmyheart: {
+    title: 'Still in my heart',
+    reading: 'すてぃる いん まい はーと',
+    album: 'KONAYUKI',
+    albumReading: 'こなゆき',
+    releaseDate: '2025-12-10',
+    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    displayPriority: 9,
+    lyrics: `静かな夜に ひとりきり
+思い出の中 君を探す
+笑ってた あの瞳（め）が
+今も離れないよ
+
+届かない message
+読み返すたびに
+心の奥 still bleeding
+消えない love remains
+
+You’re still in my heart
+どんなに時が過ぎても
+あの瞬間の君を
+忘れられないまま
+You’re still in my heart
+痛いほど愛してた
+もう戻れないけど
+I can’t let you go
+
+君の声が 風に溶けて
+胸の奥 響いてる
+「さよなら」さえ 優しくて
+泣けなかったあの日
+
+If I could turn back time
+君を抱きしめて
+I’d whisper softly
+“Don’t say goodbye…”
+
+You’re still in my heart
+今でも夢に出てくる
+触れられないその手を
+追いかけているよ
+You’re still in my heart
+永遠に消えない love
+君の記憶だけが
+生きている my heart`,
+  },
+  konosakinomirai: {
+    title: 'この先の未来に',
+    reading: 'このさきのみらいに',
+    album: 'KONAYUKI',
+    albumReading: 'こなゆき',
+    releaseDate: '2025-12-10',
+    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    displayPriority: 8,
+    lyrics: `雪が降り始めた 夜の街で
+ふと立ち止まり あなたを想う
+あの日交わした ささやかな言葉が
+今も胸の奥で息をしてる
+
+失ってから気がついた
+いて当たり前だと思ってた
+あなたの笑顔ひとつで
+毎日が色づいていたのに
+
+もしこの先の未来に
+あなたがいるのなら
+今度こそ離れないだろう
+手を伸ばせば届きそうな
+あの夢の続きを
+あなたと見たいと思ったんだ
+かけがえのない日々を
+抱きしめながら
+
+風に揺れてた あなたの声
+今も耳の中で優しく響く
+遠回りして 傷ついた夜も
+あなたがいるから強くなれた
+
+涙がこぼれた理由は
+弱さじゃなくて大切だから
+あなたの隣にいるだけで
+未来は輝いて見えた
+だけど今はもういない
+
+もしこの先の未来に
+あなたがいられるなら
+もう迷わずに愛を抱きしめるよ
+願い続けたぬくもりを
+離さないようにと
+胸の奥でそっと誓ったんだ
+どんな夜もあなたと
+越えていきたい`,
+  },
+  kanarazususumeru: {
+    title: '必ず進める',
+    reading: 'かならずすすめる',
+    album: 'KONAYUKI',
+    albumReading: 'こなゆき',
+    releaseDate: '2025-12-10',
+    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    displayPriority: 7,
+    lyrics: `戻れるなら この身が無くなっても
+変われるなら 痛みさえも受け止める
+風がそっと 頬をなでるたび
+辛い心は必ず報われる
+
+泣きたい時 泣いていいよ
+涙が未来の夢に変わるから
+暗闇の中 光は見える
+必ず進める信じて進んで
+
+傷ついた手 掴んだ夢
+それでも離さない 消えない願い
+冷たい夜 星も隠れて
+あなたがくれた 温もりだけ
+
+泣きたい時 泣いていいよ
+涙が未来の夢に変わるから
+孤独の中 希望は生まれる
+必ず進める信じて進んで
+
+雨が降っても 土が潤う
+涙がこぼれても 花は咲く
+儚い時間に 意味を見つけて
+また歩き出せる どこまでも
+
+泣きたい時 泣いていいよ
+涙が未来の夢になるから
+暗闇の中 光は見える
+必ず進める 信じて進んで`,
+  },
+  kokoroniitsumademo: {
+    title: '心にいつまでも',
+    reading: 'こころにいつまでも',
+    album: 'KONAYUKI',
+    albumReading: 'こなゆき',
+    releaseDate: '2025-12-10',
+    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    displayPriority: 6,
+    lyrics: `白い雪が降る 静かな夜に
+君を思い出す あの日のまま
+手をつないだ温もりだけが
+まだ胸に残っているよ
+
+届かない声が 空に溶けて
+気づけば冬が終わってゆく
+
+もう会えないとしても
+心だけは 君を抱きしめてる
+白い息にのせた 最後の願い
+「さよなら」じゃ終われない
+思い出は 心にいつまでも
+
+街灯に舞う 雪の粒が
+二人の思い出を そっと照らす
+笑い合った日々 涙の跡も
+すべてが今も愛しいまま
+
+あの約束を 果たせないまま
+時間だけが前へ進んでく
+
+触れられない距離でも
+思い出だけ そばで寄り添ってる
+    白い雪に消えた 君の温もり
+    もう一度だけでいい
+    君がそばにいて欲しいだけ
+    
+    粉雪の中で 君を想うよ永遠に
+    いつまでも続く君への愛`,
+  },
+  kimigainaisekai: {
+    title: '君が居ない世界',
+    reading: 'きみがいないせかい',
+    album: 'KONAYUKI',
+    albumReading: 'こなゆき',
+    releaseDate: '2025-12-10',
+    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    displayPriority: 5,
+    lyrics: `秋色の空が広がる朝
+静かな部屋で時計が止まる
+君の声はもう聞こえない
+ただ風がささやくように
+
+どうして笑った日々は
+遠く消えていくのだろう
+
+それでも君がいない世界は今も
+星が消えた夜のように暗い
+抱きしめた記憶も
+こぼれ落ちる涙も
+君の影 追いかける
+
+写真の中で微笑む君
+あの日に戻る事はできない
+君が残した温もりだけ
+今も胸の奥にしまう
+
+もしも戻れるならば
+全てをかけて守るから
+
+それでも君が居ない世界は今も
+色を失った花のように儚い
+さよならの言葉も
+消せないこの傷も
+君の名を呼び続ける
+
+君が居ない世界は今も
+それでも僕は思い続ける
+失った日々 この心にずっと
+君の思い出 灯しながら
+
+もう戻れないと 知りながら
+君が居ない世界でも
+君を 待っている
+愛はまだ ここにある`,
+  },
+  aitakute: {
+    title: '会いたくて',
+    reading: 'あいたくて',
+    album: 'TOKOSHIE / KONAYUKI',
+    albumReading: 'とこしえ / こなゆき',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 2,
+    lyrics: `君と出会ったあの日の空
+あの青さ今も忘れない
+風に乗って君の声が
+遠くから響いてくる
+
+夢でもいいから会いたい
+君の笑顔をもう一度
+怒られるかも知れないけど
+君に会いたくて涙が出る
+
+ふたり出会ったこの場所で
+君の影を探してしまう
+人ごみのなか  何度も見ては
+どこかに君がいる気がして
+
+夢でもいいから会いたい
+君の温もり感じたい
+誰より強く想ってる
+君に会いたくて涙が出る
+
+心の奥の深い場所
+君の名前が響いてる
+消えない記憶 焼き付いた声
+そしてこれからもここにある
+
+夢でもいいから会いたい
+君の笑顔が見たいだけ
+怒られるかも知れないけど
+君に会いたくて涙が出る`,
+  },
+  dakaraimagaaru: {
+    title: 'だから今がある',
+    reading: 'だからいまがある',
+    album: 'KONAYUKI',
+    albumReading: 'こなゆき',
+    releaseDate: '2025-12-10',
+    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    displayPriority: 3,
+    lyrics: `立ちつくした雨の中
+うつむいた あの夜でも
+明日の向こうへ 歩いてく
+
+ひとりじゃ なかったこと
+胸にともる 灯り
+
+だれにも言えなくて
+こぼれそうな 夢をつめ
+それでも 前を見つめた
+君の未来は ここにある
+
+負けそうな日 迷った日も
+あなたの声 思い出すたび
+強くなれた だから今がある
+
+まだ見えない この先も
+胸を張って 進もう
+涙は 力にして
+背中を押す その言葉
+
+孤独のかげ 感じるたびに
+心に灯を ともしながら
+それでも 笑顔でいたい
+歩き続ける この道の先`,
+  },
+  kienaiakari: {
+    title: '消えない灯り',
+    reading: 'きえないあかり',
+    album: 'KONAYUKI',
+    albumReading: 'こなゆき',
+    releaseDate: '2025-12-10',
+    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    displayPriority: 2,
+    lyrics: `立ち止まった帰り道
+まだ見えない 歩いた道を
+明日の向こうに進んでいこう
+
+夢をだいてひとりじゃない
+それでも消えない灯り
+
+涙がこぼれないように
+心を押し殺して
+それでも自分を信じた
+だから希望は 持ち続けて
+
+負けそうな日 迷った日も
+それでも無駄でなく愛せる日が
+来ると信じたい
+
+まだ見えないこの先に
+胸を張って進もう
+未来はまだ見えなくても
+手を伸ばす勇気をくれる
+
+涙はこぼれないように
+心に灯をともして
+それでも笑顔でいたい
+歩き続ける この道の先`,
+  },
+  saigonoyuki: {
+    title: '最後の雪',
+    reading: 'さいごのゆき',
+    album: 'TOKOSHIE / KONAYUKI',
+    albumReading: 'とこしえ / こなゆき',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 11,
+    lyrics: `白い吐息が街を包む
+足跡だけが語る旅路
+消えない想い胸に秘めて
+最後の雪が舞い降りる
+
+あの日の声が
+今も耳元で響く
+
+最後の雪は 優しく降り
+君の温もりを探してる
+儚い夢が溶ける前に
+この心を届けたい
+
+凍える夜に空を仰ぐ
+星たちも黙る静寂の中
+君の笑顔が浮かぶたびに
+涙はそっと頬を伝う
+
+記憶の影が
+今も心を揺らす
+
+最後の雪よ 悲しく降る
+君と交わした約束を
+冷たい風がさらう前に
+この想いを守りたい`,
+  },
   inochi: {
     title: 'いのちの理由',
     reading: 'いのちのりゆう',
@@ -77,6 +663,76 @@ const songsData = {
 忘れたいのに忘れられない
 心に響く君の影`,
   },
+  todokanai: {
+    title: '届かない・・',
+    reading: 'とどかない',
+    album: 'TOKOSHIE',
+    albumReading: 'とこしえ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 5,
+    lyrics: `空に響く静かな声
+影を追う君の後ろ姿
+白い息が夜を染める
+
+雪が降るたび心が震える
+何を失い何を残せる
+
+悲しみの雪が降りつもる
+冷たい風に夢が散る
+この手を伸ばしても届かない
+君の影ただ消えていく
+
+街灯の下でひとり泣いた
+足跡さえも雪に隠れて
+時間だけが過ぎていく
+
+思い出の中に君が笑う
+それでも今は涙が止まらない
+
+悲しみの雪が降りつもる
+心の隙間に白く積もる
+何度叫んでも届かない
+君の名前ただ響くだけ`,
+  },
+  kimitointajikan: {
+    title: '君といた時間',
+    reading: 'きみといたじかん',
+    album: 'TOKOSHIE',
+    albumReading: 'とこしえ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 13,
+    lyrics: `君と歩いたこの道は
+今も静かに僕を呼ぶ
+風が運ぶ君の声
+心の奥で響いている
+
+君といた時間をまだ照らしている
+あの日の笑顔が消えない光
+何度季節が変わっても
+僕の中で生き続ける
+
+星空の下 ふたりの影
+優しい夜が包んでいた
+君の手の温もりさえ
+忘れたくない思い出の中
+
+君といた時間をまだ照らしている
+胸に刻まれた永遠のあかり
+たとえ遠く離れても
+君は僕のすべてになる
+
+雨の匂い 窓辺の景色
+君が教えてくれた世界
+全てが今も僕の中で
+鮮やかに彩ってる
+
+君といた時間をまだ照らしている
+優しさの中で僕は生きる
+これから先の未来さえ
+今いない君と歩いていく`,
+  },
   kokoro: {
     title: '心の羽',
     reading: 'こころのはね',
@@ -115,12 +771,13 @@ const songsData = {
 新しい空へ 飛び立つのさ`,
   },
   yasashii: {
-    title: '優しい光',
-    reading: 'やさしいひかり',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28', // アルバムリリース日
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    title: '優しい光(Remix)',
+    reading: 'やさしいひかりりみっくす',
+    album: 'TOKOSHIE / NUKUMORI',
+    albumReading: 'とこしえ / ぬくもり',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 1,
     lyrics: `夜空にひとり 立ち尽くして
 星たちの声を 聞こうとして
 涙の理由は 誰にも言えず
@@ -339,10 +996,11 @@ const songsData = {
   mienai: {
     title: '見えない光',
     reading: 'みえないひかり',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    album: 'TOKOSHIE / NUKUMORI',
+    albumReading: 'とこしえ / ぬくもり',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 10,
     lyrics: `生きてきた今までの長い時間は
 辛い時も悲しい瞬間もあったのに
 手を伸ばせば消える希望の影
@@ -524,10 +1182,11 @@ const songsData = {
   kibou: {
     title: '希望へ',
     reading: 'きぼうへ',
-    album: 'NUKUMORI',
-    albumReading: 'ぬくもり',
-    releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    album: 'TOKOSHIE / NUKUMORI',
+    albumReading: 'とこしえ / ぬくもり',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 6,
     lyrics: `夜の静けさに包まれて
 涙はそっと頬を伝う
 言葉にならないこの痛み
@@ -672,10 +1331,11 @@ const songsData = {
   kimiwomamoritai: {
     title: '君を守りたい',
     reading: 'きみをまもりたい',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-07-21',
-    linkUrl: 'https://linkco.re/RZYccEGt',
+    album: 'TOKOSHIE',
+    albumReading: 'とこしえ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 3,
     lyrics: `冷たい風が吹く夜に
 君の手をそっと握りしめて
 孤独な闇に包まれても
@@ -709,10 +1369,11 @@ const songsData = {
   anohibi: {
     title: 'あの日々',
     reading: 'あのひび',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-07-17',
-    linkUrl: 'https://linkco.re/MU4uQntZ',
+    album: 'TOKOSHIE',
+    albumReading: 'とこしえ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 9,
     lyrics: `夜空に浮かぶ星ひとつ
 君の影を映してる
 忘れたくないその声が
@@ -954,10 +1615,11 @@ const songsData = {
   kimidakegasubete: {
     title: '君だけが全ての世界',
     reading: 'きみだけがすべてのせかい',
-    album: 'YASURAGI',
-    albumReading: 'やすらぎ',
-    releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    album: 'TOKOSHIE / YASURAGI',
+    albumReading: 'とこしえ / やすらぎ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 8,
     lyrics: `遠くなる声が響く夜
 胸の中で君を探す
 触れた指先が覚えてる
@@ -1721,10 +2383,11 @@ const songsData = {
   namidagakierusonohimade: {
     title: '涙が消えるその日まで',
     reading: 'なみだがきえるそのひまで',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-09-17',
-    linkUrl: 'https://linkco.re/qBcbmfV0',
+    album: 'TOKOSHIE',
+    albumReading: 'とこしえ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 12,
     lyrics: `暗いよるの静けさに
 星が一つ泣いていた
 君の声が遠くなり
@@ -1929,10 +2592,11 @@ const songsData = {
   hikarihaitsumokokoniaru: {
     title: '光はいつもここにある',
     reading: 'ひかりはいつもここにある',
-    album: '',
-    albumReading: '',
-    releaseDate: '2025-09-30',
-    linkUrl: 'https://linkco.re/cGy228q0',
+    album: 'TOKOSHIE',
+    albumReading: 'とこしえ',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 4,
     lyrics: `静かな夜にささやく声
 消えない影 心に残る
 涙の海に沈むような日々
@@ -1962,11 +2626,11 @@ const songsData = {
   deattekuretearigatou: {
     title: '出会ってくれてありがとう',
     reading: 'であってくれてありがとう',
-    album: 'KOMOREBI',
-    albumReading: 'こもれび',
-    releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
-    displayPriority: 15,
+    album: 'TOKOSHIE / KOMOREBI',
+    albumReading: 'とこしえ / こもれび',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 14,
     lyrics: `君に出会えた奇跡を
 心の奥に刻むよ
 光のように眩しい日々
@@ -2455,11 +3119,11 @@ const songsData = {
   namidademaegamienakunattemo: {
     title: '涙で前が見えなくなっても',
     reading: 'なみだでまえがみえなくなっても',
-    album: 'KOMOREBI',
-    albumReading: 'こもれび',
-    releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
-    displayPriority: 1,
+    album: 'TOKOSHIE / KOMOREBI',
+    albumReading: 'とこしえ / こもれび',
+    releaseDate: '2026-01-17',
+    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    displayPriority: 7,
     lyrics: `涙で前が見えなくなって
 それでも足は止めないで
 傷ついた心を抱えたまま
@@ -2527,7 +3191,7 @@ const songsData = {
 
 // 検索・ソート設定
 const searchSortConfig = {
-  defaultSort: 'custom', // デフォルト: 追加した順（displayPriority優先）
+  defaultSort: 'releaseDate', // デフォルト: 新しい順（KOMOREBI内はdisplayPriorityで固定）
   defaultOrder: 'desc', // デフォルト順序（優先度の高い=新規追加が先頭）
   searchFields: ['title', 'album'], // 検索対象フィールド
   itemsPerPage: 20, // 最大表示件数

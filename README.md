@@ -39,11 +39,13 @@ SUNO AIで制作した楽曲で音楽配信する新人アーティスト「appr
 - [「いのちの理由」](https://linkco.re/Hb9nfMcM)
 - [TikTok @appriver12](https://www.tiktok.com/@appriver12?is_from_webapp=1&sender_device=pc)
 
-## 運用クイックガイド（開発）
+<!-- CI: pr-required-check smoke v2 -->
 
-- フロー: ブランチ作成 → 変更 → PR作成 → Vercelプレビュー確認 → Squash and merge → 開発Productionデプロイ確認
+## 運用クイックガイド（本番）
+
+- フロー: 開発ブランチ → PR作成 → Vercelプレビュー確認 → Squash and merge（線形履歴）→ 本番デプロイ確認
 - プレビューURL: PRの「Checks → Vercel」から確認
-- Production（開発用）: Vercelのプロジェクト「appriver-claude-dev」→ 最新のProductionデプロイの Domains
+- 本番確認: https://www.appriver.jp/#songs-lyrics で表示・検索・歌詞モーダル・配信リンクを確認
 
 ### 楽曲追加の要点
 
@@ -51,17 +53,22 @@ SUNO AIで制作した楽曲で音楽配信する新人アーティスト「appr
 - 日付: `YYYY-MM-DD`（例: 2025-09-17）
 - 歌詞: バッククォート`を含めない（テンプレート文字列使用のため）
 - 配信リンク: LinkCore等のURL
+- 表示順ルール:
+  - 既定は「新しい順（releaseDate 降順）」
+  - アルバム「KOMOREBI」内は同日リリースのため、`displayPriority` で固定順（大きいほど先頭）
+  - KOMOREBI に曲を追加する場合は、既存の最大値+1を割り当てる（例: 現在最大15 → 新規は16）
 
-### CI / ルールの要点
+### CI / ルールの要点（Ruleset: main-protection）
 
-- 必須チェック（推奨）: `CI / smoke (pull_request)`
+- 必須チェック: `CI / smoke (pull_request)`（無印の`CI / smoke`は必須にしない）
+- マージ: Squashのみ、`Require linear history` 有効
+- レビュー: Required approvals = 0、`Require conversation resolution` 有効
 - verify: PR差分のコミットメッセージに `[Codex]` または `[Claude]` を含める
-- ローカル: `commit-msg` フックで同タグを強制（Husky）。コミット時に未記載だと拒否されます。
 - secrets-scan: TruffleHog v3 + 差分スキャン + `.trufflehogignore` で `songs-data.js` とバックアップを除外
 - Prettier: `.github/workflows/*.yml` は整形対象外（.prettierignore 済み）
 
 ### トラブルシューティング
 
-- RequiredがExpectedのまま: ルールで必須チェック名を「CI / smoke (pull_request)」に統一
-- verifyで`origin/main..HEAD`のエラー: checkoutに`fetch-depth: 0`、比較は`base.sha..HEAD`（現状対応済み）
+- RequiredがExpectedのまま: ルールの必須チェック名を「CI / smoke (pull_request)」に統一
+- verifyで履歴取得エラー: checkoutに`fetch-depth: 0`、比較は`base.sha..HEAD`
 - secrets-scan誤検知: `@v3`固定・`--only-verified`・`.trufflehogignore`の見直し

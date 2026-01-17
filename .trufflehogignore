@@ -1,7 +1,2 @@
-# TruffleHog exclude paths (regex)
-# 大容量データ/歌詞・ワークフロー・ドキュメント・ツール雛形を除外（誤検知回避）
-^songs-data\.js$
-^songs-data\.js\.backup.*$
-^docs/.*$
-^tools/song-builder/.*$
-^\.github/workflows/.*$
+songs-data.js
+songs-data.js.backup*

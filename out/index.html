@@ -16,42 +16,12 @@
     <script defer src="/_vercel/insights/script.js"></script>
 
     <style>
-      body {
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Noto Sans JP', Arial,
-          sans-serif;
-        margin: 0;
-        padding: 2rem;
-        color: #333;
-      }
-      .box {
-        max-width: 560px;
-        margin: 10vh auto 0;
-        border: 1px solid #eee;
-        border-radius: 12px;
-        padding: 1.5rem;
-        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
-      }
-      .title {
-        margin: 0 0 0.25rem;
-        font-size: 1.25rem;
-        font-weight: 600;
-      }
-      .url {
-        word-break: break-all;
-        color: #666;
-        font-size: 0.9rem;
-      }
-      .hint {
-        margin-top: 0.75rem;
-        color: #666;
-        font-size: 0.9rem;
-      }
-      .link {
-        display: inline-block;
-        margin-top: 1rem;
-        color: #0b6bcb;
-        text-decoration: none;
-      }
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Noto Sans JP', Arial, sans-serif; margin: 0; padding: 2rem; color: #333; }
+      .box { max-width: 560px; margin: 10vh auto 0; border: 1px solid #eee; border-radius: 12px; padding: 1.5rem; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06); }
+      .title { margin: 0 0 0.25rem; font-size: 1.25rem; font-weight: 600; }
+      .url { word-break: break-all; color: #666; font-size: 0.9rem; }
+      .hint { margin-top: 0.75rem; color: #666; font-size: 0.9rem; }
+      .link { display: inline-block; margin-top: 1rem; color: #0b6bcb; text-decoration: none; }
     </style>
   </head>
   <body>
@@ -66,70 +36,13 @@
       (function () {
         var params = new URLSearchParams(location.search);
         var to = window.REDIRECT_TO || params.get('to');
-        // Fallback: rewritesが無効で /out/<slug> に直接来た場合のスラッグ解決
-        if (!to) {
-          try {
-            var m = (location.pathname || '').match(/\/out\/([^\/?#]+)/);
-            var slug = m && m[1];
-            if (slug) {
-              var map = {
-                'line-music': 'https://music.line.me/playlist/upi7nLrdtfvhxjzl9Eel6t3v5zzqyDypzjJn',
-                'apple-music': 'https://music.apple.com/jp/playlist/appriver-%E5%85%AC%E5%BC%8F%E3%83%97%E3%83%AC%E3%82%A4%E3%83%AA%E3%82%B9%E3%83%88/pl.u-V9D7vD9FEP64AZ',
-                'apple-music-embed': 'https://embed.music.apple.com/jp/playlist/appriver-%E5%85%AC%E5%BC%8F%E3%83%97%E3%83%AC%E3%82%A4%E3%83%AA%E3%82%B9%E3%83%88/pl.u-V9D7vD9FEP64AZ',
-                spotify: 'https://open.spotify.com/playlist/1Y4ICAnET0o7CPHRycOriz',
-                youtube: 'https://www.youtube.com/@appriver12',
-                others: 'https://www.tunecore.co.jp/artists?id=991248',
-                'spotify-artist': 'https://open.spotify.com/intl-ja/artist/2PbgbV4vBCzAUV9ZfHPG3Z',
-                'apple-artist': 'https://music.apple.com/jp/artist/%E3%82%A2%E3%83%83%E3%83%97%E3%83%AA%E3%83%90%E3%83%BC/1816403477',
-                yasuragi: 'https://linkco.re/1gXERgmA',
-                nukumori: 'https://linkco.re/E7hxe2Ay',
-                'karaoke-coupon': 'https://social.kicks.video/v1/re/kr/83855/joysound_coupon?utm_source=vk&utm_medium=sw&utm_campaign=share&utm_term=83855',
-              };
-              if (map[slug]) to = map[slug];
-            }
-          } catch (_) {}
-        }
-        try {
-          if (to) to = decodeURIComponent(to);
-        } catch (_) {}
+        try { if (to) to = decodeURIComponent(to); } catch (_) {}
         var linkEl = document.getElementById('link');
         var destEl = document.getElementById('dest');
-        if (to) {
-          linkEl.href = to;
-          destEl.textContent = to;
-        } else {
-          destEl.textContent = 'リンク先URLが見つかりませんでした。';
-        }
-
-        // ページビュー送信の猶予を確保してから遷移（約300ms）
-        // 戻るで再訪した場合は自動遷移を抑止
-        window.addEventListener('load', function () {
-          try {
-            var m2 = (location.pathname || '').match(/\/out\/([^\/?#]+)/);
-            var slug2 = m2 && m2[1];
-            var key = slug2 ? 'out_redirected_' + slug2 : 'out_redirected_generic';
-            var already = sessionStorage.getItem(key);
-            if (already) {
-              // 2回目以降はボタンのみ表示
-              return;
-            }
-            var isIOS = /iP(hone|od|ad)/.test(navigator.userAgent);
-            setTimeout(function () {
-              if (to) {
-                try { sessionStorage.setItem(key, '1'); } catch (_) {}
-                // iOSは戻る時に前ページへ復帰しやすいよう replace を使用
-                if (isIOS) {
-                  location.replace(to);
-                } else {
-                  location.assign(to);
-                }
-              }
-            }, 300);
-          } catch (_) {
-            setTimeout(function () { if (to) location.assign(to); }, 300);
-          }
-        });
+        if (to) { linkEl.href = to; destEl.textContent = to; } else { destEl.textContent = 'リンク先URLが見つかりませんでした。'; }
+        window.addEventListener('load', function () { setTimeout(function () { if (to) location.replace(to); }, 300); });
       })();
     </script>
   </body>
   </html>
+

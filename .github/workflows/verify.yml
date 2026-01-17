@@ -37,8 +37,12 @@ jobs:
         run: |
           if [[ "${{ github.event_name }}" == "pull_request" ]]; then
             echo "🔒 Verifying tool lock compliance..."
-            git fetch --no-tags --depth=100 origin ${{ github.event.pull_request.base.ref }}:${{ github.event.pull_request.base.ref }} || true
-            git log --oneline ${{ github.event.pull_request.base.sha }}..HEAD | grep -E '\[(Claude|Codex)\]' || {
+            
+            # Fetch base branch to ensure history exists
+  　　　　　　git fetch --no-tags --depth=100 origin ${{ github.event.pull_request.base.ref }}:
+  ${{ github.event.pull_request.base.ref }} || true
+            # Check commit messages between base SHA and HEAD for tool tags
+            git log --oneline ${{ github.event_pull_request.base.sha }}..HEAD | grep -E '\[(Claude|Codex)\]' || {
               echo "❌ Missing tool tag in commit messages. Please add [Claude] or [Codex] tag."
               exit 1
             }
