@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>appriver - 公式サイト</title>
     <meta name="description" content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
-    
+
     <!-- OGP Meta Tags -->
     <meta property="og:title" content="appriver - 公式サイト">
-    <meta property="og:description" content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
+    <meta property="og:description"
+        content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
     <meta property="og:image" content="https://appriver.jp/OGP.png">
     <meta property="og:url" content="https://appriver.jp/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="appriver">
     <meta property="og:locale" content="ja_JP">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="appriver - 公式サイト">
-    <meta name="twitter:description" content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
+    <meta name="twitter:description"
+        content="appriver公式サイト。SUNO AIで作成した楽曲を配信中。アルバム「NUKUMORI」をはじめ、いのちの理由、君の影などの楽曲をお楽しみください。">
     <meta name="twitter:image" content="https://appriver.jp/OGP.png">
-    
+
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#e8a48b">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -28,10 +31,10 @@
     <meta name="apple-mobile-web-app-title" content="appriver">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="appriver">
-    
+
     <!-- Web App Manifest -->
     <link rel="manifest" href="/manifest.json">
-    
+
     <!-- Apple Touch Icons -->
     <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png">
@@ -41,20 +44,22 @@
     <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon-76x76.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-touch-icon-57x57.png">
-    
+
     <!-- Standard Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    
+
     <!-- Microsoft Tiles -->
     <meta name="msapplication-TileColor" content="#e8a48b">
     <meta name="msapplication-TileImage" content="/icons/apple-touch-icon-144x144.png">
     <meta name="msapplication-config" content="/browserconfig.xml">
-    
+
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=M+PLUS+2:wght@100;200;300;400;500;600;700;800;900&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=M+PLUS+2:wght@100;200;300;400;500;600;700;800;900&family=Klee+One:wght@400;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- Vercel Web Analytics -->
@@ -65,14 +70,17 @@
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
 </head>
+
 <body>
     <!-- Pull to Refresh Indicator (Mobile Only) -->
     <div id="pullToRefreshIndicator" class="pull-to-refresh-indicator">
         <div class="pull-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2V6L8 2L12 2ZM12 2L16 6L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M12 6V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M8 18L12 22L16 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 2V6L8 2L12 2ZM12 2L16 6L12 2Z" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 6V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M8 18L12 22L16 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
             </svg>
         </div>
         <div class="pull-text">引っ張って更新</div>
@@ -99,15 +107,13 @@
             <div id="reloadGuide" class="reload-guide">
                 <div class="reload-text">画面を2回<br>タップして更新</div>
             </div>
-            
+
             <div class="hero-content">
                 <h1 class="artist-name">appriver</h1>
                 <p class="description">created with SUNO AI</p>
-                
+
                 <!-- TOKOSHIE Release CTA: プレイヤー先頭へ同一タブ遷移 -->
-                <a href="#music-players" 
-                   class="hero-release-button new-release"
-                   aria-label="TOKOSHIEアルバムを聴く">
+                <a href="#music-players" class="hero-release-button new-release" aria-label="TOKOSHIEアルバムを聴く">
                     2026.1.17<br>
                     BEST ALBUM 「TOKOSHIE」<br>
                     全ストアにて配信開始<br>
@@ -115,29 +121,22 @@
                 </a>
 
                 <!-- YASURAGI CTA（将来再利用のため保持・非表示） -->
-                <a href="/out/yasuragi" 
-                   target="_blank" 
-                   class="hero-release-button new-release"
-                   aria-label="YASURAGIアルバムを聴く"
-                   rel="nofollow noopener"
-                   hidden aria-hidden="true" tabindex="-1">
+                <a href="/out/yasuragi" target="_blank" class="hero-release-button new-release"
+                    aria-label="YASURAGIアルバムを聴く" rel="nofollow noopener" hidden aria-hidden="true" tabindex="-1">
                     2025.8.22<br>
                     2ndアルバム「YASURAGI」<br>
                     全ストアにて配信開始<br>
                     今すぐ聴く
                 </a>
             </div>
-            
+
             <!-- スクロールガイド -->
             <div id="scrollGuide" class="scroll-guide">
                 <div class="scroll-text">画面をスクロール</div>
             </div>
-            
+
             <!-- カラオケクーポンボタン -->
-            <a href="/out/karaoke-coupon" 
-               target="_blank" 
-               class="hero-karaoke-coupon-button"
-               aria-label="カラオケクーポンを取得">
+            <a href="/out/karaoke-coupon" target="_blank" class="hero-karaoke-coupon-button" aria-label="カラオケクーポンを取得">
                 カラオケクーポン<br>
                 今すぐ取得
             </a>
@@ -150,7 +149,7 @@
                 <div class="player-note">
                     <p><i class="fas fa-info-circle"></i> フル再生には各プラットフォームの<br>サブスクリプションが必要です</p>
                 </div>
-                
+
                 <div class="platform-selector">
                     <button class="platform-btn active" data-platform="apple-music">
                         <i class="fab fa-apple"></i>
@@ -187,9 +186,10 @@
                                     <span>Apple Music</span>
                                 </div>
                             </div>
-                            
+
                             <div class="apple-music-playlist-link">
-                                <a href="https://embed.music.apple.com/jp/playlist/appriver-%E5%85%AC%E5%BC%8F%E3%83%97%E3%83%AC%E3%82%A4%E3%83%AA%E3%82%B9%E3%83%88/pl.u-V9D7vD9FEP64AZ" class="apple-music-embed-btn">
+                                <a href="https://embed.music.apple.com/jp/playlist/appriver-%E5%85%AC%E5%BC%8F%E3%83%97%E3%83%AC%E3%82%A4%E3%83%AA%E3%82%B9%E3%83%88/pl.u-V9D7vD9FEP64AZ"
+                                    class="apple-music-embed-btn">
                                     <i class="fas fa-external-link-alt"></i>
                                     <span>プレイリストを開く</span>
                                 </a>
@@ -204,7 +204,7 @@
                                     <span>Spotify</span>
                                 </div>
                             </div>
-                            
+
                             <div class="spotify-playlist-link">
                                 <a href="/out/spotify/" class="spotify-full-playlist-btn">
                                     <i class="fas fa-external-link-alt"></i>
@@ -223,7 +223,8 @@
                             </div>
 
                             <div class="amazon-artist-link">
-                                <a href="https://music.amazon.co.jp/artists/B0F9TGK1JY/%E3%82%A2%E3%83%83%E3%83%97%E3%83%AA%E3%83%90%E3%83%BC" class="amazon-artist-btn others-full-playlist-btn" rel="nofollow noopener">
+                                <a href="https://music.amazon.co.jp/artists/B0F9TGK1JY/%E3%82%A2%E3%83%83%E3%83%97%E3%83%AA%E3%83%90%E3%83%BC"
+                                    class="amazon-artist-btn others-full-playlist-btn" rel="nofollow noopener">
                                     <i class="fas fa-external-link-alt"></i>
                                     <span>アーティストを開く</span>
                                 </a>
@@ -238,9 +239,10 @@
                                     <span>LINE Music</span>
                                 </div>
                             </div>
-                            
+
                             <div class="line-playlist-link">
-                                <a href="https://music.line.me/playlist/upi7nLrdtfvhxjzl9Eel6t3v5zzqyDypzjJn" target="_blank" class="line-full-playlist-btn" rel="nofollow noopener">
+                                <a href="https://music.line.me/playlist/upi7nLrdtfvhxjzl9Eel6t3v5zzqyDypzjJn"
+                                    target="_blank" class="line-full-playlist-btn" rel="nofollow noopener">
                                     <i class="fas fa-external-link-alt"></i>
                                     <span>プレイリストを開く</span>
                                 </a>
@@ -255,7 +257,7 @@
                                     <span>YouTube</span>
                                 </div>
                             </div>
-                            
+
                             <div class="youtube-playlist-link">
                                 <a href="/out/youtube/" class="youtube-full-playlist-btn">
                                     <i class="fas fa-external-link-alt"></i>
@@ -272,7 +274,7 @@
                                     <span>Other Platforms</span>
                                 </div>
                             </div>
-                            
+
                             <div class="others-playlist-link">
                                 <a href="/out/others/" class="others-full-playlist-btn">
                                     <i class="fas fa-music"></i>
@@ -309,7 +311,7 @@
                     <div id="swipeGuide" class="swipe-guide">
                         <div class="swipe-text">左右にスワイプ</div>
                     </div>
-                    
+
                     <button class="slider-btn prev">&#10094;</button>
                     <div class="slider-track">
                         <!-- 動的生成: search-sort.js が releaseDate(YYYY-MM-DD) 降順でカードを描画します -->
@@ -317,7 +319,7 @@
                     <button class="slider-btn next">&#10095;</button>
                 </div>
                 <!-- Song Slider End -->
-                
+
                 <!-- Lyrics Display -->
                 <div class="lyrics-display" id="lyrics-display" style="display: none;">
                     <div class="lyrics-song-title" id="lyrics-title"></div>
@@ -333,37 +335,37 @@
 
 
 
-                        
 
 
 
 
 
-                        
 
 
 
 
 
-                        
 
 
 
 
 
-                        
 
 
 
 
 
-                        
 
 
 
 
-                    </div>
-                </div>
+
+
+
+
+
+            </div>
+            </div>
             </div>
         </section>
 
@@ -371,11 +373,29 @@
             <div class="container">
                 <h2>ALBUM</h2>
                 <div class="albums-container">
+                    <!-- New Album: IROZUKI -->
+                    <div class="album-info">
+                        <div class="album-artwork">
+                            <div class="album-artwork-container">
+                                <img src="IROZUKI.jpg" alt="IROZUKI アルバムアート" class="album-artwork-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="placeholder-artwork">IROZUKI</div>
+                            </div>
+                        </div>
+                        <div class="album-details">
+                            <h3>IROZUKI</h3>
+                            <p class="track-count">15曲</p>
+                            <p class="release-date">2026.1.30<br>全ストアにて配信開始</p>
+                            <a href="#" class="stream-link" target="_blank" rel="nofollow noopener">聴いてみる</a>
+                        </div>
+                    </div>
+
                     <!-- Best Album: TOKOSHIE (先頭) -->
                     <div class="album-info">
                         <div class="album-artwork">
                             <div class="album-artwork-container">
-                                <img src="TOKOSHIE.jpg" alt="TOKOSHIE アルバムアート" class="album-artwork-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <img src="TOKOSHIE.jpg" alt="TOKOSHIE アルバムアート" class="album-artwork-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                                 <div class="placeholder-artwork">TOKOSHIE</div>
                             </div>
                         </div>
@@ -383,7 +403,8 @@
                             <h3>TOKOSHIE</h3>
                             <p class="track-count">BEST ALBUM・全15曲</p>
                             <p class="release-date">2026.1.17<br>全ストアにて配信開始</p>
-                            <a href="https://linkco.re/S1b5FZ8s" class="stream-link" target="_blank" rel="nofollow noopener">聴いてみる</a>
+                            <a href="https://linkco.re/S1b5FZ8s" class="stream-link" target="_blank"
+                                rel="nofollow noopener">聴いてみる</a>
                         </div>
                     </div>
 
@@ -391,7 +412,8 @@
                     <div class="album-info">
                         <div class="album-artwork">
                             <div class="album-artwork-container">
-                                <img src="粉雪.jpg" alt="KONAYUKI アルバムアート" class="album-artwork-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <img src="粉雪.jpg" alt="KONAYUKI アルバムアート" class="album-artwork-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                                 <div class="placeholder-artwork">KONAYUKI</div>
                             </div>
                         </div>
@@ -399,7 +421,8 @@
                             <h3>KONAYUKI</h3>
                             <p class="track-count">15曲</p>
                             <p class="release-date">2025.12.10<br>全ストアにて配信中</p>
-                            <a href="https://linkco.re/rZAQ9cfa" class="stream-link" target="_blank" rel="nofollow noopener">聴いてみる</a>
+                            <a href="https://linkco.re/rZAQ9cfa" class="stream-link" target="_blank"
+                                rel="nofollow noopener">聴いてみる</a>
                         </div>
                     </div>
 
@@ -407,7 +430,8 @@
                     <div class="album-info komorebi">
                         <div class="album-artwork">
                             <div class="album-artwork-container">
-                                <img src="KOMOREBI.jpg" alt="KOMOREBI アルバムアート" class="album-artwork-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <img src="KOMOREBI.jpg" alt="KOMOREBI アルバムアート" class="album-artwork-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                                 <div class="placeholder-artwork">KOMOREBI</div>
                             </div>
                         </div>
@@ -415,7 +439,8 @@
                             <h3>KOMOREBI</h3>
                             <p class="track-count">15曲</p>
                             <p class="release-date">2025.10.20<br>全ストアにて配信中</p>
-                            <a href="https://linkco.re/n4fg1c51" class="stream-link" target="_blank" rel="nofollow noopener">聴いてみる</a>
+                            <a href="https://linkco.re/n4fg1c51" class="stream-link" target="_blank"
+                                rel="nofollow noopener">聴いてみる</a>
                         </div>
                     </div>
 
@@ -423,7 +448,8 @@
                     <div class="album-info">
                         <div class="album-artwork">
                             <div class="album-artwork-container">
-                                <img src="yasuragi-album.jpg" alt="YASURAGI アルバムアート" class="album-artwork-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <img src="yasuragi-album.jpg" alt="YASURAGI アルバムアート" class="album-artwork-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                                 <div class="placeholder-artwork">YASURAGI</div>
                             </div>
                         </div>
@@ -434,12 +460,13 @@
                             <a href="/out/yasuragi" class="stream-link" target="_blank">聴いてみる</a>
                         </div>
                     </div>
-                    
+
                     <!-- 1st Album: NUKUMORI -->
                     <div class="album-info">
                         <div class="album-artwork">
                             <div class="album-artwork-container">
-                                <img src="nukumori-album.jpg" alt="NUKUMORI アルバムアート" class="album-artwork-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <img src="nukumori-album.jpg" alt="NUKUMORI アルバムアート" class="album-artwork-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                                 <div class="placeholder-artwork">NUKUMORI</div>
                             </div>
                         </div>
@@ -500,53 +527,54 @@
     <script src="analytics.js"></script>
     <!-- Apple Select Modal -->
     <div id="appleSelectModal" class="select-modal" aria-hidden="true">
-      <div class="select-modal-backdrop" data-close="apple-select"></div>
-      <div class="select-modal-card" role="dialog" aria-labelledby="appleSelectTitle">
-        <div class="select-modal-header">
-          <h3 id="appleSelectTitle">Apple Music を開く</h3>
-          <button class="select-modal-close" aria-label="閉じる" data-close="apple-select">×</button>
+        <div class="select-modal-backdrop" data-close="apple-select"></div>
+        <div class="select-modal-card" role="dialog" aria-labelledby="appleSelectTitle">
+            <div class="select-modal-header">
+                <h3 id="appleSelectTitle">Apple Music を開く</h3>
+                <button class="select-modal-close" aria-label="閉じる" data-close="apple-select">×</button>
+            </div>
+            <p class="select-modal-desc">開き方を選択してください。</p>
+            <div class="select-modal-actions">
+                <a class="apple-music-embed-btn" href="/out/apple-music-embed/">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>ブラウザで開く</span>
+                </a>
+                <a class="apple-music-full-playlist-btn" href="/out/apple-music/">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>アプリで開く</span>
+                </a>
+            </div>
         </div>
-        <p class="select-modal-desc">開き方を選択してください。</p>
-        <div class="select-modal-actions">
-          <a class="apple-music-embed-btn" href="/out/apple-music-embed/">
-            <i class="fas fa-external-link-alt"></i>
-            <span>ブラウザで開く</span>
-          </a>
-          <a class="apple-music-full-playlist-btn" href="/out/apple-music/">
-            <i class="fas fa-external-link-alt"></i>
-            <span>アプリで開く</span>
-          </a>
-        </div>
-      </div>
     </div>
     <script>
-      (function () {
-        const openBtn = document.querySelector('[data-open="apple-select"]');
-        const modal = document.getElementById('appleSelectModal');
-        if (!openBtn || !modal) return;
-        function openModal(e) {
-          e.preventDefault();
-          modal.setAttribute('aria-hidden', 'false');
-          modal.classList.add('open');
-          document.body.style.overflow = 'hidden';
-        }
-        function closeModal() {
-          modal.setAttribute('aria-hidden', 'true');
-          modal.classList.remove('open');
-          document.body.style.overflow = '';
-        }
-        openBtn.addEventListener('click', openModal);
-        modal.addEventListener('click', function (e) {
-          const t = e.target;
-          if (!t) return;
-          if (t.matches('[data-close="apple-select"]')) {
-            closeModal();
-          }
-        });
-        document.addEventListener('keydown', function (e) {
-          if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
-        });
-      })();
+        (function () {
+            const openBtn = document.querySelector('[data-open="apple-select"]');
+            const modal = document.getElementById('appleSelectModal');
+            if (!openBtn || !modal) return;
+            function openModal(e) {
+                e.preventDefault();
+                modal.setAttribute('aria-hidden', 'false');
+                modal.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeModal() {
+                modal.setAttribute('aria-hidden', 'true');
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+            openBtn.addEventListener('click', openModal);
+            modal.addEventListener('click', function (e) {
+                const t = e.target;
+                if (!t) return;
+                if (t.matches('[data-close="apple-select"]')) {
+                    closeModal();
+                }
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+            });
+        })();
     </script>
 </body>
+
 </html>
