@@ -29,6 +29,7 @@ body {
     transform: translateY(-100%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -40,6 +41,7 @@ body {
     transform: translateX(-100%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -51,6 +53,7 @@ body {
     transform: translateX(100%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -62,6 +65,7 @@ body {
   100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
@@ -72,6 +76,7 @@ body {
   100% {
     box-shadow: 0 0 5px rgba(232, 164, 139, 0.5);
   }
+
   50% {
     box-shadow:
       0 0 20px rgba(232, 164, 139, 0.8),
@@ -142,6 +147,7 @@ body {
     from {
       transform: rotate(0deg);
     }
+
     to {
       transform: rotate(360deg);
     }
@@ -215,12 +221,15 @@ nav {
 .nav-links li:nth-child(1) {
   animation-delay: 0.2s;
 }
+
 .nav-links li:nth-child(2) {
   animation-delay: 0.4s;
 }
+
 .nav-links li:nth-child(3) {
   animation-delay: 0.6s;
 }
+
 .nav-links li:nth-child(4) {
   animation-delay: 0.8s;
 }
@@ -306,6 +315,7 @@ nav {
   100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -323,6 +333,7 @@ nav {
     opacity: 0;
     transform: translateY(50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -344,6 +355,7 @@ nav {
   0% {
     background-position: 200% 200%;
   }
+
   100% {
     background-position: -200% -200%;
   }
@@ -377,6 +389,7 @@ nav {
 }
 
 /* YASURAGIボタン化スタイル */
+/* YASURAGIボタン化スタイル */
 .hero-release-button {
   /* 基本スタイル（hero-release-infoを継承） */
   font-size: 1.2rem;
@@ -384,67 +397,69 @@ nav {
   text-align: center;
   line-height: 1.4;
   text-decoration: none;
-  color: #1f2a14;
+  color: #2a1f14;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
 
   /* ボタン特有のスタイル */
   display: inline-block;
-  background: linear-gradient(135deg, #6fa451, #b8d66f, #f4d98a);
+  background: linear-gradient(135deg, #ff9a7b, #ffc8a2, #ffd4c5);
   background-size: 200% 200%;
   padding: 15px 25px;
   border-radius: 15px;
   font-weight: 600;
-  box-shadow: 0 8px 24px rgba(88, 126, 57, 0.35);
+  box-shadow: 0 8px 24px rgba(255, 122, 92, 0.35);
   transition: all 0.3s ease;
   cursor: pointer;
-  border: 2px solid rgba(120, 165, 80, 0.95);
+  border: 2px solid rgba(255, 145, 110, 0.95);
   backdrop-filter: blur(10px);
-  animation: tokoshieGlow 4s ease-in-out infinite;
-  background-color: #dfe6a2;
+  animation: irozukiGlow 4s ease-in-out infinite;
+  background-color: #ffe6d9;
 }
 
 .hero-release-button:hover,
 .hero-release-button:focus {
   transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(88, 126, 57, 0.45);
-  background: linear-gradient(135deg, #7fb863, #c3e07d, #f8e3a1);
+  box-shadow: 0 14px 36px rgba(255, 122, 92, 0.45);
+  background: linear-gradient(135deg, #ffad91, #ffd2b3, #ffe0d4);
   background-size: 200% 200%;
-  border-color: rgba(132, 176, 92, 1);
+  border-color: rgba(255, 160, 130, 1);
   text-decoration: none;
-  color: #1f2a14;
+  color: #2a1f14;
 }
 
 .hero-release-button:active {
   transform: translateY(0);
-  box-shadow: 0 3px 12px rgba(162, 124, 47, 0.35);
+  box-shadow: 0 3px 12px rgba(162, 85, 47, 0.35);
 }
 
-@keyframes tokoshieGlow {
+@keyframes irozukiGlow {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
-/* CTA 背景色の強制上書き（TOKOSHIEカラー） */
+/* CTA 背景色の強制上書き（IROZUKIカラー） */
 .hero .hero-release-button {
-  background: linear-gradient(135deg, #6fa451, #b8d66f, #f4d98a) !important;
-  background-color: #dfe6a2 !important;
-  border-color: rgba(120, 165, 80, 0.95) !important;
-  box-shadow: 0 8px 24px rgba(88, 126, 57, 0.35) !important;
+  background: linear-gradient(135deg, #ff9a7b, #ffc8a2, #ffd4c5) !important;
+  background-color: #ffe6d9 !important;
+  border-color: rgba(255, 145, 110, 0.95) !important;
+  box-shadow: 0 8px 24px rgba(255, 122, 92, 0.35) !important;
 }
 
 .hero .hero-release-button:hover,
 .hero .hero-release-button:focus {
-  background: linear-gradient(135deg, #7fb863, #c3e07d, #f8e3a1) !important;
-  background-color: #e7efb4 !important;
-  border-color: rgba(132, 176, 92, 1) !important;
-  box-shadow: 0 12px 28px rgba(88, 126, 57, 0.45) !important;
+  background: linear-gradient(135deg, #ffad91, #ffd2b3, #ffe0d4) !important;
+  background-color: #fff0e8 !important;
+  border-color: rgba(255, 160, 130, 1) !important;
+  box-shadow: 0 12px 28px rgba(255, 122, 92, 0.45) !important;
 }
 
 /* Karaoke Coupon Button */
@@ -470,7 +485,8 @@ nav {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  display: inline-block; /* ボタン表示開始 */
+  display: inline-block;
+  /* ボタン表示開始 */
 }
 
 .hero-karaoke-coupon-button:hover,
@@ -554,9 +570,11 @@ section h2::after {
   0% {
     left: -100%;
   }
+
   50% {
     left: 100%;
   }
+
   100% {
     left: -100%;
   }
@@ -830,6 +848,7 @@ section h2::after {
       0 0 20px rgba(88, 126, 57, 0.2);
     transform: scale(1);
   }
+
   50% {
     box-shadow:
       0 6px 25px rgba(88, 126, 57, 0.5),
@@ -843,6 +862,7 @@ section h2::after {
   100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
@@ -852,6 +872,7 @@ section h2::after {
   0% {
     transform: translateX(-100%) translateY(-100%) rotate(45deg);
   }
+
   100% {
     transform: translateX(100%) translateY(100%) rotate(45deg);
   }
@@ -926,6 +947,7 @@ section h2::after {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }
+
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
   }
@@ -1273,15 +1295,19 @@ section h2::after {
 .social-link:nth-child(1) {
   animation-delay: 0.1s;
 }
+
 .social-link:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 .social-link:nth-child(3) {
   animation-delay: 0.3s;
 }
+
 .social-link:nth-child(4) {
   animation-delay: 0.4s;
 }
+
 .social-link:nth-child(5) {
   animation-delay: 0.5s;
 }
@@ -1894,7 +1920,8 @@ section h2::after {
 
 .amazon-logo i {
   font-size: 4rem;
-  color: #ff9900; /* Amazon brand accent */
+  color: #ff9900;
+  /* Amazon brand accent */
   animation: pulse 2s ease-in-out infinite alternate;
   filter: drop-shadow(0 4px 8px rgba(255, 153, 0, 0.3));
 }
@@ -2199,7 +2226,8 @@ section h2::after {
 
 .line-logo i {
   font-size: 4rem;
-  color: #06c755; /* LINE brand color */
+  color: #06c755;
+  /* LINE brand color */
   animation: pulse 2s ease-in-out infinite alternate;
   filter: drop-shadow(0 4px 8px rgba(6, 199, 85, 0.3));
 }
@@ -2261,6 +2289,7 @@ section h2::after {
 .line-full-playlist-btn i {
   font-size: 1.2rem;
 }
+
 /* Footer */
 footer {
   background: #333;
@@ -2476,7 +2505,8 @@ footer {
     margin-top: 1.5rem;
     padding: 12px 20px;
     border-radius: 12px;
-    touch-action: manipulation; /* モバイルでのタップ最適化 */
+    touch-action: manipulation;
+    /* モバイルでのタップ最適化 */
   }
 
   .hero-karaoke-coupon-button {
@@ -2484,8 +2514,10 @@ footer {
     margin-top: 1rem;
     padding: 8px 15px;
     border-radius: 10px;
-    touch-action: manipulation; /* モバイルでのタップ最適化 */
-    top: 80%; /* モバイルでの位置調整 */
+    touch-action: manipulation;
+    /* モバイルでのタップ最適化 */
+    top: 80%;
+    /* モバイルでの位置調整 */
   }
 
   .placeholder-artwork {
@@ -2999,6 +3031,7 @@ footer {
   .line-logo i {
     font-size: 2.2rem;
   }
+
   .line-logo span {
     font-size: 1.4rem;
     font-weight: 600;
@@ -3030,10 +3063,12 @@ footer {
   .line-full-playlist-btn i {
     font-size: 1.3rem;
   }
+
   .line-full-playlist-btn:active {
     transform: translateY(-1px) scale(0.98);
     box-shadow: 0 4px 15px rgba(232, 164, 139, 0.3);
   }
+
   .youtube-full-playlist-btn i {
     font-size: 1.3rem;
   }
@@ -3184,6 +3219,7 @@ footer {
       opacity: 0;
       transform: translateX(-50%) translateY(10px);
     }
+
     100% {
       opacity: 0.9;
       transform: translateX(-50%) translateY(0);
@@ -3195,6 +3231,7 @@ footer {
     100% {
       opacity: 0.9;
     }
+
     50% {
       opacity: 0.4;
     }
@@ -3240,6 +3277,7 @@ footer {
       opacity: 0;
       transform: translateX(-50%) translateY(10px);
     }
+
     100% {
       opacity: 0.9;
       transform: translateX(-50%) translateY(0);
@@ -3280,6 +3318,7 @@ footer {
       opacity: 0;
       transform: translateX(-50%) translateY(10px);
     }
+
     100% {
       opacity: 0.9;
       transform: translateX(-50%) translateY(0);
@@ -3316,14 +3355,17 @@ footer {
   justify-content: center;
   z-index: 2000;
 }
+
 .select-modal.open {
   display: flex;
 }
+
 .select-modal-backdrop {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.35);
 }
+
 .select-modal-card {
   position: relative;
   width: min(560px, 92vw);
@@ -3333,6 +3375,7 @@ footer {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
+
 .select-modal-header {
   display: flex;
   align-items: center;
@@ -3340,10 +3383,12 @@ footer {
   gap: 0.5rem;
   margin-bottom: 0.4rem;
 }
+
 .select-modal-header h3 {
   font-size: 1.1rem;
   margin: 0;
 }
+
 .select-modal-close {
   background: transparent;
   border: none;
@@ -3351,16 +3396,19 @@ footer {
   cursor: pointer;
   color: #666;
 }
+
 .select-modal-desc {
   margin: 0.2rem 0 0.8rem;
   color: #555;
   font-size: 0.95rem;
 }
+
 .select-modal-actions {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.6rem;
 }
+
 @media (min-width: 480px) {
   .select-modal-actions {
     grid-template-columns: 1fr 1fr;
