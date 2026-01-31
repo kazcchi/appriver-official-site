@@ -47,8 +47,11 @@ jobs:
       - name: Filter change list (allowed paths only)
         run: |
           set -euo pipefail
-          # 許可する昇格対象（ルート直下の主要ファイル）
-          ALLOW_REGEX='^(index\.html|style\.css|songs-data\.js|search-sort\.js|slider\.js|music-players\.js|vercel\.json)$'
+          # 許可する昇格対象（ルート直下の主要ファイル + 画像）
+          # - 主要ファイル: index.html, style.css, songs-data.js, search-sort.js, slider.js, music-players.js, vercel.json
+          # - 画像ファイル: *.jpg, *.png (アルバムアート、OGP等)
+          # - アイコン: icons/*.png
+          ALLOW_REGEX='^(index\.html|style\.css|songs-data\.js|search-sort\.js|slider\.js|music-players\.js|vercel\.json|[^/]+\.(jpg|png)|icons/[^/]+\.png)$'
           awk -F '\t' -v re="$ALLOW_REGEX" '{
             status=$1; a=$2; b=$3;
             p=a; if (status ~ /^[RC]/ && b!="") p=b;
