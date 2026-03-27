@@ -446,20 +446,20 @@ nav {
   }
 }
 
-/* CTA 背景色の強制上書き（IROZUKIカラー） */
+/* CTA 背景色の強制上書き（kagayakiカラー：淡いピンク） */
 .hero .hero-release-button {
-  background: linear-gradient(135deg, #ff9a7b, #ffc8a2, #ffd4c5) !important;
-  background-color: #ffe6d9 !important;
-  border-color: rgba(255, 145, 110, 0.95) !important;
-  box-shadow: 0 8px 24px rgba(255, 122, 92, 0.35) !important;
+  background: linear-gradient(135deg, #ffb6c1, #ffd1dc, #ffe4e1) !important;
+  background-color: #fff0f5 !important;
+  border-color: rgba(255, 182, 193, 0.95) !important;
+  box-shadow: 0 8px 24px rgba(255, 182, 193, 0.35) !important;
 }
 
 .hero .hero-release-button:hover,
 .hero .hero-release-button:focus {
-  background: linear-gradient(135deg, #ffad91, #ffd2b3, #ffe0d4) !important;
-  background-color: #fff0e8 !important;
-  border-color: rgba(255, 160, 130, 1) !important;
-  box-shadow: 0 12px 28px rgba(255, 122, 92, 0.45) !important;
+  background: linear-gradient(135deg, #ffc0cb, #ffe4e1, #fff0f5) !important;
+  background-color: #fffafa !important;
+  border-color: rgba(255, 192, 203, 1) !important;
+  box-shadow: 0 12px 28px rgba(255, 182, 193, 0.45) !important;
 }
 
 /* Karaoke Coupon Button */
