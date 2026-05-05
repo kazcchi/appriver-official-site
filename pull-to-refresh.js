@@ -19,8 +19,8 @@
   let isPulling = false;
   let isRefreshing = false;
 
-  const PULL_THRESHOLD = 80; // Minimum pull distance to trigger refresh
-  const MAX_PULL_DISTANCE = 120; // Maximum pull distance
+  const PULL_THRESHOLD = 120; // Minimum pull distance to trigger refresh (感度を下げるために増加)
+  const MAX_PULL_DISTANCE = 180; // Maximum pull distance
 
   // Initialize
   function init() {
@@ -62,13 +62,14 @@
     if (isRefreshing) return;
 
     currentY = e.touches[0].pageY;
-    pullDistance = currentY - startY;
+    const rawDistance = currentY - startY;
 
-    // Only pull down and when at top of page
-    if (pullDistance > 0 && window.pageYOffset === 0) {
+    // Only pull down and when at top of page (10px以上のスワイプで発火させ、過敏な反応を防ぐ)
+    if (rawDistance > 10 && window.pageYOffset <= 0) {
       e.preventDefault(); // Prevent default scroll behavior
 
       isPulling = true;
+      pullDistance = (rawDistance - 10) * 0.6; // 0.6倍の抵抗を加えて、引っ張るのに少し力を要するようにする
 
       // Limit pull distance
       const clampedDistance = Math.min(pullDistance, MAX_PULL_DISTANCE);

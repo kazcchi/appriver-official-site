@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>BUKA - Official Site</title>
+    <meta name="description" content="BUKA公式サイト。女性R&Bボーカリスト。SUNO AIで作成した楽曲を配信中。">
+
+    <!-- OGP Meta Tags -->
+    <meta property="og:title" content="BUKA - Official Site">
+    <meta property="og:description" content="BUKA公式サイト。女性R&Bボーカリスト。SUNO AIで作成した楽曲を配信中。">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BUKA">
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BUKA - Official Site">
+    <meta name="twitter:description" content="BUKA公式サイト。女性R&Bボーカリスト。SUNO AIで作成した楽曲を配信中。">
+
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>BUKA</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item">home</a></li>
+                <li><a href="#music-players" class="nav-item">players</a></li>
+                <li><a href="#songs-lyrics" class="nav-item">songs&lyrics</a></li>
+                <li><a href="#album" class="nav-item">album</a></li>
+                <li><a href="#links" class="nav-item">links</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-particles"></div>
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="BUKA.png" alt="BUKA" class="hero-logo-image">
+                </div>
+
+                <a href="#music-players" class="hero-release-button new-release" aria-label="最新アルバムを聴く">
+                    2026.4.21<br>
+                    1st ALBUM 「VELVET NIGHT」<br>
+                    全ストアにて配信開始<br>
+                    今すぐ聴く
+                </a>
+            </div>
+
+            <!-- スクロールガイド -->
+            <div class="scroll-guide">
+                <div class="scroll-text">scroll</div>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <section id="music-players" class="music-players-section">
+            <div class="container">
+                <h2>MUSIC PLAYERS</h2>
+                <p class="players-description">お好みのプラットフォームの<br>ボタンを押してください</p>
+                <div class="player-note">
+                    <p><i class="fas fa-info-circle"></i> フル再生には各プラットフォームの<br>サブスクリプションが必要です</p>
+                </div>
+
+                <div class="platform-selector">
+                    <button class="platform-btn active" data-platform="apple-music">
+                        <i class="fab fa-apple"></i>
+                        Apple
+                    </button>
+                    <button class="platform-btn" data-platform="spotify">
+                        <i class="fab fa-spotify"></i>
+                        Spotify
+                    </button>
+                    <button class="platform-btn" data-platform="line-music">
+                        <i class="fab fa-line"></i>
+                        LINE
+                    </button>
+                    <button class="platform-btn" data-platform="youtube">
+                        <i class="fab fa-youtube"></i>
+                        YouTube
+                    </button>
+                    <button class="platform-btn" data-platform="amazon">
+                        <i class="fab fa-amazon"></i>
+                        Amazon
+                    </button>
+                    <button class="platform-btn" data-platform="others">
+                        <i class="fas fa-external-link-alt"></i>
+                        その他
+                    </button>
+                </div>
+
+                <div class="player-container">
+                    <div class="player-embed" id="apple-music-player">
+                        <div class="platform-direct-container">
+                            <div class="platform-header">
+                                <div class="platform-logo">
+                                    <i class="fab fa-apple"></i>
+                                    <span>Apple Music</span>
+                                </div>
+                            </div>
+                            <div class="platform-link">
+                                <a href="#" class="platform-open-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>プレイリストを開く</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-embed" id="spotify-player" style="display: none;">
+                        <div class="platform-direct-container">
+                            <div class="platform-header">
+                                <div class="platform-logo spotify-color">
+                                    <i class="fab fa-spotify"></i>
+                                    <span>Spotify</span>
+                                </div>
+                            </div>
+                            <div class="platform-link">
+                                <a href="#" class="platform-open-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>プレイリストを開く</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-embed" id="line-music-player" style="display: none;">
+                        <div class="platform-direct-container">
+                            <div class="platform-header">
+                                <div class="platform-logo line-color">
+                                    <i class="fab fa-line"></i>
+                                    <span>LINE Music</span>
+                                </div>
+                            </div>
+                            <div class="platform-link">
+                                <a href="#" class="platform-open-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>プレイリストを開く</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-embed" id="youtube-player" style="display: none;">
+                        <div class="platform-direct-container">
+                            <div class="platform-header">
+                                <div class="platform-logo youtube-color">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>YouTube</span>
+                                </div>
+                            </div>
+                            <div class="platform-link">
+                                <a href="#" class="platform-open-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>チャンネルを開く</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-embed" id="amazon-player" style="display: none;">
+                        <div class="platform-direct-container">
+                            <div class="platform-header">
+                                <div class="platform-logo amazon-color">
+                                    <i class="fab fa-amazon"></i>
+                                    <span>Amazon Music</span>
+                                </div>
+                            </div>
+                            <div class="platform-link">
+                                <a href="#" class="platform-open-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>アーティストを開く</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-embed" id="others-player" style="display: none;">
+                        <div class="platform-direct-container">
+                            <div class="platform-header">
+                                <div class="platform-logo others-color">
+                                    <i class="fas fa-music"></i>
+                                    <span>Other Platforms</span>
+                                </div>
+                            </div>
+                            <div class="platform-link">
+                                <a href="#" class="platform-open-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>その他のプラットフォームで聴く</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="songs-lyrics" class="lyrics-section">
+            <div class="container">
+                <h2>SONGS & LYRICS</h2>
+
+                <!-- Search & Sort Controls -->
+                <div class="search-sort-controls">
+                    <div class="search-container">
+                        <input type="text" id="song-search" placeholder="楽曲名・アルバム名で検索..." class="search-input">
+                        <button id="search-clear" class="search-clear" style="display: none;">×</button>
+                    </div>
+                    <div class="sort-container">
+                        <button id="sort-release" class="sort-btn sort-active sort-desc">⚡ 新しい順</button>
+                        <button id="sort-reading" class="sort-btn">📝 あ→ん</button>
+                    </div>
+                    <div id="search-result-count" class="search-result-count" style="display: none;"></div>
+                </div>
+
+                <!-- Song Slider -->
+                <div class="song-slider">
+                    <button class="slider-btn prev">&#10094;</button>
+                    <div class="slider-track">
+                        <!-- 動的生成: search-sort.js が releaseDate(YYYY-MM-DD) 降順でカードを描画します -->
+                    </div>
+                    <button class="slider-btn next">&#10095;</button>
+                </div>
+
+                <!-- Lyrics Display -->
+                <div class="lyrics-display" id="lyrics-display" style="display: none;">
+                    <div class="lyrics-song-title" id="lyrics-title"></div>
+                    <div class="lyrics-scroll-container">
+                        <div class="lyrics-content" id="lyrics-content"></div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button class="close-lyrics-btn" id="close-lyrics">閉じる</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="album" class="album-section">
+            <div class="container">
+                <h2>ALBUM</h2>
+                <div class="albums-container">
+                    <!-- 1st Album: VELVET NIGHT -->
+                    <div class="album-info">
+                        <div class="album-artwork">
+                            <div class="album-artwork-container">
+                                <div class="placeholder-artwork">VELVET NIGHT</div>
+                            </div>
+                        </div>
+                        <div class="album-details">
+                            <h3>VELVET NIGHT</h3>
+                            <p class="track-count">10曲</p>
+                            <p class="release-date">2026.4.21<br>全ストアにて配信開始</p>
+                            <a href="#" class="stream-link">聴いてみる</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="links" class="links-section">
+            <div class="container">
+                <h2>Links</h2>
+                <div class="social-links">
+                    <a href="#" class="social-link tiktok">
+                        <i class="fab fa-tiktok"></i>
+                        TikTok
+                    </a>
+                    <a href="#" class="social-link youtube">
+                        <i class="fab fa-youtube"></i>
+                        YouTube
+                    </a>
+                    <a href="#" class="social-link spotify">
+                        <i class="fab fa-spotify"></i>
+                        Spotify
+                    </a>
+                    <a href="#" class="social-link apple-music">
+                        <i class="fab fa-apple"></i>
+                        Apple Music
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 BUKA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="songs-data.js"></script>
+    <script src="search-sort.js"></script>
+    <script src="slider.js"></script>
+    <script src="music-players.js"></script>
+</body>
+
+</html>
