@@ -1,6 +1,16 @@
 import js from '@eslint/js';
 
 export default [
+  {
+    ignores: [
+      'node_modules/**',
+      '*.backup*',
+      '*.min.js',
+      '.vercel/**',
+      'song-template.snippet.js',
+      'songs-data.js',
+    ],
+  },
   js.configs.recommended,
   {
     languageOptions: {
@@ -54,6 +64,5 @@ export default [
       semi: ['error', 'always'],
       quotes: ['error', 'single', { avoidEscape: true }],
     },
-    ignores: ['node_modules/**', '*.backup*', '*.min.js', '.vercel/**', 'song-template.snippet.js'],
   },
 ];
