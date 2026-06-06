@@ -7,7 +7,7 @@
 - **技術スタック**: JavaScript, HTML, CSS (フロントエンド)
 - **パッケージマネージャー**: npm
 - **Node.js**: 20.18.0
-- **開発方式**: デュアルツール（Claude Code + Codex CLI）
+- **開発方式**: シングルリポジトリ（Claude Code / Codex CLI）
 
 ## 🚀 クイックスタート
 
@@ -37,7 +37,7 @@ npm run format    # Prettier自動修正
 npm run lint:fix  # ESLint自動修正
 ```
 
-## 🔒 デュアルツール開発ルール
+## 🔒 開発ルール
 
 ### 必須事項
 
@@ -45,15 +45,10 @@ npm run lint:fix  # ESLint自動修正
    - Claude使用時: `[Claude] 変更内容`
    - Codex使用時: `[Codex] 変更内容`
 
-2. **1PR = 1ツール原則**
-   - PR作成後のツール切替は禁止
-   - PRテンプレートでツール選択必須
-
-3. **CI通過必須**
+2. **CI通過必須**
    - format check
    - ESLint check
    - secrets scan
-   - tool lock compliance
 
 ### ワークフロー
 
@@ -62,7 +57,6 @@ npm run lint:fix  # ESLint自動修正
 git checkout -b feature/your-feature
 
 # 2. 開発作業
-# (Claude Code または Codex で開発)
 
 # 3. 検証
 npm run verify
@@ -70,14 +64,14 @@ npm run verify
 # 4. コミット (ツールタグ必須)
 git commit -m "[Claude] feat: 新機能追加"
 
-# 5. プッシュ & PR作成
+# 5. プッシュ & PR作成 → mainへマージ
 git push origin feature/your-feature
 ```
 
 ## 📁 プロジェクト構造
 
 ```
-appriver-claude-dev/
+appriver-official-site/
 ├── index.html                 # メインページ
 ├── style.css                  # スタイルシート
 ├── songs-data.js             # 楽曲データ (手動フォーマット)
@@ -137,7 +131,6 @@ npm run prepare      # husky初期化
 1. **verify.yml**
    - Prettier format check
    - ESLint check
-   - Tool lock compliance
    - Node.js 20.18.0
 
 2. **secrets-scan.yml**
@@ -199,26 +192,22 @@ nvm use 20.18.0
 - [ ] Node.js 20.18.0
 - [ ] npm 依存関係インストール済み
 - [ ] ブランチ作成済み
-- [ ] ツール選択決定済み
 
 ### 開発中
 
 - [ ] 定期的な `npm run verify`
 - [ ] コミットメッセージにツールタグ
-- [ ] 1PR = 1ツール原則遵守
 
 ### PR作成前
 
 - [ ] `npm run verify` 成功
 - [ ] 全変更ファイル確認
 - [ ] PRテンプレート記入
-- [ ] 影響範囲・ロールバック手順記載
 
 ### マージ前
 
 - [ ] CI全通過
 - [ ] レビュー承認済み
-- [ ] ツールロック確認済み
 
 ## 🔗 参考リンク
 
