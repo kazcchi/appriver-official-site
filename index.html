@@ -109,8 +109,18 @@
             <div class="hero-content">
                 <h1 class="artist-name">appriver</h1>
 
-                <!-- kagayaki Release CTA: music-playersセクションへ遷移 -->
-                <a href="#music-players" class="hero-release-button new-release" aria-label="kagayakiアルバムを聴く">
+                <!-- OMOKAGE Release CTA: 公開時にhidden属性を外す -->
+                <a href="https://linkco.re/urZ130YH" target="_blank" class="hero-release-button new-release"
+                    aria-label="OMOKAGEアルバムを聴く" rel="nofollow noopener">
+                    2026.6.7<br>
+                    NEW ALBUM 「OMOKAGE」<br>
+                    全ストアにて配信開始<br>
+                    今すぐ聴く
+                </a>
+
+                <!-- kagayaki Release CTA（将来再利用のため保持・非表示） -->
+                <a href="#music-players" class="hero-release-button new-release" aria-label="kagayakiアルバムを聴く"
+                    hidden aria-hidden="true" tabindex="-1">
                     2026.3.28<br>
                     NEW ALBUM 「kagayaki」<br>
                     全ストアにて配信開始<br>
@@ -336,6 +346,24 @@
             <div class="container">
                 <h2>ALBUM</h2>
                 <div class="albums-container">
+                    <!-- New Album: OMOKAGE -->
+                    <div class="album-info">
+                        <div class="album-artwork">
+                            <div class="album-artwork-container">
+                                <img src="OMOKAGE.png" alt="OMOKAGE アルバムアート" class="album-artwork-image"
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <div class="placeholder-artwork">OMOKAGE</div>
+                            </div>
+                        </div>
+                        <div class="album-details">
+                            <h3>OMOKAGE</h3>
+                            <p class="track-count">12曲</p>
+                            <p class="release-date">2026.6.7<br>全ストアにて配信開始</p>
+                            <a href="https://linkco.re/urZ130YH" class="stream-link" target="_blank"
+                                rel="nofollow noopener">聴いてみる</a>
+                        </div>
+                    </div>
+
                     <!-- New Album: kagayaki -->
                     <div class="album-info">
                         <div class="album-artwork">
