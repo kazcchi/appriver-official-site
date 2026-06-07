@@ -9,8 +9,8 @@ const songsData = {
     reading: 'おわらないうた',
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
-    releaseDate: 'TODO_RELEASE_DATE',
-    linkUrl: 'TODO_OMOKAGE_LINK',
+    releaseDate: '2026-06-07',
+    linkUrl: 'https://linkco.re/urZ130YH',
     displayPriority: 12,
     lyrics: `いつものように
 また笑ってくれる気がして
@@ -103,8 +103,8 @@ const songsData = {
     reading: 'ながいみち',
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
-    releaseDate: 'TODO_RELEASE_DATE',
-    linkUrl: 'TODO_OMOKAGE_LINK',
+    releaseDate: '2026-06-07',
+    linkUrl: 'https://linkco.re/urZ130YH',
     displayPriority: 11,
     lyrics: `君の心に続く長い道
 足跡は見えないけど確かにある
@@ -150,8 +150,8 @@ const songsData = {
     reading: 'あるきだすみらいへ',
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
-    releaseDate: 'TODO_RELEASE_DATE',
-    linkUrl: 'TODO_OMOKAGE_LINK',
+    releaseDate: '2026-06-07',
+    linkUrl: 'https://linkco.re/urZ130YH',
     displayPriority: 10,
     lyrics: `あの日描いた夢の続きが
 まだ胸の奥で息をしている
@@ -196,8 +196,8 @@ I'll keep walking on
     reading: 'どれだけすぎても',
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
-    releaseDate: 'TODO_RELEASE_DATE',
-    linkUrl: 'TODO_OMOKAGE_LINK',
+    releaseDate: '2026-06-07',
+    linkUrl: 'https://linkco.re/urZ130YH',
     displayPriority: 9,
     lyrics: `引き出しの奥にしまった
 古い写真を開いた
@@ -244,8 +244,8 @@ I'll keep walking on
     reading: 'きみにあいたいよ',
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
-    releaseDate: 'TODO_RELEASE_DATE',
-    linkUrl: 'TODO_OMOKAGE_LINK',
+    releaseDate: '2026-06-07',
+    linkUrl: 'https://linkco.re/urZ130YH',
     displayPriority: 8,
     lyrics: `あかりが滲む帰り道
 ひとり歩くこの街で
@@ -316,8 +316,8 @@ I'll keep walking on
     reading: 'きみをおもうたび',
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
-    releaseDate: 'TODO_RELEASE_DATE',
-    linkUrl: 'TODO_OMOKAGE_LINK',
+    releaseDate: '2026-06-07',
+    linkUrl: 'https://linkco.re/urZ130YH',
     displayPriority: 7,
     lyrics: `君の気配だけ
 部屋にまだ残る
@@ -372,8 +372,8 @@ I'll keep walking on
     reading: 'あえないじかん',
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
-    releaseDate: 'TODO_RELEASE_DATE',
-    linkUrl: 'TODO_OMOKAGE_LINK',
+    releaseDate: '2026-06-07',
+    linkUrl: 'https://linkco.re/urZ130YH',
     displayPriority: 6,
     lyrics: `眠る前 開く画面
 君の「お疲れ」が嬉しくて
@@ -451,8 +451,8 @@ I'll keep walking on
     reading: 'なみのきおく',
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
-    releaseDate: 'TODO_RELEASE_DATE',
-    linkUrl: 'TODO_OMOKAGE_LINK',
+    releaseDate: '2026-06-07',
+    linkUrl: 'https://linkco.re/urZ130YH',
     displayPriority: 5,
     lyrics: `静かな波の音に
 君の声を重ねてる
@@ -524,8 +524,8 @@ I'll keep walking on
     reading: 'きえないおと',
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
-    releaseDate: 'TODO_RELEASE_DATE',
-    linkUrl: 'TODO_OMOKAGE_LINK',
+    releaseDate: '2026-06-07',
+    linkUrl: 'https://linkco.re/urZ130YH',
     displayPriority: 4,
     lyrics: `ドアを閉めた　音だけが
 やけに長く　残ってる
@@ -578,8 +578,8 @@ I'll keep walking on
     reading: 'さいごのさんせっと',
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
-    releaseDate: 'TODO_RELEASE_DATE',
-    linkUrl: 'TODO_OMOKAGE_LINK',
+    releaseDate: '2026-06-07',
+    linkUrl: 'https://linkco.re/urZ130YH',
     displayPriority: 3,
     lyrics: `夕暮れの波音に
 あの日の声が混ざってる
@@ -645,8 +645,8 @@ I'll keep walking on
     reading: 'まだここに',
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
-    releaseDate: 'TODO_RELEASE_DATE',
-    linkUrl: 'TODO_OMOKAGE_LINK',
+    releaseDate: '2026-06-07',
+    linkUrl: 'https://linkco.re/urZ130YH',
     displayPriority: 2,
     lyrics: `誰かの言葉に　つまずいて
 立ち止まる夜もある
@@ -701,8 +701,8 @@ I'll keep walking on
     reading: 'きみのこもりうた',
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
-    releaseDate: 'TODO_RELEASE_DATE',
-    linkUrl: 'TODO_OMOKAGE_LINK',
+    releaseDate: '2026-06-07',
+    linkUrl: 'https://linkco.re/urZ130YH',
     displayPriority: 1,
     lyrics: `眠れないなら　話そうか
 今日のことでも　明日のことでも
