@@ -35,7 +35,12 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.appriver.jp" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.appriver.jp"
+        }
+      ],
       "destination": "https://appriver.jp/$1",
       "permanent": true
     }
@@ -43,35 +48,35 @@
   "rewrites": [
     {
       "source": "/out/komorebi",
-      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2Fn4fg1c51&platform=album"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%2Falbums%2Fkomorebi%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/komorebi/",
-      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2Fn4fg1c51&platform=album"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%2Falbums%2Fkomorebi%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/apple-music",
-      "destination": "/out/index.html?to=https%3A%2F%2Fmusic.apple.com%2Fjp%2Fplaylist%2Fappriver-%25E5%2585%25AC%25E5%25BC%258F%25E3%2583%2597%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%2Fpl.u-V9D7vD9FEP64AZ&platform=apple-music"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/apple-music/",
-      "destination": "/out/index.html?to=https%3A%2F%2Fmusic.apple.com%2Fjp%2Fplaylist%2Fappriver-%25E5%2585%25AC%25E5%25BC%258F%25E3%2583%2597%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%2Fpl.u-V9D7vD9FEP64AZ&platform=apple-music"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/apple-music-embed",
-      "destination": "/out/index.html?to=https%3A%2F%2Fembed.music.apple.com%2Fjp%2Fplaylist%2Fappriver-%25E5%2585%25AC%25E5%25BC%258F%25E3%2583%2597%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%2Fpl.u-V9D7vD9FEP64AZ&platform=apple-music-embed"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/apple-music-embed/",
-      "destination": "/out/index.html?to=https%3A%2F%2Fembed.music.apple.com%2Fjp%2Fplaylist%2Fappriver-%25E5%2585%25AC%25E5%25BC%258F%25E3%2583%2597%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25AA%25E3%2582%25B9%25E3%2583%2588%2Fpl.u-V9D7vD9FEP64AZ&platform=apple-music-embed"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/spotify",
-      "destination": "/out/index.html?to=https%3A%2F%2Fopen.spotify.com%2Fplaylist%2F1Y4ICAnET0o7CPHRycOriz&platform=spotify"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/spotify/",
-      "destination": "/out/index.html?to=https%3A%2F%2Fopen.spotify.com%2Fplaylist%2F1Y4ICAnET0o7CPHRycOriz&platform=spotify"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/youtube",
@@ -83,27 +88,27 @@
     },
     {
       "source": "/out/line-music",
-      "destination": "/out/index.html?to=https%3A%2F%2Fmusic.line.me%2Fplaylist%2Fupi7nLrdtfvhxjzl9Eel6t3v5zzqyDypzjJn&platform=line"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/line-music/",
-      "destination": "/out/index.html?to=https%3A%2F%2Fmusic.line.me%2Fplaylist%2Fupi7nLrdtfvhxjzl9Eel6t3v5zzqyDypzjJn&platform=line"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/others",
-      "destination": "/out/index.html?to=https%3A%2F%2Fwww.tunecore.co.jp%2Fartists%3Fid%3D991248&platform=others"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/others/",
-      "destination": "/out/index.html?to=https%3A%2F%2Fwww.tunecore.co.jp%2Fartists%3Fid%3D991248&platform=others"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/spotify-artist",
-      "destination": "/out/index.html?to=https%3A%2F%2Fopen.spotify.com%2Fintl-ja%2Fartist%2F2PbgbV4vBCzAUV9ZfHPG3Z&platform=spotify"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/apple-artist",
-      "destination": "/out/index.html?to=https%3A%2F%2Fmusic.apple.com%2Fjp%2Fartist%2F%25E3%2582%25A2%25E3%2583%2583%25E3%2583%2597%25E3%2583%25AA%25E3%2583%2590%25E3%2583%25BC%2F1816403477&platform=apple-music"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/tiktok",
@@ -115,11 +120,11 @@
     },
     {
       "source": "/out/yasuragi",
-      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2F1gXERgmA&platform=album"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%2Falbums%2Fyasuragi%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/nukumori",
-      "destination": "/out/index.html?to=https%3A%2F%2Flinkco.re%2FE7hxe2Ay&platform=album"
+      "destination": "/out/index.html?to=https%3A%2F%2Fmwm.ne.jp%2Fartists%2Fappriver%2Falbums%2Fnukumori%3Futm_source%3Dappriver.jp%26utm_medium%3Dreferral&platform=mwm"
     },
     {
       "source": "/out/karaoke-coupon",
