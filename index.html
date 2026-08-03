@@ -109,32 +109,17 @@
             <div class="hero-content">
                 <h1 class="artist-name">appriver</h1>
 
-                <!-- OMOKAGE Release CTA: 公開時にhidden属性を外す -->
-                <a href="https://linkco.re/urZ130YH" target="_blank" class="hero-release-button new-release"
-                    aria-label="OMOKAGEアルバムを聴く" rel="nofollow noopener">
-                    2026.6.7<br>
-                    NEW ALBUM 「OMOKAGE」<br>
-                    全ストアにて配信開始<br>
+                <!-- MWM Release CTA -->
+                <a href="https://mwm.ne.jp/artists/appriver?utm_source=appriver.jp&utm_medium=referral" target="_blank"
+                    class="hero-release-button new-release" aria-label="MURAKAMI WORKS Musicで聴く" rel="noopener">
+                    2026.8.1<br>
+                    MURAKAMI WORKS Music<br>
+                    にて配信開始<br>
                     今すぐ聴く
                 </a>
 
-                <!-- kagayaki Release CTA（将来再利用のため保持・非表示） -->
-                <a href="#music-players" class="hero-release-button new-release" aria-label="kagayakiアルバムを聴く"
-                    hidden aria-hidden="true" tabindex="-1">
-                    2026.3.28<br>
-                    NEW ALBUM 「kagayaki」<br>
-                    全ストアにて配信開始<br>
-                    今すぐ聴く
-                </a>
-
-                <!-- YASURAGI CTA（将来再利用のため保持・非表示） -->
-                <a href="/out/yasuragi" target="_blank" class="hero-release-button new-release"
-                    aria-label="YASURAGIアルバムを聴く" rel="nofollow noopener" hidden aria-hidden="true" tabindex="-1">
-                    2025.8.22<br>
-                    2ndアルバム「YASURAGI」<br>
-                    全ストアにて配信開始<br>
-                    今すぐ聴く
-                </a>
+                
+                
             </div>
 
             <!-- スクロールガイド -->
@@ -152,144 +137,34 @@
         <section id="music-players" class="music-players-section">
             <div class="container">
                 <h2>MUSIC PLAYERS</h2>
-                <p class="players-description">お好みのプラットフォームの<br>ボタンを押してください</p>
-                <div class="player-note">
-                    <p><i class="fas fa-info-circle"></i> フル再生には各プラットフォームの<br>サブスクリプションが必要です</p>
-                </div>
-
-                <div class="platform-selector">
-                    <button class="platform-btn active" data-platform="apple-music">
-                        <i class="fab fa-apple"></i>
-                        Apple
-                    </button>
-                    <button class="platform-btn" data-platform="spotify">
-                        <i class="fab fa-spotify"></i>
-                        Spotify
-                    </button>
-                    <button class="platform-btn" data-platform="line-music">
-                        <i class="fab fa-line"></i>
-                        LINE
-                    </button>
-                    <button class="platform-btn" data-platform="youtube">
-                        <i class="fab fa-youtube"></i>
-                        YouTube
-                    </button>
-                    <button class="platform-btn" data-platform="amazon">
-                        <i class="fab fa-amazon"></i>
-                        Amazon
-                    </button>
-                    <button class="platform-btn" data-platform="others">
-                        <i class="fas fa-external-link-alt"></i>
-                        その他
-                    </button>
-                </div>
+                <p class="players-description">appriverの楽曲は、会員制音楽配信サービス<br>「MURAKAMI WORKS Music」で<br>お聴きいただけます</p>
 
                 <div class="player-container">
-                    <div class="player-embed" id="apple-music-player">
-                        <div class="apple-music-direct-container">
-                            <div class="apple-music-header">
-                                <div class="apple-music-logo">
-                                    <i class="fab fa-apple"></i>
-                                    <span>Apple Music</span>
-                                </div>
-                            </div>
-
-                            <div class="apple-music-playlist-link">
-                                <a href="https://embed.music.apple.com/jp/playlist/appriver-%E5%85%AC%E5%BC%8F%E3%83%97%E3%83%AC%E3%82%A4%E3%83%AA%E3%82%B9%E3%83%88/pl.u-V9D7vD9FEP64AZ"
-                                    class="apple-music-embed-btn">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>プレイリストを開く</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="player-embed" id="spotify-player" style="display: none;">
-                        <div class="spotify-direct-container">
-                            <div class="spotify-header">
-                                <div class="spotify-logo">
-                                    <i class="fab fa-spotify"></i>
-                                    <span>Spotify</span>
-                                </div>
-                            </div>
-
-                            <div class="spotify-playlist-link">
-                                <a href="/out/spotify/" class="spotify-full-playlist-btn">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>プレイリストを開く</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="player-embed" id="amazon-player" style="display: none;">
-                        <div class="amazon-direct-container">
-                            <div class="amazon-header">
-                                <div class="amazon-logo">
-                                    <i class="fab fa-amazon"></i>
-                                    <span>Amazon Music</span>
-                                </div>
-                            </div>
-
-                            <div class="amazon-artist-link">
-                                <a href="https://music.amazon.co.jp/artists/B0F9TGK1JY/%E3%82%A2%E3%83%83%E3%83%97%E3%83%AA%E3%83%90%E3%83%BC"
-                                    class="amazon-artist-btn others-full-playlist-btn" rel="nofollow noopener">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>アーティストを開く</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="player-embed" id="line-music-player" style="display: none;">
-                        <div class="line-direct-container">
-                            <div class="line-header">
-                                <div class="line-logo">
-                                    <i class="fab fa-line"></i>
-                                    <span>LINE Music</span>
-                                </div>
-                            </div>
-
-                            <div class="line-playlist-link">
-                                <a href="https://music.line.me/playlist/upi7nLrdtfvhxjzl9Eel6t3v5zzqyDypzjJn"
-                                    target="_blank" class="line-full-playlist-btn" rel="nofollow noopener">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>プレイリストを開く</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="player-embed" id="youtube-player" style="display: none;">
-                        <div class="youtube-direct-container">
-                            <div class="youtube-header">
-                                <div class="youtube-logo">
-                                    <i class="fab fa-youtube"></i>
-                                    <span>YouTube</span>
-                                </div>
-                            </div>
-
-                            <div class="youtube-playlist-link">
-                                <a href="/out/youtube/" class="youtube-full-playlist-btn">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>チャンネルを開く</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="player-embed" id="others-player" style="display: none;">
+                    <div class="player-embed" id="mwm-player">
                         <div class="others-direct-container">
                             <div class="others-header">
                                 <div class="others-logo">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Other Platforms</span>
+                                    <img src="mwm-mark.png" alt="" class="mwm-mark">
+                                    <span>MURAKAMI WORKS Music</span>
                                 </div>
                             </div>
 
                             <div class="others-playlist-link">
-                                <a href="/out/others/" class="others-full-playlist-btn">
-                                    <i class="fas fa-music"></i>
-                                    <span>その他のプラットフォームで聴く</span>
+                                <a href="https://mwm.ne.jp/artists/appriver?utm_source=appriver.jp&utm_medium=referral"
+                                    target="_blank" rel="noopener" class="others-full-playlist-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>今すぐ聴く</span>
                                 </a>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="player-note">
+                    <p><i class="fas fa-info-circle"></i> 公開中の全曲のフル再生・同期歌詞・<br>うたごえモードに対応。<br>初回30日間無料(カード登録不要)です</p>
+                </div>
+                <div class="player-note">
+                    <p><i class="fas fa-info-circle"></i> ダウンロード購入は<a href="https://recochoku.jp/artist/2003671393" target="_blank" rel="noopener">レコチョク</a>でも可能です。<br>dヒッツでも配信中<br>(アプリ内で「アップリバー」を検索)</p>
                 </div>
             </div>
         </section>
@@ -358,8 +233,8 @@
                         <div class="album-details">
                             <h3>OMOKAGE</h3>
                             <p class="track-count">12曲</p>
-                            <p class="release-date">2026.6.7<br>全ストアにて配信開始</p>
-                            <a href="https://linkco.re/urZ130YH" class="stream-link" target="_blank"
+                            <p class="release-date">2026.6.7<br>MURAKAMI WORKS Musicにて配信中</p>
+                            <a href="https://mwm.ne.jp/artists/appriver/albums/omokage?utm_source=appriver.jp&utm_medium=referral" class="stream-link" target="_blank"
                                 rel="nofollow noopener">聴いてみる</a>
                         </div>
                     </div>
@@ -376,8 +251,8 @@
                         <div class="album-details">
                             <h3 style="text-transform: none; font-family: 'Klee One', 'Chalkboard', cursive; font-weight: bold;">kagayaki</h3>
                             <p class="track-count">15曲</p>
-                            <p class="release-date">2026.3.28<br>全ストアにて配信開始</p>
-                            <a href="https://linkco.re/t2C4302g" class="stream-link" target="_blank"
+                            <p class="release-date">2026.3.28<br>MURAKAMI WORKS Musicにて配信中</p>
+                            <a href="https://mwm.ne.jp/artists/appriver/albums/kagayaki?utm_source=appriver.jp&utm_medium=referral" class="stream-link" target="_blank"
                                 rel="nofollow noopener">聴いてみる</a>
                         </div>
                     </div>
@@ -394,8 +269,8 @@
                         <div class="album-details">
                             <h3>IROZUKI</h3>
                             <p class="track-count">15曲</p>
-                            <p class="release-date">2026.1.30<br>全ストアにて配信開始</p>
-                            <a href="https://linkco.re/yVsSndRZ" class="stream-link" target="_blank"
+                            <p class="release-date">2026.1.30<br>MURAKAMI WORKS Musicにて配信中</p>
+                            <a href="https://mwm.ne.jp/artists/appriver/albums/irozuki?utm_source=appriver.jp&utm_medium=referral" class="stream-link" target="_blank"
                                 rel="nofollow noopener">聴いてみる</a>
                         </div>
                     </div>
@@ -412,8 +287,8 @@
                         <div class="album-details">
                             <h3>TOKOSHIE</h3>
                             <p class="track-count">BEST ALBUM・全15曲</p>
-                            <p class="release-date">2026.1.17<br>全ストアにて配信開始</p>
-                            <a href="https://linkco.re/S1b5FZ8s" class="stream-link" target="_blank"
+                            <p class="release-date">2026.1.17<br>MURAKAMI WORKS Musicにて配信中</p>
+                            <a href="https://mwm.ne.jp/artists/appriver/albums/tokoshie?utm_source=appriver.jp&utm_medium=referral" class="stream-link" target="_blank"
                                 rel="nofollow noopener">聴いてみる</a>
                         </div>
                     </div>
@@ -430,8 +305,8 @@
                         <div class="album-details">
                             <h3>KONAYUKI</h3>
                             <p class="track-count">15曲</p>
-                            <p class="release-date">2025.12.10<br>全ストアにて配信中</p>
-                            <a href="https://linkco.re/rZAQ9cfa" class="stream-link" target="_blank"
+                            <p class="release-date">2025.12.10<br>MURAKAMI WORKS Musicにて配信中</p>
+                            <a href="https://mwm.ne.jp/artists/appriver/albums/konayuki?utm_source=appriver.jp&utm_medium=referral" class="stream-link" target="_blank"
                                 rel="nofollow noopener">聴いてみる</a>
                         </div>
                     </div>
@@ -448,8 +323,8 @@
                         <div class="album-details">
                             <h3>KOMOREBI</h3>
                             <p class="track-count">15曲</p>
-                            <p class="release-date">2025.10.20<br>全ストアにて配信中</p>
-                            <a href="https://linkco.re/n4fg1c51" class="stream-link" target="_blank"
+                            <p class="release-date">2025.10.20<br>MURAKAMI WORKS Musicにて配信中</p>
+                            <a href="https://mwm.ne.jp/artists/appriver/albums/komorebi?utm_source=appriver.jp&utm_medium=referral" class="stream-link" target="_blank"
                                 rel="nofollow noopener">聴いてみる</a>
                         </div>
                     </div>
@@ -466,8 +341,8 @@
                         <div class="album-details">
                             <h3>YASURAGI</h3>
                             <p class="track-count">15曲</p>
-                            <p class="release-date">2025.8.22<br>全ストアにて配信中</p>
-                            <a href="/out/yasuragi" class="stream-link" target="_blank">聴いてみる</a>
+                            <p class="release-date">2025.8.22<br>MURAKAMI WORKS Musicにて配信中</p>
+                            <a href="https://mwm.ne.jp/artists/appriver/albums/yasuragi?utm_source=appriver.jp&utm_medium=referral" class="stream-link" target="_blank">聴いてみる</a>
                         </div>
                     </div>
 
@@ -483,8 +358,8 @@
                         <div class="album-details">
                             <h3>NUKUMORI</h3>
                             <p class="track-count">15曲</p>
-                            <p class="release-date">2025.6.28<br>全ストアにて配信中</p>
-                            <a href="/out/nukumori" class="stream-link" target="_blank">聴いてみる</a>
+                            <p class="release-date">2025.6.28<br>MURAKAMI WORKS Musicにて公開準備中<br>(「いのちの理由」は配信中)</p>
+                            <a href="https://mwm.ne.jp/artists/appriver/albums/nukumori?utm_source=appriver.jp&utm_medium=referral" class="stream-link" target="_blank">聴いてみる</a>
                         </div>
                     </div>
                 </div>
@@ -507,13 +382,15 @@
                         <i class="fab fa-youtube"></i>
                         YouTube
                     </a>
-                    <a href="/out/spotify-artist" target="_blank" class="social-link spotify">
-                        <i class="fab fa-spotify"></i>
-                        Spotify
+                    <a href="https://mwm.ne.jp/artists/appriver?utm_source=appriver.jp&utm_medium=referral" target="_blank"
+                        rel="noopener" class="social-link mwm">
+                        <img src="mwm-mark-light.png" alt="" class="social-mwm-mark">
+                        MURAKAMI WORKS Music
                     </a>
-                    <a href="/out/apple-artist" target="_blank" class="social-link apple-music">
-                        <i class="fab fa-apple"></i>
-                        Apple Music
+                    <a href="https://recochoku.jp/artist/2003671393" target="_blank" rel="noopener"
+                        class="social-link recochoku">
+                        <i class="fas fa-download"></i>
+                        レコチョク
                     </a>
                 </div>
             </div>
@@ -522,69 +399,24 @@
 
     <footer>
         <div class="container">
+            <a href="https://mwm.ne.jp?utm_source=appriver.jp&utm_medium=referral" target="_blank" rel="noopener"
+                class="footer-mwm" aria-label="MURAKAMI WORKS Music">
+                <img src="mwm-mark-light.png" alt="" class="footer-mwm-mark">
+                <span>MURAKAMI WORKS Music</span>
+            </a>
             <p>&copy; 2025 appriver. All rights reserved.</p>
         </div>
     </footer>
     <script src="songs-data.js"></script>
     <script src="search-sort.js"></script>
     <script src="slider.js"></script>
-    <script src="music-players.js"></script>
     <script src="pull-to-refresh.js"></script>
     <script src="reload-guide.js"></script>
     <script src="pc-reload-fix.js"></script>
     <script src="scroll-guide.js"></script>
     <script src="swipe-guide.js"></script>
     <script src="analytics.js"></script>
-    <!-- Apple Select Modal -->
-    <div id="appleSelectModal" class="select-modal" aria-hidden="true">
-        <div class="select-modal-backdrop" data-close="apple-select"></div>
-        <div class="select-modal-card" role="dialog" aria-labelledby="appleSelectTitle">
-            <div class="select-modal-header">
-                <h3 id="appleSelectTitle">Apple Music を開く</h3>
-                <button class="select-modal-close" aria-label="閉じる" data-close="apple-select">×</button>
-            </div>
-            <p class="select-modal-desc">開き方を選択してください。</p>
-            <div class="select-modal-actions">
-                <a class="apple-music-embed-btn" href="/out/apple-music-embed/">
-                    <i class="fas fa-external-link-alt"></i>
-                    <span>ブラウザで開く</span>
-                </a>
-                <a class="apple-music-full-playlist-btn" href="/out/apple-music/">
-                    <i class="fas fa-external-link-alt"></i>
-                    <span>アプリで開く</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <script>
-        (function () {
-            const openBtn = document.querySelector('[data-open="apple-select"]');
-            const modal = document.getElementById('appleSelectModal');
-            if (!openBtn || !modal) return;
-            function openModal(e) {
-                e.preventDefault();
-                modal.setAttribute('aria-hidden', 'false');
-                modal.classList.add('open');
-                document.body.style.overflow = 'hidden';
-            }
-            function closeModal() {
-                modal.setAttribute('aria-hidden', 'true');
-                modal.classList.remove('open');
-                document.body.style.overflow = '';
-            }
-            openBtn.addEventListener('click', openModal);
-            modal.addEventListener('click', function (e) {
-                const t = e.target;
-                if (!t) return;
-                if (t.matches('[data-close="apple-select"]')) {
-                    closeModal();
-                }
-            });
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
-            });
-        })();
-    </script>
+    
 </body>
 
 </html>

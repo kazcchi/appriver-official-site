@@ -10,7 +10,7 @@ const songsData = {
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
     releaseDate: '2026-06-07',
-    linkUrl: 'https://linkco.re/urZ130YH',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/owaranaiuta?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 12,
     lyrics: `いつものように
 また笑ってくれる気がして
@@ -104,7 +104,7 @@ const songsData = {
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
     releaseDate: '2026-06-07',
-    linkUrl: 'https://linkco.re/urZ130YH',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/nagaimichi?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 11,
     lyrics: `君の心に続く長い道
 足跡は見えないけど確かにある
@@ -151,7 +151,7 @@ const songsData = {
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
     releaseDate: '2026-06-07',
-    linkUrl: 'https://linkco.re/urZ130YH',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/arukidasumiraihe?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 10,
     lyrics: `あの日描いた夢の続きが
 まだ胸の奥で息をしている
@@ -197,7 +197,7 @@ I'll keep walking on
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
     releaseDate: '2026-06-07',
-    linkUrl: 'https://linkco.re/urZ130YH',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/doredakesugitemo?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 9,
     lyrics: `引き出しの奥にしまった
 古い写真を開いた
@@ -245,7 +245,7 @@ I'll keep walking on
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
     releaseDate: '2026-06-07',
-    linkUrl: 'https://linkco.re/urZ130YH',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kiminiaitaiyo?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 8,
     lyrics: `あかりが滲む帰り道
 ひとり歩くこの街で
@@ -317,7 +317,7 @@ I'll keep walking on
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
     releaseDate: '2026-06-07',
-    linkUrl: 'https://linkco.re/urZ130YH',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kimiwoomotabi?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 7,
     lyrics: `君の気配だけ
 部屋にまだ残る
@@ -373,7 +373,7 @@ I'll keep walking on
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
     releaseDate: '2026-06-07',
-    linkUrl: 'https://linkco.re/urZ130YH',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/aenaijikan?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 6,
     lyrics: `眠る前 開く画面
 君の「お疲れ」が嬉しくて
@@ -452,7 +452,7 @@ I'll keep walking on
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
     releaseDate: '2026-06-07',
-    linkUrl: 'https://linkco.re/urZ130YH',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/naminokioku?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 5,
     lyrics: `静かな波の音に
 君の声を重ねてる
@@ -525,7 +525,7 @@ I'll keep walking on
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
     releaseDate: '2026-06-07',
-    linkUrl: 'https://linkco.re/urZ130YH',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kienaioto?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 4,
     lyrics: `ドアを閉めた　音だけが
 やけに長く　残ってる
@@ -579,7 +579,7 @@ I'll keep walking on
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
     releaseDate: '2026-06-07',
-    linkUrl: 'https://linkco.re/urZ130YH',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/saigonosansetto?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 3,
     lyrics: `夕暮れの波音に
 あの日の声が混ざってる
@@ -646,7 +646,7 @@ I'll keep walking on
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
     releaseDate: '2026-06-07',
-    linkUrl: 'https://linkco.re/urZ130YH',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/madakokoni?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 2,
     lyrics: `誰かの言葉に　つまずいて
 立ち止まる夜もある
@@ -702,7 +702,7 @@ I'll keep walking on
     album: 'OMOKAGE',
     albumReading: 'おもかげ',
     releaseDate: '2026-06-07',
-    linkUrl: 'https://linkco.re/urZ130YH',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kiminokomoriuta?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 1,
     lyrics: `眠れないなら　話そうか
 今日のことでも　明日のことでも
@@ -767,7 +767,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/negaiwodakishimete?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 15,
     lyrics: `あと少しだけ　声を聞きたくて
 閉じたまぶたに　面影を探す
@@ -810,7 +810,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/harugakitemo?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 14,
     lyrics: `まだ冷たい　朝の空気
 白い息が　ほどけてゆく
@@ -850,7 +850,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kimiwoushinattekara?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 13,
     lyrics: `君を失ってから
 時間だけがすぎていく
@@ -902,7 +902,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/negainegau?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 12,
     lyrics: `ねぇ　覚えてる？
 あの春の帰り道
@@ -964,7 +964,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/soresurakanawanai?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 11,
     lyrics: `もう少しだけ　隣にいたくて
 伸ばした指は　雨にほどけた
@@ -1018,7 +1018,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/onajisoranoiro?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 10,
     lyrics: `まだ少し冷たい風
 あの日と同じ空の色
@@ -1075,7 +1075,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/mouichidokimito?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 9,
     lyrics: `静かな夜に君の名前を呼ぶだけで
 心の奥が少しだけ震えた
@@ -1113,7 +1113,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kienaimamaharu?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 8,
     lyrics: `桜舞う街の中で
 君の笑顔が今も揺れる
@@ -1151,7 +1151,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/madakimiwoomotteru?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 7,
     lyrics: `まだ君を　忘れられない
 夜の空に　名前を呼ぶ
@@ -1194,7 +1194,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/namaedemoyobenai?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 6,
     lyrics: `同じ景色を　見ているのに
 君のとなりが　少し遠い
@@ -1241,7 +1241,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kiminiainiikuyo?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 5,
     lyrics: `朝焼け　窓のしずくが
 カーテン越しに　揺れている
@@ -1273,7 +1273,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/donnamiraigamatteitemo?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 4,
     lyrics: `昨日までの僕はきっと
 正しさばかり探してた
@@ -1332,7 +1332,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kiminotokorohe?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 3,
     lyrics: `朝焼け　電車の窓に
 遠ざかる君の横顔
@@ -1373,7 +1373,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/tsutaetaikotobaha?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 2,
     lyrics: `あの朝くれた　短いメッセージ
 画面の光が　胸を照らした
@@ -1417,7 +1417,7 @@ I'll keep walking on
     album: 'kagayaki',
     albumReading: 'かがやき',
     releaseDate: '2026-03-28',
-    linkUrl: 'https://linkco.re/t2C4302g',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/saigonosakura?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 1,
     lyrics: `川沿いのベンチで　息をひそめてた
 散り始めた花びら　肩にふわり落ちた
@@ -1454,7 +1454,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/namidaganagaretemo?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 15,
     lyrics: `逢えなくなって いくつもの季節
 今でもまだ 忘れていない
@@ -1493,7 +1493,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/soredemokimiwoshinjitai?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 14,
     lyrics: `目を閉じて 祈るたび
 沢山の消えた思い出
@@ -1527,7 +1527,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/namaewoyobanaiyoru?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 13,
     lyrics: `時計の音がやけに大きくて
 夜が長く感じる部屋
@@ -1575,7 +1575,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/onajibashode?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 12,
     lyrics: `静かな風が揺れる道
 あの日の声がまだ聞こえる
@@ -1613,7 +1613,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/itsukakanashimigaomoideninarumade?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 11,
     lyrics: `泣き腫らした あの夜のこと
 まだ心に 焼きついたまま
@@ -1654,7 +1654,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/tsumugu?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 10,
     lyrics: `ほどけかけたこの糸
 指先で また結び直す
@@ -1693,7 +1693,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/bokunonakade?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 9,
     lyrics: `あの日から 止まったままの
 カレンダー めくらないまま
@@ -1733,7 +1733,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/bokunosenakanitsubasagaareba?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 8,
     lyrics: `夜の隙間に こぼれたため息
 行き場のない想い 胸に抱いたまま
@@ -1783,7 +1783,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/darekawosasaeteru?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 7,
     lyrics: `夜が長すぎて
 時計の針 見つめてるけど
@@ -1842,7 +1842,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/zuttoisshoni?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 6,
     lyrics: `そっと風が頬を撫でる
 あの日の笑顔が浮かんでくる
@@ -1885,7 +1885,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kimigakuretahikari?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 5,
     lyrics: `会えなくなって 何年経つのか
 君の言葉を 思い出していた
@@ -1920,7 +1920,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/anatawoomou?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 4,
     lyrics: `朝焼け まだ眠る町で
 寝ている顔を ずっと見ていた
@@ -1963,7 +1963,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/sunaoniienakute?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 3,
     lyrics: `夕焼け染まる遠い空の先で
 君の横顔が目に浮かぶんだ
@@ -2013,7 +2013,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/imawoterashiteru?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 2,
     lyrics: `雨上がりの僕は うつむいたまま
 空ばかり見てた 誰にも言えない
@@ -2056,7 +2056,7 @@ I'll keep walking on
     album: 'IROZUKI',
     albumReading: 'いろずき',
     releaseDate: '2026-01-30',
-    linkUrl: 'https://linkco.re/yVsSndRZ',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/anatanotonarini?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 1,
     lyrics: `ぎこちない朝のキス
 冷めかけたコーヒーと笑う顔
@@ -2109,7 +2109,7 @@ I'll keep walking on
     album: 'KONAYUKI',
     albumReading: 'こなゆき',
     releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/fuyunokiseki?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 15,
     lyrics: `静かな街 灯りが揺れる
 白い息が 夜空に溶けて
@@ -2145,7 +2145,7 @@ I'll keep walking on
     album: 'KONAYUKI',
     albumReading: 'こなゆき',
     releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/yuki?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 14,
     lyrics: `粉雪が舞う夜に
 静けさが心にしみる
@@ -2185,7 +2185,7 @@ I'll keep walking on
     album: 'TOKOSHIE / KONAYUKI',
     albumReading: 'とこしえ / こなゆき',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/wasurenai?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 15,
     lyrics: `老いた庭に月の影
 手を繋ぎし記憶の糸
@@ -2224,7 +2224,7 @@ I'll keep walking on
     album: 'KONAYUKI',
     albumReading: 'こなゆき',
     releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/naiteiikara?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 12,
     lyrics: `暗い夜に隠れた声
 誰にも聞かれたくない痛み
@@ -2260,7 +2260,7 @@ I'll keep walking on
     album: 'KONAYUKI',
     albumReading: 'こなゆき',
     releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/mouichido?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 11,
     lyrics: `カーテン越しの 朝の光
 今日も 空は 息をしてる
@@ -2296,7 +2296,7 @@ I'll keep walking on
     album: 'KONAYUKI',
     albumReading: 'こなゆき',
     releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kimihe?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 10,
     lyrics: `あれから何年経つのだろう
 いつだって
@@ -2339,7 +2339,7 @@ I'll keep walking on
     album: 'KONAYUKI',
     albumReading: 'こなゆき',
     releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/stillinmyheart?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 9,
     lyrics: `静かな夜に ひとりきり
 思い出の中 君を探す
@@ -2385,7 +2385,7 @@ You’re still in my heart
     album: 'KONAYUKI',
     albumReading: 'こなゆき',
     releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/konosakinomirai?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 8,
     lyrics: `雪が降り始めた 夜の街で
 ふと立ち止まり あなたを想う
@@ -2432,7 +2432,7 @@ You’re still in my heart
     album: 'KONAYUKI',
     albumReading: 'こなゆき',
     releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kanarazususumeru?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 7,
     lyrics: `戻れるなら この身が無くなっても
 変われるなら 痛みさえも受け止める
@@ -2470,7 +2470,7 @@ You’re still in my heart
     album: 'KONAYUKI',
     albumReading: 'こなゆき',
     releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kokoroniitsumademo?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 6,
     lyrics: `白い雪が降る 静かな夜に
 君を思い出す あの日のまま
@@ -2509,7 +2509,7 @@ You’re still in my heart
     album: 'KONAYUKI',
     albumReading: 'こなゆき',
     releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kimigainaisekai?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 5,
     lyrics: `秋色の空が広がる朝
 静かな部屋で時計が止まる
@@ -2555,7 +2555,7 @@ You’re still in my heart
     album: 'TOKOSHIE / KONAYUKI',
     albumReading: 'とこしえ / こなゆき',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/aitakute?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 2,
     lyrics: `君と出会ったあの日の空
 あの青さ今も忘れない
@@ -2593,7 +2593,7 @@ You’re still in my heart
     album: 'KONAYUKI',
     albumReading: 'こなゆき',
     releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/dakaraimagaaru?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 3,
     lyrics: `立ちつくした雨の中
 うつむいた あの夜でも
@@ -2627,7 +2627,7 @@ You’re still in my heart
     album: 'KONAYUKI',
     albumReading: 'こなゆき',
     releaseDate: '2025-12-10',
-    linkUrl: 'https://linkco.re/rZAQ9cfa',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kienaiakari?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 2,
     lyrics: `立ち止まった帰り道
 まだ見えない 歩いた道を
@@ -2661,7 +2661,7 @@ You’re still in my heart
     album: 'TOKOSHIE / KONAYUKI',
     albumReading: 'とこしえ / こなゆき',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/saigonoyuki?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 11,
     lyrics: `白い吐息が街を包む
 足跡だけが語る旅路
@@ -2695,7 +2695,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-06-10',
-    linkUrl: 'https://linkco.re/Hb9nfMcM',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/inochi?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `空に問いかけた声が
 消えてゆくこの静寂の中で
 あの日見た夢の続きを
@@ -2732,7 +2732,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-06-11',
-    linkUrl: 'https://linkco.re/DDaFCGVU',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kage?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   todokanai: {
@@ -2741,7 +2741,7 @@ You’re still in my heart
     album: 'TOKOSHIE',
     albumReading: 'とこしえ',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/todokanai?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 5,
     lyrics: `空に響く静かな声
 影を追う君の後ろ姿
@@ -2773,7 +2773,7 @@ You’re still in my heart
     album: 'TOKOSHIE',
     albumReading: 'とこしえ',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kimitointajikan?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 13,
     lyrics: `君と歩いたこの道は
 今も静かに僕を呼ぶ
@@ -2811,7 +2811,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-07-08',
-    linkUrl: 'https://linkco.re/bQ8vxgZd',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kokoro?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   yasashii: {
@@ -2820,7 +2820,7 @@ You’re still in my heart
     album: 'TOKOSHIE / NUKUMORI',
     albumReading: 'とこしえ / ぬくもり',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/yasashii?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 1,
     lyrics: `歌詞は公開準備中です。`,
   },
@@ -2830,7 +2830,7 @@ You’re still in my heart
     album: 'NUKUMORI',
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/moshi?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   imanani: {
@@ -2839,7 +2839,7 @@ You’re still in my heart
     album: 'NUKUMORI',
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/imanani?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   kimidake: {
@@ -2848,7 +2848,7 @@ You’re still in my heart
     album: 'NUKUMORI',
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kimidake?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   namidaga: {
@@ -2857,7 +2857,7 @@ You’re still in my heart
     album: 'NUKUMORI',
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/namidaga?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   konomama: {
@@ -2866,7 +2866,7 @@ You’re still in my heart
     album: 'NUKUMORI',
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/konomama?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   mienai: {
@@ -2875,7 +2875,7 @@ You’re still in my heart
     album: 'TOKOSHIE / NUKUMORI',
     albumReading: 'とこしえ / ぬくもり',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/mienai?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 10,
     lyrics: `歌詞は公開準備中です。`,
   },
@@ -2885,7 +2885,7 @@ You’re still in my heart
     album: 'NUKUMORI',
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/yumedeshika?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   bokunomichi: {
@@ -2894,7 +2894,7 @@ You’re still in my heart
     album: 'NUKUMORI',
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/bokunomichi?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   subete: {
@@ -2903,7 +2903,7 @@ You’re still in my heart
     album: 'NUKUMORI',
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/subete?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   sabishikute: {
@@ -2912,7 +2912,7 @@ You’re still in my heart
     album: 'NUKUMORI',
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/sabishikute?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   kibou: {
@@ -2921,7 +2921,7 @@ You’re still in my heart
     album: 'TOKOSHIE / NUKUMORI',
     albumReading: 'とこしえ / ぬくもり',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kibou?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 6,
     lyrics: `歌詞は公開準備中です。`,
   },
@@ -2931,7 +2931,7 @@ You’re still in my heart
     album: 'NUKUMORI',
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kimitoiru?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   yumenomukou: {
@@ -2940,7 +2940,7 @@ You’re still in my heart
     album: 'NUKUMORI',
     albumReading: 'ぬくもり',
     releaseDate: '2025-06-28',
-    linkUrl: 'https://linkco.re/E7hxe2Ay',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/yumenomukou?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   tokiwokoete: {
@@ -2949,7 +2949,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-07-17',
-    linkUrl: 'https://linkco.re/5GGDQ6m3',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/tokiwokoete?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `あの頃の君は笑ってた
 小さな夢を追いかけた
 夕焼けの空が泣いてた
@@ -2986,7 +2986,7 @@ You’re still in my heart
     album: 'TOKOSHIE',
     albumReading: 'とこしえ',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kimiwomamoritai?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 3,
     lyrics: `冷たい風が吹く夜に
 君の手をそっと握りしめて
@@ -3024,7 +3024,7 @@ You’re still in my heart
     album: 'TOKOSHIE',
     albumReading: 'とこしえ',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/anohibi?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 9,
     lyrics: `夜空に浮かぶ星ひとつ
 君の影を映してる
@@ -3062,7 +3062,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-07-29',
-    linkUrl: 'https://linkco.re/UEetr9T1',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/modoreruna?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `夕焼けに染まる街角
 君の声がまだ聞こえる
 あの日の約束 握りしめ
@@ -3099,7 +3099,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-08-09',
-    linkUrl: 'https://linkco.re/uhv5dtZx',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/machitsudukeru?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `冷たい風が心に触れ
 窓のそとでは雨がふりだし
 君の声が遠くで響く でも届かない
@@ -3132,7 +3132,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-08-07',
-    linkUrl: 'https://linkco.re/pc0exyfX',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/oresounakokoro?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `静かな夜の海に
 涙がひとつ落ちた
 星が揺れているのか
@@ -3165,7 +3165,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/deaeteanakereba?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `あの日の風が囁いてた
 君がいなけりゃ何も始まらない
 冷たい夜空に一人きり
@@ -3202,7 +3202,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/itsumademo?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `静かな街灯の下
 影が伸びてく消えないまま
 風がそっと名前を呼ぶようで
@@ -3237,7 +3237,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/itooshii?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `君の笑顔が朝を染める
 光の中で息をする
 触れたいけど触れられない
@@ -3270,7 +3270,7 @@ You’re still in my heart
     album: 'TOKOSHIE / YASURAGI',
     albumReading: 'とこしえ / やすらぎ',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kimidakegasubete?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 8,
     lyrics: `遠くなる声が響く夜
 胸の中で君を探す
@@ -3308,7 +3308,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/wasuretainoni?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `愛の炎は静かに消えて
 夜の闇に溶けていく
 ささやきは風にさらわれて
@@ -3345,7 +3345,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/mottohayaku?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `夜空に浮かぶ星のように
 君との出逢い輝いてた
 だけど時間は止まらない
@@ -3382,7 +3382,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/namidanosaki?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `小さな声で叫んでた
 誰も聞こえない空の下
 涙が頬をつたう夜
@@ -3415,7 +3415,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/arigatouwo?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `静かな夜の風が吹く
 星たちが囁く夢の中
 君の笑顔 思い出すたび
@@ -3448,7 +3448,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/susumusonosaki?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `小さなともしびが揺れている
 静かな夜にひとりきり
 心の中で何かが囁く
@@ -3481,7 +3481,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/namidanohoshi?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `静かな夜に一人きり
 心の奥が痛むたび
 記憶の中で君が笑う
@@ -3518,7 +3518,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/futarinosora?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `君の笑顔が揺れる街角
 風が運ぶよ 優しい記憶を
 手をつないで 夢を語ったね
@@ -3551,7 +3551,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/anohitohaima?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `あの人は今どこにいる
 風が答えを運ぶけど
 言葉にならない痛みだけ
@@ -3583,7 +3583,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kiminidetaeta?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `淡い光が差し込む朝
 君の笑顔が僕を包む
 何気ない日々が煌めき出す
@@ -3620,7 +3620,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/imawoikirunda?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `あの日の空は遠く霞んで
 涙の意味も知らなかった
 無邪気な笑顔で駆け抜けた日々
@@ -3657,7 +3657,7 @@ You’re still in my heart
     album: 'YASURAGI',
     albumReading: 'やすらぎ',
     releaseDate: '2025-08-22',
-    linkUrl: 'https://linkco.re/1gXERgmA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/bokunosubete?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `暗い空に星ひとつ
 孤独な夜に浮かぶ光
 君の笑顔で世界が変わる
@@ -3688,7 +3688,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-08',
-    linkUrl: 'https://linkco.re/TMy1qy6G',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/hitoriinorudake?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `あの日の風が胸を撫でて
 君の笑顔が瞼に浮かぶ
 触れられない距離がつらくて
@@ -3725,7 +3725,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-08',
-    linkUrl: 'https://linkco.re/2MR6mb13',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/yumenokakera?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `全てが崩れた日
 光は影に消えていく
 手にしてた夢のかけら
@@ -3762,7 +3762,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-08',
-    linkUrl: 'https://linkco.re/5QG1gCmM',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/naitemoii?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `夜空に問いかけた 星たちは黙った
 答えのない日々が ただ過ぎていく
 心の隙間に 風が吹き抜ける
@@ -3797,7 +3797,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-08',
-    linkUrl: 'https://linkco.re/yfBPxec0',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kiminonamidahabokunosei?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `君の涙が頬を伝う
 夜の静けさに溶ける音
 僕はただ見ているだけで
@@ -3834,7 +3834,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-08',
-    linkUrl: 'https://linkco.re/CF0hpdYb',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kibouwakienai?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `不安が夜を包み込む
 心は迷路の中で彷徨う
 明日が来るのが怖くて
@@ -3867,7 +3867,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-08',
-    linkUrl: 'https://linkco.re/v1M8v9Vg',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/bokugamitaanosora?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `雲が流れる静かな朝
 風がそっと頬を撫でる
 この道を歩き続ける僕
@@ -3904,7 +3904,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-12',
-    linkUrl: 'https://linkco.re/CaqfUEqa',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/itsukakono?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `いつかこの道を振り返る日が来る
 足跡は消えずに 砂に刻まれたまま
 遠い空に願いを込めた あの時の声
@@ -3934,7 +3934,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-12',
-    linkUrl: 'https://linkco.re/NfUDu2vR',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/konosakiga?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `この道の先に何があるのか
 誰も教えてくれないけど
 風がささやく まだ進めと
@@ -3968,7 +3968,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-17',
-    linkUrl: 'https://linkco.re/AnF8HmUY',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/sonosakinimieru?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `静かに揺れる木漏れ日
 風がそっと頬を撫でて
 遠く響く声が呼ぶ
@@ -4003,7 +4003,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-17',
-    linkUrl: 'https://linkco.re/EHEY5EQt',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/きせきがいまここにある?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `空に描く未来図が
 消えてしまいそうな夜がある
 でも足元の花たちが
@@ -4038,7 +4038,7 @@ You’re still in my heart
     album: 'TOKOSHIE',
     albumReading: 'とこしえ',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/namidagakierusonohimade?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 12,
     lyrics: `歌詞は公開準備中です。`,
   },
@@ -4048,7 +4048,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-17',
-    linkUrl: 'https://linkco.re/PTr9FHvT',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/futarinonagai?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `長い道を歩いてきた
 手と手をつないでただ前を見た
 泣いた夜も 笑った朝も
@@ -4083,7 +4083,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-27',
-    linkUrl: 'https://linkco.re/NgX1urcc',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/bokunokaeru?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `冷たい風が頬を撫で
 記憶の欠片が落ちる夜
 見失った道 どこに続く
@@ -4114,7 +4114,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-27',
-    linkUrl: 'https://linkco.re/6ef25rFT',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/tanoshikattahibi?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
   kokorono: {
@@ -4123,7 +4123,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-28',
-    linkUrl: 'https://linkco.re/qcbdPXh9',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kokorono?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `静かな夜にひとり立ち
 街灯が影を作り出す
 心の隙間に忍び込む
@@ -4160,7 +4160,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-09-29',
-    linkUrl: 'https://linkco.re/zDXppZDA',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/tsukamumiraimirai?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `静かな夜にささやく声
 心の隙間に触れる風
 遠くに揺れるあの灯り
@@ -4195,7 +4195,7 @@ You’re still in my heart
     album: 'TOKOSHIE',
     albumReading: 'とこしえ',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/hikarihaitsumokokoniaru?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 4,
     lyrics: `静かな夜にささやく声
 消えない影 心に残る
@@ -4229,7 +4229,7 @@ You’re still in my heart
     album: 'TOKOSHIE / KOMOREBI',
     albumReading: 'とこしえ / こもれび',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/deattekuretearigatou?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 14,
     lyrics: `君に出会えた奇跡を
 心の奥に刻むよ
@@ -4267,7 +4267,7 @@ You’re still in my heart
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kagayaiteite?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 14,
     lyrics: `お互い分かり合えなかった
 ぶつかり合ってばかりの日々
@@ -4305,7 +4305,7 @@ You’re still in my heart
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kiminotaisetsunahi?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 13,
     lyrics: `星が瞬く夜空の下で
 君と出会えた奇跡がある
@@ -4338,7 +4338,7 @@ You’re still in my heart
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/aishitsuzukeru?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 12,
     lyrics: `涙が頬を伝う夜
 何も見えない霧の中
@@ -4372,7 +4372,7 @@ You’re still in my heart
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/itsumademoowaranai?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 11,
     lyrics: `星が降る夜に静かに
 君の笑顔が浮かぶよ
@@ -4406,7 +4406,7 @@ You’re still in my heart
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/subetenakushitemonao?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 10,
     lyrics: `失くした鍵の先に
 探してた夢があった
@@ -4438,7 +4438,7 @@ You’re still in my heart
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/anohinikaeritai?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 9,
     lyrics: `窓辺に映る夕暮れの影
 心の隅で消えた声が響く
@@ -4472,7 +4472,7 @@ You’re still in my heart
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kimiwoomoidasudarou?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 8,
     lyrics: `夕焼けの空を見上げて
 君の笑顔が浮かぶんだ
@@ -4500,7 +4500,7 @@ You’re still in my heart
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kokorononaka?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 7,
     lyrics: `遠く見える あの空の端
 消えた夢の声 聞こえるか
@@ -4534,7 +4534,7 @@ You’re still in my heart
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/miraiwokaerukara?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 6,
     lyrics: `どんなに暗い夜でも
 星がひとつ光るように
@@ -4574,7 +4574,7 @@ You’re still in my heart
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/kiminokiokugakierusonotokimadewa?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 5,
     lyrics: `静かな夜に君を想う
 消えない願いがあるんだ
@@ -4608,7 +4608,7 @@ You’re still in my heart
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/wasuretainoniwasurerarenai?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 4,
     lyrics: `夜の空に浮かぶ月
 君の影を探してる
@@ -4646,7 +4646,7 @@ You’re still in my heart
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/sobaniikuyo?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 3,
     lyrics: `夜の風が髪を揺らして
 街の灯りが遠く消える
@@ -4684,7 +4684,7 @@ You’re still in my heart
     album: 'KOMOREBI',
     albumReading: 'こもれび',
     releaseDate: '2025-10-20',
-    linkUrl: 'https://linkco.re/n4fg1c51',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/yumeoakiramenainaide?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 2,
     lyrics: `星が消えた空の下
 涙が光る頬を伝う
@@ -4722,7 +4722,7 @@ You’re still in my heart
     album: 'TOKOSHIE / KOMOREBI',
     albumReading: 'とこしえ / こもれび',
     releaseDate: '2026-01-17',
-    linkUrl: 'https://linkco.re/S1b5FZ8s',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/namidademaegamienakunattemo?utm_source=appriver.jp&utm_medium=referral',
     displayPriority: 7,
     lyrics: `涙で前が見えなくなって
 それでも足は止めないで
@@ -4756,7 +4756,7 @@ You’re still in my heart
     album: '',
     albumReading: '',
     releaseDate: '2025-10-04',
-    linkUrl: 'https://linkco.re/2DCt3ays',
+    linkUrl: 'https://mwm.ne.jp/artists/appriver/tracks/mataaou?utm_source=appriver.jp&utm_medium=referral',
     lyrics: `歌詞は公開準備中です。`,
   },
 };

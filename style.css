@@ -3414,3 +3414,41 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* MWM ロゴマーク(MUSIC PLAYERSカード) */
+.mwm-mark {
+  height: 4rem;
+  width: auto;
+  filter: drop-shadow(0 4px 8px rgba(51, 51, 51, 0.15));
+}
+@media (max-width: 768px) {
+  .mwm-mark {
+    height: 3rem;
+  }
+}
+
+/* フッターのMWMクレジット */
+.footer-mwm {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+.footer-mwm:hover {
+  opacity: 1;
+}
+.footer-mwm-mark {
+  height: 2rem;
+  width: auto;
+}
+
+/* Links欄のMWMロゴマーク */
+.social-mwm-mark {
+  height: 2.5rem;
+  width: auto;
+  margin-bottom: 0.8rem;
+}
