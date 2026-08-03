@@ -3445,3 +3445,10 @@ footer {
   height: 2rem;
   width: auto;
 }
+
+/* Links欄のMWMロゴマーク */
+.social-mwm-mark {
+  height: 2.5rem;
+  width: auto;
+  margin-bottom: 0.8rem;
+}
