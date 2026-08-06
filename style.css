@@ -412,6 +412,9 @@ nav {
   cursor: pointer;
   border: 2px solid rgba(255, 145, 110, 0.95);
   backdrop-filter: blur(10px);
+  /* ⚠️ このanimationは実際には効いていない。同じ要素に付いている .new-release が
+     ファイルの後ろにあり(同じ詳細度なので後勝ち)、そちらの指定が使われる。
+     CTAの動きを足すときは .new-release 側を触ること */
   animation: irozukiGlow 4s ease-in-out infinite;
   background-color: #ffe6d9;
 }
@@ -446,6 +449,24 @@ nav {
   }
 }
 
+/* CTAの動き(2026-08-06)。跳ねるのは開いた直後の一度きり、以後は呼吸だけ */
+@keyframes mwmCtaHop {
+  0%, 100% { translate: 0 0; }
+  25% { translate: 0 -10px; }
+  45% { translate: 0 0; }
+  62% { translate: 0 -4px; }
+  80% { translate: 0 0; }
+}
+
+@keyframes mwmCtaBreathe {
+  0%, 100% { scale: 1; }
+  50% { scale: 1.045; }
+}
+
+/* 「視差を減らす」設定の方には動かさない(光の点滅が苦手な方への配慮)。
+   ⚠️ 打ち消す相手は .new-release 側の指定。この@mediaは .new-release より
+   後ろに置かないと効かない(下の .new-release の直後に同じものを置いてある) */
+
 /* CTA 背景色の強制上書き（kagayakiカラー：淡いピンク） */
 .hero .hero-release-button {
   background: linear-gradient(135deg, #ffb6c1, #ffd1dc, #ffe4e1) !important;
@@ -462,47 +483,7 @@ nav {
   box-shadow: 0 12px 28px rgba(255, 182, 193, 0.45) !important;
 }
 
-/* Karaoke Coupon Button */
-.hero-karaoke-coupon-button {
-  font-size: 1rem;
-  margin-top: 1rem;
-  text-align: center;
-  line-height: 1.3;
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-
-  background: linear-gradient(135deg, #ff7a2f, #ff9b4a, #ffd3a3);
-  border: 2px solid rgba(255, 146, 74, 0.8);
-  border-radius: 12px;
-  padding: 10px 18px;
-  font-weight: 600;
-  color: #2c1810;
-  box-shadow: 0 4px 15px rgba(255, 146, 74, 0.35);
-  transition: all 0.3s ease;
-  position: absolute;
-  top: 78%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: inline-block;
-  /* ボタン表示開始 */
-}
-
-.hero-karaoke-coupon-button:hover,
-.hero-karaoke-coupon-button:focus {
-  transform: translate(-50%, -2px);
-  box-shadow: 0 6px 20px rgba(255, 146, 74, 0.45);
-  background: linear-gradient(135deg, #ff8b3f, #ffad63, #ffe1b8);
-  border-color: rgba(255, 146, 74, 0.95);
-  text-decoration: none;
-  color: #2c1810;
-}
-
-.hero-karaoke-coupon-button:active {
-  transform: translate(-50%, 0);
-  box-shadow: 0 2px 10px rgba(255, 146, 74, 0.35);
-}
+/* カラオケクーポンボタンは2026-08-06に廃止(スマホでのみ出ていた) */
 
 /* Sections */
 section {
@@ -821,12 +802,29 @@ section h2::after {
   border-radius: 12px;
   font-weight: bold;
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.45);
+  /* 開いた直後に一度だけ跳ね、そのあとはゆっくり呼吸させて気づいてもらう(2026-08-06)。
+     ⚠️ transform ではなく translate / scale の単独プロパティで動かしている。
+     transform を使うと :hover / :active の translateY(-2px) を打ち消してしまい、
+     押したときの手ごたえが消えるため */
   animation:
     newReleaseGlow 3s ease-in-out infinite,
-    gradientShift 4s ease-in-out infinite;
+    gradientShift 4s ease-in-out infinite,
+    mwmCtaHop 0.9s ease-in-out 0.6s 1,
+    mwmCtaBreathe 2.4s ease-in-out 1.5s infinite;
   box-shadow: 0 4px 15px rgba(88, 126, 57, 0.35);
   position: relative;
   overflow: hidden;
+}
+
+/* 「視差を減らす」設定の方には動かさない(光の点滅が苦手な方への配慮) */
+@media (prefers-reduced-motion: reduce) {
+  .new-release {
+    animation:
+      newReleaseGlow 3s ease-in-out infinite,
+      gradientShift 4s ease-in-out infinite;
+    translate: none;
+    scale: 1;
+  }
 }
 
 .new-release::before {
@@ -2509,17 +2507,6 @@ footer {
     /* モバイルでのタップ最適化 */
   }
 
-  .hero-karaoke-coupon-button {
-    font-size: 0.9rem;
-    margin-top: 1rem;
-    padding: 8px 15px;
-    border-radius: 10px;
-    touch-action: manipulation;
-    /* モバイルでのタップ最適化 */
-    top: 80%;
-    /* モバイルでの位置調整 */
-  }
-
   .placeholder-artwork {
     width: 200px;
     height: 200px;
@@ -3332,12 +3319,6 @@ footer {
   .scroll-guide,
   .swipe-guide {
     display: none !important;
-  }
-
-  .hero-karaoke-coupon-button {
-    display: none !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
   }
 }
 
