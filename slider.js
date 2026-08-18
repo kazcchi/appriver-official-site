@@ -226,50 +226,5 @@ document.addEventListener('DOMContentLoaded', () => {
     { passive: true }
   );
 
-  // Lyrics display functionality
-  const lyricsDisplay = document.getElementById('lyrics-display');
-  const lyricsTitle = document.getElementById('lyrics-title');
-  const lyricsContent = document.getElementById('lyrics-content');
-  const closeLyricsBtn = document.getElementById('close-lyrics');
-
-  // Add event listeners for lyric buttons
-  document.addEventListener('click', e => {
-    if (e.target.classList.contains('lyric-btn')) {
-      const songId = e.target.dataset.song;
-
-      // 新しいデータ構造との互換性
-      let songData = null;
-      if (typeof songsData !== 'undefined' && songsData[songId]) {
-        songData = songsData[songId];
-      } else if (typeof lyricsData !== 'undefined' && lyricsData[songId]) {
-        songData = lyricsData[songId];
-      }
-
-      if (songData) {
-        lyricsTitle.textContent = songData.title;
-        lyricsContent.innerHTML = songData.lyrics
-          .split('\n')
-          .map(line => (line.trim() === '' ? '<br>' : `<p>${line}</p>`))
-          .join('');
-        lyricsDisplay.style.display = 'block';
-
-        // Scroll to lyrics with proper offset for title visibility
-        lyricsDisplay.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-  });
-
-  // Close lyrics
-  closeLyricsBtn.addEventListener('click', () => {
-    lyricsDisplay.style.display = 'none';
-
-    // Scroll back to songs&lyrics section top
-    const songsLyricsSection = document.getElementById('songs-lyrics');
-    if (songsLyricsSection) {
-      songsLyricsSection.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }
-  });
+  // 歌詞のサイト内表示(モーダル)は2026-08-18に廃止。歌詞はMWMの曲ページで全文公開。
 });

@@ -235,10 +235,11 @@ class SearchSortManager {
       cardHTML = this.highlightSearchTerm(cardHTML, this.currentSearch);
     }
 
+    // 歌詞のサイト内表示は2026-08-18に廃止。試聴も歌詞もMWMの曲ページに一本化した
+    // (歌詞はMWMで全文公開。このサイトは「探す→MWMで聴く・読む」の入口に徹する)
     cardHTML += `
       <div class="card-actions">
-        <a href="${song.linkUrl}" target="_blank" class="stream-link small">聴いてみる</a>
-        <button class="stream-link small secondary lyric-btn" data-song="${song.id}">歌詞</button>
+        <a href="${song.linkUrl}" target="_blank" class="stream-link small">聴く・歌詞を見る</a>
       </div>
     `;
 
@@ -462,13 +463,4 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     console.error('songs-data.js が読み込まれていません');
   }
-});
-
-// 歌詞データとの互換性維持のため、lyricsDataも更新
-const lyricsData = {};
-Object.entries(songsData || {}).forEach(([key, song]) => {
-  lyricsData[key] = {
-    title: song.title,
-    lyrics: song.lyrics,
-  };
 });

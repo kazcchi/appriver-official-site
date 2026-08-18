@@ -39,7 +39,6 @@ export default [
         songsData: 'readonly',
         searchSortConfig: 'readonly',
         getSongsArray: 'readonly',
-        lyricsData: 'readonly',
       },
     },
     rules: {
