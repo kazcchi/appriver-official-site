@@ -451,16 +451,32 @@ nav {
 
 /* CTAの動き(2026-08-06)。跳ねるのは開いた直後の一度きり、以後は呼吸だけ */
 @keyframes mwmCtaHop {
-  0%, 100% { translate: 0 0; }
-  25% { translate: 0 -10px; }
-  45% { translate: 0 0; }
-  62% { translate: 0 -4px; }
-  80% { translate: 0 0; }
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  25% {
+    translate: 0 -10px;
+  }
+  45% {
+    translate: 0 0;
+  }
+  62% {
+    translate: 0 -4px;
+  }
+  80% {
+    translate: 0 0;
+  }
 }
 
 @keyframes mwmCtaBreathe {
-  0%, 100% { scale: 1; }
-  50% { scale: 1.045; }
+  0%,
+  100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.045;
+  }
 }
 
 /* 「視差を減らす」設定の方には動かさない(光の点滅が苦手な方への配慮)。
@@ -3434,4 +3450,87 @@ footer {
   height: 2.5rem;
   width: auto;
   margin-bottom: 0.8rem;
+}
+
+/* 2026-10: ストア配信再開。4つのサービスを縦に並べる小さめのカード */
+.platform-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.others-direct-container.compact {
+  min-height: auto;
+  padding: 1.25rem 1.75rem;
+  flex-direction: row;
+  text-align: left;
+  gap: 1rem;
+  border-radius: 16px;
+}
+
+.others-direct-container.compact .others-logo {
+  justify-content: flex-start;
+  gap: 0.8rem;
+}
+
+.others-direct-container.compact .others-logo i {
+  font-size: 2rem;
+  animation: none;
+  filter: none;
+}
+
+.others-direct-container.compact .others-logo span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.others-direct-container.compact .mwm-mark {
+  height: 2rem;
+}
+
+.others-direct-container.compact .others-full-playlist-btn {
+  width: auto;
+  min-height: auto;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+}
+
+.others-direct-container.compact .others-full-playlist-btn:hover {
+  transform: translateY(-2px);
+}
+
+.others-logo.apple-color i {
+  color: #fa2d48;
+}
+.others-logo.spotify-color i {
+  color: #1db954;
+}
+.others-logo.youtube-color i {
+  color: #ff0000;
+}
+.others-logo.amazon-color i {
+  color: #ff9900;
+}
+
+@media (max-width: 768px) {
+  .platform-list {
+    gap: 10px;
+  }
+  .others-direct-container.compact {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.1rem 1.25rem;
+    gap: 0.9rem;
+  }
+  .others-direct-container.compact .others-logo {
+    justify-content: center;
+    gap: 0.7rem;
+  }
+  .others-direct-container.compact .others-logo span {
+    font-size: 1.15rem;
+  }
+  .others-direct-container.compact .mwm-mark {
+    height: 1.6rem;
+  }
 }

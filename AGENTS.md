@@ -1,6 +1,6 @@
 # appriver 公式サイト(appriver.jp)
 
-SUNO AIで制作した楽曲で活動するアーティスト「appriver」の公式サイト。静的サイト(HTML/CSS/JavaScript)。2026-08-18以降の役割は **MWM(https://mwm.ne.jp)への送客サイト**。歌詞・試聴はサイト内で完結させず、MWMのアーティストページへ誘導する。同じリポジトリの `buka/` に BUKA の公式サイトも同居する。
+SUNO AIで制作した楽曲で活動するアーティスト「appriver」の公式サイト。静的サイト(HTML/CSS/JavaScript)。役割は **TikTok から来た人を各ストアの「アーティストページ」へ案内する入口**(2026-10 裁定・正本は BUKA リポジトリの `docs/gunbai/2026-10-03-ストア配信再開とサイト導線.md`)。🔴ストアへの誘導はアーティストページまで(アルバム・曲・自作プレイリストへは直接誘導しない)。**旧譜(8th OMOKAGE 以前)は MWM だけ、新譜(9th KAGEROU 以降)は全ストア**。歌詞の正本は MWM の曲ページ。同じリポジトリの `buka/` に BUKA の公式サイトも同居する。
 
 ## 言語ポリシー
 
@@ -25,7 +25,7 @@ SUNO AIで制作した楽曲で活動するアーティスト「appriver」の�
 - `mwm-bridge.js`: TikTokアプリ内ブラウザから mwm.ne.jp へ遷移できない問題の橋渡し(2026-08-08 実機検証済み)。UAがTikTokと名乗る場合だけ横取りする設計を崩さない
 - `vercel.json` の `/out/*` リライト: 外部導線(TikTok・YouTube・MWMアルバム等)の短縮URL。既存の行き先を勝手に変えない(追加はよい)
 - `CNAME`(`appriver.jp`)・`browserconfig.xml`・`manifest.json`・`icons/`: ドメインとPWA設定
-- 歌詞のサイト内表示は 2026-08-18 に廃止済み(#88)。復活させない(MWMへ一本化の裁定)
+- 歌詞のサイト内表示は 2026-08-18 に廃止済み(#88)。復活させない(歌詞の正本は MWM)
 - `songs-data.js` は Prettier 除外(手動フォーマット・大容量)。整形ツールにかけない
 
 ## 技術・構成
