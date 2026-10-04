@@ -2,14 +2,14 @@
 
 **終了処理のたびにこのファイルを更新する。開始処理のたびに最初に読む。** 手順・ルールは `AGENTS.md`、ここは「いまどこまで来ていて、次に何をするか」だけ。
 
-最終更新: 2026-10-03(Claude Code・Mac mini)
+最終更新: 2026-10-04(Claude Code・Mac mini)
 
 ## 待ち事項・保留アラート
 
-- 🔴 **ストア配信対応の改修(ブランチ `feat/store-streaming`)は KAGEROU のストア発売に合わせてマージする(2026-10-03 オーナー決定)**。マージ前に仮置きをすべて埋める:
-  - `TODO_KAGEROU_DATE`(`index.html` のヒーローとアルバム欄の2か所)→ ストアの発売日(例 `2026.10.24`)
-  - `TODO_APPLE_ARTIST_URL` / `TODO_SPOTIFY_ARTIST_URL` / `TODO_YOUTUBE_ARTIST_URL`(プレイヤー欄とリンク欄に各2か所)→ 確定したアーティストページの URL。新しいページで行くか旧「アップリバー」へ統合するかは MWM 側の判断待ち(`../mwm_main/docs/distrokid/appriverのストア別アーティストページ.md`)
-  - 確認方法: `grep -n TODO_ index.html` が0件になること
+- 🔴 **ストア配信対応の改修(ブランチ `feat/store-streaming`)は KAGEROU のストア発売に合わせてマージする(2026-10-03 オーナー決定)**。✅10/4に仮置きをすべて埋めた(`grep -n TODO index.html` は0件):
+  - 発売日=`2026.10.04`(DistroKidでKAGEROU 12曲を10/4に申請・発売日10/4)
+  - アーティストページ=すべて**DistroKid経由の新しいページ**(旧「アップリバー」には紐づけない=MWM側9/8・9/21の方針)。Apple `https://music.apple.com/jp/artist/appriver/6818672122`/Spotify `https://open.spotify.com/artist/4E3Og0VU8ez1FcsPCLNz3S`/YouTube Music `https://music.youtube.com/channel/UCa0X77bBagSdZk3beSTheeQ`(新トピック。`UC3P8aPW6tQUuqJO_xYaiYCQ`「アップリバー」は旧チャンネルなので使わない)。10/4時点では3つとも陽炎シングルだけ
+  - 残り=KAGEROUアルバムがストアに載ったのを確かめてからmainへマージ(Vercel自動デプロイ)→ https://appriver.jp を実機確認。12月末に旧ページと統合したらURLを見直す
   - Amazon Music はコメントで待機中(掲載とURLを実測したら外す)
 - (appriver の配信・審査まわりの待ち事項は MWM 側 `../mwm_main/HANDOFF.md` に集約している。サイトに反映が要る決定があればここへ書く)
 
