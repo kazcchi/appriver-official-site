@@ -2,11 +2,11 @@
 
 **終了処理のたびにこのファイルを更新する。開始処理のたびに最初に読む。** 手順・ルールは `AGENTS.md`、ここは「いまどこまで来ていて、次に何をするか」だけ。
 
-最終更新: 2026-10-04(Claude Code・Mac mini)
+最終更新: 2026-10-07(Claude Code・Mac mini)
 
 ## 待ち事項・保留アラート
 
-- 🔴 **ストア配信対応の改修(ブランチ `feat/store-streaming`)は KAGEROU のストア発売に合わせてマージする(2026-10-03 オーナー決定)**。✅10/4に仮置きをすべて埋めた(`grep -n TODO index.html` は0件):
+- ✅ **ストア版を本番反映済み(2026-10-07・PR #90)**=KAGEROUアルバムのApple Music掲載(10/7確認)を受けてマージ。同日、スマホ幅で「聴いてみる」が2行に折れるのを修正(#91・768px以下のcompactカードだけ・幅220px・折り返し禁止)。残り=12月末に旧ページと統合したらURLを見直す/Amazon Musicは掲載を実測したらコメントを外す。以下は準備時の記録→ ストア配信対応の改修(ブランチ `feat/store-streaming`)は KAGEROU のストア発売に合わせてマージする(2026-10-03 オーナー決定)。✅10/4に仮置きをすべて埋めた(`grep -n TODO index.html` は0件):
   - 発売日=`2026.10.04`(DistroKidでKAGEROU 12曲を10/4に申請・発売日10/4)
   - アーティストページ=すべて**DistroKid経由の新しいページ**(旧「アップリバー」には紐づけない=MWM側9/8・9/21の方針)。Apple `https://music.apple.com/jp/artist/appriver/6818672122`/Spotify `https://open.spotify.com/artist/4E3Og0VU8ez1FcsPCLNz3S`/YouTube Music `https://music.youtube.com/channel/UCa0X77bBagSdZk3beSTheeQ`(新トピック。`UC3P8aPW6tQUuqJO_xYaiYCQ`「アップリバー」は旧チャンネルなので使わない)。10/4時点では3つとも陽炎シングルだけ
   - 残り=KAGEROUアルバムがストアに載ったのを確かめてからmainへマージ(Vercel自動デプロイ)→ https://appriver.jp を実機確認。12月末に旧ページと統合したらURLを見直す
