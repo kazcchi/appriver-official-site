@@ -3533,4 +3533,22 @@ footer {
   .others-direct-container.compact .mwm-mark {
     height: 1.6rem;
   }
+  /* 「聴いてみる」を1行に収める(2026-10-07) */
+  .others-direct-container.compact .others-playlist-link {
+    height: auto;
+    width: 100%;
+  }
+  .others-direct-container.compact .others-full-playlist-btn {
+    width: min(220px, 100%);
+    height: auto;
+    min-height: 48px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    gap: 0.6rem;
+    white-space: nowrap;
+  }
+  .others-direct-container.compact .others-full-playlist-btn i {
+    font-size: 1rem;
+  }
 }
