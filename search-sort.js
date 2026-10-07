@@ -239,7 +239,7 @@ class SearchSortManager {
     // (歌詞はMWMで全文公開。このサイトは「探す→MWMで聴く・読む」の入口に徹する)
     cardHTML += `
       <div class="card-actions">
-        <a href="${song.linkUrl}" target="_blank" class="stream-link small">聴く・歌詞を見る</a>
+        <a href="${song.linkUrl}" target="_blank" class="stream-link small">歌詞を見る・聴く</a>
       </div>
     `;
 
