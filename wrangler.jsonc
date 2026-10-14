@@ -1,0 +1,25 @@
+{
+  // appriver 公式サイト(静的 HTML)。Vercel から Cloudflare Workers へ引っ越し(2026-10-14〜)。
+  // 中身は Vercel と同じファイルをそのまま配る。worker/index.js は www の転送・フォルダ宛ての index.html・HSTS だけを受け持つ。
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "appriver-official",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  // 本番ドメイン。既存の A・CNAME があると付けられないので、Cloudflare の画面で先に消してから deploy する
+  "routes": [
+    { "pattern": "appriver.jp", "custom_domain": true },
+    { "pattern": "www.appriver.jp", "custom_domain": true },
+  ],
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    // www の転送と HSTS を全要求に効かせるため、静的配信より先に worker を通す
+    "run_worker_first": true,
+    // Vercel(cleanUrls なし)と同じ挙動にする
+    "html_handling": "none",
+    "not_found_handling": "none",
+  },
+  // 配らないファイルは .assetsignore に書く。応答ヘッダーは _headers
+}

@@ -64,4 +64,11 @@ export default [
       quotes: ['error', 'single', { avoidEscape: true }],
     },
   },
+  {
+    // Cloudflare Workers の worker(wrangler.jsonc)
+    files: ['worker/**/*.js'],
+    languageOptions: {
+      globals: { URL: 'readonly', Request: 'readonly', Response: 'readonly' },
+    },
+  },
 ];

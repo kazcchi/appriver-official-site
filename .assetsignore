@@ -1,0 +1,17 @@
+# Cloudflare Workers に載せないもの(リポジトリには残す)
+.*
+node_modules
+package.json
+package-lock.json
+wrangler.jsonc
+worker
+_headers
+docs
+tools
+*.md
+vercel.json
+CNAME
+eslint.config.js
+スクリーンショット*
+# git に入れていない作業用の素材(手元にあっても配らない)
+mainlogo.png
