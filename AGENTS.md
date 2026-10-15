@@ -23,14 +23,18 @@ SUNO AIで制作した楽曲で活動するアーティスト「appriver」の�
 ## 触らない範囲(凍結)
 
 - `mwm-bridge.js`: TikTokアプリ内ブラウザから mwm.ne.jp へ遷移できない問題の橋渡し(2026-08-08 実機検証済み)。UAがTikTokと名乗る場合だけ横取りする設計を崩さない
-- `vercel.json` の `/out/*` リライト: 外部導線(TikTok・YouTube・MWMアルバム等)の短縮URL。既存の行き先を勝手に変えない(追加はよい)
+- `out/*/index.html`: 外部導線(TikTok・YouTube・ストア等)の短縮URL `appriver.jp/out/〇〇` の中継ページ。**行き先は各ページの `REDIRECT_TO`**。既存の行き先を勝手に変えない(追加はよい)
+  - ⚠ `vercel.json` の `/out/*` リライト(MWM 行きの表)は、Vercel 時代から**効いていなかった**(同名のフォルダが先に返るため。2026-10-14 に本番で確認)。Cloudflare 移行後は `vercel.json` 自体を使っていない。表のとおりに行き先をそろえるかはオーナー判断待ち
 - `CNAME`(`appriver.jp`)・`browserconfig.xml`・`manifest.json`・`icons/`: ドメインとPWA設定
 - 歌詞のサイト内表示は 2026-08-18 に廃止済み(#88)。復活させない(歌詞の正本は MWM)
 - `songs-data.js` は Prettier 除外(手動フォーマット・大容量)。整形ツールにかけない
 
 ## 技術・構成
 
-- 素のHTML/CSS/JavaScript(フレームワークなし)。Node.js 20.18.0(`.node-version`)・npm。ホスティングは Vercel(`vercel.json`)、ドメインは appriver.jp(www は appriver.jp へ301)
+- 素のHTML/CSS/JavaScript(フレームワークなし)。Node.js 22.18.0(`.node-version`。wrangler が 22 以上を要求)・npm。ホスティングは **Cloudflare Workers `appriver-official`**(2026-10-14 に Vercel から移行)、ドメインは appriver.jp(www は appriver.jp へ301)
+- デプロイ: **本番反映は `npm run deploy`(= `wrangler deploy`)。`main` への push だけでは本番は変わらない**(Vercel のプロジェクトは保険として残しているだけで、ドメインは向いていない)
+  - `wrangler.jsonc`(設定)・`worker/index.js`(www と http の転送・フォルダ宛ての index.html・末尾スラッシュなしのフォルダ・HSTS)・`_headers`(応答ヘッダー)・`.assetsignore`(配らないファイル。**新しいファイルを足して配りたくないときはここに書く**。未追跡の素材も手元にあればアップロードされる)
+  - DNS は Cloudflare(ネームサーバー cody / paityn)。ドメインの登録先はお名前.com のまま。移行の記録と戻し方は `docs/dns/`
 - 主要ファイル: `index.html`(メインページ)/`style.css`/`songs-data.js`(楽曲データ)/`search-sort.js`(検索・並び替え)/`slider.js`/`pull-to-refresh.js`/`mwm-bridge.js`(TikTok対策)/`analytics.js`/`scroll-guide.js`・`swipe-guide.js`・`reload-guide.js`(操作ガイド)/`song-template.snippet.js`(曲追加のひな形)
 - フォルダ: `buka/`(BUKA公式サイト・同じ構成の静的サイト)/`out/`(外部リンクの中継ページ)/`icons/`(PWAアイコン)/`docs/`(文書)/`tools/`/`.github/`(CI・PRテンプレート)
 - 曲追加の手順: `ADD_SONG_CHECKLIST.md`(ひな形は `song-template.snippet.js`)。ただし歌詞は MWM に一本化済みなので、いまは配信リンクとメタ情報だけを扱う
@@ -58,4 +62,4 @@ npm run lint:fix     # ESLint 自動修正
 - `npm run verify` を通す
 - 画面の変更は `index.html` をブラウザで開くか、ローカルサーバーで確認する(MWM側のブラウザペイン設定では `appriver-static`=ポート3200、`buka-static`=3201)。スマホ幅での確認を必ず入れる(利用者の大半がスマホ・TikTok経由)
 - mwm.ne.jp への導線を変えたときは、TikTokアプリ内ブラウザ(プロフィール欄リンクからの正式ブラウザ)で実機確認する。ブラウザペインでは再現できない
-- 本番反映は main へのマージで Vercel が自動デプロイ。反映後に https://appriver.jp を実機で開いて確認する
+- 本番反映は main へマージしたあと、手元で `npm run deploy`。反映後に https://appriver.jp を実機で開いて確認する(応答ヘッダー `server: cloudflare`)。仮 URL https://appriver-official.sdl-admin.workers.dev でも同じものが見られる
