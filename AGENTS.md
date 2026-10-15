@@ -24,7 +24,8 @@ SUNO AIで制作した楽曲で活動するアーティスト「appriver」の�
 
 - `mwm-bridge.js`: TikTokアプリ内ブラウザから mwm.ne.jp へ遷移できない問題の橋渡し(2026-08-08 実機検証済み)。UAがTikTokと名乗る場合だけ横取りする設計を崩さない
 - `out/*/index.html`: 外部導線(TikTok・YouTube・ストア等)の短縮URL `appriver.jp/out/〇〇` の中継ページ。**行き先は各ページの `REDIRECT_TO`**。既存の行き先を勝手に変えない(追加はよい)
-  - ⚠ `vercel.json` の `/out/*` リライト(MWM 行きの表)は、Vercel 時代から**効いていなかった**(同名のフォルダが先に返るため。2026-10-14 に本番で確認)。Cloudflare 移行後は `vercel.json` 自体を使っていない。表のとおりに行き先をそろえるかはオーナー判断待ち
+  - ⚠ `vercel.json` の `/out/*` リライト(MWM 行きの表)は、Vercel 時代から**効いていなかった**(同名のフォルダが先に返るため。2026-10-14 に本番で確認)。Cloudflare 移行後は `vercel.json` 自体を使っていない(表は参考にしない)
+  - 2026-10-15 オーナー決定: ストア系は**新しいアーティストページ**へ(`spotify`・`spotify-artist` → Spotify、`apple-music`・`apple-artist`・`apple-music-embed` → Apple)。旧譜(`nukumori`・`yasuragi`・`komorebi`)は MWM の各アルバムページへ。`line-music`・`others` は廃止(フォルダを削除・404)。個別のプレイリストは作らないので、プレイリストへ送る短縮 URL は置かない
 - `CNAME`(`appriver.jp`)・`browserconfig.xml`・`manifest.json`・`icons/`: ドメインとPWA設定
 - 歌詞のサイト内表示は 2026-08-18 に廃止済み(#88)。復活させない(歌詞の正本は MWM)
 - `songs-data.js` は Prettier 除外(手動フォーマット・大容量)。整形ツールにかけない
