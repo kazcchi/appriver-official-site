@@ -1,31 +1,65 @@
-name: ci-push
+# 自動チェック(2026-10-15 に壊れていた 4 本 verify / ci / ci-pr / secrets-scan を 1 本にまとめた)
+# 本番反映は手元の `npm run deploy` で行うので、ここはチェックだけ
+name: CI
 
 on:
+  pull_request:
+    branches: [main]
   push:
-    branches: [ main ]
+    branches: [main]
+
+concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
-jobs:
-  smoke:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+permissions:
+  contents: read
 
-      - name: Use Node
-        uses: actions/setup-node@v4
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
         with:
-          node-version: '22'
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
           cache: 'npm'
 
-      - name: Install deps (ci)
-        run: npm ci
+      - name: Install dependencies
+        run: npm ci --no-audit
 
-      - name: Build (if present)
-        run: npm run build --if-present
+      - name: Prettier と ESLint
+        run: npm run verify
 
-      - name: Syntax check songs-data.js (ESM import)
-        run: node --input-type=module -e "import('./songs-data.js').then(()=>console.log('syntax ok')).catch(e=>{console.error(e); process.exit(1);})"
+      - name: songs-data.js が読み込めるか
+        run: node --input-type=module -e "await import('./songs-data.js'); console.log('songs-data.js ok')"
+
+      - name: コミットに [Claude] か [Codex] の印があるか(PR のみ)
+        if: github.event_name == 'pull_request'
+        run: |
+          missing=$(git log --format='%h %s' --no-merges ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} | grep -vE '\[(Claude|Codex)\]' || true)
+          if [ -n "$missing" ]; then
+            echo "❌ 印のないコミットがあります:"
+            echo "$missing"
+            exit 1
+          fi
+          echo "✅ すべてのコミットに印があります"
+
+  secrets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: TruffleHog
+        uses: trufflesecurity/trufflehog@v3.99.2
+        with:
+          base: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          head: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+          extra_args: --only-verified --exclude-paths .trufflehogignore
