@@ -55,7 +55,7 @@ npm run lint:fix     # ESLint 自動修正
 
 ## CI
 
-- `verify.yml`(Prettier + ESLint + ツールタグ検査)・`secrets-scan.yml`(TruffleHog)・`ci.yml`/`ci-pr.yml`。PR とマージ前に全通過が必須
+- `.github/workflows/ci.yml` の 1 本(Prettier + ESLint・`songs-data.js` の読み込み・PR のツールタグ検査・TruffleHog)。PR とマージ前に全通過が必須。2026-10-15 に、書き方が壊れて少なくとも 5 月から一度も動いていなかった 4 本(verify / ci / ci-pr / secrets-scan)をまとめ直した。ワークフローを書き換えたら、手元で YAML として読めるかを確かめてから push する
 - Pre-commit フックが失敗したら `npm run verify` で原因を直し、再ステージしてコミットし直す。ツールタグ不備は `git commit --amend` で直す
 
 ## 検証方法
