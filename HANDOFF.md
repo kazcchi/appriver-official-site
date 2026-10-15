@@ -2,10 +2,11 @@
 
 **終了処理のたびにこのファイルを更新する。開始処理のたびに最初に読む。** 手順・ルールは `AGENTS.md`、ここは「いまどこまで来ていて、次に何をするか」だけ。
 
-最終更新: 2026-10-07(Claude Code・Mac mini)
+最終更新: 2026-10-15(Claude Code・Mac mini)
 
 ## 待ち事項・保留アラート
 
+- ✅ **ホスティングを Vercel から Cloudflare Workers `appriver-official` へ移行(2026-10-15 完了)**。10/14 にいったん戻し、10/15 に再挑戦して切り替えた。経過は `docs/dns/2026-10-14-移行前のDNS控え-お名前.md`。**本番反映は `npm run deploy`、push では本番は変わらない**。Vercel の appriver-official-site は数日様子を見てから削除(オーナーの手)。`vercel.json` の短縮 URL の表(MWM 行き)にそろえるかはオーナー判断待ち
 - ✅ **ストア版を本番反映済み(2026-10-07・PR #90)**=KAGEROUアルバムのApple Music掲載(10/7確認)を受けてマージ。同日、スマホ幅で「聴いてみる」が2行に折れるのを修正(#91・768px以下のcompactカードだけ・幅220px・折り返し禁止)。残り=12月末に旧ページと統合したらURLを見直す/Amazon Musicは掲載を実測したらコメントを外す。以下は準備時の記録→ ストア配信対応の改修(ブランチ `feat/store-streaming`)は KAGEROU のストア発売に合わせてマージする(2026-10-03 オーナー決定)。✅10/4に仮置きをすべて埋めた(`grep -n TODO index.html` は0件):
   - 発売日=`2026.10.04`(DistroKidでKAGEROU 12曲を10/4に申請・発売日10/4)
   - アーティストページ=すべて**DistroKid経由の新しいページ**(旧「アップリバー」には紐づけない=MWM側9/8・9/21の方針)。Apple `https://music.apple.com/jp/artist/appriver/6818672122`/Spotify `https://open.spotify.com/artist/4E3Og0VU8ez1FcsPCLNz3S`/YouTube Music `https://music.youtube.com/channel/UCa0X77bBagSdZk3beSTheeQ`(新トピック。`UC3P8aPW6tQUuqJO_xYaiYCQ`「アップリバー」は旧チャンネルなので使わない)。10/4時点では3つとも陽炎シングルだけ
