@@ -32,7 +32,7 @@ SUNO AIで制作した楽曲で活動するアーティスト「appriver」の�
 
 ## 技術・構成
 
-- 素のHTML/CSS/JavaScript(フレームワークなし)。Node.js 22.18.0(`.node-version`。wrangler が 22 以上を要求)・npm。ホスティングは **Cloudflare Workers `appriver-official`**(2026-10-14 に Vercel から移行)、ドメインは appriver.jp(www は appriver.jp へ301)
+- 素のHTML/CSS/JavaScript(フレームワークなし)。Node.js 22.23.4(`.node-version`。wrangler が 22 以上を要求)・npm。ホスティングは **Cloudflare Workers `appriver-official`**(2026-10-14 に Vercel から移行)、ドメインは appriver.jp(www は appriver.jp へ301)
 - デプロイ: **本番反映は `npm run deploy`(= `wrangler deploy`)。`main` への push だけでは本番は変わらない**(Vercel のプロジェクトは保険として残しているだけで、ドメインは向いていない)
   - `wrangler.jsonc`(設定)・`worker/index.js`(www と http の転送・フォルダ宛ての index.html・末尾スラッシュなしのフォルダ・HSTS)・`_headers`(応答ヘッダー)・`.assetsignore`(配らないファイル。**新しいファイルを足して配りたくないときはここに書く**。未追跡の素材も手元にあればアップロードされる)
   - DNS は Cloudflare(ネームサーバー cody / paityn)。ドメインの登録先はお名前.com のまま。移行の記録と戻し方は `docs/dns/`
